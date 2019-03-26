@@ -2,7 +2,7 @@ box: golang:1.10
 
 build:
   steps:
-    - ? script
+    - script:
       name: build_bins
       code: |
         source ci/setBuildEnv.sh
@@ -18,7 +18,7 @@ unitTests:
 
 testRest:
   steps:
-    - ? script
+    - script:
       name: test
       code: |
         source ci/setBuildEnv.sh
@@ -26,7 +26,7 @@ testRest:
 
 testGRpc:
   steps:
-    - ? script
+    - script:
       name: test
       code: |
         source ci/setBuildEnv.sh
@@ -34,7 +34,7 @@ testGRpc:
 
 testSpctl:
   steps:
-    - ? script
+    - script:
       name: test
       code: |
         source ci/setBuildEnv.sh
@@ -42,21 +42,8 @@ testSpctl:
 
 testRestADS:
   steps:
-    - ? script
+    - script:
       name: test
       code: |
         source ci/setBuildEnv.sh
         make testSpeedleRestADSCheck
-
-publishDoc:
-  box:
-    id: r.authz.fun/mkdocs
-    username: $DOCKER_USERNAME
-    password: $DOCKER_PASSWORD
-    tag: 1.0.0
-  steps:
-    - ? script
-      name: build_docs
-      code: |
-        cd docs/public/speedle
-        mkdocs build
