@@ -1,5 +1,5 @@
 
-<img src="/docs/images/Speedle_log_black.svg" height="50%" width="50%"/> 
+<img src="/docs/images/Speedle_logo_b.svg" height="50%" width="50%"/> 
 
 # Speedle
 
