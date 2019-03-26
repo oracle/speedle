@@ -44,6 +44,14 @@ go build -ldflags "-X main.gitCommit=a61b32e -X main.productVersion=18.4.1 -X ma
 go build -ldflags "-X main.gitCommit=a61b32e -X main.productVersion=18.4.1 -X main.goVersion=go1.12.1" -o /home/opc/gopath/bin/spctl  github.com/oracle/speedle/cmd/spctl
 ```
 
+4. Done, find the binaries
+
+```
+[opc@wcai-speedle-host speedle]$ cd $GOPATH/bin
+[opc@wcai-speedle-host bin]$ ls
+spctl  speedle-ads  speedle-pms
+```
+
 ## Get Help
 
 * Join us on Slack: [#speedle-users](https://join.slack.com/t/speedleproject/shared_invite/enQtNTUzODM3NDY0ODE2LTg0ODc0NzQ1MjVmM2NiODVmMThkMmVjNmMyODA0ZWJjZjQ3NDc2MjdlMzliN2U4MDRkZjhlYzYzMDEyZTgxMGQ)
