@@ -17,13 +17,13 @@ all: build
 build: buildPms buildAds buildSpctl
 
 buildPms:
-	go build ${goLDFlags} -o ${GOPATH}/bin/speedle-pms gitlab-odx.oracledx.com/wcai/speedle/cmd/speedle-pms
+	go build ${goLDFlags} -o ${GOPATH}/bin/speedle-pms github.com/oracle/speedle/cmd/speedle-pms
 
 buildAds:
-	go build ${goLDFlags} -o ${GOPATH}/bin/speedle-ads gitlab-odx.oracledx.com/wcai/speedle/cmd/speedle-ads
+	go build ${goLDFlags} -o ${GOPATH}/bin/speedle-ads github.com/oracle/speedle/cmd/speedle-ads
 
 buildSpctl:
-	go build ${goLDFlags} -o ${GOPATH}/bin/spctl  gitlab-odx.oracledx.com/wcai/speedle/cmd/spctl
+	go build ${goLDFlags} -o ${GOPATH}/bin/spctl  github.com/oracle/speedle/cmd/spctl
 
 image: imagePms imageAds
 
@@ -42,15 +42,15 @@ test: testAll
 testAll: speedleUnitTests testSpeedleRest testSpeedleGRpc testSpctl testSpeedleRestADSCheck testSpeedleGRpcADSCheck testSpeedleTls
 
 speedleUnitTests:
-	go test ${TEST_OPTS} gitlab-odx.oracledx.com/wcai/speedle/pkg/cfg 
-	go test ${TEST_OPTS} gitlab-odx.oracledx.com/wcai/speedle/pkg/eval 
-	go test ${TEST_OPTS} gitlab-odx.oracledx.com/wcai/speedle/pkg/store/file
-	go test ${TEST_OPTS} gitlab-odx.oracledx.com/wcai/speedle/pkg/store/etcd
-	go test ${TEST_OPTS} gitlab-odx.oracledx.com/wcai/speedle/cmd/spctl/pdl
-	go test ${TEST_OPTS} gitlab-odx.oracledx.com/wcai/speedle/pkg/suid
-	go test ${TEST_OPTS} gitlab-odx.oracledx.com/wcai/speedle/pkg/assertion
+	go test ${TEST_OPTS} github.com/oracle/speedle/pkg/cfg 
+	go test ${TEST_OPTS} github.com/oracle/speedle/pkg/eval 
+	go test ${TEST_OPTS} github.com/oracle/speedle/pkg/store/file
+	go test ${TEST_OPTS} github.com/oracle/speedle/pkg/store/etcd
+	go test ${TEST_OPTS} github.com/oracle/speedle/cmd/spctl/pdl
+	go test ${TEST_OPTS} github.com/oracle/speedle/pkg/suid
+	go test ${TEST_OPTS} github.com/oracle/speedle/pkg/assertion
 	go clean -testcache
-	STORE_TYPE=etcd go test ${TEST_OPTS} gitlab-odx.oracledx.com/wcai/speedle/pkg/eval
+	STORE_TYPE=etcd go test ${TEST_OPTS} github.com/oracle/speedle/pkg/eval
 
 testSpeedleRest:
 	pkg/svcs/pmsrest/run_file_test.sh
@@ -76,7 +76,7 @@ testSpeedleTls:
 	pkg/svcs/pmsrest/tls_test.sh
 	pkg/svcs/pmsrest/tls_test-force-client-cert.sh
 clean:
-	rm -rf ${GOPATH}/pkg/linux_amd64/gitlab-odx.oracledx.com/wcai/speedle
+	rm -rf ${GOPATH}/pkg/linux_amd64/github.com/oracle/speedle
 	rm -f ${GOPATH}/bin/speedle-pms
 	rm -f ${GOPATH}/bin/speedle-ads
 	rm -f ${GOPATH}/bin/spctl

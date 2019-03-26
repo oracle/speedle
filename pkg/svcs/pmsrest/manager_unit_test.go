@@ -17,11 +17,11 @@ import (
 
 	"log"
 
-	pmsapi "gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/cfg"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/store"
-	_ "gitlab-odx.oracledx.com/wcai/speedle/pkg/store/file"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs"
+	pmsapi "github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/pkg/cfg"
+	"github.com/oracle/speedle/pkg/store"
+	_ "github.com/oracle/speedle/pkg/store/file"
+	"github.com/oracle/speedle/pkg/svcs"
 )
 
 var storeFile = "./fakestore.json"

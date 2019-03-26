@@ -12,10 +12,10 @@ import (
 	"os"
 	"strings"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/assertion"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/cfg"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/logging"
+	"github.com/oracle/speedle/pkg/assertion"
+	"github.com/oracle/speedle/pkg/cfg"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/logging"
 
 	"strconv"
 

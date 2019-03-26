@@ -7,7 +7,7 @@ import (
 	"math"
 	"reflect"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/errors"
 )
 
 // Add all built-in functions in this file

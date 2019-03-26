@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/cmd/spctl/command"
+	"github.com/oracle/speedle/cmd/spctl/command"
 )
 
 var gitCommit string

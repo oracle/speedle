@@ -6,9 +6,9 @@ package store
 import (
 	"reflect"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/subjectutils"
+	"github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/pkg/subjectutils"
 )
 
 const (

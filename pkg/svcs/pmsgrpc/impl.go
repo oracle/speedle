@@ -9,19 +9,19 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/store"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/pmsgrpc/pb"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/pmsimpl"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/store"
+	"github.com/oracle/speedle/pkg/svcs/pmsgrpc/pb"
+	"github.com/oracle/speedle/pkg/svcs/pmsimpl"
 
 	"context"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	"github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/api/pms"
 
 	"strings"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/logging"
+	"github.com/oracle/speedle/pkg/logging"
 )
 
 type serviceImpl struct {

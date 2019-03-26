@@ -6,7 +6,7 @@ package eval
 import (
 	"testing"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
+	adsapi "github.com/oracle/speedle/api/ads"
 )
 
 func TestDiagnoseWithoutApp(t *testing.T) {

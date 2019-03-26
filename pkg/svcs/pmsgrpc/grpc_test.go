@@ -6,8 +6,8 @@ package pmsgrpc
 import (
 	"testing"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/pmsgrpc/pb"
-	"gitlab-odx.oracledx.com/wcai/speedle/testutil"
+	"github.com/oracle/speedle/pkg/svcs/pmsgrpc/pb"
+	"github.com/oracle/speedle/testutil"
 )
 
 //Test GRpc API for Service Manangement

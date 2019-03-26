@@ -5,7 +5,7 @@ shell_dir=$(dirname $0)
 set -ex
 #source pkg/svcs/pmsrest/start_etcd.sh
 rm -rf ./speedle.etcd
-source ${GOPATH}/src/gitlab-odx.oracledx.com/wcai/speedle/setTestEnv.sh
+source ${GOPATH}/src/github.com/oracle/speedle/setTestEnv.sh
 go clean -testcache
 
 #Reconfig spctl
@@ -16,9 +16,9 @@ startPMS etcd --config-file ${shell_dir}/../pmsrest/config_etcd.json
 startADS --config-file ${shell_dir}/../pmsrest/config_etcd.json
 
 ${GOPATH}/bin/spctl delete service --all
-go test ${TEST_OPTS} gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/adsrest -tags=runtime_test_prepare
+go test ${TEST_OPTS} github.com/oracle/speedle/pkg/svcs/adsrest -tags=runtime_test_prepare
 ${GOPATH}/bin/spctl get service --all
 sleep 2
-go test ${TEST_OPTS} gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/adsrest -tags="runtime_test runtime_cache_test" -run=TestMats
+go test ${TEST_OPTS} github.com/oracle/speedle/pkg/svcs/adsrest -tags="runtime_test runtime_cache_test" -run=TestMats
 
 rm -rf ./speedle.etcd

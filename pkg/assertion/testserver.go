@@ -8,7 +8,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
+	adsapi "github.com/oracle/speedle/api/ads"
 )
 
 type asserterHandler struct {

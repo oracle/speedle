@@ -5,7 +5,7 @@ package ads
 import (
 	"strconv"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	"github.com/oracle/speedle/api/pms"
 )
 
 func (p *EvaluationResult) AddRolePolicy(rolePolicy *pms.RolePolicy, result bool) {

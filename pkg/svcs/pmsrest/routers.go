@@ -7,8 +7,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/pkg/svcs"
 )
 
 type route struct {

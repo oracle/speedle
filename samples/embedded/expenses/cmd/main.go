@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"os"
 
-	_ "gitlab-odx.oracledx.com/wcai/speedle/pkg/store/file"
-	"gitlab-odx.oracledx.com/wcai/speedle/samples/embedded/expenses"
+	_ "github.com/oracle/speedle/pkg/store/file"
+	"github.com/oracle/speedle/samples/embedded/expenses"
 )
 
 func main() {

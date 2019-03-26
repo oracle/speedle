@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/spf13/cobra"
-	"gitlab-odx.oracledx.com/wcai/speedle/cmd/spctl/client"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/pmsrest"
+	"github.com/oracle/speedle/cmd/spctl/client"
+	"github.com/oracle/speedle/pkg/svcs/pmsrest"
 )
 
 var (

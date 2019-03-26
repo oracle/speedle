@@ -53,7 +53,7 @@ the last two steps are used to make Oracle SSO works.
 Run below commands to build source code
 
 ```bash
-cd $GOPATH/src/gitlab-odx.oracledx.com/wcai/speedle
+cd $GOPATH/src/github.com/oracle/speedle
 make clean build
 ```
 

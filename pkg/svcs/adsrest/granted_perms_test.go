@@ -8,9 +8,9 @@ package adsrest
 import (
 	"testing"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/testutil"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/testutil"
 )
 
 var URI_GRANTED_PERMS = "/authz-check/v1/all-granted-permissions"

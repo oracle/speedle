@@ -2,7 +2,7 @@
 
 shell_dir=$(dirname $0)
 # set -x
-source ${GOPATH}/src/gitlab-odx.oracledx.com/wcai/speedle/setTestEnv.sh
+source ${GOPATH}/src/github.com/oracle/speedle/setTestEnv.sh
 ${GOPATH}/bin/spctl config pms-endpoint https://localhost:6733/policy-mgmt/v1/
 
 

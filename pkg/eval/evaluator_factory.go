@@ -4,11 +4,11 @@
 package eval
 
 import (
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/cfg"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/store"
+	"github.com/oracle/speedle/pkg/cfg"
+	"github.com/oracle/speedle/pkg/store"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/api/pms"
 
 	log "github.com/sirupsen/logrus"
 )

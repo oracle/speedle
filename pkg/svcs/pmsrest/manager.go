@@ -8,19 +8,19 @@ import (
 	"net/http"
 	"strings"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/httputils"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/logging"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/pmsimpl"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/httputils"
+	"github.com/oracle/speedle/pkg/logging"
+	"github.com/oracle/speedle/pkg/svcs/pmsimpl"
 
 	"github.com/gorilla/mux"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	"github.com/oracle/speedle/api/pms"
 
 	"time"
 
 	log "github.com/sirupsen/logrus"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs"
+	"github.com/oracle/speedle/pkg/svcs"
 )
 
 type RESTService struct {

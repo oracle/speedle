@@ -7,10 +7,10 @@ import (
 	"fmt"
 	"testing"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/testutil"
-	"gitlab-odx.oracledx.com/wcai/speedle/testutil/msg"
-	"gitlab-odx.oracledx.com/wcai/speedle/testutil/param"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/testutil"
+	"github.com/oracle/speedle/testutil/msg"
+	"github.com/oracle/speedle/testutil/param"
 )
 
 func getCmdTestDataForCreateService(sName string, sType string) testutil.TestCase {

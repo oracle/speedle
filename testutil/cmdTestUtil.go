@@ -12,9 +12,9 @@ import (
 	"reflect"
 	"strings"
 
-	pmsapi "gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/testutil/msg"
-	"gitlab-odx.oracledx.com/wcai/speedle/testutil/param"
+	pmsapi "github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/testutil/msg"
+	"github.com/oracle/speedle/testutil/param"
 )
 
 const (

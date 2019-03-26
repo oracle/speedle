@@ -7,12 +7,12 @@ import (
 	"context"
 	"fmt"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/eval"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/adsgrpc/pb"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/pkg/eval"
+	"github.com/oracle/speedle/pkg/svcs/adsgrpc/pb"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/logging"
+	"github.com/oracle/speedle/pkg/logging"
 )
 
 // GRPCService is the ADS GRPC implementation

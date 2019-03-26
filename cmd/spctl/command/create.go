@@ -16,9 +16,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/cmd/spctl/client"
-	"gitlab-odx.oracledx.com/wcai/speedle/cmd/spctl/pdl"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/cmd/spctl/client"
+	"github.com/oracle/speedle/cmd/spctl/pdl"
 )
 
 var (

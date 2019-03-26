@@ -8,8 +8,8 @@ import (
 	"sort"
 	"strings"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/pmsgrpc/pb"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/pkg/svcs/pmsgrpc/pb"
 )
 
 //Test Methods for Speedle

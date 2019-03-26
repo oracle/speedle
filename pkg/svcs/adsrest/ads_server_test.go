@@ -5,11 +5,11 @@ package adsrest
 import (
 	"net/http/httptest"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/assertion"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/cfg"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/eval"
-	_ "gitlab-odx.oracledx.com/wcai/speedle/pkg/store/file"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/pkg/assertion"
+	"github.com/oracle/speedle/pkg/cfg"
+	"github.com/oracle/speedle/pkg/eval"
+	_ "github.com/oracle/speedle/pkg/store/file"
 )
 
 var storeLocation = "./fakestore.json"

@@ -10,13 +10,13 @@ import (
 	"strings"
 	"time"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/3rdparty/github.com/Knetic/govaluate"
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/eval/function"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/subjectutils"
+	"github.com/oracle/speedle/3rdparty/github.com/Knetic/govaluate"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/eval/function"
+	"github.com/oracle/speedle/pkg/subjectutils"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	"github.com/oracle/speedle/api/pms"
 
 	log "github.com/sirupsen/logrus"
 )

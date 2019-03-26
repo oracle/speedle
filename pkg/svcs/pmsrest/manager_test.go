@@ -6,8 +6,8 @@ package pmsrest
 import (
 	"testing"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/testutil"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/testutil"
 )
 
 //Test REST API for Service Manangement

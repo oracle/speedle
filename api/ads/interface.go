@@ -4,7 +4,7 @@
 package ads
 
 import (
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	"github.com/oracle/speedle/api/pms"
 )
 
 type PolicyEvaluator interface {

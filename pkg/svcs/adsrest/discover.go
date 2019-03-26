@@ -6,8 +6,8 @@ package adsrest
 import (
 	"net/http"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/httputils"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/logging"
+	"github.com/oracle/speedle/pkg/httputils"
+	"github.com/oracle/speedle/pkg/logging"
 )
 
 func (e *RESTService) Discover(w http.ResponseWriter, r *http.Request) {

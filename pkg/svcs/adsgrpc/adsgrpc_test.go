@@ -6,10 +6,10 @@ package adsgrpc
 import (
 	"testing"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	adsPB "gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/adsgrpc/pb"
-	pmsPB "gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/pmsgrpc/pb"
-	"gitlab-odx.oracledx.com/wcai/speedle/testutil"
+	adsapi "github.com/oracle/speedle/api/ads"
+	adsPB "github.com/oracle/speedle/pkg/svcs/adsgrpc/pb"
+	pmsPB "github.com/oracle/speedle/pkg/svcs/pmsgrpc/pb"
+	"github.com/oracle/speedle/testutil"
 )
 
 var POLICY_RELOAD_TIME = 500 //ms

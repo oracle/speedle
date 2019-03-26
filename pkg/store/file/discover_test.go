@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/store"
+	"github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/pkg/store"
 )
 
 func TestSaveGetLastRequest(t *testing.T) {

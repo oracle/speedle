@@ -6,8 +6,8 @@ package adsrest
 import (
 	"net/http"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/eval"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs"
+	"github.com/oracle/speedle/pkg/eval"
+	"github.com/oracle/speedle/pkg/svcs"
 
 	"github.com/gorilla/mux"
 )

@@ -8,9 +8,9 @@ import (
 	"strings"
 
 	log "github.com/sirupsen/logrus"
-	"gitlab-odx.oracledx.com/wcai/speedle/3rdparty/github.com/Knetic/govaluate"
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	"github.com/oracle/speedle/3rdparty/github.com/Knetic/govaluate"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/api/pms"
 )
 
 func matchResource(requestRes string, resources, resExpressions []string) bool {

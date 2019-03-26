@@ -11,12 +11,12 @@ import (
 	"strings"
 	"sync"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/suid"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/suid"
 
 	"github.com/fsnotify/fsnotify"
 	log "github.com/sirupsen/logrus"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	"github.com/oracle/speedle/api/pms"
 )
 
 type Store struct {

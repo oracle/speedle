@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
+	adsapi "github.com/oracle/speedle/api/ads"
 )
 
 func TestAssertion(t *testing.T) {

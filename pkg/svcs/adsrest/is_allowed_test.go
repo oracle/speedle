@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs"
-	"gitlab-odx.oracledx.com/wcai/speedle/testutil"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/pkg/svcs"
+	"github.com/oracle/speedle/testutil"
 )
 
 const (

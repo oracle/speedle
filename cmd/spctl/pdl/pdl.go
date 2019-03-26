@@ -12,9 +12,9 @@ import (
 	"strings"
 	"unicode"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/subjectutils"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/pkg/subjectutils"
 )
 
 const (

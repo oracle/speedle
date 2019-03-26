@@ -17,9 +17,9 @@ import (
 	"reflect"
 	"strings"
 
-	pmsapi "gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/cmd/flags"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs"
+	pmsapi "github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/pkg/cmd/flags"
+	"github.com/oracle/speedle/pkg/svcs"
 )
 
 const (

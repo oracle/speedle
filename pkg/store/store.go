@@ -7,8 +7,8 @@ import (
 	"sort"
 	"sync"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/pkg/errors"
 )
 
 var (

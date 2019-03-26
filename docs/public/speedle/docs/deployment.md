@@ -28,7 +28,7 @@ In `Production mode`, Speedle components run on an `etcd` cluster as a policy st
 1. Golang 1.10.0 environment has already been installed on dev box.
 2. Docker 1.12 or higher has already been installed on dev box.
 3. A docker registry to publish docker images.
-4. Sync up the latest code from Speedle repo to folder \$GOPATH/src/gitlab-odx.oracledx.com/wcai/speedle/ on dev box.
+4. Sync up the latest code from Speedle repo to folder \$GOPATH/src/github.com/oracle/speedle/ on dev box.
 5. A Kubernetes cluster or an OKE cluster
 6. Create the docker-registry secret:
 
@@ -159,10 +159,10 @@ store:
 
 #### Build Speedle
 
-Assume system environment variable GOPATH has already been set, and speedle code could be found under directory \$GOPATH/src/gitlab-odx.oracledx.com/wcai/speedle/
+Assume system environment variable GOPATH has already been set, and speedle code could be found under directory \$GOPATH/src/github.com/oracle/speedle/
 
 ```bash
-cd $GOPATH/src/gitlab-odx.oracledx.com/wcai/speedle
+cd $GOPATH/src/github.com/oracle/speedle
 make
 ```
 
@@ -176,7 +176,7 @@ export pmsImageImageVesion=docker image version of pms
 export adsImageRepo=docker repository of ads
 export adsImageImageVesion=docker image version of ads
 
-cd $GOPATH/src/gitlab-odx.oracledx.com/wcai/speedle
+cd $GOPATH/src/github.com/oracle/speedle
 make image
 ```
 
@@ -184,7 +184,7 @@ make image
 
 ##### Create the Dev Mode Kubernetes Deployment
 
-This is a sample YAML file to deploy both speedle-pms and speedle-ads in one kubernetes deployment. This file can be found from GIT repo: https://gitlab-odx.oracledx.com/wcai/speedle/blob/master/deployment/k8s/speedle-dev.yaml
+This is a sample YAML file to deploy both speedle-pms and speedle-ads in one kubernetes deployment. This file can be found from GIT repo: https://github.com/oracle/speedle/blob/master/deployment/k8s/speedle-dev.yaml
 
 ```yaml
 kind: Service
@@ -274,7 +274,7 @@ speedle   ClusterIP   10.108.146.148   <none>        6733/TCP,6734/TCP   39m
 
 This is a sample YAML file to deploy both speedle-pms and speedle-ads in one kubernetes
 deployment. This file can be found from GIT repo:
-https://gitlab-odx.oracledx.com/wcai/speedle/blob/master/deployment/k8s/speedle-prod.yaml.
+https://github.com/oracle/speedle/blob/master/deployment/k8s/speedle-prod.yaml.
 
 In this deployment file, `etcd` runs in one Kubernetes POD. An HA `etcd` cluster
 depends on users environment, if want to run Speedle on an `etcd` cluster,

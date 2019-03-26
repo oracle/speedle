@@ -8,8 +8,8 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/3rdparty/github.com/Knetic/govaluate"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	"github.com/oracle/speedle/3rdparty/github.com/Knetic/govaluate"
+	"github.com/oracle/speedle/api/pms"
 )
 
 type PolicyCacheData struct {

@@ -6,8 +6,8 @@
 package adsrest
 
 import (
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/testutil"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/testutil"
 	"testing"
 )
 

@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	"github.com/oracle/speedle/api/pms"
 )
 
 func TestParsingPolicy(t *testing.T) {

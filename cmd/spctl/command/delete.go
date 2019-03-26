@@ -8,7 +8,7 @@ import (
 	"os"
 	"strings"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/cmd/spctl/client"
+	"github.com/oracle/speedle/cmd/spctl/client"
 
 	"github.com/spf13/cobra"
 )

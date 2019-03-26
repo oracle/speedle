@@ -12,8 +12,8 @@ import (
 
 	"net/http/httptest"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/assertion"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs"
+	"github.com/oracle/speedle/pkg/assertion"
+	"github.com/oracle/speedle/pkg/svcs"
 )
 
 func TestSettingPrincipalHeader(t *testing.T) {

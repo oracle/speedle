@@ -6,8 +6,8 @@ package eval
 import (
 	"testing"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/api/pms"
 )
 
 func TestGetResourcesWithoutApp(t *testing.T) {

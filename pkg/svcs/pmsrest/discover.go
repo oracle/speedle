@@ -10,12 +10,12 @@ import (
 
 	"github.com/gorilla/mux"
 	log "github.com/sirupsen/logrus"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/httputils"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/logging"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/store"
+	"github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/httputils"
+	"github.com/oracle/speedle/pkg/logging"
+	"github.com/oracle/speedle/pkg/store"
 )
 
 type GetDiscoverRequestsResponse struct {

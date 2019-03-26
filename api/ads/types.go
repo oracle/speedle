@@ -3,7 +3,7 @@
 
 package ads
 
-import "gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+import "github.com/oracle/speedle/api/pms"
 
 type Principal struct {
 	Type string `json:"type,omitempty"`

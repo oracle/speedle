@@ -9,9 +9,9 @@ import (
 
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/pflag"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/store"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/store"
 )
 
 const (

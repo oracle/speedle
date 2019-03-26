@@ -7,14 +7,14 @@ import (
 	"fmt"
 	"net"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/cmd/flags"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/logging"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/store"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/pmsgrpc"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/pmsgrpc/pb"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/pmsrest"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/pkg/cmd/flags"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/logging"
+	"github.com/oracle/speedle/pkg/store"
+	"github.com/oracle/speedle/pkg/svcs/pmsgrpc"
+	"github.com/oracle/speedle/pkg/svcs/pmsgrpc/pb"
+	"github.com/oracle/speedle/pkg/svcs/pmsrest"
 
 	log "github.com/sirupsen/logrus"
 

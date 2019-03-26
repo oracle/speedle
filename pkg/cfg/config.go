@@ -7,9 +7,9 @@ import (
 	"encoding/json"
 	"io/ioutil"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/assertion"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/logging"
+	"github.com/oracle/speedle/pkg/assertion"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/logging"
 )
 
 const (

@@ -6,7 +6,7 @@ package subjectutils
 import (
 	"fmt"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
+	adsapi "github.com/oracle/speedle/api/ads"
 )
 
 // EncodePrincipal encodes prinicpal object to string

@@ -9,9 +9,9 @@ import (
 	"os"
 	"strings"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/cmd/spctl/client"
+	"github.com/oracle/speedle/cmd/spctl/client"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	"github.com/oracle/speedle/api/pms"
 
 	"github.com/spf13/cobra"
 )

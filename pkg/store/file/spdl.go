@@ -11,10 +11,10 @@ import (
 	"strings"
 
 	log "github.com/sirupsen/logrus"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
-	"gitlab-odx.oracledx.com/wcai/speedle/cmd/spctl/pdl"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/suid"
+	"github.com/oracle/speedle/api/pms"
+	"github.com/oracle/speedle/cmd/spctl/pdl"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/suid"
 )
 
 type phase int

@@ -13,8 +13,8 @@ import (
 	"sort"
 	"strings"
 
-	adsPB "gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/adsgrpc/pb"
-	pmsPB "gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs/pmsgrpc/pb"
+	adsPB "github.com/oracle/speedle/pkg/svcs/adsgrpc/pb"
+	pmsPB "github.com/oracle/speedle/pkg/svcs/pmsgrpc/pb"
 
 	"google.golang.org/grpc"
 )

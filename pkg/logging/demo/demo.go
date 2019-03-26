@@ -9,7 +9,7 @@ import (
 	"io/ioutil"
 
 	log "github.com/sirupsen/logrus"
-	logging "gitlab-odx.oracledx.com/wcai/speedle/pkg/logging"
+	logging "github.com/oracle/speedle/pkg/logging"
 )
 
 type Config struct {

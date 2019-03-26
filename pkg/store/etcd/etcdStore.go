@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/suid"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/suid"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/pms"
+	"github.com/oracle/speedle/api/pms"
 
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/clientv3/concurrency"

@@ -8,7 +8,7 @@ import (
 
 	"github.com/natefinch/lumberjack"
 	log "github.com/sirupsen/logrus"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/errors"
 )
 
 const (

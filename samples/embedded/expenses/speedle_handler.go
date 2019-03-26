@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strings"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/eval"
+	"github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/pkg/eval"
 )
 
 // Wrap wraps an HTTP handler with a new HTTP handler for authorization

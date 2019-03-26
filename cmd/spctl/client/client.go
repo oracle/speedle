@@ -14,7 +14,7 @@ import (
 	"path"
 	"strings"
 
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/httputils"
+	"github.com/oracle/speedle/pkg/httputils"
 )
 
 type Client struct {

@@ -14,7 +14,7 @@ import (
 	"time"
 
 	log "github.com/sirupsen/logrus"
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
+	adsapi "github.com/oracle/speedle/api/ads"
 )
 
 const (

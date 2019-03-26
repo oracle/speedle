@@ -11,8 +11,8 @@ import (
 	"net/http"
 	"testing"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/api/ext"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/api/ext"
 )
 
 var (

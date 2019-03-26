@@ -9,15 +9,15 @@ import (
 	"reflect"
 	"time"
 
-	adsapi "gitlab-odx.oracledx.com/wcai/speedle/api/ads"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/cfg"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/errors"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/eval"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/httputils"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/logging"
+	adsapi "github.com/oracle/speedle/api/ads"
+	"github.com/oracle/speedle/pkg/cfg"
+	"github.com/oracle/speedle/pkg/errors"
+	"github.com/oracle/speedle/pkg/eval"
+	"github.com/oracle/speedle/pkg/httputils"
+	"github.com/oracle/speedle/pkg/logging"
 
 	log "github.com/sirupsen/logrus"
-	"gitlab-odx.oracledx.com/wcai/speedle/pkg/svcs"
+	"github.com/oracle/speedle/pkg/svcs"
 )
 
 type JsonAttribute struct {
