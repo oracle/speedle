@@ -17,6 +17,32 @@ See Getting Started at <https://speedle.io/quick-start/>.
 
 ## Build
 
+### Prerequisites
+
+* GO 1.10.1 or greater <https://golang.org/doc/install>
+* Set `GOROOT` and `GOPATH` properly
+
+### Steps
+
+1. Fetch Speedle source code
+```
+[opc@wcai-speedle-host ~]$ go get github.com/oracle/speedle
+```
+
+2. Move to Speedle source code directory
+
+```
+[opc@wcai-speedle-host gopath]$ cd $GOPATH/src/github.com/oracle/speedle
+```
+
+3. Compile
+
+```
+[opc@wcai-speedle-host speedle]$ make
+go build -ldflags "-X main.gitCommit=a61b32e -X main.productVersion=18.4.1 -X main.goVersion=go1.12.1" -o /home/opc/gopath/bin/speedle-pms github.com/oracle/speedle/cmd/speedle-pms
+go build -ldflags "-X main.gitCommit=a61b32e -X main.productVersion=18.4.1 -X main.goVersion=go1.12.1" -o /home/opc/gopath/bin/speedle-ads github.com/oracle/speedle/cmd/speedle-ads
+go build -ldflags "-X main.gitCommit=a61b32e -X main.productVersion=18.4.1 -X main.goVersion=go1.12.1" -o /home/opc/gopath/bin/spctl  github.com/oracle/speedle/cmd/spctl
+```
 
 ## Get Help
 
