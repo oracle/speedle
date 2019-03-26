@@ -1,0 +1,27 @@
+# Kubernetes API version
+apiVersion: v1
+# kind of the API object
+kind: Config
+# clusters refers to the remote service.
+clusters:
+  - name: name-of-remote-authz-service
+    cluster:
+      # CA for verifying the remote service.
+      certificate-authority: /path/to/ca.crt
+      # URL of remote service to query. Must use 'https'. May not include parameters.
+      server: https://<speedle host ip>:<speedle ads port>/
+
+# users refers to the API Server's webhook configuration.
+users:
+  - name: name-of-api-server
+    user:
+      client-certificate: /path/to/server.crt # cert for the webhook plugin to use
+      client-key: /path/to/server.key          # key matching the cert
+
+# kubeconfig files require a context. Provide one for the API Server.
+current-context: webhook
+contexts:
+- context:
+    cluster: name-of-remote-authz-service
+    user: name-of-api-server
+  name: webhook

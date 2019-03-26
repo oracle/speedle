@@ -1,0 +1,27 @@
+{{- define "serviceTemplate" }}
+{{- with .chart }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "speedle.fullname" . }}-{{ $.serviceName }}
+  labels:
+    app: {{ $.serviceName }}
+    chart: {{ template "speedle.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ $.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ $.serviceName }}
+    release: {{ .Release.Name }}
+{{- end }}
+{{- end }}
+
+{{- template "serviceTemplate" dict "chart" $ "serviceName" "pms" "port" .Values.service.pmsPort }}
+---
+{{- template "serviceTemplate" dict "chart" $ "serviceName" "ads" "port" .Values.service.adsPort }}

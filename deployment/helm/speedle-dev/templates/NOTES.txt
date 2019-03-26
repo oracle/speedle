@@ -1,0 +1,2 @@
+$ kubectl port-forward svc/{{ template "speedle.fullname" . }} 6733:6733 6734:6734 
+  Then access http://127.0.0.1:6733/policy-mgmt/v1/ to manage policies, access http://127.0.0.1:6734/authz-check/v1/is-allowed to check permissions.

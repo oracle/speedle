@@ -1,0 +1,10 @@
+export ISTIO=$GOPATH/src/istio.io
+export MIXER_REPO=$ISTIO/istio/mixer
+export REGISTRY=
+export BUILD_OOP_DOCKER_HUB=
+export BUILD_OOP_DOCKER_TAG=
+#The speedle adapter service port, eg: 8888
+export OOP_ADAPTER_SERVICE_PORT=
+export SPEEDLE_ADS_ENDPOINT="http://speedle-ads.speedle.svc.cluster.local:6734/authz-check/v1/is-allowed"
+export SPEEDLE_SERVICE_NAME=istio
+

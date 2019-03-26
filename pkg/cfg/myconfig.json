@@ -1,0 +1,8 @@
+{
+    "storeConfig": {
+        "storeType": "file",
+        "storeProps": {
+            "FileLocation": "./ps.json"
+        }
+    }
+}

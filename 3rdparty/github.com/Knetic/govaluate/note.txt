@@ -1,0 +1,5 @@
+The code in this directory is based on 3rd party code "github.com/Knetic/govaluate", revision="9aa49832a739dcd78a5542ff189fb82c3e423116", with additional fix of following 2 issues.
+https://github.com/Knetic/govaluate/issues/114
+https://github.com/Knetic/govaluate/issues/115
+
+

@@ -1,0 +1,48 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "speedle.fullname" . }}
+  labels:
+    app: speedle
+    chart: {{ template "speedle.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: speedle
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: speedle
+        release: {{ .Release.Name }}
+    spec:
+      imagePullSecrets:
+        - name: "{{ .Values.image.pullSecret }}"
+      containers:
+        - name: pms
+          image: "{{ .Values.image.pms }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - mountPath: /var/lib/speedle
+              name: policy-store
+          ports:
+            - name: pms
+              containerPort: 6733
+              protocol: TCP
+        - name: ads
+          image: "{{ .Values.image.ads }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - mountPath: /var/lib/speedle
+              name: policy-store
+          ports:
+            - name: ads
+              containerPort: 6734
+              protocol: TCP
+      volumes:
+      - name: policy-store
+        hostPath:
+          path: /home/opc/policystore

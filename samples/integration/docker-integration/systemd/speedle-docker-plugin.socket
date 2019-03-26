@@ -1,0 +1,8 @@
+[Unit]
+Description=Docker RBAC & ABAC Authorization Plugin based on Speedle Socket for the API
+
+[Socket]
+ListenStream=/run/docker/plugins/speedle-docker-plugin.sock
+
+[Install]
+WantedBy=sockets.target

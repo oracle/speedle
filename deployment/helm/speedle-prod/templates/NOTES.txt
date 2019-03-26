@@ -1,0 +1,12 @@
+{{- define "schema" -}}
+{{- if .Values.tls -}}
+{{- "https" -}}
+{{- else -}}
+{{- "http" -}}
+{{- end -}}
+{{- end -}}
+1. $ kubectl port-forward svc/{{ template "speedle.fullname" . }}-pms 6733:6733
+Then access {{ template "schema" . }}://127.0.0.1:6733/policy-mgmt/v1 to manage policies.
+
+2. $ kubectl port-forward svc/{{ template "speedle.fullname" . }}-ads 6734:6734
+Then access {{ template "schema" . }}://127.0.0.1:6733/authz-check/v1/is-allowed to manage policies.

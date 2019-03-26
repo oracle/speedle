@@ -1,0 +1,147 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: speedle
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: speedle-pms
+  namespace: speedle
+spec:
+  selector:
+    app: speedle
+    name: pms
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 6733
+    targetPort: 6733
+    name: pms
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: speedle-ads
+  namespace: speedle
+spec:
+  selector:
+    app: speedle
+    name: ads
+  ports:
+  - protocol: TCP
+    port: 6734
+    targetPort: 6734
+    name: ads
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: speedle-etcd
+  namespace: speedle
+spec:
+  selector:
+    app: speedle
+    name: etcd
+  ports:
+  - protocol: TCP
+    port: 2379
+    targetPort: 2379
+    name: etcd
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: speedle-etcd
+  namespace: speedle
+  labels:
+    app: speedle
+    name: etcd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: speedle
+      name: etcd
+  template:
+    metadata:
+      labels:
+        app: speedle
+        name: etcd
+    spec:
+      containers:
+      - name: pms
+        image: quay.io/coreos/etcd:v3.2
+        command: ["/usr/local/bin/etcd"]
+        args: ["--listen-client-urls", "http://0.0.0.0:2379", "--advertise-client-urls", "http://0.0.0.0:2379"]
+        ports:
+        - containerPort: 2379
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: speedle-pms
+  namespace: speedle
+  labels:
+    app: speedle
+    name: pms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: speedle
+      name: pms
+  template:
+    metadata:
+      labels:
+        app: speedle
+        name: pms
+    spec:
+      containers:
+      - name: pms
+        image: r.authz.fun/speedle-pms:v0.1  // please update image location
+        command: ["speedle-pms"]
+        args: ["--endpoint", "0.0.0.0:6733", "--store-type", "etcd", "--etcdstore-endpoint", "speedle-etcd:2379"]
+        ports:
+        - containerPort: 6733
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: speedle-ads
+  namespace: speedle
+  labels:
+    app: speedle
+    name: ads
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: speedle
+      name: ads
+  template:
+    metadata:
+      labels:
+        app: speedle
+        name: ads
+    spec:
+      containers:
+      - name: ads
+        image: r.authz.fun/speedle-ads:v0.1  // please update image location
+        command: ["speedle-ads"]
+        args: ["--endpoint", "0.0.0.0:6734", "--store-type", "etcd", "--etcdstore-endpoint", "speedle-etcd:2379"]
+        ports:
+        - containerPort: 6734
+

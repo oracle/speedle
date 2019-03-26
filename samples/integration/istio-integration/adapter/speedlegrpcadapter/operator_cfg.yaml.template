@@ -1,0 +1,52 @@
+# instance configuration for template 'authorization'
+apiVersion: "config.istio.io/v1alpha2"
+kind: instance
+metadata:
+  name: speedle-instance
+  namespace: istio-system
+spec:
+  template: authorization
+  params:
+    subject:
+      user: request.headers["end-user"] | request.headers["cookie"] | ""
+      #groups: 
+      properties:
+        source.service: source.labels["app"] | ""
+        source.namespace: source.namespace | ""
+    action:
+      namespace: destination.service.namespace | destination.namespace | ""
+      service: destination.service.name | destination.labels["app"] | ""
+      method: request.method | ""
+      path: request.path | ""
+      properties:
+        service: request.headers["version"] | ""
+
+---
+# handler configuration for adapter 'speedle'
+apiVersion: "config.istio.io/v1alpha2"
+kind: handler
+metadata:
+ name: speedle-handler
+ namespace: istio-system
+spec:
+ adapter: speedlegrpcadapter
+ connection:
+   address: "speedlegrpcadapter.istio-system.svc.cluster.local:<OOP_ADAPTER_SERVICE_PORT>"
+ params:
+   ads_endpoint: <ADS_ENDPOINT>
+   speedle_service: <SERVICE_NAME>
+
+---
+#rule to dispatch to our handler, for local test, so just set the match to true
+apiVersion: "config.istio.io/v1alpha2"
+kind: rule
+metadata:
+ name: speedle-rule
+ namespace: istio-system
+spec:
+ match: destination.labels["app"] == "details" || destination.labels["app"] == "productpage" || destination.labels["app"] == "reviews" || destination.labels["app"] == "ratings"
+ actions:
+ - handler: speedle-handler.istio-system
+   instances:
+   - speedle-instance
+

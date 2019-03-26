@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+      name: speedlegrpcadapter
+      namespace: istio-system
+      labels:
+        app: speedlegrpcadapter
+spec:
+    selector:
+       matchLabels:
+            app: speedlegrpcadapter
+    replicas: 1
+    template:
+        metadata:
+              labels:
+                 app: speedlegrpcadapter
+              annotations:
+                sidecar.istio.io/inject: "false"
+                scheduler.alpha.kubernetes.io/critical-pod: ""
+        spec:
+            containers:
+            - name: speedlegrpcadapter
+              image: <BUILD_OOP_DOCKER_HUB>:<BUILD_OOP_DOCKER_TAG>
+              imagePullPolicy: IfNotPresent
+              ports:
+              - containerPort: 41165
+              command: ["/usr/local/bin/speedlegrpcadapter"]
+              args: [":41165"]
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+      labels:
+         app: speedlegrpcadapter
+      name: speedlegrpcadapter
+      namespace: istio-system
+spec:
+    type: ClusterIP
+    selector:
+        app: speedlegrpcadapter
+    ports:
+    - name: grpc
+      protocol: TCP
+      port: <OOP_ADAPTER_SERVICE_PORT>
+      targetPort: 41165

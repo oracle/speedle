@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+// $title:Speedle
+// $description: Adapter that implements an Speedle client
+// $location: 
+// $aliases:
+// $  - 
+package adapter.speedle.config;
+
+import "gogoproto/gogo.proto";
+
+option go_package="config";
+option (gogoproto.goproto_getters_all) = false;
+option (gogoproto.equal_all) = false;
+option (gogoproto.gostring_all) = false;
+
+// The speedle params
+message Params {
+  // The ads endpoint
+  string ads_endpoint= 1;
+  
+  //The speedle service
+  string speedle_service = 2;
+
+  // Close the client request when adapter is disabled for invalid configuration
+  bool fail_close = 3;
+}

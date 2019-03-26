@@ -1,0 +1,8 @@
+{
+  "services": [
+    {
+    "name": "fakservice",
+    "type": "k8s-cluster"
+    }
+  ]
+}

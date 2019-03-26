@@ -1,0 +1,9 @@
+{
+    "storeConfig": {
+        "storeType": "file",
+        "storeProps": {
+            "FileLocation": "/tmp/speedle-test-file-store.json"
+        }
+    },
+    "enableWatch": true
+}

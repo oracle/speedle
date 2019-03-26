@@ -1,0 +1,11 @@
+[Unit]
+Description=Docker RBAC & ABAC Authorization Plugin based on Speedle
+Before=docker.service
+After=network.target speedle-docker-plugin.socket
+Requires=speedle-docker-plugin.socket docker.service
+
+[Service]
+ExecStart=/usr/lib/docker/speedle-docker-plugin
+
+[Install]
+WantedBy=multi-user.target

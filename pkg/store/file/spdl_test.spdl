@@ -1,0 +1,13 @@
+#Copyright (c) 2019, Oracle and/or its affiliates. All rights reserved.
+#Licensed under the Universal Permissive License (UPL) Version 1.0 as shown at http://oss.oracle.com/licenses/upl.
+
+[service.service1]
+[policy]
+grant role employee read books
+[rolepolicy]
+grant user bill role employee
+
+[service.service2]
+[policy]
+grant group customer role other
+

@@ -1,0 +1,110 @@
+{{- define "deploymentTemplate" }}
+{{- with .chart }}
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "speedle.fullname" . }}-{{ $.serviceName }}
+  labels:
+    app: {{ $.serviceName }}
+    chart: {{ template "speedle.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ $.serviceName }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ $.serviceName }}
+        release: {{ .Release.Name }}
+    spec:
+      imagePullSecrets:
+        - name: "{{ .Values.image.pullSecret }}"
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ $.image }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- if eq .Values.store.type "etcd" }}
+          command:
+            - speedle-{{ $.serviceName }}
+          {{- end }}
+          args:
+          {{- if eq .Values.store.type "etcd" }}
+            - --store-type
+            - etcd
+            - --etcdstore-endpoint
+            - {{ .Values.store.etcd.endpoint }}
+            {{- if .Values.store.etcd.certFile }}
+            - --etcdstore-tls-cert
+            - /etc/etcdtls/{{ .Values.store.etcd.certFile }}
+            {{- end }}
+            {{- if .Values.store.etcd.keyFile }}
+            - --etcdstore-tls-key
+            - /etc/etcdtls/{{ .Values.store.etcd.keyFile }}
+            {{- end }}
+            {{- if .Values.store.etcd.trustedCAFile }}
+            - --etcdstore-tls-ca
+            - /etc/etcdtls/{{ .Values.store.etcd.trustedCAFile }}
+            {{- end }}
+          {{- end }}
+          {{- if .Values.tls }}
+            - --insecure
+            - "false"
+            {{- if .Values.tls.certFile }}
+            - --cert
+            - /etc/tls/{{ .Values.tls.certFile }}
+            {{- end }}
+            {{- if .Values.tls.keyFile }}
+            - --key
+            - /etc/tls/{{ .Values.tls.keyFile }}
+            {{- end }}
+            {{- if .Values.tls.trustedCAFile }}
+            - --client-cert
+            - /etc/tls/{{ .Values.tls.trustedCAFile }}
+            {{- end }}
+            {{- if .Values.tls.forceClientCert }}
+            - --force-client-cert
+            - "{{ .Values.tls.forceClientCert }}"
+            {{- end }}
+          {{- end }}
+          volumeMounts:
+          {{- if .Values.store.etcd.etcdClientCertSecret }}
+            - name: etcd-client-tls
+              mountPath: /etc/etcdtls
+              readOnly: true
+          {{- end }}
+          {{- if .Values.tls }}
+            {{- if .Values.tls.certSecret }}
+            - name: client-tls
+              mountPath: /etc/tls
+              readOnly: true
+            {{- end }}
+          {{- end }}
+          ports:
+            - name: http
+              containerPort: {{ $.port }}
+              protocol: TCP
+      volumes:
+      {{- if .Values.store.etcd.etcdClientCertSecret }}
+      - name: etcd-client-tls
+        secret:
+          defaultMode: 420
+          secretName: {{ .Values.store.etcd.etcdClientCertSecret }}
+      {{- end }}
+      {{- if .Values.tls }}
+        {{- if .Values.tls.certSecret }}
+        - name: client-tls
+          secret:
+            defaultMode: 420
+            secretName: {{ .Values.tls.certSecret }}
+        {{- end }}
+      {{- end }}
+{{- end }}
+{{- end }}
+
+{{- template "deploymentTemplate" dict "chart" $ "serviceName" "pms" "image" .Values.image.pms "port" 6733 }}
+---
+{{- template "deploymentTemplate" dict "chart" $ "serviceName" "ads" "image" .Values.image.ads "port" 6734 }}

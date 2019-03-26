@@ -1,0 +1,9 @@
+{
+    "storeType": "etcd",
+    "storeProps": {
+        "EtcdEndpoint": "localhost:2379",
+        "EtcdKeyPrefix": "/opss_ps/",
+        "IsEmbeddedEtcd": true,
+        "EmbeddedEtcdDataDir": "./speedle.etcd"
+    }
+}

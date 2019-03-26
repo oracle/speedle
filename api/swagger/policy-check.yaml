@@ -1,0 +1,364 @@
+swagger: '2.0'
+info:
+  description: This is the definition for authorization runtime APIs.
+  version: v1
+  title: Authorization runtime API
+basePath: /authz-check/v1
+schemes:
+  - http
+paths:
+  /is-allowed:
+    post:
+      tags:
+        - isAllowed
+      summary: Check if resource is allowed to access.
+      description: Check if resource is allowed to access.
+      operationId: isAllowed
+      consumes:
+        - application/json
+        - application/yaml
+      produces:
+        - application/json
+        - application/yaml
+      parameters:
+        - in: body
+          name: body
+          description: Request Context of isAllowed
+          required: true
+          schema:
+            $ref: '#/definitions/ContextRequest'
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/IsAllowedResponse'
+        '400':
+          description: Bad request, invalid request data.
+          schema:
+            $ref: '#/definitions/Error'
+        '401':
+          description: No authorization header found or invalid authorization header found.
+        '403':
+          description: Request is not permitted.
+  /all-granted-roles:
+    post:
+      tags:
+        - getAllGrantedRoles
+      summary: Get all granted roles.
+      description: Get all granted roles.
+      operationId: getAllGrantedRoles
+      consumes:
+        - application/json
+        - application/yaml
+      produces:
+        - application/json
+        - application/yaml
+      parameters:
+        - in: body
+          name: body
+          description: Request Context of getAllGrantedRoles
+          required: true
+          schema:
+            $ref: '#/definitions/ContextRequest'
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/AllRoleResponse'
+        '400':
+          description: Bad request, invalid request data.
+          schema:
+            $ref: '#/definitions/Error'
+        '401':
+          description: No authorization header found or invalid authorization header found.
+        '403':
+          description: Request is not permitted.
+  /all-granted-permissions:
+    post:
+      tags:
+        - getAllGrantedPermissions
+      summary: Get all granted permissions.
+      description: Get all granted permissions.
+      operationId: getAllGrantedPermissions
+      consumes:
+        - application/json
+        - application/yaml
+      produces:
+        - application/json
+        - application/yaml
+      parameters:
+        - in: body
+          name: body
+          description: Request Context of getAllGrantedPermissions
+          required: true
+          schema:
+            $ref: '#/definitions/ContextRequest'
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/AllPermissionResponse'
+        '400':
+          description: Bad request, invalid request data.
+          schema:
+            $ref: '#/definitions/Error'
+        '401':
+          description: No authorization header found or invalid authorization header found.
+        '403':
+          description: Request is not permitted.
+  /discover:
+    post:
+      tags:
+        - policy discovery
+      summary: Discover has the same interface as is-allowed, but it only saves requests for analysis and always return allowed.
+      description: Save is-allowed request for later analysis and always return allowed.
+      operationId: discover
+      consumes:
+        - application/json
+        - application/yaml
+      produces:
+        - application/json
+        - application/yaml
+      parameters:
+        - in: body
+          name: body
+          description: Request Context of isAllowed
+          required: true
+          schema:
+            $ref: '#/definitions/ContextRequest'
+      responses:
+        '200':
+          description: request is successfully saved.
+          schema:
+            $ref: '#/definitions/IsAllowedResponse'
+        '400':
+          description: Bad request, invalid request data.
+          schema:
+            $ref: '#/definitions/Error'
+        '401':
+          description: No authorization header found or invalid authorization header found.
+        '403':
+          description: Request is not permitted.  
+  
+  /diagnose:
+    post:
+      tags:
+        - diagnosis
+      summary: Diagnose helps debugging policies, when an authorization request is denied, policy administrator may want to know why authorization request is denied. Diagnose reveive the authorization request and outputs .
+      description: Diagnose helps debugging policies.
+      operationId: diagnose
+      consumes:
+        - application/json
+        - application/yaml
+      produces:
+        - application/json
+        - application/yaml
+      parameters:
+        - in: body
+          name: body
+          description: Request Context of isAllowed
+          required: true
+          schema:
+            $ref: '#/definitions/ContextRequest'
+      responses:
+        '200':
+          description: request is successfully saved.
+          schema:
+            $ref: '#/definitions/DiagnoseResponse'
+        '400':
+          description: Bad request, invalid request data.
+          schema:
+            $ref: '#/definitions/Error'
+        '401':
+          description: No authorization header found or invalid authorization header found.
+        '403':
+          description: Request is not permitted.         
+          
+definitions:
+  Principal:
+    type: object
+    properties:
+      type:
+        type: string
+        enum: [user, group, entity]
+      name:
+        type: string
+      idd:
+        type: string
+  Attribute:
+    type: object
+    properties:
+      name:
+        type: string
+      type:
+        type: string
+        enum: [string, bool, numeric, datetime]
+      value: {}
+  Subject:
+    type: object
+    properties:
+      principals:
+        type: array
+        items:
+          $ref: '#/definitions/Principal'
+      tokenType:
+        type: string
+      token:
+        type: string
+      entity:
+        type: string
+  ContextRequest:
+    type: object
+    properties:
+      subject:
+        $ref: '#/definitions/Subject'
+      serviceName:
+        type: string
+      resource:
+        type: string
+      action:
+        type: string
+      attributes:
+        type: array
+        items:
+          $ref: '#/definitions/Attribute'
+  IsAllowedResponse:
+    type: object
+    properties:
+      allowed:
+        type: boolean
+      reason:
+        type: integer
+        format: int32
+      errorMessage:
+        type: string
+  AllRoleResponse:
+    type: array
+    items:
+      type: string
+  AllPermissionResponse:
+    type: array
+    items:
+      type: object
+      properties:
+        resource:
+          type: string
+        actions:
+          type: array
+          items:
+            type: string
+            
+  EffectEnum:
+    type: string
+    enum:
+      - grant
+      - deny
+      
+  AndPrincipals:
+    type: array
+    items:
+      type: string
+  Principals:
+    type: array
+    items:
+      $ref: '#/definitions/AndPrincipals'
+
+            
+  RolePolicyResponse:
+    type: object
+    properties:
+      id:
+        type: string
+      status:
+        type: string
+      name:
+        type: string
+      effect:
+        $ref: '#/definitions/EffectEnum'
+      roles:
+        type: array
+        items:
+          type: string
+      resources:
+        type: array
+        items:
+          type: string
+      principals:
+        type: array
+        items:
+          type: string
+      resourceExpressions:
+        type: array
+        items:
+          type: string
+      condition:
+        type: object
+        properties:
+          conditionExpression:
+            type: string
+          evaluationResult:
+            type: string
+  PolicyResponse:
+    type: object
+    properties:
+      id:
+        type: string
+      status:
+        type: string
+      name:
+        type: string
+      effect:
+        $ref: '#/definitions/EffectEnum'
+      permissions:
+       type: array
+       items:
+          type: object
+          properties:
+            resource:
+              type: string
+            resourceExpression:
+              type: string
+            actions:
+              type: array
+              items:
+                type: string
+      principals:
+        $ref: '#/definitions/Principals'
+      condition:
+        type: object
+        properties:
+          conditionExpression:
+            type: string
+          evaluationResult:
+            type: string
+
+  DiagnoseResponse:
+    type: object
+    properties:
+      allowed:
+        type: boolean
+      reason:
+        type: string
+      requestContext:
+        $ref: '#/definitions/ContextRequest'
+      grantedRoles:
+        type: array
+        items:
+          type: string
+      policies:
+        type: array
+        items:
+          $ref: '#/definitions/PolicyResponse'
+      rolePolicies:
+        type: array
+        items:
+          $ref: '#/definitions/RolePolicyResponse'
+      attributes:
+        type: array
+        items:
+          $ref: '#/definitions/Attribute'
+  Error:
+    type: object
+    properties:
+      error:
+        type: string

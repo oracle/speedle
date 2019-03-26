@@ -1,0 +1,120 @@
+syntax = "proto3";
+
+package pb;
+
+service Evaluator {
+    rpc IsAllowed(ContextRequest) returns(IsAllowedResponse) {}
+    rpc GetAllGrantedRoles(ContextRequest) returns(AllRoleResponse) {}
+    rpc GetAllPermissions(ContextRequest) returns(AllPermissionResponse) {}
+
+    rpc Discover(ContextRequest) returns(IsAllowedResponse) {}
+    rpc Diagnose(ContextRequest) returns(EvaluationDebugResponse) {}
+}
+
+message Principal {
+    string type = 1;
+    string name = 2;
+    string idd = 3;
+}
+
+message Subject {
+    repeated Principal principals = 1;
+    string tokenType = 2;
+    string token = 3;
+}
+
+message ContextRequest {
+    Subject subject = 1;
+    string serviceName = 2;
+    string resource = 3;
+    string action = 4;
+    map<string, string> attributes = 5;
+}
+
+message IsAllowedResponse {
+    bool allowed = 1;
+    int32 reason = 2;
+    string errMsg = 3;
+}
+
+message AndPrincipals {
+    repeated string principals = 1;
+}
+
+message RolePolicy {
+        string ID = 1;
+        string Name = 2;
+        string Effect = 3;
+        repeated string Roles = 4;
+        repeated string Principals = 5;
+        repeated string Resources = 6;
+        repeated string ResourceExpressions = 7;
+        string Condition = 8;
+    }
+
+message Policy {
+    message Permission {
+        string resource = 1;
+        string resourceExpression = 2;
+        repeated string actions = 3;
+    }
+    string ID = 1;
+    string Name = 2;
+    string Effect = 3;
+    repeated Permission permissions = 4;
+    repeated AndPrincipals Principals = 5;
+    string Condition = 6;
+}
+
+message EvaluatedCondition {
+    string ConditionExpression = 1;
+    string EvaluationResult = 2;
+}
+
+message EvaluatedRolePolicy {
+    string Status = 1;
+    string ID = 2;
+    string Name = 3;
+    string Effect = 4;
+    repeated string Roles = 5;
+    repeated string Principals = 6;
+    repeated string Resources = 7;
+    repeated string ResourceExpressions = 8;
+    EvaluatedCondition Condition = 9;
+}
+
+message EvaluatedPolicy {
+    message Permission {
+        string resource = 1;
+        string resourceExpression = 2;
+        repeated string actions = 3;
+    }
+    string Status = 1;
+    string ID = 2;
+    string Name = 3;
+    string Effect = 4;
+    repeated Permission permissions = 5;
+    repeated string Principals = 6;
+    EvaluatedCondition Condition = 7;
+}
+
+message EvaluationDebugResponse {
+    bool allowed = 1;
+    string reason = 2;
+    ContextRequest requestContext = 3;
+    repeated string grantedRoles = 4;
+    repeated EvaluatedRolePolicy rolePolicies = 5;
+    repeated EvaluatedPolicy policies = 6;
+}
+
+message AllRoleResponse {
+    repeated string roles = 1;
+}
+
+message AllPermissionResponse {
+    message Permission {
+        string resource = 1;
+        repeated string actions = 2;
+    }
+    repeated Permission permissions = 1;
+}

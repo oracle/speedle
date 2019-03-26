@@ -1,0 +1,57 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: speedle
+spec:
+  selector:
+    app: speedle
+  ports:
+  - protocol: TCP
+    port: 6733
+    targetPort: 6733
+    name: pms
+  - protocol: TCP
+    port: 6734
+    targetPort: 6734
+    name: ads
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: speedle
+  labels:
+    app: speedle
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: speedle
+      name: ads
+  template:
+    metadata:
+      labels:
+        app: speedle
+        name: ads
+    spec:
+      containers:
+      - name: ads
+        image: speedle-ads:v0.1
+        ports:
+        - containerPort: 6734
+        volumeMounts:
+        - mountPath: /var/lib/speedle
+          name: policy-store
+      - name: pms
+        image: speedle-pms:v0.1
+        ports:
+        - containerPort: 6733
+        volumeMounts:
+        - mountPath: /var/lib/speedle
+          name: policy-store
+      volumes:
+      - name: policy-store
+        hostPath:
+          path: /home/opc/policystore
+

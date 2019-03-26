@@ -1,0 +1,18 @@
+site_name: Speedle
+pages:
+    - Home: index.md
+    - Authorization ABC: aabc.md
+    - Quick Start: quickstart.md
+    - Use Cases: usecases.md
+    - SPDL Language: spdl.md
+    - Architecture: architecture.md
+    - Deployment: deployment.md
+    - Integration Samples: integration.md
+    - Versions: versions.md
+    - Why Speedle: why.md
+    - Reference Customers: customers.md
+    - FAQ: faq.md
+    - API Documentation: apis.md
+    - Tutorial: tutorial.md
+    - Logging: logging.md
+theme: readthedocs

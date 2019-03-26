@@ -1,0 +1,37 @@
+{
+	"storeConfig": {
+        "storeType": "etcd",
+        "storeProps": {
+            "EtcdEndpoint": "localhost:2379",
+            "EtcdKeyPrefix": "/opss_ps/",
+            "IsEmbeddedEtcd": true,
+            "EmbeddedEtcdDataDir": "./speedle.etcd"
+        }
+    },
+    "enableWatch":true,
+    "asserterWebhookConfig": {
+        "endpoint": "https://%idd%.identity.c9dev0.oc9qadev.com/.well-known/idcs-configuration",
+        "clientCert": "",
+        "clientKey": "",
+        "caCert": ""
+    },
+    "serverConfig": {
+        "endpoint":"",
+        "insecure":"",
+        "certPath":"",
+        "clientCertPath":"",
+        "keyPath":""
+    },
+    "logConfig": {
+        "level": "info",
+        "formatter": "text", 
+        "rotationConfig": {
+            "filename": ".speedle.log",
+            "maxSize": 10,
+            "maxBackups": 5,
+            "maxAge": 0,
+            "LocalTime": false,
+            "compress": false
+        }
+    }	
+}

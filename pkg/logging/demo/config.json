@@ -1,0 +1,15 @@
+{
+    "logConfig": {
+        "level": "info",
+        "formatter": "text", 
+        "setReportCaller": false,
+        "rotationConfig": {
+            "filename": "./mylog.log",
+            "maxSize": 10,
+            "maxBackups": 5,
+            "maxAge": 0,
+            "LocalTime": false,
+            "compress": false
+        }
+    }
+}
