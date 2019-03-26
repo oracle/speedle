@@ -1,5 +1,5 @@
 
-<img src="/docs/images/Speedle_logo_b.svg" height="50%" width="50%"/> 
+<img src="/docs/images/Speedle_logo_b.svg" height="50%" width="50%" class="center"/> 
 
 # Speedle
 
@@ -8,10 +8,11 @@ Speedle is an open source project for authorization management. It consits of a 
 
 ## Documentation
 
+Latest documentation and javadocs are available at <https://speedle.io/docs/usecases/>.
+
 ## Get Started
 
-
-## Downloads / Accessing Binaries
+See Getting Started at <https://speedle.io/quick-start/>.
 
 
 ## Build
@@ -19,8 +20,11 @@ Speedle is an open source project for authorization management. It consits of a 
 
 ## Get Help
 
+* Join us on Slack: [#speedle-users](https://join.slack.com/t/speedleproject/shared_invite/enQtNTUzODM3NDY0ODE2LTg0ODc0NzQ1MjVmM2NiODVmMThkMmVjNmMyODA0ZWJjZjQ3NDc2MjdlMzliN2U4MDRkZjhlYzYzMDEyZTgxMGQ)
+* Mailing List: speedle-users@googlegroups.com
 
 ## Get Involved
 
-
+* Learn how to [contribute](CONTRIBUTING.md)
+* See [issues](https://github.com/oracle/speedle/issues) for issues you can help with
 
