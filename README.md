@@ -1,5 +1,5 @@
 
-<img src="/docs/images/speedle_black.png" height="10%" width="10%"/> Speedle
+<img src="/docs/images/speedle_black.png" height="10%" width="10%"/> <font face="IBM Plex Sans" size="200"> Speedle </font>
 
 # Speedle
 
