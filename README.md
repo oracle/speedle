@@ -1,4 +1,5 @@
-<img src="/docs/imagesspeedle.png" height="10%" width="10%"/>
+
+<img src="/docs/images/speedle_black.png" height="10%" width="10%"/> Speedle
 
 # Speedle
 
