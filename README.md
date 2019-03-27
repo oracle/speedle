@@ -9,7 +9,9 @@
 
 # Speedle
 
-Speedle is an open source project for authorization management. It consits of a policy definition language, policy management module, authorization runtime module, commandline tool, and integration samples with popular systems.
+Speedle is a general purpose authorization engine. It allows users to construct their policy model with user-friendly policy definition language and get authorization decision efficiently based on the policies. Speedle is very user-friendly, efficient, and extremely scalable. 
+
+Speedle open source project consits of a policy definition language, policy management module, authorization runtime module, commandline tool, and integration samples with popular systems.
 
 ## Documentation
 
