@@ -31,16 +31,16 @@ See Getting Started at <https://speedle.io/quick-start/>.
 ### Step
 
 ```
-[opc@wcai-speedle-host gopath]$ go get github.com/oracle/speedle/cmd/...
-[opc@wcai-speedle-host gopath]$ ls $GOPATH/bin
+$ go get github.com/oracle/speedle/cmd/...
+$ ls $GOPATH/bin
 spctl  speedle-ads  speedle-pms
 ```
 
 ## Test
 
 ```
-[opc@wcai-speedle-host ~]$ cd $GOPATH/src/github.com/oracle/speedle
-[opc@wcai-speedle-host speedle]$ make test
+$ cd $GOPATH/src/github.com/oracle/speedle
+$ make test
 ```
 
 ## Get Help
