@@ -15,7 +15,7 @@ Speedle open source project consits of a policy definition language, policy mana
 
 ## Documentation
 
-Latest documentation and javadocs are available at <https://speedle.io/docs/usecases/>.
+Latest documentation and javadocs are available at <https://speedle.io/docs>.
 
 ## Get Started
 
