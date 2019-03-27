@@ -2,8 +2,14 @@
     <img src="/docs/images/Speedle_logo_b.svg" height="50%" width="50%" class="center"/>
 </p>
 <p align="center">
+    <a href="https://github.com/oracle/speedle/tags">
+        <img src="https://img.shields.io/github/tag/oracle/speedle.svg" alt="latest version">
+    </a>
+    <a href="https://github.com/oracle/speedle/issues">
+        <img src="https://img.shields.io/github/issues/oracle/speedle.svg" alt="latest version">
+    </a>
     <a href="https://app.wercker.com/project/byKey/07abf3ef318b376c1171c95346333083">
-    <img alt="Wercker status" src="https://app.wercker.com/status/07abf3ef318b376c1171c95346333083/s/master">
+        <img alt="Wercker status" src="https://app.wercker.com/status/07abf3ef318b376c1171c95346333083/s/master">
     </a>
 </p>
 
