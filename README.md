@@ -34,6 +34,13 @@ See Getting Started at <https://speedle.io/quick-start/>.
 spctl  speedle-ads  speedle-pms
 ```
 
+## Test
+
+```
+[opc@wcai-speedle-host ~]$ cd $GOPATH/src/github.com/oracle/speedle
+[opc@wcai-speedle-host speedle]$ make test
+```
+
 ## Get Help
 
 -   Join us on Slack: [#speedle-users](https://join.slack.com/t/speedleproject/shared_invite/enQtNTUzODM3NDY0ODE2LTg0ODc0NzQ1MjVmM2NiODVmMThkMmVjNmMyODA0ZWJjZjQ3NDc2MjdlMzliN2U4MDRkZjhlYzYzMDEyZTgxMGQ)
