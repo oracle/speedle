@@ -8,6 +8,9 @@
     <a href="https://github.com/oracle/speedle/issues">
         <img src="https://img.shields.io/github/issues/oracle/speedle.svg" alt="latest version">
     </a>
+    <a href="https://goreportcard.com/badge/github.com/oracle/speedle">
+        <img src="https://goreportcard.com/badge/github.com/oracle/speedle" alt="latest version">
+    </a>
     <a href="https://app.wercker.com/project/byKey/07abf3ef318b376c1171c95346333083">
         <img alt="Wercker status" src="https://app.wercker.com/status/07abf3ef318b376c1171c95346333083/s/master">
     </a>
