@@ -16,6 +16,10 @@
     </a>
 </p>
 
+<p align="right">
+<a href="README.zh-cn.md">中文版</a>
+</p>
+
 # Speedle
 
 Speedle is a general purpose authorization engine. It allows users to construct their policy model with user-friendly policy definition language and get authorization decision in milliseconds based on the policies. Speedle is very user-friendly, efficient, and extremely scalable. 
