@@ -16,9 +16,13 @@
     </a>
 </p>
 
+<p align="left">
+<a href="README.md">English Version</a>
+</p>
+
 # Speedle
 
-Speedle是一个通用授权引擎。用户可以使用它非常易用的策略定义语言构建自己的授权模型，并在数毫秒之内基于定义的策略得到授权结果。Speedle非常易用，非常高效，而且可扩展性能力非常强。用户可以在Speedle里面管理百万规模级的授权策略。
+Speedle是一个通用授权引擎。用户可以使用它非常易用的策略定义语言构建自己的授权模型，并能在数毫秒之内得到授权结果。Speedle非常易用，非常高效，而且可扩展性能力非常强。用户可以在Speedle里面管理百万规模级的授权策略。
 
 作为一个开源项目，Speedle包括策略定义语言（SPDL)，策略管理模块，授权决策模块，命令行工具，以及数个和流行系统集成的示例。
 
@@ -62,7 +66,7 @@ $ make test
 如果您喜欢Speedle项目并愿意为它做些事情，我们将非常欢迎。您可以：
 
 0. 下载并使用Speedle，这是对Speedle项目的最大支持
-1. 在https://github.com/oracle/speedle右上角，为Speedle项目加颗星星
+1. 在<https://github.com/oracle/speedle>右上角，为Speedle项目加颗星星
 2. 帮助推广Speedle项目，向您的同事，同学，朋友介绍Speedle
 3. 如果不介意的话，您可以告诉我们您如何在项目里使用Speedle
 4. 通过<https://github.com/oracle/speedle/issues>告诉我们您使用过程中发现的问题
