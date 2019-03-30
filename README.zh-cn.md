@@ -16,7 +16,7 @@
     </a>
 </p>
 
-<p align="left">
+<p align="right">
 <a href="README.md">English Version</a>
 </p>
 
