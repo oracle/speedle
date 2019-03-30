@@ -58,7 +58,7 @@ $ make test
 
 ## 社区
 
--   我们推荐大家使用Slack，Slack是一个非常优秀的沟通工具，Speedle的Slack社区很活跃，里面的每一个问题都会在24小时内得到回复。: [#speedle-chinese](https://join.slack.com/t/speedleproject/shared_invite/enQtNTUzODM3NDY0ODE2LTg0ODc0NzQ1MjVmM2NiODVmMThkMmVjNmMyODA0ZWJjZjQ3NDc2MjdlMzliN2U4MDRkZjhlYzYzMDEyZTgxMGQ)
+-   我们推荐大家使用Slack，Slack是一个非常优秀的沟通工具，Speedle的Slack社区很活跃，里面的每一个问题都会在24小时内得到回复。[#speedle-chinese](https://join.slack.com/t/speedleproject/shared_invite/enQtNTUzODM3NDY0ODE2LTg0ODc0NzQ1MjVmM2NiODVmMThkMmVjNmMyODA0ZWJjZjQ3NDc2MjdlMzliN2U4MDRkZjhlYzYzMDEyZTgxMGQ)
 -   如果大家访问Slack有困难，可以加入QQ群。群号：643201591
 
 ## 参与
