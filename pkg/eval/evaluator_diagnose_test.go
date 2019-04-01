@@ -131,6 +131,9 @@ func TestDiagnoseNoPolicy(t *testing.T) {
 		Resource:    "dummy",
 		Action:      "dummy",
 	})
+	if err != nil {
+		t.Fatalf("Err: %v happens in diagnose", err)
+	}
 	if result.Allowed {
 		t.Fatalf("Request %v should not be allowed.", request)
 		return

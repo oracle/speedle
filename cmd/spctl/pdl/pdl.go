@@ -40,7 +40,7 @@ func ParsePolicy(cmd, name string) (*pms.Policy, io.Reader, error) {
 	if len(perms) == 0 {
 		return nil, nil, errors.New("No permission found")
 	}
-	condition, i, err := getCondition(cmd, i)
+	condition, _, err := getCondition(cmd, i)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -76,7 +76,7 @@ func ParseRolePolicy(cmd, name string) (*pms.RolePolicy, io.Reader, error) {
 	if err != nil {
 		return nil, nil, err
 	}
-	condition, i, err := getCondition(cmd, i)
+	condition, _, err := getCondition(cmd, i)
 	if err != nil {
 		return nil, nil, err
 	}

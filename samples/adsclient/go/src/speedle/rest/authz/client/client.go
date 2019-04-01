@@ -65,6 +65,9 @@ func New(properties map[string]string) (ADSClient, error) {
 // New construct a new ADS client instance
 func newHttpClient(isAllowedEndpoint string) (*http.Client, error) {
 	req, err := http.NewRequest(http.MethodGet, isAllowedEndpoint, nil)
+	if err != nil {
+		return nil, err
+	}
 	proxyURL, err := http.ProxyFromEnvironment(req)
 	if err != nil {
 		return nil, err

@@ -424,7 +424,7 @@ func TestManagePolicies(t *testing.T) {
 	}
 	defer store.(*Store).destroy()
 	//clean the service firstly
-	err = store.DeleteService("service1")
+	store.DeleteService("service1")
 	app := pms.Service{Name: "service1", Type: pms.TypeApplication}
 	err = store.CreateService(&app)
 	if err != nil {
@@ -458,7 +458,7 @@ func TestManagePolicies(t *testing.T) {
 		t.Fatal("should have 1 policy")
 	}
 
-	policyR1, err = store.GetPolicy("service1", "nonexistID")
+	_, err = store.GetPolicy("service1", "nonexistID")
 	t.Log(err)
 	if err == nil {
 		t.Fatal("should fail to get policy")
@@ -484,7 +484,7 @@ func TestManageRolePolicies(t *testing.T) {
 	defer store.(*Store).destroy()
 
 	//clean the service firstly
-	err = store.DeleteService("service1")
+	store.DeleteService("service1")
 	app := pms.Service{Name: "service1", Type: pms.TypeApplication}
 	err = store.CreateService(&app)
 	if err != nil {
@@ -514,7 +514,7 @@ func TestManageRolePolicies(t *testing.T) {
 		t.Fatal("should have 1 role policy")
 	}
 
-	policyR1, err = store.GetRolePolicy("service1", "nonexistID")
+	_, err = store.GetRolePolicy("service1", "nonexistID")
 	t.Log(err)
 	if err == nil {
 		t.Fatal("should fail to get role policy")
@@ -540,7 +540,7 @@ func TestCheckItemsCount(t *testing.T) {
 	defer store.(*Store).destroy()
 
 	// clean the services
-	err = store.DeleteServices()
+	store.DeleteServices()
 
 	// Create service1
 	app1 := pms.Service{Name: "service1", Type: pms.TypeApplication}

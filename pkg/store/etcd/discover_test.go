@@ -70,6 +70,9 @@ func TestGetLastRequestContinously(t *testing.T) {
 		i++
 	}
 	request, revision, err := discover.GetLastDiscoverRequest("erp")
+	if err != nil {
+		t.Errorf("failed to GetLastDiscoverRequest: %v", err)
+	}
 	if request.Resource != "/res4" {
 		t.Error("last request is incorrect.")
 	}
@@ -85,7 +88,10 @@ func TestGetLastRequestContinously(t *testing.T) {
 		}
 		i++
 	}
-	requests, revision, err := discover.GetDiscoverRequestsSinceRevision("erp", revision)
+	requests, _, err := discover.GetDiscoverRequestsSinceRevision("erp", revision)
+	if err != nil {
+		t.Errorf("failed to GetDiscoverRequestsSinceRevision: %v", err)
+	}
 	if len(requests) != 5 {
 		t.Error("requests number should be 5")
 	}
@@ -118,6 +124,9 @@ func TestResetDiscoverRequests(t *testing.T) {
 		i++
 	}
 	testRequests, _, err := discover.GetDiscoverRequests("erp0")
+	if err != nil {
+		t.Errorf("failed to GetDiscoverRequests: %v", err)
+	}
 	fmt.Println("testRequest len:", len(testRequests))
 
 	err = discover.ResetDiscoverRequests("erp0")
@@ -125,6 +134,9 @@ func TestResetDiscoverRequests(t *testing.T) {
 		t.Fatal("Fail to reset all requests")
 	}
 	zeroRequests, _, err := discover.GetDiscoverRequests("erp0")
+	if err != nil {
+		t.Errorf("failed to GetDiscoverRequests: %v", err)
+	}
 	if len(zeroRequests) != 0 {
 		t.Fatal("Should have no requests now, as requests are reset")
 	}
@@ -133,7 +145,7 @@ func TestResetDiscoverRequests(t *testing.T) {
 	if err != nil {
 		t.Fatal("Fail to reset all requests")
 	}
-	zeroRequests, _, err = discover.GetDiscoverRequests("")
+	zeroRequests, _, _ = discover.GetDiscoverRequests("")
 	if len(zeroRequests) != 0 {
 		t.Fatal("Should have no requests now, as requests are reset")
 	}
@@ -170,6 +182,9 @@ func TestGetRequests(t *testing.T) {
 	fmt.Println("starting get requests, time is:", time.Now())
 	requests, _, err := s.(*Store).GetRequests(DiscoverPrefix, 100)
 	fmt.Println("finish get requests, time is:", time.Now())
+	if err != nil {
+		t.Errorf("failed to GetRequests: %v", err)
+	}
 	if len(requests) != requestNum {
 		t.Error("number incorrect, expected is:", requestNum, ",but is:", len(requests))
 	}

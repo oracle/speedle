@@ -213,6 +213,9 @@ func CallCustomerFunction(cf *pms.Function, request *ext.CustomerFunctionRequest
 	}
 
 	buf, err := json.Marshal(request)
+	if err != nil {
+		return nil, err
+	}
 	req, err := http.NewRequest("POST", cf.FuncURL, bytes.NewBuffer(buf))
 	if err != nil {
 		return nil, err

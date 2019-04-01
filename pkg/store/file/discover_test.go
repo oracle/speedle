@@ -67,6 +67,9 @@ func TestGetLastRequestContinously(t *testing.T) {
 		i++
 	}
 	request, revision, err := discover.GetLastDiscoverRequest("erp")
+	if err != nil {
+		t.Errorf("fail to GetLastDiscoverRequest:%v", err)
+	}
 	if request.Resource != "/res4" {
 		t.Error("last request is incorrect.")
 	}
@@ -82,7 +85,10 @@ func TestGetLastRequestContinously(t *testing.T) {
 		}
 		i++
 	}
-	requests, revision, err := discover.GetDiscoverRequestsSinceRevision("erp", revision)
+	requests, _, err := discover.GetDiscoverRequestsSinceRevision("erp", revision)
+	if err != nil {
+		t.Errorf("fail to GetDiscoverRequestsSinceRevision:%v", err)
+	}
 	if len(requests) != 5 {
 		t.Error("requests number should be 5")
 	}
@@ -119,6 +125,9 @@ func TestResetDiscoverRequests(t *testing.T) {
 		t.Fatal("Fail to reset service requests")
 	}
 	zeroRequests, _, err := discover.GetDiscoverRequests("erp0")
+	if err != nil {
+		t.Fatal("Fail to GetDiscoverRequests")
+	}
 	if len(zeroRequests) != 0 {
 		t.Fatal("Should have no requests now, as requests are reset")
 	}
@@ -127,7 +136,7 @@ func TestResetDiscoverRequests(t *testing.T) {
 	if err != nil {
 		t.Fatal("Fail to reset all requests")
 	}
-	zeroRequests, _, err = discover.GetDiscoverRequests("")
+	zeroRequests, _, _ = discover.GetDiscoverRequests("")
 	if len(zeroRequests) != 0 {
 		t.Fatal("Should have no requests now, as requests are reset")
 	}
@@ -164,6 +173,10 @@ func TestGetRequests(t *testing.T) {
 	fmt.Println("starting get requests, time is:", time.Now())
 	requests, _, err := discover.GetDiscoverRequests("erp0")
 	fmt.Println("finish get requests, time is:", time.Now())
+	if err != nil {
+		t.Error("fail to GetDiscoverRequests.")
+	}
+
 	if len(requests) != 22 {
 		t.Error("number incorrect, expected is:", requestNum, ",but is:", len(requests))
 	}

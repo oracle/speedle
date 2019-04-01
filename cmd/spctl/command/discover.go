@@ -75,7 +75,7 @@ func discoverCommandFunc(cmd *cobra.Command, args []string) {
 	}
 	cli := &client.Client{PMSEndpoint: globalFlags.PMSEndpoint, HTTPClient: hc}
 	var res []byte
-	var output = []byte{}
+	var output []byte
 	if len(args) != 1 {
 		cmd.Help()
 		return

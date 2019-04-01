@@ -170,7 +170,7 @@ func (client *RestClient) Post(data interface{}) error {
 	}
 
 	absUri := client.prefix + restTD.URI
-	payload := []byte("")
+	var payload []byte
 	isFormBody := false
 
 	var req *http.Request = nil

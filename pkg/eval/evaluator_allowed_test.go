@@ -1006,7 +1006,7 @@ func TestIsAllowedWithIDD(t *testing.T) {
 		Resource:    "/node1",
 		Action:      "list",
 	}
-	allowed, reason, err = evaluator.IsAllowed(request)
+	allowed, _, err = evaluator.IsAllowed(request)
 	if err != nil {
 		t.Errorf("Unexcepted error happened [%v].", err)
 		return
@@ -1031,7 +1031,7 @@ func TestIsAllowedWithIDD(t *testing.T) {
 		Resource:    "/node2",
 		Action:      "list",
 	}
-	allowed, reason, err = evaluator.IsAllowed(request)
+	allowed, _, err = evaluator.IsAllowed(request)
 	if err != nil {
 		t.Errorf("Unexcepted error happened [%v].", err)
 		return

@@ -408,7 +408,7 @@ func postCreateGetServiceTest_rest(outputBody interface{}, expectedBody interfac
 			TestLog.Log("Fail to convert outputBody to pms.Service")
 			return
 		}
-		expectService, ok := expectedBody.(*pms.Service)
+		expectService, _ := expectedBody.(*pms.Service)
 
 		//The policies/rolepolicies is nil in expect/output sometimes
 		if outputService.Policies == nil {
@@ -443,7 +443,7 @@ func postCreateGetServiceTest_grpc(outputBody interface{}, expectedBody interfac
 			TestLog.Log("Fail to convert outputBody to pb.Service")
 			return
 		}
-		expectService, ok := expectedBody.(*pb.Service)
+		expectService, _ := expectedBody.(*pb.Service)
 		postListPolicyTest_rest(&outputService.Policies, &expectService.Policies, context)
 		postListRolePolicyTest_rest(&outputService.RolePolicies, &expectService.RolePolicies, context)
 	} else {
