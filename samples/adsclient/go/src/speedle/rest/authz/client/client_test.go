@@ -18,7 +18,7 @@ func TestIsAllowed(t *testing.T) {
 	context := authz.RequestContext{
 		Subject: &authz.Subject{
 			Principals: []*authz.Principal{
-				&authz.Principal{
+				{
 					Type: "user",
 					Name: "alan.cao",
 				},

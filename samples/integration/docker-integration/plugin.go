@@ -78,7 +78,7 @@ func (plugin *speedleDockerPlugin) toRequestContext(req *authorization.Request) 
 	}
 	subject := authz.Subject{
 		Principals: []*authz.Principal{
-			&authz.Principal{
+			{
 				Type: "user",
 				Name: user,
 			},

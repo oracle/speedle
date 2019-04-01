@@ -592,7 +592,7 @@ func postGetAllGrantedPermissions_rest(outputBody interface{}, expectedBody inte
 
 		res := make([]string, len(*outputPerms))
 		j := 0
-		for k, _ := range adjustMap {
+		for k := range adjustMap {
 			res[j] = k
 			j++
 		}

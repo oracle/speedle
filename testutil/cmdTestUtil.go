@@ -60,7 +60,7 @@ func (client *CmdClient) ExecuteCmd(parameter string, data *CmdTestData) error {
 func NewCmdClient() *CmdClient {
 	var cmdStr string
 	binPath := os.Getenv("GOPATH")
-	if strings.Compare(string(binPath[len(binPath)-1:len(binPath)]), "/") != 0 {
+	if strings.Compare(string(binPath[len(binPath)-1:]), "/") != 0 {
 		binPath = binPath + "/"
 	}
 
@@ -80,7 +80,7 @@ func NewCmdClient() *CmdClient {
 func NewCmdClient_token(token string) *CmdClient {
 	var cmdStr string
 	binPath := os.Getenv("GOPATH")
-	if strings.Compare(string(binPath[len(binPath)-1:len(binPath)]), "/") != 0 {
+	if strings.Compare(string(binPath[len(binPath)-1:]), "/") != 0 {
 		binPath = binPath + "/"
 	}
 

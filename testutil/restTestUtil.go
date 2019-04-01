@@ -621,7 +621,7 @@ func GetRestTestData_CreatePolicy(step string, srvName string, policyName string
 				Name:   policyName,
 				Effect: effect,
 				Permissions: []*pmsapi.Permission{
-					&pmsapi.Permission{
+					{
 						Resource: resource,
 						Actions:  actions,
 					},
@@ -633,7 +633,7 @@ func GetRestTestData_CreatePolicy(step string, srvName string, policyName string
 				Name:   policyName,
 				Effect: effect,
 				Permissions: []*pmsapi.Permission{
-					&pmsapi.Permission{
+					{
 						Resource: resource,
 						Actions:  actions,
 					},

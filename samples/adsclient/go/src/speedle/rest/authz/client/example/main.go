@@ -21,7 +21,7 @@ func main() {
 	context := authz.RequestContext{
 		Subject: &authz.Subject{
 			Principals: []*authz.Principal{
-				&authz.Principal{
+				{
 					Type: "user",
 					Name: "alan.cao",
 				},

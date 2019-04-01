@@ -32,7 +32,7 @@ func Wrap(handler http.Handler, service, spdlLoc string) (http.HandlerFunc, erro
 		reqCtx := ads.RequestContext{
 			Subject: &ads.Subject{
 				Principals: []*ads.Principal{
-					&ads.Principal{
+					{
 						Type: "user",
 						Name: user,
 					},

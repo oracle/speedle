@@ -462,7 +462,7 @@ func (impl *handlerImpl) evaluatePolicies(clusterName string, req *v1beta1.Subje
 
 	subject := authz.Subject{
 		Principals: []*authz.Principal{
-			&authz.Principal{
+			{
 				Type: "user",
 				Name: req.Spec.User,
 			},

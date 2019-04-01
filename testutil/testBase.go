@@ -79,7 +79,7 @@ func RunTestCases(t *testing.T, testcases *[]TestCase, ctx *TestContext) {
 			//If test case name is like sleep_500, then it would sleep 500ms
 			method := strings.ToLower(tc.Method)
 			if strings.Contains(method, "sleep") {
-				sleep, _ := strconv.Atoi(method[6:len(method)])
+				sleep, _ := strconv.Atoi(method[6:])
 				t.Logf("Sleep %d mill-secondes", sleep)
 				time.Sleep(time.Duration(sleep) * time.Millisecond)
 				continue
