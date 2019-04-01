@@ -1,10 +1,10 @@
 package eval
 
 import (
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/api/ads"
 	"github.com/oracle/speedle/pkg/errors"
 	"github.com/oracle/speedle/pkg/store"
+	log "github.com/sirupsen/logrus"
 )
 
 func (p *PolicyEvalImpl) Discover(ctx ads.RequestContext) (bool, ads.Reason, error) {

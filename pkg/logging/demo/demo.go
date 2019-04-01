@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	log "github.com/sirupsen/logrus"
 	logging "github.com/oracle/speedle/pkg/logging"
+	log "github.com/sirupsen/logrus"
 )
 
 type Config struct {

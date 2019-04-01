@@ -1070,7 +1070,7 @@ func (p *PolicyEvalImpl) getRolePolicySetInCache() (map[int]string, []int, error
 
 func (p *PolicyEvalImpl) getCustFunctionSetInCache() ([]string, error) {
 	resultSet := []string{}
-	for funcName, _ := range p.RuntimePolicyStore.Functions {
+	for funcName := range p.RuntimePolicyStore.Functions {
 		if _, ok := builtinFunctions[funcName]; !ok {
 			resultSet = append(resultSet, funcName)
 		}

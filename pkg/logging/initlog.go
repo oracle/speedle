@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/natefinch/lumberjack"
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/pkg/errors"
+	log "github.com/sirupsen/logrus"
 )
 
 const (

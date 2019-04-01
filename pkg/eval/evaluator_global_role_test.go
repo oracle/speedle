@@ -68,7 +68,7 @@ func TestGetRoles232_1(t *testing.T) {
 	request := adsapi.RequestContext{
 		Subject: &adsapi.Subject{
 			Principals: []*adsapi.Principal{
-				&adsapi.Principal{
+				{
 					Type: adsapi.PRINCIPAL_TYPE_USER,
 					Name: "bill",
 				},
@@ -248,7 +248,7 @@ func evaluate(t *testing.T, appStream string, expectedRoles []string) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},

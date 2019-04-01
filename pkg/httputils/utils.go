@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"strings"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/pkg/errors"
+	log "github.com/sirupsen/logrus"
 )
 
 type ErrorResponse struct {

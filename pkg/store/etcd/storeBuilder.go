@@ -10,12 +10,12 @@ import (
 
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/pkg/transport"
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/pkg/errors"
+	log "github.com/sirupsen/logrus"
 
-	"github.com/spf13/pflag"
 	"github.com/oracle/speedle/api/pms"
 	"github.com/oracle/speedle/pkg/store"
+	"github.com/spf13/pflag"
 )
 
 const (

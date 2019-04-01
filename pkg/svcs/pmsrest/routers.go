@@ -28,70 +28,70 @@ func initRouters(ps pms.PolicyStoreManager) (*[]route, error) {
 	svcRoutes := []route{}
 
 	policyManagerRoutes := []route{
-		route{
+		{
 			"CreatePolicy",
 			"POST",
 			svcs.PolicyMgmtPath + "service/{serviceName}/policy",
 			manager.CreatePolicy,
 		},
 
-		route{
+		{
 			"DeletePolicies",
 			"DELETE",
 			svcs.PolicyMgmtPath + "service/{serviceName}/policy",
 			manager.DeletePolicies,
 		},
 
-		route{
+		{
 			"DeletePolicy",
 			"DELETE",
 			svcs.PolicyMgmtPath + "service/{serviceName}/policy/{policyID}",
 			manager.DeletePolicy,
 		},
 
-		route{
+		{
 			"GetPolicy",
 			"GET",
 			svcs.PolicyMgmtPath + "service/{serviceName}/policy/{policyID}",
 			manager.GetPolicy,
 		},
 
-		route{
+		{
 			"ListPolicies",
 			"GET",
 			svcs.PolicyMgmtPath + "service/{serviceName}/policy",
 			manager.ListPolicies,
 		},
 
-		route{
+		{
 			"CreateRolePolicy",
 			"POST",
 			svcs.PolicyMgmtPath + "service/{serviceName}/role-policy",
 			manager.CreateRolePolicy,
 		},
 
-		route{
+		{
 			"DeleteRolePolicies",
 			"DELETE",
 			svcs.PolicyMgmtPath + "service/{serviceName}/role-policy",
 			manager.DeleteRolePolicies,
 		},
 
-		route{
+		{
 			"DeleteRolePolicy",
 			"DELETE",
 			svcs.PolicyMgmtPath + "service/{serviceName}/role-policy/{rolePolicyID}",
 			manager.DeleteRolePolicy,
 		},
 
-		route{
+		{
 			"GetRolePolicy",
 			"GET",
 			svcs.PolicyMgmtPath + "service/{serviceName}/role-policy/{rolePolicyID}",
 			manager.GetRolePolicy,
 		},
 
-		route{
+		{
 			"ListRolePolicies",
 			"GET",
 			svcs.PolicyMgmtPath + "service/{serviceName}/role-policy",
@@ -101,42 +101,42 @@ func initRouters(ps pms.PolicyStoreManager) (*[]route, error) {
 	svcRoutes = append(svcRoutes, policyManagerRoutes...)
 
 	serviceManageRoutes := []route{
-		route{
+		{
 			"CreateService",
 			"POST",
 			svcs.PolicyMgmtPath + "service",
 			manager.CreateService,
 		},
 
-		route{
+		{
 			"DeleteService",
 			"DELETE",
 			svcs.PolicyMgmtPath + "service/{serviceName}",
 			manager.DeleteService,
 		},
 
-		route{
+		{
 			"DeleteServices",
 			"DELETE",
 			svcs.PolicyMgmtPath + "service",
 			manager.DeleteServices,
 		},
 
-		route{
+		{
 			"GetService",
 			"GET",
 			svcs.PolicyMgmtPath + "service/{serviceName}",
 			manager.GetService,
 		},
 
-		route{
+		{
 			"ListServices",
 			"GET",
 			svcs.PolicyMgmtPath + "service",
 			manager.ListServices,
 		},
 
-		route{
+		{
 			"ListPolicyCounts",
 			"GET",
 			svcs.PolicyMgmtPath + "policy-counts",
@@ -146,35 +146,35 @@ func initRouters(ps pms.PolicyStoreManager) (*[]route, error) {
 	svcRoutes = append(svcRoutes, serviceManageRoutes...)
 
 	functionManageRoutes := []route{
-		route{
+		{
 			"CreateFunction",
 			"POST",
 			svcs.PolicyMgmtPath + "function",
 			manager.CreateFunction,
 		},
 
-		route{
+		{
 			"DeleteFunction",
 			"DELETE",
 			svcs.PolicyMgmtPath + "function/{functionName}",
 			manager.DeleteFunction,
 		},
 
-		route{
+		{
 			"DeleteFunctions",
 			"DELETE",
 			svcs.PolicyMgmtPath + "function",
 			manager.DeleteFunctions,
 		},
 
-		route{
+		{
 			"GetFunction",
 			"GET",
 			svcs.PolicyMgmtPath + "function/{functionName}",
 			manager.GetFunction,
 		},
 
-		route{
+		{
 			"ListFunctions",
 			"GET",
 			svcs.PolicyMgmtPath + "function",
@@ -184,42 +184,42 @@ func initRouters(ps pms.PolicyStoreManager) (*[]route, error) {
 	svcRoutes = append(svcRoutes, functionManageRoutes...)
 
 	discoverRequestManageRoutes := []route{
-		route{
+		{
 			"GetAllDiscoverRequests",
 			"GET",
 			svcs.PolicyMgmtPath + "discover-request",
 			manager.GetAllDiscoverRequests,
 		},
 
-		route{
+		{
 			"GetDiscoverRequests",
 			"GET",
 			svcs.PolicyMgmtPath + "discover-request/{serviceName}",
 			manager.GetDiscoverRequests,
 		},
 
-		route{
+		{
 			"ResetDiscoverRequests",
 			"DELETE",
 			svcs.PolicyMgmtPath + "discover-request/{serviceName}",
 			manager.ResetDiscoverRequests,
 		},
 
-		route{
+		{
 			"ResetAllDiscoverRequests",
 			"DELETE",
 			svcs.PolicyMgmtPath + "discover-request",
 			manager.ResetAllDiscoverRequests,
 		},
 
-		route{
+		{
 			"GetDiscoverPolicies",
 			"GET",
 			svcs.PolicyMgmtPath + "discover-policy/{serviceName}",
 			manager.GetDiscoverPolicies,
 		},
 
-		route{
+		{
 			"GetAllDiscoverPolicies",
 			"GET",
 			svcs.PolicyMgmtPath + "discover-policy",

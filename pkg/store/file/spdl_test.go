@@ -19,11 +19,11 @@ util
  as   df   
 `
 	expected := []lineCtx{
-		lineCtx{no: 1, origin: "abcd"},
-		lineCtx{no: 2, origin: " 1234   "},
-		lineCtx{no: 3, origin: "\t3456\t"},
-		lineCtx{no: 4, origin: "util        "},
-		lineCtx{no: 5, origin: " as   df   "},
+		{no: 1, origin: "abcd"},
+		{no: 2, origin: " 1234   "},
+		{no: 3, origin: "\t3456\t"},
+		{no: 4, origin: "util        "},
+		{no: 5, origin: " as   df   "},
 	}
 	sr := strings.NewReader(testFile)
 	lc := lineCtx{}

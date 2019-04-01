@@ -229,7 +229,7 @@ func TestMats_PMSRest_Policy(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -241,7 +241,7 @@ func TestMats_PMSRest_Policy(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -262,7 +262,7 @@ func TestMats_PMSRest_Policy(t *testing.T) {
 					Name:   "policy2",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res2",
 							Actions:  []string{"read"},
 						},
@@ -274,7 +274,7 @@ func TestMats_PMSRest_Policy(t *testing.T) {
 					Name:   "policy2",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res2",
 							Actions:  []string{"read"},
 						},
@@ -297,7 +297,7 @@ func TestMats_PMSRest_Policy(t *testing.T) {
 						Name:   "policy1",
 						Effect: pms.Grant,
 						Permissions: []*pms.Permission{
-							&pms.Permission{
+							{
 								Resource: "res1",
 								Actions:  []string{"read", "write"},
 							},
@@ -308,7 +308,7 @@ func TestMats_PMSRest_Policy(t *testing.T) {
 						Name:   "policy2",
 						Effect: pms.Grant,
 						Permissions: []*pms.Permission{
-							&pms.Permission{
+							{
 								Resource: "res2",
 								Actions:  []string{"read"},
 							},
@@ -331,7 +331,7 @@ func TestMats_PMSRest_Policy(t *testing.T) {
 					Name:   "policy2",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res2",
 							Actions:  []string{"read"},
 						},
@@ -402,7 +402,7 @@ func TestMats_PMSRest_Policy(t *testing.T) {
 					Name:   "policy-2-entity",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -415,7 +415,7 @@ func TestMats_PMSRest_Policy(t *testing.T) {
 					Name:   "policy-2-entity",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -438,7 +438,7 @@ func TestMats_PMSRest_Policy(t *testing.T) {
 					Name:   "policy-2-entity",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},

@@ -54,7 +54,7 @@ func TestMats_Cache_With_Policy_Added(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -66,7 +66,7 @@ func TestMats_Cache_With_Policy_Added(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -83,7 +83,7 @@ func TestMats_Cache_With_Policy_Added(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -103,7 +103,7 @@ func TestMats_Cache_With_Policy_Added(t *testing.T) {
 					Name:   "policy2",
 					Effect: pms.Deny,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -115,7 +115,7 @@ func TestMats_Cache_With_Policy_Added(t *testing.T) {
 					Name:   "policy2",
 					Effect: pms.Deny,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -132,7 +132,7 @@ func TestMats_Cache_With_Policy_Added(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -158,7 +158,7 @@ func TestMats_Cache_With_Policy_Added(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -184,7 +184,7 @@ func TestMats_Cache_With_Policy_Added(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -245,7 +245,7 @@ func TestMats_Cache_With_Policy_Condition_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -258,7 +258,7 @@ func TestMats_Cache_With_Policy_Condition_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -276,12 +276,12 @@ func TestMats_Cache_With_Policy_Condition_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "age", Value: 15}},
+						{Name: "age", Value: 15}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -307,7 +307,7 @@ func TestMats_Cache_With_Policy_Condition_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -320,7 +320,7 @@ func TestMats_Cache_With_Policy_Condition_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -338,12 +338,12 @@ func TestMats_Cache_With_Policy_Condition_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "age", Value: 25}},
+						{Name: "age", Value: 25}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -356,12 +356,12 @@ func TestMats_Cache_With_Policy_Condition_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "age", Value: 15}},
+						{Name: "age", Value: 15}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -417,7 +417,7 @@ func TestMats_Cache_With_Policy_Subject_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -429,7 +429,7 @@ func TestMats_Cache_With_Policy_Subject_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -446,7 +446,7 @@ func TestMats_Cache_With_Policy_Subject_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -475,7 +475,7 @@ func TestMats_Cache_With_Policy_Subject_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -487,7 +487,7 @@ func TestMats_Cache_With_Policy_Subject_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -504,7 +504,7 @@ func TestMats_Cache_With_Policy_Subject_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -520,7 +520,7 @@ func TestMats_Cache_With_Policy_Subject_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -578,7 +578,7 @@ func TestMats_Cache_With_Policy_Permission_Res_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -590,7 +590,7 @@ func TestMats_Cache_With_Policy_Permission_Res_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -607,7 +607,7 @@ func TestMats_Cache_With_Policy_Permission_Res_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -636,7 +636,7 @@ func TestMats_Cache_With_Policy_Permission_Res_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res2",
 							Actions:  []string{"read", "write"},
 						},
@@ -648,7 +648,7 @@ func TestMats_Cache_With_Policy_Permission_Res_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res2",
 							Actions:  []string{"read", "write"},
 						},
@@ -665,7 +665,7 @@ func TestMats_Cache_With_Policy_Permission_Res_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res2",
 					Action:      "read",
@@ -681,7 +681,7 @@ func TestMats_Cache_With_Policy_Permission_Res_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -739,7 +739,7 @@ func TestMats_Cache_With_Policy_Permission_Action_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -751,7 +751,7 @@ func TestMats_Cache_With_Policy_Permission_Action_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -768,7 +768,7 @@ func TestMats_Cache_With_Policy_Permission_Action_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -797,7 +797,7 @@ func TestMats_Cache_With_Policy_Permission_Action_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res2",
 							Actions:  []string{"write"},
 						},
@@ -809,7 +809,7 @@ func TestMats_Cache_With_Policy_Permission_Action_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res2",
 							Actions:  []string{"write"},
 						},
@@ -826,7 +826,7 @@ func TestMats_Cache_With_Policy_Permission_Action_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res2",
 					Action:      "write",
@@ -842,7 +842,7 @@ func TestMats_Cache_With_Policy_Permission_Action_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -905,7 +905,7 @@ func TestMats_Cache_With_RolePolicy_Added(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -917,7 +917,7 @@ func TestMats_Cache_With_RolePolicy_Added(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -934,7 +934,7 @@ func TestMats_Cache_With_RolePolicy_Added(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -975,7 +975,7 @@ func TestMats_Cache_With_RolePolicy_Added(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -1016,7 +1016,7 @@ func TestMats_Cache_With_RolePolicy_Added(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -1042,7 +1042,7 @@ func TestMats_Cache_With_RolePolicy_Added(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -1099,7 +1099,7 @@ func TestMats_Cache_With_RolePolicy_Subject_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -1111,7 +1111,7 @@ func TestMats_Cache_With_RolePolicy_Subject_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -1128,7 +1128,7 @@ func TestMats_Cache_With_RolePolicy_Subject_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -1169,7 +1169,7 @@ func TestMats_Cache_With_RolePolicy_Subject_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -1219,7 +1219,7 @@ func TestMats_Cache_With_RolePolicy_Subject_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
@@ -1276,7 +1276,7 @@ func TestMats_Cache_With_RolePolicy_Condition_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -1288,7 +1288,7 @@ func TestMats_Cache_With_RolePolicy_Condition_Changed(t *testing.T) {
 					Name:   "policy1",
 					Effect: pms.Grant,
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read", "write"},
 						},
@@ -1305,12 +1305,12 @@ func TestMats_Cache_With_RolePolicy_Condition_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "age", Value: 15}},
+						{Name: "age", Value: 15}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1350,12 +1350,12 @@ func TestMats_Cache_With_RolePolicy_Condition_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "age", Value: 15}},
+						{Name: "age", Value: 15}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1404,12 +1404,12 @@ func TestMats_Cache_With_RolePolicy_Condition_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "age", Value: 15}},
+						{Name: "age", Value: 15}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1422,12 +1422,12 @@ func TestMats_Cache_With_RolePolicy_Condition_Changed(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: testutil.URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: appName,
 					Resource:    "res1",
 					Action:      "read",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "age", Value: 25}},
+						{Name: "age", Value: 25}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},

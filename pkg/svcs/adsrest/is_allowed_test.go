@@ -58,7 +58,7 @@ func TestMats_IsAllowed_SimpleGrant(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_allow",
 					Action:      "get",
@@ -75,7 +75,7 @@ func TestMats_IsAllowed_SimpleGrant(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_allow",
 					Action:      "get1",
@@ -92,7 +92,7 @@ func TestMats_IsAllowed_SimpleGrant(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_allow1",
 					Action:      "get",
@@ -109,7 +109,7 @@ func TestMats_IsAllowed_SimpleGrant(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1, user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1, user2"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_allow",
 					Action:      "get",
@@ -126,7 +126,7 @@ func TestMats_IsAllowed_SimpleGrant(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "groupAny"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "groupAny"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_allow",
 					Action:      "get",
@@ -143,7 +143,7 @@ func TestMats_IsAllowed_SimpleGrant(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_allow",
 					Action:      "get",
@@ -160,7 +160,7 @@ func TestMats_IsAllowed_SimpleGrant(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_allow",
 					Action:      "get",
@@ -177,7 +177,7 @@ func TestMats_IsAllowed_SimpleGrant(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userWithRole1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userWithRole1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_allow",
 					Action:      "del",
@@ -194,7 +194,7 @@ func TestMats_IsAllowed_SimpleGrant(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userWithRole1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userWithRole1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_deny",
 					Action:      "del",
@@ -221,7 +221,7 @@ func TestMats_IsAllowed_SimpleDeny(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_deny",
 					Action:      "get",
@@ -238,7 +238,7 @@ func TestMats_IsAllowed_SimpleDeny(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_deny",
 					Action:      "get",
@@ -255,7 +255,7 @@ func TestMats_IsAllowed_SimpleDeny(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userWithRole1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userWithRole1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_deny",
 					Action:      "get",
@@ -272,7 +272,7 @@ func TestMats_IsAllowed_SimpleDeny(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "groupWithRole2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "groupWithRole2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_deny",
 					Action:      "get",
@@ -312,7 +312,7 @@ func TestMats_IsAllowed_BothGrantAndDeny(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userWithRole1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userWithRole1"}}},
 					ServiceName: SERVICE_BOTH_GRANT_DENY,
 					Resource:    "res1",
 					Action:      "get",
@@ -329,7 +329,7 @@ func TestMats_IsAllowed_BothGrantAndDeny(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "groupWithRole1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "groupWithRole1"}}},
 					ServiceName: SERVICE_BOTH_GRANT_DENY,
 					Resource:    "res1",
 					Action:      "get",
@@ -346,7 +346,7 @@ func TestMats_IsAllowed_BothGrantAndDeny(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_allowed"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group_denied"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_allowed"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group_denied"}}},
 					ServiceName: SERVICE_BOTH_GRANT_DENY,
 					Resource:    "res1",
 					Action:      "get",
@@ -363,7 +363,7 @@ func TestMats_IsAllowed_BothGrantAndDeny(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_denied"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group_allowed"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_denied"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group_allowed"}}},
 					ServiceName: SERVICE_BOTH_GRANT_DENY,
 					Resource:    "res1",
 					Action:      "get",
@@ -389,7 +389,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_time1",
 					Action:      "get",
@@ -407,7 +407,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "admin"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group_attri1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "admin"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group_attri1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_user1",
 					Action:      "get",
@@ -424,7 +424,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group_func1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group_func1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_user1",
 					Action:      "get",
@@ -442,7 +442,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_groups1",
 					Action:      "get",
@@ -459,7 +459,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group11"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group11"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_groups1",
 					Action:      "get",
@@ -476,7 +476,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_action1",
 					Action:      "get",
@@ -493,7 +493,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_action1",
 					Action:      "del",
@@ -510,7 +510,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_resource1",
 					Action:      "del",
@@ -527,7 +527,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_resource2",
 					Action:      "del",
@@ -544,7 +544,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_weekday1",
 					Action:      "del",
@@ -561,7 +561,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_year_equal_2017",
 					Action:      "del",
@@ -578,7 +578,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_year_greater_2017",
 					Action:      "del",
@@ -595,7 +595,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_month_nov",
 					Action:      "del",
@@ -613,7 +613,7 @@ func TestLrg_IsAllowed_ConditionWithBuiltinAttribute(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_attri1"}}},
 					ServiceName: SERVICE_BUILTIN_ATTRIBUTE,
 					Resource:    "res_request_day_14",
 					Action:      "del",
@@ -645,7 +645,7 @@ func TestLrg_IsAllowed_Complex_bug214(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_complex1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_complex1"}}},
 					ServiceName: SERVICE_COMPLEX,
 					Resource:    "res_complex1",
 					Action:      "get",
@@ -662,7 +662,7 @@ func TestLrg_IsAllowed_Complex_bug214(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_complex1B"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_complex1B"}}},
 					ServiceName: SERVICE_COMPLEX,
 					Resource:    "res_complex1",
 					Action:      "get",
@@ -679,7 +679,7 @@ func TestLrg_IsAllowed_Complex_bug214(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_complex1A"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_complex1A"}}},
 					ServiceName: SERVICE_COMPLEX,
 					Resource:    "res_complex1",
 					Action:      "get",
@@ -696,7 +696,7 @@ func TestLrg_IsAllowed_Complex_bug214(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_complex1A"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_complex1A"}}},
 					ServiceName: SERVICE_COMPLEX,
 					Resource:    "res_complex1",
 					Action:      "del",
@@ -713,7 +713,7 @@ func TestLrg_IsAllowed_Complex_bug214(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_complex1A"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_complex1A"}}},
 					ServiceName: SERVICE_COMPLEX,
 					Resource:    "res_complex1",
 					Action:      "get",
@@ -739,7 +739,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res1",
 					Action:      "get",
@@ -756,7 +756,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res2",
 					Action:      "del",
@@ -773,7 +773,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res3",
 					Action:      "del",
@@ -790,7 +790,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user11"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user11"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res3",
 					Action:      "del",
@@ -806,7 +806,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user11"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user11"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res3",
 					Action:      "del",
@@ -823,7 +823,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user11"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user11"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res3",
 					Action:      "get",
@@ -839,7 +839,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res3",
 					Action:      "del",
@@ -856,7 +856,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res2",
 					Action:      "get",
@@ -873,7 +873,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res1",
 					Action:      "get",
@@ -890,7 +890,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res1",
 					Action:      "del",
@@ -907,7 +907,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res3",
 					Action:      "get",
@@ -924,7 +924,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user22"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user22"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res1",
 					Action:      "get",
@@ -941,7 +941,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user22"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user22"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res3",
 					Action:      "del",
@@ -958,7 +958,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user22"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user22"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res3",
 					Action:      "get",
@@ -975,7 +975,7 @@ func TestLrg_IsAllowed_Complex_Role_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res9",
 					Action:      "get",
@@ -1001,7 +1001,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "res",
 					Action:      "get",
@@ -1018,7 +1018,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "res 2",
 					Action:      "get",
@@ -1035,7 +1035,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "res*",
 					Action:      "get",
@@ -1052,7 +1052,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "res*",
 					Action:      "get",
@@ -1069,7 +1069,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "res2&",
 					Action:      "get",
@@ -1086,7 +1086,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "*res*",
 					Action:      "get",
@@ -1103,7 +1103,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "22res222",
 					Action:      "get",
@@ -1120,7 +1120,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "?res?",
 					Action:      "get",
@@ -1137,7 +1137,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "res-denied*",
 					Action:      "get",
@@ -1154,7 +1154,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "res-denied",
 					Action:      "get",
@@ -1171,7 +1171,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "11res-denied11",
 					Action:      "get",
@@ -1188,7 +1188,7 @@ func TestLrg_IsAllowed_Complex_ResExpr_bug113(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: SERVICE_COMPLEX_RESEXPR,
 					Resource:    "11res-denied11",
 					Action:      "get",
@@ -1213,7 +1213,7 @@ func TestMats_IsAllowed_ComplexPrincipleInPolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_POILICY,
 					Resource:    "res1",
 					Action:      "get",
@@ -1230,7 +1230,7 @@ func TestMats_IsAllowed_ComplexPrincipleInPolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_POILICY,
 					Resource:    "res1",
 					Action:      "get",
@@ -1247,7 +1247,7 @@ func TestMats_IsAllowed_ComplexPrincipleInPolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_POILICY,
 					Resource:    "res1",
 					Action:      "get",
@@ -1264,7 +1264,7 @@ func TestMats_IsAllowed_ComplexPrincipleInPolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group3"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group33"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group3"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group33"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_POILICY,
 					Resource:    "res1",
 					Action:      "get",
@@ -1281,7 +1281,7 @@ func TestMats_IsAllowed_ComplexPrincipleInPolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group3"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group33"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group3"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group33"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_POILICY,
 					Resource:    "res1",
 					Action:      "get",
@@ -1298,7 +1298,7 @@ func TestMats_IsAllowed_ComplexPrincipleInPolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_POILICY,
 					Resource:    "res2",
 					Action:      "get",
@@ -1315,7 +1315,7 @@ func TestMats_IsAllowed_ComplexPrincipleInPolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_POILICY,
 					Resource:    "res2",
 					Action:      "get",
@@ -1332,7 +1332,7 @@ func TestMats_IsAllowed_ComplexPrincipleInPolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_POILICY,
 					Resource:    "res2",
 					Action:      "get",
@@ -1358,7 +1358,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res1",
 					Action:      "get",
@@ -1375,7 +1375,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res1",
 					Action:      "get",
@@ -1392,7 +1392,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res1",
 					Action:      "get",
@@ -1409,7 +1409,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group3"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group33"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group3"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group33"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res1",
 					Action:      "get",
@@ -1426,7 +1426,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group4"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group4"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res4",
 					Action:      "get",
@@ -1443,7 +1443,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res4",
 					Action:      "get",
@@ -1460,7 +1460,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group4"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group4"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res4",
 					Action:      "get",
@@ -1477,7 +1477,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user4"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group3"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group33"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user4"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group3"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group33"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res4",
 					Action:      "get",
@@ -1494,7 +1494,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group3"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group33"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group3"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group33"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res4",
 					Action:      "get",
@@ -1511,7 +1511,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user4"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user4"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res4",
 					Action:      "get",
@@ -1528,7 +1528,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group5"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userAny"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group5"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res5",
 					Action:      "get",
@@ -1545,7 +1545,7 @@ func _TestMats_IsAllowed_ComplexPrincipleInRolePolicy(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group2"}, {Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group22"}}},
 					ServiceName: SERVICE_COMPLEX_PRINCIPLE_IN_ROLEPOILICY,
 					Resource:    "res5",
 					Action:      "get",
@@ -1580,7 +1580,7 @@ func TestMats_IsAllowed_EntityPrinciple(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "schema://domain.name/path1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "schema://domain.name/path1"}}},
 					ServiceName: SERVICE_WITH_ENTITY_PRINCIPLE,
 					Resource:    "res1",
 					Action:      "get",
@@ -1597,7 +1597,7 @@ func TestMats_IsAllowed_EntityPrinciple(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "schema://domain.name/path1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "schema://domain.name/path1"}}},
 					ServiceName: SERVICE_WITH_ENTITY_PRINCIPLE,
 					Resource:    "res2",
 					Action:      "get",
@@ -1614,7 +1614,7 @@ func TestMats_IsAllowed_EntityPrinciple(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "schema://domain.name/path2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "schema://domain.name/path2"}}},
 					ServiceName: SERVICE_WITH_ENTITY_PRINCIPLE,
 					Resource:    "res2",
 					Action:      "get",
@@ -1631,7 +1631,7 @@ func TestMats_IsAllowed_EntityPrinciple(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "spiffe://acme.com/9eebccd2-12bf-40a6-b262-65fe0487d453"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "spiffe://acme.com/9eebccd2-12bf-40a6-b262-65fe0487d453"}}},
 					ServiceName: SERVICE_WITH_ENTITY_PRINCIPLE,
 					Resource:    "res2",
 					Action:      "get",
@@ -1648,7 +1648,7 @@ func TestMats_IsAllowed_EntityPrinciple(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}, &JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "spiffe://acme.com/9eebccd2-12bf-40a6-b262-65fe0487d453"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_GROUP, Name: "group1"}, {Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "spiffe://acme.com/9eebccd2-12bf-40a6-b262-65fe0487d453"}}},
 					ServiceName: SERVICE_WITH_ENTITY_PRINCIPLE,
 					Resource:    "res2",
 					Action:      "get",
@@ -1665,7 +1665,7 @@ func TestMats_IsAllowed_EntityPrinciple(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "special-schema.1+2://user1:pwd@domain1/path1/path-2/a"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_ENTITY, Name: "special-schema.1+2://user1:pwd@domain1/path1/path-2/a"}}},
 					ServiceName: SERVICE_WITH_ENTITY_PRINCIPLE,
 					Resource:    "res3",
 					Action:      "get",

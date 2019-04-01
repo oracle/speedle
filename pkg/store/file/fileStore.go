@@ -15,8 +15,8 @@ import (
 	"github.com/oracle/speedle/pkg/suid"
 
 	"github.com/fsnotify/fsnotify"
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/api/pms"
+	log "github.com/sirupsen/logrus"
 )
 
 type Store struct {

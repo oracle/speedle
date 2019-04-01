@@ -11,11 +11,11 @@ import (
 	"path/filepath"
 	"sync"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/api/ads"
 	"github.com/oracle/speedle/api/pms"
 	"github.com/oracle/speedle/pkg/errors"
 	"github.com/oracle/speedle/pkg/store"
+	log "github.com/sirupsen/logrus"
 )
 
 type discoverRequestStore struct {

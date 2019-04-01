@@ -42,7 +42,7 @@ func TestMats_GrantPerms_Simple(t *testing.T) {
 				InputBody: &JsonContext{
 					Subject: &JsonSubject{
 						Principals: []*JsonPrincipal{
-							&JsonPrincipal{
+							{
 								Type: adsapi.PRINCIPAL_TYPE_USER,
 								Name: "user1",
 							},
@@ -81,7 +81,7 @@ func TestLrg_GrantedPerms_Complex_bug214(t *testing.T) {
 				InputBody: &JsonContext{
 					Subject: &JsonSubject{
 						Principals: []*JsonPrincipal{
-							&JsonPrincipal{
+							{
 								Type: adsapi.PRINCIPAL_TYPE_USER,
 								Name: "user_complex1",
 							},
@@ -104,7 +104,7 @@ func TestLrg_GrantedPerms_Complex_bug214(t *testing.T) {
 				InputBody: &JsonContext{
 					Subject: &JsonSubject{
 						Principals: []*JsonPrincipal{
-							&JsonPrincipal{
+							{
 								Type: adsapi.PRINCIPAL_TYPE_USER,
 								Name: "user_complex1A",
 							},
@@ -129,7 +129,7 @@ func TestLrg_GrantedPerms_Complex_bug214(t *testing.T) {
 				InputBody: &JsonContext{
 					Subject: &JsonSubject{
 						Principals: []*JsonPrincipal{
-							&JsonPrincipal{
+							{
 								Type: adsapi.PRINCIPAL_TYPE_USER,
 								Name: "user_complex1B",
 							},
@@ -161,7 +161,7 @@ func TestLrg_GrantedPerms_ComplexRole_bug214(t *testing.T) {
 				InputBody: &JsonContext{
 					Subject: &JsonSubject{
 						Principals: []*JsonPrincipal{
-							&JsonPrincipal{
+							{
 								Type: adsapi.PRINCIPAL_TYPE_USER,
 								Name: "user1",
 							},
@@ -190,7 +190,7 @@ func TestLrg_GrantedPerms_ComplexRole_bug214(t *testing.T) {
 				InputBody: &JsonContext{
 					Subject: &JsonSubject{
 						Principals: []*JsonPrincipal{
-							&JsonPrincipal{
+							{
 								Type: adsapi.PRINCIPAL_TYPE_USER,
 								Name: "user11",
 							},
@@ -220,7 +220,7 @@ func TestLrg_GrantedPerms_ComplexRole_bug214(t *testing.T) {
 				InputBody: &JsonContext{
 					Subject: &JsonSubject{
 						Principals: []*JsonPrincipal{
-							&JsonPrincipal{
+							{
 								Type: adsapi.PRINCIPAL_TYPE_USER,
 								Name: "user2",
 							},
@@ -258,7 +258,7 @@ func testLrg_GrantedPerms_ResExpr(t *testing.T) {
 				InputBody: &JsonContext{
 					Subject: &JsonSubject{
 						Principals: []*JsonPrincipal{
-							&JsonPrincipal{
+							{
 								Type: adsapi.PRINCIPAL_TYPE_USER,
 								Name: "user1",
 							},

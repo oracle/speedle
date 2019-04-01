@@ -24,7 +24,7 @@ func TestGetRolesWithoutApp(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -59,7 +59,7 @@ func TestGetRolesNotMatchApp(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -94,7 +94,7 @@ func TestGetRolesNoRole(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -161,11 +161,11 @@ func TestGetDirectRolesMatch(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "william",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "grp2",
 			},
@@ -258,11 +258,11 @@ func TestGetHierarchyRolesMatch(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "grp2",
 			},

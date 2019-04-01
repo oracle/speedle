@@ -66,11 +66,11 @@ func TestRolePolicyWithoutResWithCondition(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "cynthia",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "grp3",
 			},
@@ -183,11 +183,11 @@ func TestRolePolicyWithoutResCondifiton(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "cynthia",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "grp3",
 			},
@@ -490,11 +490,11 @@ func TestRolePolicyWithResWithCondition(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "cynthia",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "grp3",
 			},

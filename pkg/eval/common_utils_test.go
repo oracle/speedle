@@ -14,8 +14,8 @@ import (
 	_ "github.com/oracle/speedle/pkg/store/etcd"
 	_ "github.com/oracle/speedle/pkg/store/file"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/api/pms"
+	log "github.com/sirupsen/logrus"
 )
 
 func WriteToTempFile(content []byte) (string, error) {

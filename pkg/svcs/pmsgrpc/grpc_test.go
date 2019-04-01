@@ -173,7 +173,7 @@ func TestMats_GRpc_Policy(t *testing.T) {
 						Name:   pName,
 						Effect: pb.Effect_GRANT,
 						Principals: []*pb.AndPrincipals{
-							&pb.AndPrincipals{
+							{
 								Principals: []string{"user:userA", "group:groupA"},
 							},
 						},
@@ -190,7 +190,7 @@ func TestMats_GRpc_Policy(t *testing.T) {
 					Name:   pName,
 					Effect: pb.Effect_GRANT,
 					Principals: []*pb.AndPrincipals{
-						&pb.AndPrincipals{
+						{
 							Principals: []string{"user:userA", "group:groupA"},
 						},
 					},
@@ -216,10 +216,10 @@ func TestMats_GRpc_Policy(t *testing.T) {
 						Name:   pName1,
 						Effect: pb.Effect_DENY,
 						Principals: []*pb.AndPrincipals{
-							&pb.AndPrincipals{
+							{
 								Principals: []string{"user:userA", "user:userB"},
 							},
-							&pb.AndPrincipals{
+							{
 								Principals: []string{"user:userA", "group:groupB"},
 							},
 						},
@@ -236,10 +236,10 @@ func TestMats_GRpc_Policy(t *testing.T) {
 					Name:   pName1,
 					Effect: pb.Effect_DENY,
 					Principals: []*pb.AndPrincipals{
-						&pb.AndPrincipals{
+						{
 							Principals: []string{"user:userA", "user:userB"},
 						},
-						&pb.AndPrincipals{
+						{
 							Principals: []string{"user:userA", "group:groupB"},
 						},
 					},
@@ -269,7 +269,7 @@ func TestMats_GRpc_Policy(t *testing.T) {
 						Name:   pName,
 						Effect: pb.Effect_GRANT,
 						Principals: []*pb.AndPrincipals{
-							&pb.AndPrincipals{
+							{
 								Principals: []string{"user:userA", "group:groupA"},
 							},
 						},
@@ -298,7 +298,7 @@ func TestMats_GRpc_Policy(t *testing.T) {
 						Name:   pName,
 						Effect: pb.Effect_GRANT,
 						Principals: []*pb.AndPrincipals{
-							&pb.AndPrincipals{
+							{
 								Principals: []string{"user:userA", "group:groupA"},
 							},
 						},
@@ -313,10 +313,10 @@ func TestMats_GRpc_Policy(t *testing.T) {
 						Name:   pName1,
 						Effect: pb.Effect_DENY,
 						Principals: []*pb.AndPrincipals{
-							&pb.AndPrincipals{
+							{
 								Principals: []string{"user:userA", "user:userB"},
 							},
-							&pb.AndPrincipals{
+							{
 								Principals: []string{"user:userA", "group:groupB"},
 							},
 						},
@@ -347,7 +347,7 @@ func TestMats_GRpc_Policy(t *testing.T) {
 						Name:   pName,
 						Effect: pb.Effect_GRANT,
 						Principals: []*pb.AndPrincipals{
-							&pb.AndPrincipals{
+							{
 								Principals: []string{"user:userA", "group:groupA"},
 							},
 						},
@@ -403,10 +403,10 @@ func TestMats_GRpc_Policy(t *testing.T) {
 						Name:   pName_entity,
 						Effect: pb.Effect_GRANT,
 						Principals: []*pb.AndPrincipals{
-							&pb.AndPrincipals{
+							{
 								Principals: []string{"entity:schema://domain.name/path1"},
 							},
-							&pb.AndPrincipals{
+							{
 								Principals: []string{"entity:schema://domain.name/path2"},
 							},
 						},
@@ -423,10 +423,10 @@ func TestMats_GRpc_Policy(t *testing.T) {
 					Name:   pName_entity,
 					Effect: pb.Effect_GRANT,
 					Principals: []*pb.AndPrincipals{
-						&pb.AndPrincipals{
+						{
 							Principals: []string{"entity:schema://domain.name/path1"},
 						},
-						&pb.AndPrincipals{
+						{
 							Principals: []string{"entity:schema://domain.name/path2"},
 						},
 					},

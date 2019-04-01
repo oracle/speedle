@@ -99,7 +99,7 @@ func TestWriteReadDeleteService(t *testing.T) {
 		policy.Name = fmt.Sprintf("policy%d", i)
 		policy.Effect = "grant"
 		policy.Permissions = []*pms.Permission{
-			&pms.Permission{
+			{
 				Resource: "/node1",
 				Actions:  []string{"get", "create", "delete"},
 			},
@@ -434,7 +434,7 @@ func TestManagePolicies(t *testing.T) {
 	policy.Name = fmt.Sprintf("policy1")
 	policy.Effect = "grant"
 	policy.Permissions = []*pms.Permission{
-		&pms.Permission{
+		{
 			Resource: "/node1",
 			Actions:  []string{"get", "create", "delete"},
 		},
@@ -559,9 +559,9 @@ func TestCheckItemsCount(t *testing.T) {
 
 	// Create policies
 	policies := []pms.Policy{
-		pms.Policy{Name: "p01", Effect: "grant", Principals: [][]string{{"user:user1"}}},
-		pms.Policy{Name: "p02", Effect: "grant", Principals: [][]string{{"user:user2"}}},
-		pms.Policy{Name: "p03", Effect: "grant", Principals: [][]string{{"user:user3"}}},
+		{Name: "p01", Effect: "grant", Principals: [][]string{{"user:user1"}}},
+		{Name: "p02", Effect: "grant", Principals: [][]string{{"user:user2"}}},
+		{Name: "p03", Effect: "grant", Principals: [][]string{{"user:user3"}}},
 	}
 	for _, policy := range policies {
 		_, err := store.CreatePolicy("service1", &policy)
@@ -580,8 +580,8 @@ func TestCheckItemsCount(t *testing.T) {
 
 	// Create Role Policies
 	rolePolicies := []pms.RolePolicy{
-		pms.RolePolicy{Name: "p01", Effect: "grant", Principals: []string{"user:user1"}, Roles: []string{"role1"}},
-		pms.RolePolicy{Name: "p02", Effect: "grant", Principals: []string{"user:user2"}, Roles: []string{"role2"}},
+		{Name: "p01", Effect: "grant", Principals: []string{"user:user1"}, Roles: []string{"role1"}},
+		{Name: "p02", Effect: "grant", Principals: []string{"user:user2"}, Roles: []string{"role2"}},
 	}
 	for _, rolePolicy := range rolePolicies {
 		_, err := store.CreateRolePolicy("service1", &rolePolicy)

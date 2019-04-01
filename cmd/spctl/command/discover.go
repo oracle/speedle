@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/spf13/cobra"
 	"github.com/oracle/speedle/cmd/spctl/client"
 	"github.com/oracle/speedle/pkg/svcs/pmsrest"
+	"github.com/spf13/cobra"
 )
 
 var (

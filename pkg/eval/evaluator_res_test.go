@@ -25,7 +25,7 @@ func TestGetResourcesWithoutApp(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -59,7 +59,7 @@ func TestGetResourcesNotMatchApp(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -93,7 +93,7 @@ func TestGetResourcesNoPolicy(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -144,7 +144,7 @@ func TestGetResourcesNoPrincDef(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -260,11 +260,11 @@ func TestGetResourcesMatch(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "grp1",
 			},

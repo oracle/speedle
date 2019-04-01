@@ -19,8 +19,8 @@ import (
 
 	"time"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/pkg/svcs"
+	log "github.com/sirupsen/logrus"
 )
 
 type RESTService struct {

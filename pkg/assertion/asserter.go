@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/sirupsen/logrus"
 	adsapi "github.com/oracle/speedle/api/ads"
+	log "github.com/sirupsen/logrus"
 )
 
 const (

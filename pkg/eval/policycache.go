@@ -205,7 +205,7 @@ func (p *PolicyCacheData) getPolicyFromResourceToPolicyMap(resourceToPolicyMap *
 
 	//First add nil resource policies
 	if resourceToPolicyMap.NilResourceToPolicies != nil {
-		for id, _ := range resourceToPolicyMap.NilResourceToPolicies {
+		for id := range resourceToPolicyMap.NilResourceToPolicies {
 			resultPolicyMap[id] = p.PolicyMap[id]
 		}
 	}
@@ -215,7 +215,7 @@ func (p *PolicyCacheData) getPolicyFromResourceToPolicyMap(resourceToPolicyMap *
 		if resourceToPolicyMap.ResourceToPolicies != nil {
 			if policyIDSet, ok := resourceToPolicyMap.ResourceToPolicies[resource]; ok {
 				//Add all related policies to result policy map
-				for id, _ := range policyIDSet {
+				for id := range policyIDSet {
 					resultPolicyMap[id] = p.PolicyMap[id]
 				}
 			}
@@ -228,7 +228,7 @@ func (p *PolicyCacheData) getPolicyFromResourceToPolicyMap(resourceToPolicyMap *
 		if resourceToPolicyMap.ResourceToPolicies != nil {
 			for _, policyIDSet := range resourceToPolicyMap.ResourceToPolicies {
 				//Add all related policies to result policy map
-				for id, _ := range policyIDSet {
+				for id := range policyIDSet {
 					resultPolicyMap[id] = p.PolicyMap[id]
 				}
 			}
@@ -244,7 +244,7 @@ func (p *PolicyCacheData) getPoliciesFromResourceExpressionMap(resourceToPolicyM
 
 		fn := func(s string, v interface{}) bool {
 			policyIDSet := v.(map[string]bool)
-			for id, _ := range policyIDSet {
+			for id := range policyIDSet {
 				resultPolicyMap[id] = p.PolicyMap[id]
 			}
 
@@ -267,7 +267,7 @@ func (p *PolicyCacheData) getPoliciesFromResourceExpressionMap(resourceToPolicyM
 				}
 				if matched {
 					//Add all related policies to result policy map
-					for id, _ := range policyIDSet {
+					for id := range policyIDSet {
 						resultPolicyMap[id] = p.PolicyMap[id]
 					}
 				}
@@ -277,7 +277,7 @@ func (p *PolicyCacheData) getPoliciesFromResourceExpressionMap(resourceToPolicyM
 
 		fn := func(s string, v interface{}) bool {
 			policyIDSet := v.(map[string]bool)
-			for id, _ := range policyIDSet {
+			for id := range policyIDSet {
 				resultPolicyMap[id] = p.PolicyMap[id]
 			}
 
@@ -294,7 +294,7 @@ func (p *PolicyCacheData) getPoliciesFromResourceExpressionMap(resourceToPolicyM
 		if resourceToPolicyMap.ResourceExpressionToPolicies != nil {
 			for _, policyIDSet := range resourceToPolicyMap.ResourceExpressionToPolicies {
 				//Add all related policies to result policy map
-				for id, _ := range policyIDSet {
+				for id := range policyIDSet {
 					resultPolicyMap[id] = p.PolicyMap[id]
 				}
 			}

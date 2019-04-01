@@ -7,11 +7,11 @@ import (
 	"io/ioutil"
 	"os"
 
-	log "github.com/sirupsen/logrus"
-	"github.com/spf13/pflag"
 	"github.com/oracle/speedle/api/pms"
 	"github.com/oracle/speedle/pkg/errors"
 	"github.com/oracle/speedle/pkg/store"
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/pflag"
 )
 
 const (

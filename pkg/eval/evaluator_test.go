@@ -14,7 +14,7 @@ import (
 func TestGetPermissions(t *testing.T) {
 	alice := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "alice",
 			},
@@ -22,7 +22,7 @@ func TestGetPermissions(t *testing.T) {
 	}
 	bill := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -96,7 +96,7 @@ func TestGetPermissions(t *testing.T) {
 	}
 			`,
 			request: adsapi.RequestContext{Subject: &alice, ServiceName: "erp", Attributes: map[string]interface{}{}},
-			results: []pms.Permission{pms.Permission{Resource: "/node1", Actions: []string{"get"}}, pms.Permission{Resource: "/node2", Actions: []string{"get"}}},
+			results: []pms.Permission{{Resource: "/node1", Actions: []string{"get"}}, {Resource: "/node2", Actions: []string{"get"}}},
 		},
 		{
 			stream: `
@@ -158,7 +158,7 @@ func TestGetPermissions(t *testing.T) {
 	}
 			`,
 			request: adsapi.RequestContext{Subject: &bill, ServiceName: "erp", Attributes: map[string]interface{}{}},
-			results: []pms.Permission{pms.Permission{Resource: "/node1", Actions: []string{"get", "create", "delete"}}, pms.Permission{Resource: "/node2", Actions: []string{"get"}}},
+			results: []pms.Permission{{Resource: "/node1", Actions: []string{"get", "create", "delete"}}, {Resource: "/node2", Actions: []string{"get"}}},
 		},
 		{
 			stream: `
@@ -220,7 +220,7 @@ func TestGetPermissions(t *testing.T) {
 	}
 			`,
 			request: adsapi.RequestContext{Subject: &alice, ServiceName: "erp", Attributes: map[string]interface{}{}},
-			results: []pms.Permission{pms.Permission{Resource: "/node1", Actions: []string{"get"}}},
+			results: []pms.Permission{{Resource: "/node1", Actions: []string{"get"}}},
 		},
 		{
 			stream: `
@@ -357,7 +357,7 @@ func TestGetPermissions(t *testing.T) {
 func TestGetRoles_empty(t *testing.T) {
 	alice := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "alice",
 			},
@@ -365,7 +365,7 @@ func TestGetRoles_empty(t *testing.T) {
 	}
 	bill := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -547,7 +547,7 @@ func TestGetRoles_empty(t *testing.T) {
 func TestIsAllowed_empty(t *testing.T) {
 	alice := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "alice",
 			},
@@ -555,7 +555,7 @@ func TestIsAllowed_empty(t *testing.T) {
 	}
 	anyUser := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "anyUser",
 			},
@@ -857,7 +857,7 @@ func TestIsAllowed_empty(t *testing.T) {
 func TestEntityPrincipal(t *testing.T) {
 	mysql := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_ENTITY,
 				Name: "spiffe://staging.acme.com/payments/mysql",
 			},
@@ -865,7 +865,7 @@ func TestEntityPrincipal(t *testing.T) {
 	}
 	etcd := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_ENTITY,
 				Name: "spiffe://staging.acme.com/payments/etcd",
 			},
@@ -873,7 +873,7 @@ func TestEntityPrincipal(t *testing.T) {
 	}
 	docker := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_ENTITY,
 				Name: "spiffe://staging.acme.com/payments/docker",
 			},

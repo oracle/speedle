@@ -40,7 +40,7 @@ func TestMats_GrantedRole_Simple(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_allow",
 				},
@@ -56,7 +56,7 @@ func TestMats_GrantedRole_Simple(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userWithRole1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userWithRole1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_allow",
 				},
@@ -72,7 +72,7 @@ func TestMats_GrantedRole_Simple(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "group2WithRole2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "group2WithRole2"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Resource:    "res_deny",
 				},
@@ -96,7 +96,7 @@ func TestLrg_GrantedRole_RoleEmbeded_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 				},
 				ExpectedStatus: 200,
@@ -112,7 +112,7 @@ func TestLrg_GrantedRole_RoleEmbeded_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user2"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 				},
 				ExpectedStatus: 200,
@@ -128,7 +128,7 @@ func TestLrg_GrantedRole_RoleEmbeded_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 				},
 				ExpectedStatus: 200,
@@ -144,7 +144,7 @@ func TestLrg_GrantedRole_RoleEmbeded_bug120(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user22"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user22"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 				},
 				ExpectedStatus: 200,
@@ -174,7 +174,7 @@ func TestLrg_GrantedRole_OnResource(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userRes1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userRes1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res1",
 					Action:      "get",
@@ -192,7 +192,7 @@ func TestLrg_GrantedRole_OnResource(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userRes1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userRes1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res1",
 					Action:      "del",
@@ -210,7 +210,7 @@ func TestLrg_GrantedRole_OnResource(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userRes1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "userRes1"}}},
 					ServiceName: SERVICE_COMPLEX_ROLE,
 					Resource:    "res2",
 				},
@@ -238,10 +238,10 @@ func TestLrg_GrantedRole_WithCondition(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_condtion1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_condtion1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "age", Value: 15}},
+						{Name: "age", Value: 15}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &[]string{},
@@ -255,10 +255,10 @@ func TestLrg_GrantedRole_WithCondition(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_GRANTED_ROLES,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_condtion1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_condtion1"}}},
 					ServiceName: SERVICE_SIMPLE,
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "age", Value: 10}},
+						{Name: "age", Value: 10}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &[]string{},

@@ -14,15 +14,15 @@ import (
 func TestConditions(t *testing.T) {
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "admin",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "manager",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "tester",
 			},

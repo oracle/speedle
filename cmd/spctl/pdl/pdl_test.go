@@ -324,23 +324,23 @@ func TestPermissions(t *testing.T) {
 	}{
 		{
 			cmd:  "get core/pods ...",
-			want: []pms.Permission{pms.Permission{Actions: []string{"get"}, Resource: "core/pods"}},
+			want: []pms.Permission{{Actions: []string{"get"}, Resource: "core/pods"}},
 		},
 		{
 			cmd:  "   get core/pods ...",
-			want: []pms.Permission{pms.Permission{Actions: []string{"get"}, Resource: "core/pods"}},
+			want: []pms.Permission{{Actions: []string{"get"}, Resource: "core/pods"}},
 		},
 		{
 			cmd:  "get,list,watch core/pods ...",
-			want: []pms.Permission{pms.Permission{Actions: []string{"get", "list", "watch"}, Resource: "core/pods"}},
+			want: []pms.Permission{{Actions: []string{"get", "list", "watch"}, Resource: "core/pods"}},
 		},
 		{
 			cmd:  "get, list , watch core/pods ...",
-			want: []pms.Permission{pms.Permission{Actions: []string{"get", "list", "watch"}, Resource: "core/pods"}},
+			want: []pms.Permission{{Actions: []string{"get", "list", "watch"}, Resource: "core/pods"}},
 		},
 		{
 			cmd:  "get, list , watch 'res with whitespace' ...",
-			want: []pms.Permission{pms.Permission{Actions: []string{"get", "list", "watch"}, Resource: "res with whitespace"}},
+			want: []pms.Permission{{Actions: []string{"get", "list", "watch"}, Resource: "res with whitespace"}},
 		},
 	}
 

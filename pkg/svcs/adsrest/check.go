@@ -16,8 +16,8 @@ import (
 	"github.com/oracle/speedle/pkg/httputils"
 	"github.com/oracle/speedle/pkg/logging"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/pkg/svcs"
+	log "github.com/sirupsen/logrus"
 )
 
 type JsonAttribute struct {

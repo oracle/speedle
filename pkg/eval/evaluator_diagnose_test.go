@@ -23,7 +23,7 @@ func TestDiagnoseWithoutApp(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -69,7 +69,7 @@ func TestDiagnoseNotMatchApp(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -112,7 +112,7 @@ func TestDiagnoseNoPolicy(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -173,7 +173,7 @@ func TestDiagnoseNoPrincDef(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},

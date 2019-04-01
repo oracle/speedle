@@ -49,7 +49,7 @@ func TestMats_GRpc_IsAllowed_User(t *testing.T) {
 						Name:   pName,
 						Effect: pmsPB.Effect_GRANT,
 						Principals: []*pmsPB.AndPrincipals{
-							&pmsPB.AndPrincipals{
+							{
 								Principals: []string{"user:userA"},
 							},
 						},
@@ -66,7 +66,7 @@ func TestMats_GRpc_IsAllowed_User(t *testing.T) {
 					Name:   pName,
 					Effect: pmsPB.Effect_GRANT,
 					Principals: []*pmsPB.AndPrincipals{
-						&pmsPB.AndPrincipals{
+						{
 							Principals: []string{"user:userA"},
 						},
 					},
@@ -90,7 +90,7 @@ func TestMats_GRpc_IsAllowed_User(t *testing.T) {
 				InputBody: &adsPB.ContextRequest{
 					Subject: &adsPB.Subject{
 						Principals: []*adsPB.Principal{
-							&adsPB.Principal{
+							{
 								Type: "user",
 								Name: "userA",
 							},
@@ -116,7 +116,7 @@ func TestMats_GRpc_IsAllowed_User(t *testing.T) {
 				InputBody: &adsPB.ContextRequest{
 					Subject: &adsPB.Subject{
 						Principals: []*adsPB.Principal{
-							&adsPB.Principal{
+							{
 								Type: "user",
 								Name: "invaliduserA",
 							},
@@ -142,7 +142,7 @@ func TestMats_GRpc_IsAllowed_User(t *testing.T) {
 				InputBody: &adsPB.ContextRequest{
 					Subject: &adsPB.Subject{
 						Principals: []*adsPB.Principal{
-							&adsPB.Principal{
+							{
 								Type: "user",
 								Name: "userA",
 							},
@@ -168,7 +168,7 @@ func TestMats_GRpc_IsAllowed_User(t *testing.T) {
 				InputBody: &adsPB.ContextRequest{
 					Subject: &adsPB.Subject{
 						Principals: []*adsPB.Principal{
-							&adsPB.Principal{
+							{
 								Type: "user",
 								Name: "userA",
 							},
@@ -269,7 +269,7 @@ func TestMats_GRpc_IsAllowed_Role(t *testing.T) {
 						Name:   pName,
 						Effect: pmsPB.Effect_GRANT,
 						Principals: []*pmsPB.AndPrincipals{
-							&pmsPB.AndPrincipals{
+							{
 								Principals: []string{"role:role1"},
 							},
 						},
@@ -286,7 +286,7 @@ func TestMats_GRpc_IsAllowed_Role(t *testing.T) {
 					Name:   pName,
 					Effect: pmsPB.Effect_GRANT,
 					Principals: []*pmsPB.AndPrincipals{
-						&pmsPB.AndPrincipals{
+						{
 							Principals: []string{"role:role1"},
 						},
 					},
@@ -310,7 +310,7 @@ func TestMats_GRpc_IsAllowed_Role(t *testing.T) {
 				InputBody: &adsPB.ContextRequest{
 					Subject: &adsPB.Subject{
 						Principals: []*adsPB.Principal{
-							&adsPB.Principal{
+							{
 								Type: "user",
 								Name: "userA",
 							},
@@ -435,7 +435,7 @@ func TestMats_GRpc_GetAllGrantedRoles_basic(t *testing.T) {
 				InputBody: &adsPB.ContextRequest{
 					Subject: &adsPB.Subject{
 						Principals: []*adsPB.Principal{
-							&adsPB.Principal{
+							{
 								Type: "user",
 								Name: "userA",
 							},
@@ -459,7 +459,7 @@ func TestMats_GRpc_GetAllGrantedRoles_basic(t *testing.T) {
 				InputBody: &adsPB.ContextRequest{
 					Subject: &adsPB.Subject{
 						Principals: []*adsPB.Principal{
-							&adsPB.Principal{
+							{
 								Type: "user",
 								Name: "userA",
 							},
@@ -610,7 +610,7 @@ func TestMats_GRpc_GetAllGrantedRoles_RoleToRole(t *testing.T) {
 				InputBody: &adsPB.ContextRequest{
 					Subject: &adsPB.Subject{
 						Principals: []*adsPB.Principal{
-							&adsPB.Principal{
+							{
 								Type: "user",
 								Name: "userA",
 							},
@@ -634,7 +634,7 @@ func TestMats_GRpc_GetAllGrantedRoles_RoleToRole(t *testing.T) {
 				InputBody: &adsPB.ContextRequest{
 					Subject: &adsPB.Subject{
 						Principals: []*adsPB.Principal{
-							&adsPB.Principal{
+							{
 								Type: "user",
 								Name: "userA",
 							},
@@ -658,7 +658,7 @@ func TestMats_GRpc_GetAllGrantedRoles_RoleToRole(t *testing.T) {
 				InputBody: &adsPB.ContextRequest{
 					Subject: &adsPB.Subject{
 						Principals: []*adsPB.Principal{
-							&adsPB.Principal{
+							{
 								Type: "user",
 								Name: "userA",
 							},
@@ -730,7 +730,7 @@ func TestMats_GRpc_GetAllGrantedPermission(t *testing.T) {
 						Name:   pName1,
 						Effect: pmsPB.Effect_GRANT,
 						Principals: []*pmsPB.AndPrincipals{
-							&pmsPB.AndPrincipals{
+							{
 								Principals: []string{"user:userA"},
 							},
 						},
@@ -747,7 +747,7 @@ func TestMats_GRpc_GetAllGrantedPermission(t *testing.T) {
 					Name:   pName1,
 					Effect: pmsPB.Effect_GRANT,
 					Principals: []*pmsPB.AndPrincipals{
-						&pmsPB.AndPrincipals{
+						{
 							Principals: []string{"user:userA"},
 						},
 					},
@@ -773,7 +773,7 @@ func TestMats_GRpc_GetAllGrantedPermission(t *testing.T) {
 						Name:   pName2,
 						Effect: pmsPB.Effect_GRANT,
 						Principals: []*pmsPB.AndPrincipals{
-							&pmsPB.AndPrincipals{
+							{
 								Principals: []string{"user:userA"},
 							},
 						},
@@ -790,7 +790,7 @@ func TestMats_GRpc_GetAllGrantedPermission(t *testing.T) {
 					Name:   pName2,
 					Effect: pmsPB.Effect_GRANT,
 					Principals: []*pmsPB.AndPrincipals{
-						&pmsPB.AndPrincipals{
+						{
 							Principals: []string{"user:userA"},
 						},
 					},
@@ -841,7 +841,7 @@ func TestMats_GRpc_GetAllGrantedPermission(t *testing.T) {
 						Name:   pName3,
 						Effect: pmsPB.Effect_GRANT,
 						Principals: []*pmsPB.AndPrincipals{
-							&pmsPB.AndPrincipals{
+							{
 								Principals: []string{"role:role1"},
 							},
 						},
@@ -858,7 +858,7 @@ func TestMats_GRpc_GetAllGrantedPermission(t *testing.T) {
 					Name:   pName3,
 					Effect: pmsPB.Effect_GRANT,
 					Principals: []*pmsPB.AndPrincipals{
-						&pmsPB.AndPrincipals{
+						{
 							Principals: []string{"role:role1"},
 						},
 					},
@@ -882,7 +882,7 @@ func TestMats_GRpc_GetAllGrantedPermission(t *testing.T) {
 				InputBody: &adsPB.ContextRequest{
 					Subject: &adsPB.Subject{
 						Principals: []*adsPB.Principal{
-							&adsPB.Principal{
+							{
 								Type: "user",
 								Name: "userA",
 							},
@@ -893,15 +893,15 @@ func TestMats_GRpc_GetAllGrantedPermission(t *testing.T) {
 				OutputBody: &adsPB.AllPermissionResponse{},
 				ExpectedBody: &adsPB.AllPermissionResponse{
 					Permissions: []*adsPB.AllPermissionResponse_Permission{
-						&adsPB.AllPermissionResponse_Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"read"},
 						},
-						&adsPB.AllPermissionResponse_Permission{
+						{
 							Resource: "res1",
 							Actions:  []string{"write"},
 						},
-						&adsPB.AllPermissionResponse_Permission{
+						{
 							Resource: "res2",
 							Actions:  []string{"read"},
 						},

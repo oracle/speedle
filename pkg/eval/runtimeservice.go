@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"sync"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/3rdparty/github.com/Knetic/govaluate"
 	"github.com/oracle/speedle/api/pms"
+	log "github.com/sirupsen/logrus"
 )
 
 type RuntimePolicyStore struct {

@@ -11,8 +11,8 @@ import (
 	"time"
 
 	"github.com/coreos/etcd/embed"
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/pkg/errors"
+	log "github.com/sirupsen/logrus"
 )
 
 var embededStarted = false

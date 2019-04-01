@@ -10,11 +10,11 @@ import (
 	"os"
 	"strings"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/oracle/speedle/api/pms"
 	"github.com/oracle/speedle/cmd/spctl/pdl"
 	"github.com/oracle/speedle/pkg/errors"
 	"github.com/oracle/speedle/pkg/suid"
+	log "github.com/sirupsen/logrus"
 )
 
 type phase int

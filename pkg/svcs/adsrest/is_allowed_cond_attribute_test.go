@@ -25,12 +25,12 @@ func TestMats_IsAllowed_Attri_Bool(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_equal1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_equal1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_equal1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: false}},
+						{Name: "x", Value: false}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -43,12 +43,12 @@ func TestMats_IsAllowed_Attri_Bool(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_equal1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_equal1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_equal1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: true}},
+						{Name: "x", Value: true}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -63,12 +63,12 @@ func TestMats_IsAllowed_Attri_Bool(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_equal2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_equal2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_equal2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: false}},
+						{Name: "x", Value: false}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -81,12 +81,12 @@ func TestMats_IsAllowed_Attri_Bool(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_equal2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_equal2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_equal2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: true}},
+						{Name: "x", Value: true}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -102,12 +102,12 @@ func TestMats_IsAllowed_Attri_Bool(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_notequal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_notequal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_equal2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: true}},
+						{Name: "x", Value: true}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -120,12 +120,12 @@ func TestMats_IsAllowed_Attri_Bool(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_notequal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_notequal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_equal2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: false}},
+						{Name: "x", Value: false}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -145,14 +145,14 @@ func TestMats_IsAllowed_Attri_Bool(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_complex",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: true},
-						&JsonAttribute{Name: "s2", Value: false},
-						&JsonAttribute{Name: "s3", Value: true}},
+						{Name: "s1", Value: true},
+						{Name: "s2", Value: false},
+						{Name: "s3", Value: true}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -165,14 +165,14 @@ func TestMats_IsAllowed_Attri_Bool(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_complex",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: true},
-						&JsonAttribute{Name: "s2", Value: true},
-						&JsonAttribute{Name: "s3", Value: true}},
+						{Name: "s1", Value: true},
+						{Name: "s2", Value: true},
+						{Name: "s3", Value: true}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -185,14 +185,14 @@ func TestMats_IsAllowed_Attri_Bool(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_complex",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: false},
-						&JsonAttribute{Name: "s2", Value: false},
-						&JsonAttribute{Name: "s3", Value: true}},
+						{Name: "s1", Value: false},
+						{Name: "s2", Value: false},
+						{Name: "s3", Value: true}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -205,14 +205,14 @@ func TestMats_IsAllowed_Attri_Bool(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_complex",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: true},
-						&JsonAttribute{Name: "s2", Value: true},
-						&JsonAttribute{Name: "s3", Value: false}},
+						{Name: "s1", Value: true},
+						{Name: "s2", Value: true},
+						{Name: "s3", Value: false}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -226,14 +226,14 @@ func TestMats_IsAllowed_Attri_Bool(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_complex",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: false},
-						&JsonAttribute{Name: "s2", Value: true},
-						&JsonAttribute{Name: "s3", Value: false}},
+						{Name: "s1", Value: false},
+						{Name: "s2", Value: true},
+						{Name: "s3", Value: false}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -258,14 +258,14 @@ func TestLrg_IsAllowed_Attri_Bool_NoSpace_Between_Operator_bug162(t *testing.T) 
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: true},
-						&JsonAttribute{Name: "s2", Value: false},
-						&JsonAttribute{Name: "s3", Value: true}},
+						{Name: "s1", Value: true},
+						{Name: "s2", Value: false},
+						{Name: "s3", Value: true}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -280,14 +280,14 @@ func TestLrg_IsAllowed_Attri_Bool_NoSpace_Between_Operator_bug162(t *testing.T) 
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: true},
-						&JsonAttribute{Name: "s2", Value: false},
-						&JsonAttribute{Name: "s3", Value: true}},
+						{Name: "s1", Value: true},
+						{Name: "s2", Value: false},
+						{Name: "s3", Value: true}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -302,14 +302,14 @@ func TestLrg_IsAllowed_Attri_Bool_NoSpace_Between_Operator_bug162(t *testing.T) 
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool3"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool3"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: true},
-						&JsonAttribute{Name: "s2", Value: false},
-						&JsonAttribute{Name: "s3", Value: false}},
+						{Name: "s1", Value: true},
+						{Name: "s2", Value: false},
+						{Name: "s3", Value: false}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -338,14 +338,14 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 20},
-						&JsonAttribute{Name: "s2", Value: 2},
-						&JsonAttribute{Name: "s3", Value: 3}},
+						{Name: "s1", Value: 20},
+						{Name: "s2", Value: 2},
+						{Name: "s3", Value: 3}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -358,14 +358,14 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 20},
-						&JsonAttribute{Name: "s2", Value: 2},
-						&JsonAttribute{Name: "s3", Value: 2}},
+						{Name: "s1", Value: 20},
+						{Name: "s2", Value: 2},
+						{Name: "s3", Value: 2}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -378,14 +378,14 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 20},
-						&JsonAttribute{Name: "s2", Value: 2},
-						&JsonAttribute{Name: "s3", Value: -3}},
+						{Name: "s1", Value: 20},
+						{Name: "s2", Value: 2},
+						{Name: "s3", Value: -3}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -398,14 +398,14 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: -22},
-						&JsonAttribute{Name: "s2", Value: 2},
-						&JsonAttribute{Name: "s3", Value: -3}},
+						{Name: "s1", Value: -22},
+						{Name: "s2", Value: 2},
+						{Name: "s3", Value: -3}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -418,14 +418,14 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: -22},
-						&JsonAttribute{Name: "s2", Value: 2},
-						&JsonAttribute{Name: "s3", Value: 3}},
+						{Name: "s1", Value: -22},
+						{Name: "s2", Value: 2},
+						{Name: "s3", Value: 3}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -438,14 +438,14 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 12},
-						&JsonAttribute{Name: "s2", Value: -2},
-						&JsonAttribute{Name: "s3", Value: 3}},
+						{Name: "s1", Value: 12},
+						{Name: "s2", Value: -2},
+						{Name: "s3", Value: 3}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -464,14 +464,14 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: -10},
-						&JsonAttribute{Name: "s2", Value: 3},
-						&JsonAttribute{Name: "s3", Value: -1}},
+						{Name: "s1", Value: -10},
+						{Name: "s2", Value: 3},
+						{Name: "s3", Value: -1}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -484,14 +484,14 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: -10},
-						&JsonAttribute{Name: "s2", Value: 3},
-						&JsonAttribute{Name: "s3", Value: 1}},
+						{Name: "s1", Value: -10},
+						{Name: "s2", Value: 3},
+						{Name: "s3", Value: 1}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -504,14 +504,14 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 0},
-						&JsonAttribute{Name: "s2", Value: -3},
-						&JsonAttribute{Name: "s3", Value: 1}},
+						{Name: "s1", Value: 0},
+						{Name: "s2", Value: -3},
+						{Name: "s3", Value: 1}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -524,14 +524,14 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 0},
-						&JsonAttribute{Name: "s2", Value: -3},
-						&JsonAttribute{Name: "s3", Value: -1}},
+						{Name: "s1", Value: 0},
+						{Name: "s2", Value: -3},
+						{Name: "s3", Value: -1}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -544,14 +544,14 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_equal2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 1.2},
-						&JsonAttribute{Name: "s2", Value: -3.0},
-						&JsonAttribute{Name: "s3", Value: 1}},
+						{Name: "s1", Value: 1.2},
+						{Name: "s2", Value: -3.0},
+						{Name: "s3", Value: 1}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -568,13 +568,13 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_notequal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_notequal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num3",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 0},
-						&JsonAttribute{Name: "s2", Value: 10}},
+						{Name: "s1", Value: 0},
+						{Name: "s2", Value: 10}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -587,13 +587,13 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_notequal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_notequal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num3",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 1},
-						&JsonAttribute{Name: "s2", Value: 10}},
+						{Name: "s1", Value: 1},
+						{Name: "s2", Value: 10}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -611,13 +611,13 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num4",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: -5},
-						&JsonAttribute{Name: "s2", Value: 0}},
+						{Name: "s1", Value: -5},
+						{Name: "s2", Value: 0}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -630,13 +630,13 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num4",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: -2},
-						&JsonAttribute{Name: "s2", Value: 0}},
+						{Name: "s1", Value: -2},
+						{Name: "s2", Value: 0}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -649,13 +649,13 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num4",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 0},
-						&JsonAttribute{Name: "s2", Value: 0}},
+						{Name: "s1", Value: 0},
+						{Name: "s2", Value: 0}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -668,13 +668,13 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num4",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: -10},
-						&JsonAttribute{Name: "s2", Value: -10}},
+						{Name: "s1", Value: -10},
+						{Name: "s2", Value: -10}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -691,13 +691,13 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num5",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: -5},
-						&JsonAttribute{Name: "s2", Value: 0}},
+						{Name: "s1", Value: -5},
+						{Name: "s2", Value: 0}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -710,13 +710,13 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num5",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: -20},
-						&JsonAttribute{Name: "s2", Value: -20}},
+						{Name: "s1", Value: -20},
+						{Name: "s2", Value: -20}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -729,13 +729,13 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num5",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 30},
-						&JsonAttribute{Name: "s2", Value: 10.02}},
+						{Name: "s1", Value: 30},
+						{Name: "s2", Value: 10.02}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -753,13 +753,13 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater_equal2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater_equal2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num6",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 1},
-						&JsonAttribute{Name: "s2", Value: 0.4}},
+						{Name: "s1", Value: 1},
+						{Name: "s2", Value: 0.4}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -773,13 +773,13 @@ func TestMats_IsAllowed_Attri_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater_equal2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_num_greater_equal2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_num6",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 1},
-						&JsonAttribute{Name: "s2", Value: 0.5}},
+						{Name: "s1", Value: 1},
+						{Name: "s2", Value: 0.5}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -808,13 +808,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_equal1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_equal1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "1"},
-						&JsonAttribute{Name: "s2", Value: "23"}},
+						{Name: "s1", Value: "1"},
+						{Name: "s2", Value: "23"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -827,13 +827,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_equal1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_equal1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "1"},
-						&JsonAttribute{Name: "s2", Value: "22"}},
+						{Name: "s1", Value: "1"},
+						{Name: "s2", Value: "22"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -846,13 +846,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_equal1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_equal1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: ""},
-						&JsonAttribute{Name: "s2", Value: "123"}},
+						{Name: "s1", Value: ""},
+						{Name: "s2", Value: "123"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -893,13 +893,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_notequal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_notequal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "1"},
-						&JsonAttribute{Name: "s2", Value: "1"}},
+						{Name: "s1", Value: "1"},
+						{Name: "s2", Value: "1"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -912,13 +912,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_notequal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_notequal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "1"},
-						&JsonAttribute{Name: "s2", Value: "-1"}},
+						{Name: "s1", Value: "1"},
+						{Name: "s2", Value: "-1"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -931,13 +931,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_notequal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_notequal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: ""},
-						&JsonAttribute{Name: "s2", Value: "nil"}},
+						{Name: "s1", Value: ""},
+						{Name: "s2", Value: "nil"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -954,13 +954,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_regx"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_regx"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str3",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: "abc"}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: "abc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -973,13 +973,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_regx"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_regx"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str3",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: "123"}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: "123"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -996,13 +996,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str4",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: "Abc"}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: "Abc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1015,13 +1015,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str4",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: "abc"}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: "abc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1034,13 +1034,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str4",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: ""}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: ""}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1058,13 +1058,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str5",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: "Abc"}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: "Abc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1077,13 +1077,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str5",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: "abc"}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: "abc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1096,13 +1096,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_greater_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str5",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "null"},
-						&JsonAttribute{Name: "s2", Value: ""}},
+						{Name: "s1", Value: "null"},
+						{Name: "s2", Value: ""}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1121,13 +1121,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_less_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_less_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str6",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: "Abc"}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: "Abc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1140,13 +1140,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_less_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_less_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str6",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: "abc"}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: "abc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1165,13 +1165,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_less"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_less"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str7",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: "Abc"}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: "Abc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1184,13 +1184,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_less"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_less"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str7",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: "abc"}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: "abc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1203,13 +1203,13 @@ func TestMats_IsAllowed_Attri_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_less"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_str_less"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_str7",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "a bc"},
-						&JsonAttribute{Name: "s2", Value: "a1bc"}},
+						{Name: "s1", Value: "a bc"},
+						{Name: "s2", Value: "a1bc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1236,13 +1236,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1255,13 +1255,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-09:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-09:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1274,13 +1274,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-22T15:04:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-22T15:04:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1297,13 +1297,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_notequal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_notequal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05+07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05+07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05+07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05+07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1316,13 +1316,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_notequal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_notequal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05+07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05+07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1339,13 +1339,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1358,13 +1358,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-09:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-09:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1377,13 +1377,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T05:04:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T05:04:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1396,13 +1396,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T05:04:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T05:04:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1419,13 +1419,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1438,13 +1438,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-09:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-09:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1457,13 +1457,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_greater_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:04-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:04-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1480,13 +1480,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1499,13 +1499,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-09:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-09:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1518,13 +1518,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:04-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:04-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1541,13 +1541,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1560,13 +1560,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-09:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-09:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1579,13 +1579,13 @@ func TestMats_IsAllowed_Attri_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_less"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:04-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T05:05:04-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T05:05:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1608,13 +1608,13 @@ func TestLrg_IsAllowed_Negative_Datetime_InvalidFormat(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-02-29T15:04:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-22T15:04:05-07:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-02-29T15:04:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-22T15:04:05-07:00"}},
 				},
 				ExpectedStatus: 400,
 				OutputBody:     &IsAllowedResponse{},
@@ -1627,13 +1627,13 @@ func TestLrg_IsAllowed_Negative_Datetime_InvalidFormat(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "date-time", Value: "2017-01-02T15:04:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "date-time", Value: "2017-01-02T15:04:05-07:00"}},
+						{Name: "s1", Type: "date-time", Value: "2017-01-02T15:04:05-07:00"},
+						{Name: "s2", Type: "date-time", Value: "2017-01-02T15:04:05-07:00"}},
 				},
 				ExpectedStatus: 400,
 				OutputBody:     &IsAllowedResponse{},
@@ -1646,13 +1646,13 @@ func TestLrg_IsAllowed_Negative_Datetime_InvalidFormat(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_date_equal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "date-time", Value: "2017-01-02T15:04:05"},
-						&JsonAttribute{Name: "s2", Type: "date-time", Value: "2017-01-02T15:04:05"}},
+						{Name: "s1", Type: "date-time", Value: "2017-01-02T15:04:05"},
+						{Name: "s2", Type: "date-time", Value: "2017-01-02T15:04:05"}},
 				},
 				ExpectedStatus: 400,
 				OutputBody:     &IsAllowedResponse{},
@@ -1682,12 +1682,12 @@ func TestMats_IsAllowed_Attri_InArray_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: "a"}},
+						{Name: "x", Value: "a"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1700,12 +1700,12 @@ func TestMats_IsAllowed_Attri_InArray_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: "b"}},
+						{Name: "x", Value: "b"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1718,12 +1718,12 @@ func TestMats_IsAllowed_Attri_InArray_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: "1"}},
+						{Name: "x", Value: "1"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1736,12 +1736,12 @@ func TestMats_IsAllowed_Attri_InArray_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: ""}},
+						{Name: "x", Value: ""}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1754,12 +1754,12 @@ func TestMats_IsAllowed_Attri_InArray_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: 1}},
+						{Name: "x", Value: 1}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1814,13 +1814,13 @@ func TestMats_IsAllowed_Attri_InArray_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_single1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_single1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "a"},
-						&JsonAttribute{Name: "s2", Value: []string{"a"}}},
+						{Name: "s1", Value: "a"},
+						{Name: "s2", Value: []string{"a"}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1833,13 +1833,13 @@ func TestMats_IsAllowed_Attri_InArray_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_single1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_single1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: ""},
-						&JsonAttribute{Name: "s2", Value: []string{}}},
+						{Name: "s1", Value: ""},
+						{Name: "s2", Value: []string{}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1852,13 +1852,13 @@ func TestMats_IsAllowed_Attri_InArray_String(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_single1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_single1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: ""},
-						&JsonAttribute{Name: "s2", Value: []string{"a"}}},
+						{Name: "s1", Value: ""},
+						{Name: "s2", Value: []string{"a"}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1930,12 +1930,12 @@ func TestMats_IsAllowed_Attri_InArray_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_in2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: 1}},
+						{Name: "x", Value: 1}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1948,12 +1948,12 @@ func TestMats_IsAllowed_Attri_InArray_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_in2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: 2}},
+						{Name: "x", Value: 2}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1966,12 +1966,12 @@ func TestMats_IsAllowed_Attri_InArray_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_in2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: 2.0}},
+						{Name: "x", Value: 2.0}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -1984,12 +1984,12 @@ func TestMats_IsAllowed_Attri_InArray_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_in2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: -2.1}},
+						{Name: "x", Value: -2.1}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2002,12 +2002,12 @@ func TestMats_IsAllowed_Attri_InArray_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_in2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: 3.5}},
+						{Name: "x", Value: 3.5}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2020,12 +2020,12 @@ func TestMats_IsAllowed_Attri_InArray_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_in2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: 3.567}},
+						{Name: "x", Value: 3.567}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2038,12 +2038,12 @@ func TestMats_IsAllowed_Attri_InArray_Num(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_num"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_in2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: '1'}},
+						{Name: "x", Value: '1'}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2066,14 +2066,14 @@ func TestMats_IsAllowed_Attri_InArray_Boolean(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: true},
-						&JsonAttribute{Name: "s2", Value: true},
-						&JsonAttribute{Name: "s3", Value: true}},
+						{Name: "s1", Value: true},
+						{Name: "s2", Value: true},
+						{Name: "s3", Value: true}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2086,14 +2086,14 @@ func TestMats_IsAllowed_Attri_InArray_Boolean(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: false},
-						&JsonAttribute{Name: "s2", Value: false},
-						&JsonAttribute{Name: "s3", Value: false}},
+						{Name: "s1", Value: false},
+						{Name: "s2", Value: false},
+						{Name: "s3", Value: false}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2106,14 +2106,14 @@ func TestMats_IsAllowed_Attri_InArray_Boolean(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: false},
-						&JsonAttribute{Name: "s2", Value: true},
-						&JsonAttribute{Name: "s3", Value: false}},
+						{Name: "s1", Value: false},
+						{Name: "s2", Value: true},
+						{Name: "s3", Value: false}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2126,14 +2126,14 @@ func TestMats_IsAllowed_Attri_InArray_Boolean(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: false},
-						&JsonAttribute{Name: "s2", Value: true},
-						&JsonAttribute{Name: "s3", Value: true}},
+						{Name: "s1", Value: false},
+						{Name: "s2", Value: true},
+						{Name: "s3", Value: true}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2165,14 +2165,14 @@ func TestMats_IsAllowed_Attri_InArray_All(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "1"},
-						&JsonAttribute{Name: "s2", Value: "1"},
-						&JsonAttribute{Name: "s3", Value: "2"}},
+						{Name: "s1", Value: "1"},
+						{Name: "s2", Value: "1"},
+						{Name: "s3", Value: "2"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2185,14 +2185,14 @@ func TestMats_IsAllowed_Attri_InArray_All(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "1"},
-						&JsonAttribute{Name: "s2", Value: "2"},
-						&JsonAttribute{Name: "s3", Value: "2"}},
+						{Name: "s1", Value: "1"},
+						{Name: "s2", Value: "2"},
+						{Name: "s3", Value: "2"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2205,14 +2205,14 @@ func TestMats_IsAllowed_Attri_InArray_All(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 1},
-						&JsonAttribute{Name: "s2", Value: 1},
-						&JsonAttribute{Name: "s3", Value: 2}},
+						{Name: "s1", Value: 1},
+						{Name: "s2", Value: 1},
+						{Name: "s3", Value: 2}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2225,14 +2225,14 @@ func TestMats_IsAllowed_Attri_InArray_All(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 1},
-						&JsonAttribute{Name: "s2", Value: 2},
-						&JsonAttribute{Name: "s3", Value: 2}},
+						{Name: "s1", Value: 1},
+						{Name: "s2", Value: 2},
+						{Name: "s3", Value: 2}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2245,14 +2245,14 @@ func TestMats_IsAllowed_Attri_InArray_All(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: 1.1},
-						&JsonAttribute{Name: "s2", Value: 1.1},
-						&JsonAttribute{Name: "s3", Value: 2}},
+						{Name: "s1", Value: 1.1},
+						{Name: "s2", Value: 1.1},
+						{Name: "s3", Value: 2}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2265,14 +2265,14 @@ func TestMats_IsAllowed_Attri_InArray_All(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: -2.0},
-						&JsonAttribute{Name: "s2", Value: -2},
-						&JsonAttribute{Name: "s3", Value: 3}},
+						{Name: "s1", Value: -2.0},
+						{Name: "s2", Value: -2},
+						{Name: "s3", Value: 3}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2285,14 +2285,14 @@ func TestMats_IsAllowed_Attri_InArray_All(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: -2},
-						&JsonAttribute{Name: "s2", Value: -2.0},
-						&JsonAttribute{Name: "s3", Value: 3}},
+						{Name: "s1", Value: -2},
+						{Name: "s2", Value: -2.0},
+						{Name: "s3", Value: 3}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2306,14 +2306,14 @@ func TestMats_IsAllowed_Attri_InArray_All(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
-						&JsonAttribute{Name: "s3", Type: "datetime", Value: "2017-01-02T15:04:05-09:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
+						{Name: "s3", Type: "datetime", Value: "2017-01-02T15:04:05-09:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2326,14 +2326,14 @@ func TestMats_IsAllowed_Attri_InArray_All(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-10:00"},
-						&JsonAttribute{Name: "s3", Type: "datetime", Value: "2017-01-02T15:04:05-09:00"}},
+						{Name: "s1", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"},
+						{Name: "s2", Type: "datetime", Value: "2017-01-02T15:04:05-10:00"},
+						{Name: "s3", Type: "datetime", Value: "2017-01-02T15:04:05-09:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2356,13 +2356,13 @@ func TestMats_IsAllowed_Attri_IsSubset(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_subset",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: []int{1, 2}},
-						&JsonAttribute{Name: "s2", Value: []int{1, 5, 2, 3}}},
+						{Name: "s1", Value: []int{1, 2}},
+						{Name: "s2", Value: []int{1, 5, 2, 3}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2375,13 +2375,13 @@ func TestMats_IsAllowed_Attri_IsSubset(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_subset",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: []int{1, 2}},
-						&JsonAttribute{Name: "s2", Value: []int{1, 5, -2, 3}}},
+						{Name: "s1", Value: []int{1, 2}},
+						{Name: "s2", Value: []int{1, 5, -2, 3}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2394,13 +2394,13 @@ func TestMats_IsAllowed_Attri_IsSubset(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_subset",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: []int{-2}},
-						&JsonAttribute{Name: "s2", Value: []int{1, 5, -2, 3}}},
+						{Name: "s1", Value: []int{-2}},
+						{Name: "s2", Value: []int{1, 5, -2, 3}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2413,13 +2413,13 @@ func TestMats_IsAllowed_Attri_IsSubset(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_subset",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: []string{"b", "a"}},
-						&JsonAttribute{Name: "s2", Value: []string{"a", "b", "c"}}},
+						{Name: "s1", Value: []string{"b", "a"}},
+						{Name: "s2", Value: []string{"a", "b", "c"}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2432,13 +2432,13 @@ func TestMats_IsAllowed_Attri_IsSubset(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_subset",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: []string{"b"}},
-						&JsonAttribute{Name: "s2", Value: []string{"a", "b", "c"}}},
+						{Name: "s1", Value: []string{"b"}},
+						{Name: "s2", Value: []string{"a", "b", "c"}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2451,13 +2451,13 @@ func TestMats_IsAllowed_Attri_IsSubset(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_subset",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: []string{"b"}},
-						&JsonAttribute{Name: "s2", Value: []string{"b"}}},
+						{Name: "s1", Value: []string{"b"}},
+						{Name: "s2", Value: []string{"b"}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2470,13 +2470,13 @@ func TestMats_IsAllowed_Attri_IsSubset(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_subset",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: []string{}},
-						&JsonAttribute{Name: "s2", Value: []string{"b"}}},
+						{Name: "s1", Value: []string{}},
+						{Name: "s2", Value: []string{"b"}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2489,13 +2489,13 @@ func TestMats_IsAllowed_Attri_IsSubset(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_subset",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: []string{"a", "b"}},
-						&JsonAttribute{Name: "s2", Value: []string{}}},
+						{Name: "s1", Value: []string{"a", "b"}},
+						{Name: "s2", Value: []string{}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2508,13 +2508,13 @@ func TestMats_IsAllowed_Attri_IsSubset(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_subset",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: []string{"2017-01-02T15:04:05-07:00", "2017-01-02T15:04:05-09:00"}},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: []string{"2017-01-02T15:04:05-07:00", "2017-01-02T15:04:05-09:00"}}},
+						{Name: "s1", Type: "datetime", Value: []string{"2017-01-02T15:04:05-07:00", "2017-01-02T15:04:05-09:00"}},
+						{Name: "s2", Type: "datetime", Value: []string{"2017-01-02T15:04:05-07:00", "2017-01-02T15:04:05-09:00"}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2527,13 +2527,13 @@ func TestMats_IsAllowed_Attri_IsSubset(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset1"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_subset",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Type: "datetime", Value: []string{"2017-01-02T15:04:05-07:00"}},
-						&JsonAttribute{Name: "s2", Type: "datetime", Value: []string{"2017-01-02T15:04:05-07:00", "2017-01-02T15:04:05-09:00"}}},
+						{Name: "s1", Type: "datetime", Value: []string{"2017-01-02T15:04:05-07:00"}},
+						{Name: "s2", Type: "datetime", Value: []string{"2017-01-02T15:04:05-07:00", "2017-01-02T15:04:05-09:00"}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2547,12 +2547,12 @@ func TestMats_IsAllowed_Attri_IsSubset(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_issubset2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_subset",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: []string{"a1", "b1"}}},
+						{Name: "s1", Value: []string{"a1", "b1"}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2576,14 +2576,14 @@ func TestLrg_IsAllowed_Negative_LeftHandOfInIsArray(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_str_multi"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res1",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: []string{"a", "b"}},
-						&JsonAttribute{Name: "s2", Value: []string{"a", "c"}},
-						&JsonAttribute{Name: "s3", Value: []string{"b", "d"}}},
+						{Name: "s1", Value: []string{"a", "b"}},
+						{Name: "s2", Value: []string{"a", "c"}},
+						{Name: "s3", Value: []string{"b", "d"}}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2609,12 +2609,12 @@ func TestMats_IsAllowed_Attri_In_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_date"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_date"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_in2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"}},
+						{Name: "x", Type: "datetime", Value: "2017-01-02T15:04:05-07:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2627,12 +2627,12 @@ func TestMats_IsAllowed_Attri_In_Datetime(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_date"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_array_date"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_in2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Type: "datetime", Value: "2017-01-02T15:04:05-17:00"}},
+						{Name: "x", Type: "datetime", Value: "2017-01-02T15:04:05-17:00"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2698,12 +2698,12 @@ func TestLrg_IsAllowed_Negative_Attri_Bool_bug163(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_equal2"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_equal2"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_equal2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: "abc"}},
+						{Name: "x", Value: "abc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2718,12 +2718,12 @@ func TestLrg_IsAllowed_Negative_Attri_Bool_bug163(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_notequal"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_notequal"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_equal2",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "x", Value: '0'}},
+						{Name: "x", Value: '0'}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},
@@ -2739,14 +2739,14 @@ func TestLrg_IsAllowed_Negative_Attri_Bool_bug163(t *testing.T) {
 			Data: &testutil.RestTestData{
 				URI: URI_IS_ALLOWD,
 				InputBody: &JsonContext{
-					Subject:     &JsonSubject{Principals: []*JsonPrincipal{&JsonPrincipal{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
+					Subject:     &JsonSubject{Principals: []*JsonPrincipal{{Type: adsapi.PRINCIPAL_TYPE_USER, Name: "user_bool_complex"}}},
 					ServiceName: SERVICE_COND_ATTRIBUTE,
 					Resource:    "res_complex",
 					Action:      "get",
 					Attributes: []*JsonAttribute{
-						&JsonAttribute{Name: "s1", Value: "abc"},
-						&JsonAttribute{Name: "s2", Value: true},
-						&JsonAttribute{Name: "s3", Value: "abc"}},
+						{Name: "s1", Value: "abc"},
+						{Name: "s2", Value: true},
+						{Name: "s3", Value: "abc"}},
 				},
 				ExpectedStatus: 200,
 				OutputBody:     &IsAllowedResponse{},

@@ -24,7 +24,7 @@ func TestIsAllowedWithoutApp(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -67,7 +67,7 @@ func TestIsAllowedNotMatchApp(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -111,7 +111,7 @@ func TestIsAllowedNoPolicy(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -172,7 +172,7 @@ func TestIsAllowedNoPrincDef(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
@@ -406,11 +406,11 @@ func TestIsAllowedMatch(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "cynthia",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "grp2",
 			},
@@ -559,11 +559,11 @@ func TestIsAllowedMatch(t *testing.T) {
 
 	subject = adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "bill",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "grp2",
 			},
@@ -685,11 +685,11 @@ func ANDPrincpal_IN_RolePolicy_TestIsAllowedMatch_1(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "userA",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "groupB",
 			},
@@ -768,11 +768,11 @@ func ANDPrincpal_IN_RolePolicy_TestIsAllowedMatch_2(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "userA",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "groupB",
 			},
@@ -858,11 +858,11 @@ func TestIsAllowedMatch_3(t *testing.T) {
 	}
 	subject := adsapi.Subject{
 		Principals: []*adsapi.Principal{
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_USER,
 				Name: "userA",
 			},
-			&adsapi.Principal{
+			{
 				Type: adsapi.PRINCIPAL_TYPE_GROUP,
 				Name: "groupB",
 			},
@@ -938,7 +938,7 @@ func TestIsAllowedWithIDD(t *testing.T) {
 	request := adsapi.RequestContext{
 		Subject: &adsapi.Subject{
 			Principals: []*adsapi.Principal{
-				&adsapi.Principal{
+				{
 					Type: adsapi.PRINCIPAL_TYPE_USER,
 					Name: "bill",
 				},
@@ -966,7 +966,7 @@ func TestIsAllowedWithIDD(t *testing.T) {
 	request = adsapi.RequestContext{
 		Subject: &adsapi.Subject{
 			Principals: []*adsapi.Principal{
-				&adsapi.Principal{
+				{
 					Type: adsapi.PRINCIPAL_TYPE_USER,
 					Name: "bill",
 					IDD:  "intel",
@@ -995,7 +995,7 @@ func TestIsAllowedWithIDD(t *testing.T) {
 	request = adsapi.RequestContext{
 		Subject: &adsapi.Subject{
 			Principals: []*adsapi.Principal{
-				&adsapi.Principal{
+				{
 					Type: adsapi.PRINCIPAL_TYPE_USER,
 					Name: "bill",
 					IDD:  "cisco",
@@ -1020,7 +1020,7 @@ func TestIsAllowedWithIDD(t *testing.T) {
 	request = adsapi.RequestContext{
 		Subject: &adsapi.Subject{
 			Principals: []*adsapi.Principal{
-				&adsapi.Principal{
+				{
 					Type: adsapi.PRINCIPAL_TYPE_USER,
 					Name: "bill",
 					IDD:  "cisco",

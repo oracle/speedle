@@ -35,7 +35,7 @@ func (h *asserterHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			subj.ErrCode = 0
 			subj.ErrMessage = ""
 			subj.Principals = []*adsapi.Principal{
-				&adsapi.Principal{
+				{
 					Type: adsapi.PRINCIPAL_TYPE_USER,
 					Name: "testUser",
 				},

@@ -40,7 +40,7 @@ func (s *Store) PutRequest(request *ads.RequestContext) (int64, error) {
 			clientv3.Compare(clientv3.CreateRevision(key), "=", 0), //key does not exist
 		).Then(
 			clientv3.OpPut(key, string(value)),
-			clientv3.OpGet(DiscoverPrefix, clientv3.WithPrefix(), clientv3.WithCountOnly()),                                                                                                                                       //get number of requests
+			clientv3.OpGet(DiscoverPrefix, clientv3.WithPrefix(), clientv3.WithCountOnly()), //get number of requests
 			clientv3.OpGet(DiscoverPrefix, clientv3.WithLimit(store.DeleteNumWhenReachMaxDiscoverRequest), clientv3.WithPrefix(), clientv3.WithKeysOnly(), clientv3.WithSort(clientv3.SortByCreateRevision, clientv3.SortAscend)), //get oldest keys
 		).Commit()
 		if err != nil {

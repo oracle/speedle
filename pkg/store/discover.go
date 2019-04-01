@@ -67,7 +67,7 @@ func GeneratePoliciesFromDiscoverRequests(requests []*ads.RequestContext, princi
 					Effect:     "grant",
 					Principals: [][]string{{"role:" + roleName}},
 					Permissions: []*pms.Permission{
-						&pms.Permission{
+						{
 							Resource: req.Resource,
 							Actions:  []string{req.Action},
 						},
@@ -113,7 +113,7 @@ func GeneratePoliciesFromDiscoverRequests(requests []*ads.RequestContext, princi
 						Effect:     "grant",
 						Principals: [][]string{{"role:" + roleName}},
 						Permissions: []*pms.Permission{
-							&pms.Permission{
+							{
 								Resource: req.Resource,
 								Actions:  []string{req.Action},
 							},
