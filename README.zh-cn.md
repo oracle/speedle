@@ -14,6 +14,9 @@
     <a href="https://app.wercker.com/project/byKey/07abf3ef318b376c1171c95346333083">
         <img alt="Wercker status" src="https://app.wercker.com/status/07abf3ef318b376c1171c95346333083/s/master">
     </a>
+    <a href="https://996.icu/#/zh_CN">
+        <img src="https://img.shields.io/badge/link-996.icu-red.svg">
+    </a>
 </p>
 
 <p align="right">
