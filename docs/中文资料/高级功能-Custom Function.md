@@ -191,11 +191,11 @@ function.json file:
 ```
 ./spctl create function --json-file=function.json
 ```
-### 3. 在 policy 或 role-policy 的 condition 中使用 custom function
+## 3. 在 policy 或 role-policy 的 condition 中使用 custom function
 下面的例子展示了如何在 policy 的condition中使用 'isValid' custom function.
 ```
 ./spctl create policy -c "grant user Ally access library if isValid(attr1)" --service-name=service1
 ```
 
-### 声明:
+## 声明:
 使用者必须自己确保condition中的函数参数RESTful service接受的函数参数匹配.
