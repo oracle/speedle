@@ -1,19 +1,19 @@
-# 什么是discover mode?
+# 什么是discovery mode?
 当一个系统使用Speedle作为权限控制引擎时，在所有保护资源被访问之前， 都会向Speedle的ARS(Authorization Runtime Service)发authorization请求。所有的authorization请求都被被发送到Speedle ARS的is-allowed RESTful endpoint。ARS根据系统中的所有policy计算出当前请求的资源访问是否允许。
 
 当系统中需要保护的资源越来越多，为这些资源创建policy就是一件比较痛苦的事情。因为policy的制定者需要知道如何在policy中正确表述资源。discover mode就是为了解决这一痛点而设计的。简单来说， 我们提供了一个和is-allowed有着相同输入和输出的接口discover, 这个接口永远返回allowed, 同时记录下authorization请求。并提供命令行工具查询被discover接口记录下的authorization请求,甚至为这些请求生成Policy.
 
-当我们把系统中的is-allowed接口统统换成discover接口,我们称系统工作在discover mode.
-# discover mode 能帮我们做什么?
+当我们把系统中的is-allowed接口统统换成discover接口,我们称系统工作在discovery mode.
+# discovery mode 能帮我们做什么?
 
 * 记录authorization请求的内容
 
 * 根据记录的authorization请求生成Policy
 
 * 关闭权限检查    
-因为discover API总是返回is-allowed=true, 所以discover mode相当于关闭了权限检查。
+因为discover API总是返回is-allowed=true, 所以discovery mode相当于关闭了权限检查。
 
-# 如何使用discover mode?
+# 如何使用discovery mode?
 
 ## Step 1. 将系统中所有is-allowed调用改成discover调用
 如果你的系统是通过RESTFul API来调is-allowed, 这种情况下，只需将is-allowed endpoint改成discover endpoint, 如下所示：
@@ -30,7 +30,7 @@ spctl discover request --last --force --service-name=YOUR_SERVICE_NAME
 保持窗口打开，这样你可以看到下一步中的authotization请求。
 
 ## Step 3. 访问系统中的被保护资源
-不同的系统访问资源的方式不同，有通过UI访问的，又通过接口访问的。访问保护资源将触发authotization请求送往Speedle,Speedle会记录下收到的请求。
+不同的系统访问资源的方式不同，有通过UI访问的，有通过接口访问的。访问保护资源将触发authotization请求送往Speedle,Speedle会记录下收到的请求。
 
 ## Step 4. 基于访问生成对应的Policy
 使用 spctl discover policy 命令来为某个service生成json格式的policy定义。在这个例子中, 生成的policy存入service.json文件.
@@ -45,7 +45,7 @@ spctl create service --json-file service.json
 ```
 
 ## Step 6. [optional]将系统中所有discover调用改成is-allowed调用
-最后别忘了将discover mode切回正常模式。也就是step 1 的逆操作。
+最后别忘了将discovery mode切回正常模式。也就是step 1 的逆操作。
 
 # Discover 命令参考
 ```
