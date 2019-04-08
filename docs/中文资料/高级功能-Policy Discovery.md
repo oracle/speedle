@@ -15,36 +15,36 @@
 
 # 如何使用discover mode?
 
-Step 1. 将系统中所有is-allowed调用改成discover调用
+## Step 1. 将系统中所有is-allowed调用改成discover调用
 如果你的系统是通过RESTFul API来调is-allowed, 这种情况下，只需将is-allowed endpoint改成discover endpoint, 如下所示：
 ```
 http://localhost:6734/authz-check/v1/is-allowed ---> http://localhost:6734/authz-check/v1/discover
 ```
 如果你的系统是通过Grpc或者golang API来调is-allowed, 那么需要将所有的is-allowed调用改成discover调用。重新编译，并重启系统确保修改生效。
 
-Step 2. [optional] 使用命令行工具不间断发现authorization请求
+## Step 2. [optional] 使用命令行工具不间断发现authorization请求
 使用 spctl discover request 命令来发现某一个服务下的所有authorization请求。 使用 --force 来不间断发现authorization请求。
 ```
 spctl discover request --last --force --service-name=YOUR_SERVICE_NAME
 ```
 保持窗口打开，这样你可以看到下一步中的authotization请求。
 
-Step 3. 访问系统中的被保护资源
+## Step 3. 访问系统中的被保护资源
 不同的系统访问资源的方式不同，有通过UI访问的，又通过接口访问的。访问保护资源将触发authotization请求送往Speedle,Speedle会记录下收到的请求。
 
-Step 4. 基于访问生成对应的Policy
+## Step 4. 基于访问生成对应的Policy
 使用 spctl discover policy 命令来为某个service生成json格式的policy定义。在这个例子中, 生成的policy存入service.json文件.
 ```
 spctl discover policy --service-name=YOUR_SERVICE_NAME > service.json
 ```
 
-Step 5. [optional] 将生成的policy导入到Speedle中
+## Step 5. [optional] 将生成的policy导入到Speedle中
 使用 spctl create service 将上一步生成的policy导入Speedle.
 ```
 spctl create service --json-file service.json
 ```
 
-Step 6. [optional]将系统中所有discover调用改成is-allowed调用
+## Step 6. [optional]将系统中所有discover调用改成is-allowed调用
 最后别忘了将discover mode切回正常模式。也就是step 1 的逆操作。
 
 # Discover 命令参考
