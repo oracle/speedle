@@ -13,7 +13,7 @@ import (
 
 // Wrap wraps an HTTP handler with a new HTTP handler for authorization
 func Wrap(handler http.Handler, service, spdlLoc string) (http.HandlerFunc, error) {
-	eval, err := evaluator.NewFromFile(spdlLoc, true)
+	ev, err := eval.NewFromFile(spdlLoc, true)
 	if err != nil {
 		return nil, err
 	}
@@ -44,7 +44,7 @@ func Wrap(handler http.Handler, service, spdlLoc string) (http.HandlerFunc, erro
 		}
 
 		// Call evaluator
-		allowed, _, _ := eval.IsAllowed(reqCtx)
+		allowed, _, _ := ev.IsAllowed(reqCtx)
 
 		if !allowed {
 			// Not allowed, send 403
