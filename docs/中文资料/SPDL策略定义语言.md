@@ -77,29 +77,29 @@ Policy和role policy都支持Condition。只有condition满足了， policy或ro
 
 ### 2. Condition
 
-简单的说，Condition就是一个布尔表达式。由attributes, functions, constants, operators, comparators or parenthesis构建的布尔表达式。
+Condition就是一个布尔表达式。由属性(attributes), 函数(functions), 常量(constants), 操作符(operators), 比较运算符(comparators) or 括号(parenthesis)构建的布尔表达式。
 
 #### 2.1 数据类型 （Data Types）
 
-The data type of an attribute value and constant can be a string, numeric, bool, datetime or an array of string, numeric, bool, datetime.  
-The data types and the corresponding supported operators and comparators are listed in following table.
+属性和常量的数据类型可以是string, numeric, bool, datetime，或者由string, numeric, bool, datetime构成的数组。  
+数据类型及其支持的操作符，比较运算符如下表所示：
 
  <table class="bordered striped">
     <thead>
       <tr>
-        <th>Data Type</th>
-        <th>Operators</th>
-        <th>Comparators</th>
-        <th>Comment</th>
+        <th>数据类型<br>Data Type</th>
+        <th>操作符<br>Operators</th>
+        <th>比较运算符<br>Comparators</th>
+        <th>备注<br>Comment</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>string</td>
         <td>+</td>
-        <td>+ <br>== <br> != <br> =~ <br> > <br> >= <br> < <br> <= <br>
+        <td>== <br> != <br> =~ <br> > <br> >= <br> < <br> <= <br>
         </td>
-        <td>'+' is for string concatenation <br> '=~' is for regular expr matching, see the annotation below the table.</td>
+        <td>'+' 用于字符串连接操作 <br><br> '=~' 用于正则表达式匹配。  <br>左边是匹配的字符串， 右边是正则表达式.`"=~"`返回ture如果匹配成功，或者false如果匹配失败。</td>
       </tr>
       <tr>
         <td>numeric</td>
@@ -130,31 +130,25 @@ The data types and the corresponding supported operators and comparators are lis
     </tfoot>
   </table>
 
-Most comparators are self explanatory, here is the annotation for `"=~"`:  
-`"=~"` is the regex comparator. It uses Go's standard regexp flavor of regex. The left side is expected to be the candidate string; the right side is the pattern.
-`"=~"` returns whether or not the candidate string matches the regex pattern given on the right.
 
-- Left side: string
-- Right side: string
-- Returns: bool
 
 #### 2.2 Attributes
 
-An attribute in a condition represents a variable. The attribute value is determined at runtime, obtained from either the Authorization Decision Service (ADS) runtime or the customer.
-Built-in attributes are those values that are populated by the ADS runtime.
-Customer attributes are those values that are provided by the customer when asking the ADS for authorization decisions.
+属性(attribute)在condition中代表一个变量。属性分为内置属性和用户属性两大类。
+内置属性(Built-in attributes)是Speedle预定义的，它们的值是在决策运算中Authorization Decision Service (ADS)运行时指定的。
+用户属性（customer attributes)的值是用户在授权请求(authorization decision request)中传入的。
 
 ##### 2.2.1 Built-in Attributes
 
-Built-in attributes are as follows:
+Speedle预定义的内置属性如下:
 
 <table class="bordered striped">
     <thead>
       <tr>
-        <th>Built-in Attribute Name</th>
-        <th>Data Type </th>
-        <th>Sample Value</th>
-        <th>Definition</th>
+        <th>内置属性名<br>Built-in Attribute Name</th>
+        <th>数据类型<br>Data Type </th>
+        <th>例子<br>Sample Value</th>
+        <th>定义<br>Definition</th>
       </tr>
     </thead>
     <tbody>
