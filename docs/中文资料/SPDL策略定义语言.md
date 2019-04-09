@@ -314,42 +314,42 @@ Speedle提供以下内置函数：
     <tbody>
        <tr>
         <td>Sqrt</td>
-        <td>Square root of a numeric</td>
+        <td>求平方根</td>
         <td>One numeric parameter</td>
         <td>numeric</td>
         <td>Sqrt(x)<br>Sqrt(64)</td>
       </tr>
        <tr>
         <td>Max</td>
-        <td>Get the max numeric in a set</td>
+        <td>取集合中的最大值</td>
         <td>1+ numeric parameters</td>
         <td>numeric</td>
         <td>Max(1, 4, x)</td>
       </tr>
        <tr>
         <td>Min</td>
-        <td>Get the min numeric in a set</td>
+        <td>取集合中的最小值</td>
         <td>1+ numeric parameters</td>
         <td>numeric</td>
         <td>Min(x, 5, z)</td>
       </tr>
        <tr>
         <td>Sum</td>
-        <td>Get the sum of a set of numeric</td>
+        <td>求和</td>
         <td>1+ numeric parameters</td>
         <td>numeric</td>
         <td>Sum(1, 3, 5, 7, x)</td>
       </tr>
       <tr>
         <td>Avg</td>
-        <td>Get the average value for a set of numeric</td>
+        <td>求平均值</td>
         <td>1+ numeric parameters</td>
         <td>numeric</td>
         <td>Avg(x, 8, 10)</td>
       </tr>
       <tr>
         <td>IsSubSet</td>
-        <td>Check if the first set/array is a subset of the second set/array</td>
+        <td>第一个参数是否是第二个参数的子集</td>
         <td>2 sets/arrays, elements of the 2 sets/arrays have same data type</td>
         <td>bool</td>
         <td>IsSubset(s1, s2))</td>
@@ -364,7 +364,7 @@ Speedle提供以下内置函数：
 用户可以向Speedle暴露自己定义的函数, 并将自定义函数用于condition.  
 更多细节, 参见 [custom function](../custom-function/).
 
-#### 2.5 Operator/Comparator Precedence
+#### 2.5 运算比较操作符的优先级operator/Comparator Precedence
 
 ##### 2.5.1 Precedence order
 
