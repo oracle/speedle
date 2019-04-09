@@ -14,7 +14,7 @@ Speedle is an open source general purpose authorization solution. It consists of
 
 Users can integrate Speedle with their systems, as a service or a library, build their own policy model based on SPDL language, enforce policy check in their systems.         
 
-Speedle is licensed under [Universal Permission License v1.0](https://opensource.org/licenses/UPL).    
+Speedle is licensed under [Universal Permissive License v1.0](https://opensource.org/licenses/UPL).    
 
 # Who are we
 
