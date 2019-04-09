@@ -132,13 +132,13 @@ Condition就是一个布尔表达式。由属性(attributes), 函数(functions),
 
 
 
-#### 2.2 Attributes
+#### 2.2 属性(Attributes)
 
-属性(attribute)在condition中代表一个变量。属性分为内置属性和用户属性两大类。
+属性(attribute)代表一个变量。属性分为内置属性和用户属性两大类。
 内置属性(Built-in attributes)是Speedle预定义的，它们的值是在决策运算中Authorization Decision Service (ADS)运行时指定的。
 用户属性（customer attributes)的值是用户在授权请求(authorization decision request)中传入的。
 
-##### 2.2.1 Built-in Attributes
+##### 2.2.1 内置属性(Built-in Attributes)
 
 Speedle预定义的内置属性如下:
 
@@ -156,101 +156,100 @@ Speedle预定义的内置属性如下:
         <td>request_user</td>
         <td>string</td>
         <td>"Alice"</td>
-        <td>The user information in the subject who is requesting to act on a resource</td>
+        <td>Authorization请求中(Subject)的user信息</td>
       </tr>
       <tr>
         <td>request_groups</td>
         <td>[]string</td>
         <td>[]string{"managers"}</td>
-        <td>The groups information in the subject who is requesting to act on a resource</td>
+        <td>Authorization请求中(Subject)的groups信息</td>
       </tr>
       <tr>
         <td>request_entity</td>
         <td>string</td>
         <td>"/org1/service1"</td>
-        <td>The service name or other entity info in the subject which the service or program is requesting to act on a resource</td>
+        <td>Authorization请求中(Subject)的entity信息</td>
       </tr>
       <tr>
         <td>request_resource</td>
         <td>string</td>
         <td>"commercialLoans"</td>
-        <td>The resource on which the subject is to act</td>
+        <td>Authorization请求中的资源</td>
       </tr>
       <tr>
         <td>request_action</td>
         <td>string</td>
         <td>"issue" </td>
-        <td>The action that the subject is to carry out on a resource </td>
+        <td>Authorization请求中对资源的操作</td>
       </tr>
       <tr>
         <td>request_time</td>
         <td>datetime</td>
         <td>'2019-01-02T15:04:05-07:00'</td>
-        <td>The date and time when the request happens</td>
+        <td>Authorization请求时的日期和时间</td>
       </tr>
       <tr>
         <td>request_year</td>
         <td>int</td>
         <td>2019</td>
-        <td>The year when the request happens</td>
+        <td>Authorization请求时的年份</td>
       </tr>
       <tr>
         <td>request_month</td>
         <td>int</td>
         <td>1, 2, ... 12</td>
-        <td>The month when the request happens</td>
+        <td>Authorization请求时的月份</td>
       </tr>
       <tr>
         <td>request_day</td>
         <td>int</td>
         <td>1, 2, ... 31</td>
-        <td>The day in a month when the request happens</td>
+        <td>Authorization请求时是一个月中的哪一天</td>
       </tr>
       <tr>
         <td>request_hour</td>
         <td>int</td>
         <td>0, 1, ... 23</td>
-        <td>The hour in a day when the request happens</td>
+        <td>Authorization请求时是一天中的哪个时辰</td>
       </tr>
       <tr>
         <td>request_weekday</td>
         <td>string</td>
         <td>"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"</td>
-        <td>The day of the week when the request happens</td>
+        <td>Authorization请求时是星期几</td>
       </tr>
     </tbody>
     <tfoot>
     </tfoot>
   </table>
 
-##### 2.2.2 Customer Attributes
+##### 2.2.2 用户属性(Customer Attributes)
 
-###### 2.2.2.1 name
+###### 2.2.2.1 属性名(name)
 
-A valid customer attribute name is a sequence of letters, digits or the underscore character `" _ "`. It must begin with a letter, and is limited to 255 characters. Customer attribute names must adhere to this rule, and should not use any reserved words (built-in attribute, built-in function name, operators, comparators) as attribute names.
+一个合法的属性名由字母，数字和下划线`" _ "`组成，必须以字母开头，小于255个字符，且不能用保留关键字。
 
-###### 2.2.2.2 value
+###### 2.2.2.2 属性值(value)
 
-When customer attributes are used in a condition, the customer needs to pass the customer attribute values when requesting an isAllowed result.
+当用户属性应用于condition时, 当用户向ADS发送Authorization Decision请求时，用户需要将属性值随请求一并传入。
 
-- Passing attribute values in Golang API  
-   Adhere to these rules when passing customer attribute values to a Golang API:
+- 通过 Golang API 传入属性值  
+   需遵循如下规则： 
+  - bool型属性值使用 Golang bool 类型.
+  - string型属性值使用 Golang string 类型.
+  - numeric型属性值使用 Golang float64 类型.
+  - datetime型属性值使用 Golang float64 类型, 也就是Unix time (using `time.Time.Unix()`).
+  - 数组属性使用 Golang []interface{}.
 
-  - Use Golang bool type for bool attribute value.
-  - Use Golang string type for string attribute value.
-  - Use Golang float64 type for any numeric attribute value.
-  - For datetime attribute value, use a Golang float64 representation of that datetime's Unix time (using `time.Time.Unix()`).
-  - Use Golang []interface{} for array attribute value.
+- 通过 REST API 传入属性值  
+   须遵循如下规则：
+  - 属性是一个结构体(struct),包含属性名(name), 属性的数据类型(type), 属性值(value). 详细信息参见REST API.
+  - 属性的数据类型(type)只能是 "string", "numeric", "bool" or "datetime".
+  - 属性值可以是单个值， 也可以是数组.
 
-- Passing attribute values in REST API  
-   Adhere to these rules when passing customer attribute values to a REST API:
-  - Attribute is a struct, which contains name, type, value of the attribute. See the REST API for details.
-  - Attribute type can be only "string", "numeric", "bool" or "datetime".
-  - Attribute value can be a single value or a slice.
+#### 2.3 常量(Constants)
 
-#### 2.3 Constants
-
-Supported data types:
+支持的数据类型:
 
 - string: single quotes, 'foobar'
 - numeric: 10, 3.1415926
@@ -258,14 +257,14 @@ Supported data types:
 - datetime: single quotes, conform to RFC3339. Datetime of RFC3339 format is YYYY-MM-DDTHH:mm:SS[.sssssssss]Z, Z is [+|-]HH:mm.
 - array: array of type string, numeric, bool, datetime
 
-The following table shows sample constants.
+各种常量的例子如下表所示：
 
 <table class="bordered striped">
     <thead>
       <tr>
-        <th>Data Type</th>
-        <th>Constant Samples </th>
-        <th>Array Constant Samples</th>
+        <th>数据类型<br>Data Type</th>
+        <th>常量例子<br>Constant Samples </th>
+        <th>常量数组例子<br>Array Constant Samples</th>
       </tr>
     </thead>
     <tbody>
@@ -294,13 +293,13 @@ The following table shows sample constants.
     </tfoot>
   </table>
 
-#### 2.4 Functions
+#### 2.4 函数(Functions)
 
-Use functions when existing operators or comparators do not meet customer requirements.
+当简单的操作符或比较操作符不满足需求时，可以使用函数.
 
-##### 2.4.1 Built-in Functions
+##### 2.4.1 内置函数(Built-in Functions)
 
-Speedle provides the following built-in functions.
+Speedle提供以下内置函数：
 
 <table class="bordered striped">
     <thead>
@@ -360,10 +359,10 @@ Speedle provides the following built-in functions.
     </tfoot>
   </table>
 
-##### 2.4.2 Custom Functions
+##### 2.4.2 用户自定义函数(Custom Functions）
 
-Customers can also expose their own functions through a REST API, and use custom functions in a condition expression.  
-For details, see [custom function](../custom-function/).
+用户可以向Speedle暴露自己定义的函数, 并将自定义函数用于condition.  
+更多细节, 参见 [custom function](../custom-function/).
 
 #### 2.5 Operator/Comparator Precedence
 
