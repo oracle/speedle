@@ -364,27 +364,27 @@ Speedle提供以下内置函数：
 用户可以向Speedle暴露自己定义的函数, 并将自定义函数用于condition.  
 更多细节, 参见 [custom function](../custom-function/).
 
-#### 2.5 运算比较操作符的优先级operator/Comparator Precedence
+#### 2.5 运算比较操作符的优先级(operator/Comparator Precedence)
 
-##### 2.5.1 Precedence order
+##### 2.5.1 优先顺序(Precedence order)
 
-When two operators share an operand, the operator with the higher precedence goes first. For example, `1 + 2 * 3` is treated as `1 + (2 * 3)`, whereas `1 * 2 + 3` is treated as `(1 * 2) + 3` because multiplication has a higher precedence than addition.
+当两个运算符共享一个操作数时，优先级较高的运算符优先。例如, `1 + 2 * 3` 被处理成 `1 + (2 * 3)`, 但是 `1 * 2 + 3` 被处理成 `(1 * 2) + 3`。 因为乘法比加法的优先级高。
 
-##### 2.5.2 Associativity
+##### 2.5.2 关联(Associativity)
 
-When an expression has two operators with the same precedence, the expression is evaluated according to its associativity. `72 / 2 / 3`is treated as `(72 / 2) / 3` because the `/` operator has left-to-right associativity. Some operators are not associative: for example, the expressions `(x <= y <= z)` and `x++--` are invalid.
+当表达式具有两个具有相同优先级的运算符时，将根据其关联性来计算表达式。 `72/2/3`被视为`（72/2）/ 3`，因为`/`运算符具有从左到右的关联性。 有些运算符不是关联的：例如，表达式`（x <= y <= z）`和`x ++  - `无效。
 
 ##### 2.5.3 Precedence and Associativity of Supported Operators and Comparators
 
-The following table lists all supported operators/comparators from highest to lowest precedence, along with their associativity.
+下表按优先级列出了所有运算和比较操作符及其关联性.
 
 <table class="bordered striped">
     <thead>
       <tr>
-        <th>Precedence</th>
-        <th>Operator/Comparator</th>
-        <th>Description</th>
-        <th>Associativity</th>
+        <th>优先级<br>Precedence</th>
+        <th>运算/比较操作符<br>Operator/Comparator</th>
+        <th>描述<br>Description</th>
+        <th>关联<br>Associativity</th>
       </tr>
     </thead>
     <tbody>
@@ -441,7 +441,7 @@ The following table lists all supported operators/comparators from highest to lo
     </tfoot>
   </table>
 
-#### 2.6 Sample Conditions
+#### 2.6 Condition 示例
 
 <table class="bordered striped">
     <thead>
@@ -468,9 +468,9 @@ The following table lists all supported operators/comparators from highest to lo
     </tfoot>
   </table>
 
-### Condition Definition
+### Condition 定义
 
-Condition should be a valid bool expression. The bool expression Speedle supports is strictly defined as follows:
+Condition 必须是一个合法的布尔表达式。 Speedle支持的布尔表达式严格定义如下:
 
 ```
 BoolExpr: ('!')BoolExpr
