@@ -135,7 +135,7 @@ Condition就是一个布尔表达式。由属性(attributes), 函数(functions),
 #### 2.2 属性(Attributes)
 
 属性(attribute)代表一个变量。属性分为内置属性和用户属性两大类。
-内置属性(Built-in attributes)是Speedle预定义的，它们的值是在决策运算中Authorization Decision Service (ADS)运行时指定的。
+内置属性(Built-in attributes)是Speedle预定义的，它们的值是在决策运算中由Authorization Decision Service (ADS)运行时指定的。
 用户属性（customer attributes)的值是用户在授权请求(authorization decision request)中传入的。
 
 ##### 2.2.1 内置属性(Built-in Attributes)
