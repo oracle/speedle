@@ -294,6 +294,14 @@ func TestRoles(t *testing.T) {
 			cmd:  "   Role1,   Role2    ,Role3   ,  Role4 on ...",
 			want: []string{"Role1", "Role2", "Role3", "Role4"},
 		},
+		{
+			cmd:  "role Role1 on ...",
+			want: []string{"Role1"},
+		},
+		{
+			cmd:  "   role Role1,   role Role2    , role Role3   ,  role Role4 on ...",
+			want: []string{"Role1", "Role2", "Role3", "Role4"},
+		},
 	}
 
 	for _, tc := range testCases {

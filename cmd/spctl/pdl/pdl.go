@@ -277,7 +277,29 @@ func getPrincipal(cmd string, i int) (string, int, error) {
 }
 
 func getRoles(cmd string, i int) ([]string, int, error) {
-	return getTokens(cmd, i, "role")
+	tokens := []string{}
+	t, i := getToken(cmd, i)
+	if strings.EqualFold("role", t) {
+		t, i = getToken(cmd, i)
+	}
+	if t == "" {
+		return tokens, i, nil
+	} 
+
+	tokens = append(tokens, t)
+	i = skipSpaces(cmd, i)
+	for i < len(cmd) && cmd[i] == ',' {
+		t, i = getToken(cmd, i+1)
+		if strings.EqualFold("role", t) {
+			t, i = getToken(cmd, i)
+		}
+		if t == "" {
+			return nil, -1, getError("Not found role", cmd, i)
+		}
+		tokens = append(tokens, t)
+		i = skipSpaces(cmd, i)
+	}
+	return tokens, i, nil
 }
 
 func getPermissions(cmd string, i int) ([]*pms.Permission, int, error) {
