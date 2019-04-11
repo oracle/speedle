@@ -390,7 +390,7 @@ Speedle提供以下内置函数：
     <tbody>
     <tr>
         <td>7</td>
-        <td>()</td>
+        <td>( )</td>
         <td>parentheses</td>
         <td>N/A</td>
       </tr>
@@ -408,7 +408,7 @@ Speedle提供以下内置函数：
       </tr>
        <tr>
         <td>4</td>
-        <td>g+<br>-<br></td>
+        <td>+<br>-<br></td>
         <td>1+ numeric parameters</td>
         <td>Left to right</td>
       </tr>
