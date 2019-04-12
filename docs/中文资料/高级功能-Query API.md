@@ -2,7 +2,7 @@
 
 - 授权查询是Speedle ADS(Authorization Decision Service)提供的服务接口， 一般用于查询某个主体(subject)对某个资源(resource)实施某项操作(action)是否被允许。
 
-- 授权查询的结果是基于策略(policies)的实时运算。
+- 授权查询的结果是基于角色策略(role-policies)和策略(policies)的实时运算。
 
 ## 2. 授权查询的方式
 
