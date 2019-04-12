@@ -16,7 +16,7 @@ Speedle 支持使用 TLS 来保护在非信任环境中的消息传输，也支�
 
 在下文中，我们将介绍如何在 Speedle（作为一个独立应用程序）中启用 TLS，以及如何使用 Speedle CLI / curl 访问启用 TLS 的 Speedle 服务。
 
-如果您希望通过 TLS 保护在 kubernetes 中的 Speedle 部署，请单击 [此处] (./CloudNative 环境下的部署.md)
+如果您希望通过 TLS 保护在 Kubernetes 中的 Speedle 部署，请单击 [此处](/CloudNative环境下的部署.md)
 
 ## 先决条件
 
@@ -26,7 +26,7 @@ Speedle 支持使用 TLS 来保护在非信任环境中的消息传输，也支�
 
 在测试环境中，可以创建一个“自签名”证书。自签名证书是未经知名 CA 签名的用户自己生成的证书，无法保证证书的真实性，因此它们不适合在生产环境中使用。
 
-为方便起见，您可以使用[cfssl]（https://github.com/cloudflare/cfssl）工具来生成自签名证书，步骤如下：
+为方便起见，您可以使用 [cfssl](https://github.com/cloudflare/cfssl) 工具来生成自签名证书，步骤如下：
 
 ### 安装 cfssl
 
