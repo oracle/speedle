@@ -40,7 +40,7 @@ Speedle是一个通用授权引擎。用户可以使用它非常易用的策略�
 
 请参阅 <https://speedle.io/quick-start/>。   
 
-更详细的内容可以查阅<https://github.com/oracle/speedle/tree/master/docs/%E4%B8%AD%E6%96%87%E8%B5%84%E6%96%99>。
+更详细的内容可以查阅[这里](https://github.com/oracle/speedle/tree/master/docs/%E4%B8%AD%E6%96%87%E8%B5%84%E6%96%99)。
 
 ## 构建
 
