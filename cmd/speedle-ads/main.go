@@ -4,8 +4,12 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"net"
+	"net/http"
+	"os"
+	"os/signal"
 
 	adsapi "github.com/oracle/speedle/api/ads"
 	"github.com/oracle/speedle/pkg/assertion"
@@ -69,18 +73,54 @@ func main() {
 	evaluator, err := newEvaluator(conf)
 	if err != nil {
 		log.Panic(err)
-		return
+		os.Exit(1)
+	}
+
+	httpServer, err := newHTTPServer(&params, evaluator)
+	if err != nil {
+		log.Panic(err)
+		os.Exit(1)
 	}
 
 	grpcServer, err := newGRPCServer(evaluator)
 	if err != nil {
 		log.Panic(err)
+		os.Exit(1)
 	}
-	log.Info("Starting the gRPC server for authorization service...")
-	go listenGRPCServer(grpcServer)
 
-	log.Info("Starting the REST server for authorization service...")
-	panic(listenAndServe(&params, evaluator))
+	intChan := make(chan os.Signal, 1)
+	signal.Notify(intChan, os.Interrupt)
+
+	errChan := make(chan error, 2)
+	go func() {
+		log.Info("Starting the gRPC server for authorization service...")
+		errChan <- listenGRPCServer(grpcServer)
+	}()
+
+	go func() {
+		log.Info("Starting the REST server for authorization service...")
+		errChan <- params.ListenAndServe(httpServer)
+	}()
+
+	select {
+	case err := <-errChan:
+		log.Errorf("Error occured %s.", err)
+		close(errChan)
+	case <-intChan:
+		log.Info("Interrupt signal")
+		close(intChan)
+	}
+
+	log.Info("Stopping servers...")
+	// Stop all services
+	if httpServer != nil {
+		log.Info("Stopping HTTP Server.")
+		httpServer.Shutdown(context.Background())
+	}
+	if grpcServer != nil {
+		log.Info("Stopping GRPC Server.")
+		grpcServer.Stop()
+	}
 }
 
 func newEvaluator(conf *cfg.Config) (eval.InternalEvaluator, error) {
@@ -144,10 +184,10 @@ func listenGRPCServer(server *grpc.Server) error {
 	return nil
 }
 
-func listenAndServe(params *flags.Parameters, evaluator eval.InternalEvaluator) error {
+func newHTTPServer(params *flags.Parameters, evaluator eval.InternalEvaluator) (*http.Server, error) {
 	routers, err := adsrest.NewRouter(evaluator)
 	if err != nil {
-		return err
+		return nil, err
 	}
-	return params.ListenAndServe(routers)
+	return params.NewHTTPServer(routers)
 }
