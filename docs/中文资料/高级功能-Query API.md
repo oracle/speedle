@@ -8,7 +8,7 @@
 
 Speedle支持以下3种方式进行授权查询：
 - REST API provided by Authorization Decision Service(ADS)
-- Grpc API provided by Authorization Decision Service(ADS)
+- gRPC API provided by Authorization Decision Service(ADS)
 - Golang API
 
 ## 3. 授权查询API及其示例
