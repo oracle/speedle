@@ -6,7 +6,7 @@ Speedle支持两种部署方式
 
 在开发模式下，Speedle使用一个文件作为策略仓库，用户使用RESTful API和CLI工具访问Speedle的各项服务。
 
-2. Production mode
+2. 生产模式
 
 在生产模式下，Speedle使用`etcd`作为策略仓库，用户使用RESTful API和CLI工具访问Speedle的各项服务。
 
@@ -139,41 +139,6 @@ store:
         certFile: etcd-client.crt
         keyFile: etcd-client.key
         trustedCAFile: etcd-client-ca.crt
-```
-
-# 开发环境下部署Speedle服务
-
-开发环境下可以使用`helm`部署Speedle服务。
-```bash
-$ helm install -n speedle deployment/helm/speedle-dev
-NAME:   speedle
-LAST DEPLOYED: Tue Nov 27 23:19:37 2018
-NAMESPACE: default
-STATUS: DEPLOYED
-
-RESOURCES:
-==> v1/Service
-NAME         TYPE       CLUSTER-IP      EXTERNAL-IP  PORT(S)   AGE
-speedle-pms  ClusterIP  10.101.117.233  <none>       6733/TCP  1s
-speedle-ads  ClusterIP  10.104.5.111    <none>       6734/TCP  1s
-
-==> v1beta2/Deployment
-NAME         DESIRED  CURRENT  UP-TO-DATE  AVAILABLE  AGE
-speedle-pms  1        1        1           0          1s
-speedle-ads  1        1        1           0          1s
-
-==> v1/Pod(related)
-NAME                          READY  STATUS             RESTARTS  AGE
-speedle-pms-867787bc95-kftbr  0/1    ContainerCreating  0         1s
-speedle-ads-7877ffbbf7-bwwtd  0/1    ContainerCreating  0         1s
-
-
-NOTES:
-1. $ kubectl port-forward svc/speedle-pms 6733:6733
-  Then access http://127.0.0.1:6733/policy-mgmt/v1/ to manage policies.
-
-2. $ kubectl port-forward svc/speedle-ads 6734:6734
-  Then access http://127.0.0.1:6734/authz-check/v1/is-allowed to check permissions.
 ```
 
 # 使用Speedle
