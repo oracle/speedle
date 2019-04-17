@@ -69,17 +69,17 @@ func main() {
 
 	ps, err := store.NewStore(conf.StoreConfig.StoreType, conf.StoreConfig.StoreProps)
 	if err != nil {
-		log.Panic(err)
+		log.Fatal(err)
 	}
 
 	httpServer, err := newHTTPServer(&params, ps)
 	if err != nil {
-		log.Panic(err)
+		log.Fatal(err)
 	}
 
 	grpcServer, err := newGRPCServer(ps)
 	if err != nil {
-		log.Panic(err)
+		log.Fatal(err)
 	}
 
 	intChan := make(chan os.Signal, 1)
@@ -96,8 +96,9 @@ func main() {
 		errChan <- params.ListenAndServe(httpServer)
 	}()
 
+	err = nil
 	select {
-	case err := <-errChan:
+	case err = <-errChan:
 		log.Errorf("Error occured %s.", err)
 		close(errChan)
 	case <-intChan:
@@ -108,12 +109,16 @@ func main() {
 	log.Info("Stopping servers...")
 	// Stop all services
 	if httpServer != nil {
-		log.Info("Stopping HTTP Server.")
+		log.Info("Stopping HTTP Server...")
 		httpServer.Shutdown(context.Background())
 	}
 	if grpcServer != nil {
-		log.Info("Stopping GRPC Server.")
+		log.Info("Stopping GRPC Server...")
 		grpcServer.Stop()
+	}
+
+	if err != nil {
+		os.Exit(1)
 	}
 }
 

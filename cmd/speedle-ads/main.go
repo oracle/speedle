@@ -72,20 +72,17 @@ func main() {
 
 	evaluator, err := newEvaluator(conf)
 	if err != nil {
-		log.Panic(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
 
 	httpServer, err := newHTTPServer(&params, evaluator)
 	if err != nil {
-		log.Panic(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
 
 	grpcServer, err := newGRPCServer(evaluator)
 	if err != nil {
-		log.Panic(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
 
 	intChan := make(chan os.Signal, 1)
@@ -102,8 +99,9 @@ func main() {
 		errChan <- params.ListenAndServe(httpServer)
 	}()
 
+	err = nil
 	select {
-	case err := <-errChan:
+	case err = <-errChan:
 		log.Errorf("Error occured %s.", err)
 		close(errChan)
 	case <-intChan:
@@ -120,6 +118,10 @@ func main() {
 	if grpcServer != nil {
 		log.Info("Stopping GRPC Server.")
 		grpcServer.Stop()
+	}
+
+	if err != nil {
+		os.Exit(1)
 	}
 }
 
