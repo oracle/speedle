@@ -101,28 +101,31 @@ type StrParamDetail struct {
 	Value        string
 }
 
-func (k *Parameters) ListenAndServe(handler http.Handler) error {
+func (k *Parameters) NewHTTPServer(handler http.Handler) (*http.Server, error) {
 	insecure, _ := strconv.ParseBool(k.Insecure.Value)
 	if insecure {
-		fmt.Println("insecure", k.Endpoint.Value)
-		return http.ListenAndServe(k.Endpoint.Value, handler)
+		server := http.Server{
+			Addr:    k.Endpoint.Value,
+			Handler: handler,
+		}
+		return &server, nil
 	}
-	return k.listenAndServeTLS(handler)
+	return k.newTLSServer(handler)
 }
 
-func (k *Parameters) listenAndServeTLS(handler http.Handler) error {
+func (k *Parameters) newTLSServer(handler http.Handler) (*http.Server, error) {
 	// Set HTTPS client
 	tlsConfig := &tls.Config{}
 
 	if k.ClientCertPath.Value != "" {
 		caCert, err := ioutil.ReadFile(k.ClientCertPath.Value)
 		if err != nil {
-			return errors.Wrapf(err, errors.ConfigError, "unable to read client CA certification from file %s", k.ClientCertPath.Value)
+			return nil, errors.Wrapf(err, errors.ConfigError, "unable to read client CA certification from file %s", k.ClientCertPath.Value)
 		}
 
 		caCertPool := x509.NewCertPool()
 		if !caCertPool.AppendCertsFromPEM(caCert) {
-			return errors.Wrap(err, errors.ConfigError, "failed to append certificates to pool")
+			return nil, errors.Wrap(err, errors.ConfigError, "failed to append certificates to pool")
 		}
 
 		tlsConfig.ClientCAs = caCertPool
@@ -137,12 +140,25 @@ func (k *Parameters) listenAndServeTLS(handler http.Handler) error {
 	}
 
 	tlsConfig.BuildNameToCertificate()
-	server := &http.Server{
+
+	server := http.Server{
 		Addr:      k.Endpoint.Value,
 		Handler:   handler,
 		TLSConfig: tlsConfig,
 	}
-	return server.ListenAndServeTLS(k.CertPath.Value, k.KeyPath.Value)
+	return &server, nil
+}
+
+func (k *Parameters) ListenAndServe(s *http.Server) error {
+	insecure, _ := strconv.ParseBool(k.Insecure.Value)
+	if insecure {
+		return s.ListenAndServe()
+	}
+	return k.listenAndServeTLS(s)
+}
+
+func (k *Parameters) listenAndServeTLS(s *http.Server) error {
+	return s.ListenAndServeTLS(k.CertPath.Value, k.KeyPath.Value)
 }
 
 // ParseFlags parses command line arguments

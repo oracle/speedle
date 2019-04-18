@@ -4,8 +4,12 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"net"
+	"net/http"
+	"os"
+	"os/signal"
 
 	"github.com/oracle/speedle/api/pms"
 	"github.com/oracle/speedle/pkg/cmd/flags"
@@ -65,19 +69,57 @@ func main() {
 
 	ps, err := store.NewStore(conf.StoreConfig.StoreType, conf.StoreConfig.StoreProps)
 	if err != nil {
-		log.Panic(err)
+		log.Fatal(err)
 	}
 
-	server, err := newGRPCServer(ps)
+	httpServer, err := newHTTPServer(&params, ps)
 	if err != nil {
-		log.Panic(err)
+		log.Fatal(err)
 	}
-	log.Info("Starting the gRPC server for pmsserver...")
-	go listenGRPCServer(server)
 
-	log.Info("Starting the REST server for pmsserver...")
-	panic(listenAndServe(&params, ps))
+	grpcServer, err := newGRPCServer(ps)
+	if err != nil {
+		log.Fatal(err)
+	}
 
+	intChan := make(chan os.Signal, 1)
+	signal.Notify(intChan, os.Interrupt)
+
+	errChan := make(chan error, 2)
+	go func() {
+		log.Info("Starting the gRPC server for policy management service...")
+		errChan <- listenGRPCServer(grpcServer)
+	}()
+
+	go func() {
+		log.Info("Starting the REST server for policy management service...")
+		errChan <- params.ListenAndServe(httpServer)
+	}()
+
+	err = nil
+	select {
+	case err = <-errChan:
+		log.Errorf("Error occured %s.", err)
+		close(errChan)
+	case <-intChan:
+		log.Info("Interrupt signal")
+		close(intChan)
+	}
+
+	log.Info("Stopping servers...")
+	// Stop all services
+	if httpServer != nil {
+		log.Info("Stopping HTTP Server...")
+		httpServer.Shutdown(context.Background())
+	}
+	if grpcServer != nil {
+		log.Info("Stopping GRPC Server...")
+		grpcServer.Stop()
+	}
+
+	if err != nil {
+		os.Exit(1)
+	}
 }
 
 func newGRPCServer(ps pms.PolicyStoreManager) (*grpc.Server, error) {
@@ -99,12 +141,11 @@ func listenGRPCServer(server *grpc.Server) error {
 	return nil
 }
 
-func listenAndServe(params *flags.Parameters, ps pms.PolicyStoreManager) error {
+func newHTTPServer(params *flags.Parameters, ps pms.PolicyStoreManager) (*http.Server, error) {
 	routers, err := pmsrest.NewRouter(ps)
 	if err != nil {
 		log.Error("Fail to create handler...")
-		return err
+		return nil, err
 	}
-	params.ListenAndServe(routers)
-	return nil
+	return params.NewHTTPServer(routers)
 }
