@@ -12,6 +12,7 @@ the benchmark cases on the testbed:
 2 * `Intel(R) Xeon(R) Platinum 8167M CPU @ 2.00GHz 2 Cores, 4 Threads`
 
 This tables shows the report for API `IsAllowed`. `op` means one call of `IsAllowed`.
+
 Case|Size|Time overhead (μs/op)
 ----|----|----
 One|1 policy, 1 role policy, 1 user|6.6
@@ -23,7 +24,9 @@ Huge|100K policies, 100K role policies, 10 users/role|8.7
 LargeExp|10K policies with resource expression, 10K role policies, 10 users/role|43.0
 LargeCond|10K policies with condition, 10K role policies, 10 users/role|8.0
 
+
 And below table shows the report for API `GetAllGrantedPermissions`. `op` means one call of `GetAllGrantedPermissions`.
+
 Case|Size|Time overhead (μs/op)
 ----|----|----
 LargePerm|10K policies, 10K role policies, 10 users/role|8.9
