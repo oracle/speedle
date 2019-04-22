@@ -2,12 +2,9 @@
 
 homeDir=$(cd $(dirname ${BASH_SOURCE[0]})/.. > /dev/null; pwd -P)
 
-echo "**** ${PWD}"
-echo "**** ${homeDir}"
-
 rmdir /go/bin
-mkdir ${WERCKER_SOURCE_DIR}/bin
-ln -s ${WERCKER_SOURCE_DIR}/bin /go/bin
+mkdir ${homeDir}/bin
+ln -s ${homeDir}/bin /go/bin
 ls -l /go/bin
 
 export GOPATH=/go
