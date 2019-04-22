@@ -17,5 +17,3 @@ fi
 ln -s $WERCKER_CACHE_DIR/pkg /go/pkg
 
 export GOPATH=/go
-#mkdir -p $GOPATH/src/github.com/oracle
-#ln -s $homeDir $GOPATH/src/github.com/oracle/speedle
