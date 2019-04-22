@@ -2,7 +2,7 @@
 
 homeDir=$(cd $(dirname ${BASH_SOURCE[0]})/.. > /dev/null; pwd -P)
 
-if [ -z ${homeDir}/bin ]; then
+if [ ! -e ${homeDir}/bin ]; then
     mkdir ${homeDir}/bin
 fi
 rmdir /go/bin
