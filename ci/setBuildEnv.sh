@@ -6,7 +6,8 @@ echo "**** ${PWD}"
 echo "**** ${homeDir}"
 
 rmdir /go/bin
-ln -s ${WERCKER_OUTPUT_DIR} /go/bin
+mkdir ${WERCKER_SOURCE_DIR}/bin
+ln -s ${WERCKER_SOURCE_DIR}/bin /go/bin
 
 export GOPATH=/go
 #mkdir -p $GOPATH/src/github.com/oracle
