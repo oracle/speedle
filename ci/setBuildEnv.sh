@@ -2,7 +2,7 @@
 
 homeDir=$(cd $(dirname ${BASH_SOURCE[0]})/.. > /dev/null; pwd -P)
 
-rm /go/bin
+rmdir /go/bin
 ln -s ${WERCKER_OUTPUT_DIR} /go/bin
 
 #export GOPATH=$homeDir
