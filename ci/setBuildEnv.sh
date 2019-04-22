@@ -2,10 +2,11 @@
 
 homeDir=$(cd $(dirname ${BASH_SOURCE[0]})/.. > /dev/null; pwd -P)
 
+if [ -z ${homeDir}/bin ]; then
+    mkdir ${homeDir}/bin
+fi
 rmdir /go/bin
-mkdir ${homeDir}/bin
 ln -s ${homeDir}/bin /go/bin
-ls -l /go/bin
 
 export GOPATH=/go
 #mkdir -p $GOPATH/src/github.com/oracle

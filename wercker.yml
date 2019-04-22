@@ -5,18 +5,14 @@ build:
     - script:
       name: build_bins
       code: |
-        pwd
         source ci/setBuildEnv.sh
         make build
-        ls bin/*
 
 unitTests:
   steps:
     - script:
       name: test
       code: |
-        pwd
-        find
         source ci/setBuildEnv.sh
         make speedleUnitTests
 
