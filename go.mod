@@ -49,7 +49,7 @@ require (
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5 // indirect
 	github.com/uber/jaeger-client-go v2.16.0+incompatible // indirect
 	github.com/uber/jaeger-lib v2.0.0+incompatible // indirect
-	github.com/ugorji/go v1.1.4 // indirect
+	github.com/ugorji/go v1.1.1 // indirect
 	github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 // indirect
 	github.com/yl2chen/cidranger v0.0.0-20180214081945-928b519e5268 // indirect
 	go.etcd.io/bbolt v1.3.2 // indirect
