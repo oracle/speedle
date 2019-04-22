@@ -3,8 +3,7 @@
 shell_dir=$(dirname $0)
 
 set -ex
-#source ${shell_dir}/start_etcd.sh
-source ${GOPATH}/src/github.com/oracle/speedle/setTestEnv.sh
+source ${shell_dir}/../../../setTestEnv.sh
 
 go clean -testcache
 

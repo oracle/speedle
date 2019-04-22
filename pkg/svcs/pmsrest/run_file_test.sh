@@ -3,7 +3,7 @@
 shell_dir=$(dirname $0)
 
 set -ex
-source ${GOPATH}/src/github.com/oracle/speedle/setTestEnv.sh
+source ${shell_dir}/../../../setTestEnv.sh
 
 startPMS file --config-file ${shell_dir}/config_file.json
 

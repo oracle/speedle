@@ -5,7 +5,7 @@ shell_dir=$(dirname $0)
 set -ex
 #source pkg/svcs/pmsrest/start_etcd.sh
 rm -rf ./speedle.etcd
-source ${GOPATH}/src/github.com/oracle/speedle/setTestEnv.sh
+source ${shell_dir}/../../../setTestEnv.sh
 go clean -testcache
 
 #Reconfig spctl

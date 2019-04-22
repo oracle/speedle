@@ -4,7 +4,7 @@ shell_dir=$(dirname $0)
 rm -rf ./speedle.etcd
 
 set -ex
-source ${GOPATH}/src/github.com/oracle/speedle/setTestEnv.sh
+source ${shell_dir}/../../../setTestEnv.sh
 
 go clean -testcache
 
