@@ -8,6 +8,7 @@ build:
         pwd
         source ci/setBuildEnv.sh
         make build
+        ls bin/*
 
 unitTests:
   steps:

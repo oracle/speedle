@@ -8,6 +8,7 @@ echo "**** ${homeDir}"
 rmdir /go/bin
 mkdir ${WERCKER_SOURCE_DIR}/bin
 ln -s ${WERCKER_SOURCE_DIR}/bin /go/bin
+ls -l /go/bin
 
 export GOPATH=/go
 #mkdir -p $GOPATH/src/github.com/oracle
