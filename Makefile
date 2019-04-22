@@ -3,7 +3,7 @@
 gitCommit := $(shell git rev-parse --short HEAD)
 # go version output is "go version go1.11.2 linux/amd64"
 goVersion := $(word 3,$(shell go version))
-goLDFlags := -mod=vendor -ldflags "-X main.gitCommit=${gitCommit} -X main.productVersion=0.1 -X main.goVersion=${goVersion}"
+goLDFlags := -ldflags "-X main.gitCommit=${gitCommit} -X main.productVersion=0.1 -X main.goVersion=${goVersion}"
 
 pmsImageRepo := speedle-pms
 pmsImageTag := v0.1
