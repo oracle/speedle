@@ -11,7 +11,9 @@ ln -s ${homeDir}/bin /go/bin
 if [ ! -e $WERCKER_CACHE_DIR/pkg ]; then
     mkdir $WERCKER_CACHE_DIR/pkg
 fi
-rmdir /go/pkg
+if [ -e /go/pkg ]; then
+    rmdir /go/pkg
+fi
 ln -s $WERCKER_CACHE_DIR/pkg /go/pkg
 
 export GOPATH=/go
