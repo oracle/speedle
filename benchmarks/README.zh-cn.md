@@ -26,7 +26,7 @@ LargeCond|10K policies with condition, 10K role policies, 10 users/role|8.0
 
 以下表格展示了API `GetAllGrantedPermissions`的时间开销。
 
-用力|模型|时间开销 (μs/op)
+用例|模型|时间开销 (μs/op)
 ----|----|----
 LargePerm|10K policies, 10K role policies, 10 users/role|8.9
 
