@@ -259,6 +259,7 @@ func BenchmarkLargePerms(b *testing.B) {
 			b.Fatal("wrong returned permssions.", err)
 		}
 	}
+	b.StopTimer()
 }
 
 func simplePolicyWriter(w io.Writer, pno int) error {
@@ -322,4 +323,5 @@ func runTest(b *testing.B, rc ads.RequestContext, pfloc string, exp bool) {
 			b.Fatal("wrong decision result.")
 		}
 	}
+	b.StopTimer()
 }
