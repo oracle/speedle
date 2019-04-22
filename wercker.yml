@@ -5,6 +5,7 @@ build:
     - script:
       name: build_bins
       code: |
+        pwd
         source ci/setBuildEnv.sh
         make build
 

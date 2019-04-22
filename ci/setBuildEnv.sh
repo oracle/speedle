@@ -2,6 +2,9 @@
 
 homeDir=$(cd $(dirname ${BASH_SOURCE[0]})/.. > /dev/null; pwd -P)
 
+echo "**** ${PWD}"
+echo "**** ${homeDir}"
+
 rmdir /go/bin
 ln -s ${WERCKER_OUTPUT_DIR} /go/bin
 
