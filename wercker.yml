@@ -13,6 +13,7 @@ unitTests:
     - script:
       name: test
       code: |
+        pwd
         source ci/setBuildEnv.sh
         make speedleUnitTests
 
