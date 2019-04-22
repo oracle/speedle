@@ -15,6 +15,7 @@ unitTests:
       name: test
       code: |
         pwd
+        find
         source ci/setBuildEnv.sh
         make speedleUnitTests
 
