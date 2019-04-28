@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Speedle</title>
+    <link>/zh/tags/</link>
+    <description>Recent content in Tags on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 18 Jan 2019 21:19:44 +0800</lastBuildDate>
+    
+	<atom:link href="/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ads</title>
+      <link>/zh/tags/ads/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/ads/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Api</title>
+      <link>/zh/tags/api/</link>
+      <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
+      
+      <guid>/zh/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Asserter</title>
+      <link>/zh/tags/asserter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/asserter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Community</title>
+      <link>/zh/tags/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/community/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contribution</title>
+      <link>/zh/tags/contribution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/contribution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Core</title>
+      <link>/zh/tags/core/</link>
+      <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
+      
+      <guid>/zh/tags/core/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Discovery</title>
+      <link>/zh/tags/discovery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/discovery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/zh/tags/docker/</link>
+      <pubDate>Mon, 10 Apr 2017 16:41:54 +0100</pubDate>
+      
+      <guid>/zh/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guide</title>
+      <link>/zh/tags/guide/</link>
+      <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
+      
+      <guid>/zh/tags/guide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Https</title>
+      <link>/zh/tags/https/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Identity</title>
+      <link>/zh/tags/identity/</link>
+      <pubDate>Thu, 17 Jan 2019 13:20:07 +0800</pubDate>
+      
+      <guid>/zh/tags/identity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Identity Domain</title>
+      <link>/zh/tags/identity-domain/</link>
+      <pubDate>Thu, 17 Jan 2019 13:20:07 +0800</pubDate>
+      
+      <guid>/zh/tags/identity-domain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Istio</title>
+      <link>/zh/tags/istio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/istio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>K8s</title>
+      <link>/zh/tags/k8s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>/zh/tags/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logging</title>
+      <link>/zh/tags/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/logging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pdp</title>
+      <link>/zh/tags/pdp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/pdp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pluggable</title>
+      <link>/zh/tags/pluggable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/pluggable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pms</title>
+      <link>/zh/tags/pms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/pms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Policy</title>
+      <link>/zh/tags/policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/policy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Releases</title>
+      <link>/zh/tags/releases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/releases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>/zh/tags/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spdl</title>
+      <link>/zh/tags/spdl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/spdl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Storage</title>
+      <link>/zh/tags/storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tls</title>
+      <link>/zh/tags/tls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/tls/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Token Asserter</title>
+      <link>/zh/tags/token-asserter/</link>
+      <pubDate>Mon, 21 Jan 2019 09:28:30 +0800</pubDate>
+      
+      <guid>/zh/tags/token-asserter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Usecase</title>
+      <link>/zh/tags/usecase/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/usecase/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>V0.1.0</title>
+      <link>/zh/tags/v0.1.0/</link>
+      <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
+      
+      <guid>/zh/tags/v0.1.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Versions</title>
+      <link>/zh/tags/versions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/versions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Webhook</title>
+      <link>/zh/tags/webhook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/tags/webhook/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

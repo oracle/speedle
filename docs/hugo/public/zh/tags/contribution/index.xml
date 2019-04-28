@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contribution on Speedle</title>
+    <link>/zh/tags/contribution/</link>
+    <description>Recent content in Contribution on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	<atom:link href="/zh/tags/contribution/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contribution and Community</title>
+      <link>/zh/contribute/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/contribute/</guid>
+      <description>欢迎加入Speedle社区！您可以通过很多方式参与Speedle项目。
+使用 使用Speedle是您对这个项目的最大支持。我们希望Speedle可以作为信息系统权限控制的首选，我们也在朝这个目标努力。
+推广 您可以通过如下方式帮忙推广Speedle开源项目：
+ 在the project at Github上加一颗星星 将Speedle推荐给您的朋友，同学，同事 如果不介意的话，您可以告诉我们您是怎么使用Speedle的，我们将把您的公司或组织加入到我们用户列表里 您可以撰写一些文章来分享使用心得，如果需要技术上的支持，请和我们联系  讨论和用户社区 您可以在通过如下途径参加Speedle相关讨论：
+ 我们推荐大家使用Slack，Slack是一个非常优秀的沟通工具，Speedle的Slack社区很活跃，里面的每一个问题都会在24小时内得到回复。#speedle-chinese 如果大家访问Slack有困难，可以加入QQ群。群号：643201591  Issues 如果您发现Speedle的bug，或者希望Speedle实现一些新功能，请在GitHub issue 创建一个Issue。
+Issue的内容请包括：
+ Speedle的版本 问题的详细描述 最好有可重现的环境和步骤 写清楚期望的行为  代码贡献 如果您想为Speedle贡献代码，请完成如下流程：
+ 签署OCA Fork Speedle代码库 改动代码，保证您的代码通过所有测试 创建一个Pull Request 查看您的pipeline结果，如果有问题请修正 我们会审阅您的改动，如果大家没有异议，就merge这个PR  行为准则 请参阅 Golden Rule 和 Contributor Covenant Code of Conduct。</description>
+    </item>
+    
+  </channel>
+</rss>

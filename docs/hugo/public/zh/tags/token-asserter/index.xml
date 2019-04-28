@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Token Asserter on Speedle</title>
+    <link>/zh/tags/token-asserter/</link>
+    <description>Recent content in Token Asserter on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 21 Jan 2019 09:28:30 +0800</lastBuildDate>
+    
+	<atom:link href="/zh/tags/token-asserter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>令牌用户身份断言</title>
+      <link>/zh/docs/assertor/</link>
+      <pubDate>Mon, 21 Jan 2019 09:28:30 +0800</pubDate>
+      
+      <guid>/zh/docs/assertor/</guid>
+      <description>令牌用户身份断言的好处 评估请求可以包含由任何身份提供者作为传入用户身份发布的身份令牌，而不是明确指定用户身份（用户标识符和用户所属的那些组）。 将 Speedle 集成到服务中时，您的服务无需验证和解析身份令牌。 Speedle 可以为您做到。
+Speedle 评估引擎检查传入请求是否包含身份令牌。 如果是，则评估引擎调用令牌断言服务的 webhook 以获得显式用户身份（用户标识符和组）。 然后，评估引擎可以基于用户身份域和组来执行策略评估。
+如何评估包含身份令牌的授权请求 要评估包含身份令牌的授权请求，请按照下列步骤操作。
+1. 实现断言服务的 webhook 接口 实现[Token Assertion Plugin API]（../ api / asserter_api）的断言服务将身份令牌，身份提供者和允许的身份域作为输入，并执行令牌验证和解析。 然后，该服务返回由身份令牌表示的显式身份（用户标识符和组）。
+请注意，如果设置了用户的身份域，则经过断言服务的用户标识可能包含用户/组的身份域。
+示例断言服务 备注: 此示例断言器服务仅用于测试目的。
+示例断言器服务源代码：
+package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; ) const ( // user type of Principal  PRINCIPAL_TYPE_USER = &amp;#34;user&amp;#34; // group type of Principal  PRINCIPAL_TYPE_GROUP = &amp;#34;group&amp;#34; // entity type of Principal  PRINCIPAL_TYPE_ENTITY = &amp;#34;entity&amp;#34; ) // Principal of Speedle type Principal struct { Type string `json:&amp;#34;type,omitempty&amp;#34;` Name string `json:&amp;#34;name,omitempty&amp;#34;` IDD string `json:&amp;#34;idd,omitempty&amp;#34;` } // AssertResponse assertion response type AssertResponse struct { Principals []*Principal `json:&amp;#34;principals,omitempty&amp;#34;` Attributes map[string]interface{} `json:&amp;#34;attributes,omitempty&amp;#34;` // non zero indicates errors happen  ErrCode int `json:&amp;#34;errCode&amp;#34;` ErrMessage string `json:&amp;#34;errMessage,omitempty&amp;#34;` } // SampleAsserter for testing only type SampleAsserter struct { } func (a SampleAsserter) ServeHTTP(w http.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,86 @@
+[GETTING_STARTED]
+other = "Getting started"
+
+[LEARN_MORE]
+other = "Learn More"
+
+[SimplePolicyLanguage]
+other = "Simple Policy Language"
+
+[FEATURE_SimplePolicyLanguage]
+other = "Define policies in a high-level declarative language (Secure Policy Definition Language - SPDL) in the most intuitive and natural way."
+
+[CloudNative]
+other = "Cloud Native"
+
+[FEATURE_CloudNative]
+other = "Cloud First! With a plethora of integration samples and pluggable interfaces, secure your applications on ANY cloud provider."
+
+[RealtimePolicyDiscovery]
+other = "Real-time Policy Discovery"
+
+[FEATURE_RealtimePolicyDiscovery]
+other = "Dynamically discover policies based on real-time runtime interactions between your services without having to guess all possible ways in which attackers could access your systems."
+
+[FEATURE_RBAC]
+other = "Use role and attributed based fine-grained access control to secure your applications."
+
+[CentralizedPolicyManagement]
+other = "Centralized Policy Management"
+
+[FEATURE_CentralizedPolicyManagement]
+other = "Leverage various integration points to manage the policies for your polyglot, disparate systems from one central place."
+
+[PluggableIdentity]
+other = "Pluggable Identity"
+
+[FEATURE_PluggableIdentity]
+other = "Easily extensible! Plug your own identity provider like Github, Okta or even your corporate one."
+
+[PluggablePersistenceStore]
+other = "BYO Persistence Store"
+
+[FEATURE_BYOPersistenceStore]
+other = "Don't like etcd? Implement our persistence interface to use your existing persistence stores - RBDMS, NoSQL or even block storage."
+
+[AboutSpeedleTitle]
+other = "About Speedle"
+
+[AboutSpeedleContent]
+other = "Speedle is a general purpose authorization engine. It is an open source project to address access control requirements for various of applications, from modern cloud native applications to legacy applications. The offering supports policy driven fine grain access control that helps customers externalize their access control logic to a policy engine that is capable of evaluating RBAC/ABAC policies for a given logged in user or on a process acting on behalf of a user."
+
+[SpeedleConsistsTitle]
+other = "Speedle consists of"
+
+[SpeedleConsistsContent1]
+other = "SPDL policy definition language"
+
+[SpeedleConsistsContent2]
+other = "Policy Management Service"
+
+[SpeedleConsistsContent3]
+other = "Authorization Decision Service"
+
+[SpeedleConsistsContent4]
+other = "Command line tool (spctl)"
+
+[SpeedleConsistsContent6]
+other = "Speedle is licensed under Universal Permissive License v1.0. - Users are free to integrate Speedle with their own systems."
+
+[Features]
+other = "Features"
+
+[Integrations]
+other = "Integrations"
+
+[ContributeToSpeedle]
+other = "Contribute to Speedle"
+
+[ContributeToSpeedleContent1]
+other = "Speedle is an open source project and as so, we urge people who feel that they can, and would like to contribute to do so, to make it better."
+
+[ContributeToSpeedleContent2]
+other = "Make Speedle better"
+
+[Contribute]
+other = "Contribute"

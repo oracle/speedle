@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spdl on Speedle</title>
+    <link>/zh/tags/spdl/</link>
+    <description>Recent content in Spdl on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	<atom:link href="/zh/tags/spdl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SPDL - 策略定义语言</title>
+      <link>/zh/docs/spdl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/spdl/</guid>
+      <description>基本的策略定义语言 保留关键字 SPDL 的保留关键字如下. 这些关键字不能用作 user name, group name, action, resource, attribute name 等等。
+ role user group entity grant deny if in on from  这些关键字均大小写不敏感。这意味着，&amp;rdquo;role&amp;rdquo;, &amp;ldquo;ROLE&amp;rdquo;, &amp;ldquo;Role&amp;rdquo;, &amp;ldquo;rOLe&amp;rdquo; 都不能用作 user name, group name, action, resource, attribute name 等等。
+命名规范  User Name: a user name consists of letters, decimal digits, punctuation marks except for comma i.e. [\p{L}\p{Nd}[\p{Punct}&amp;&amp;[^,]]]+ Group Name: a group name consists of letters, decimal digits, punctuation marks except for comma i.</description>
+    </item>
+    
+  </channel>
+</rss>

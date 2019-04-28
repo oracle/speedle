@@ -1,0 +1,27 @@
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+
+    pre {
+    background: none;
+    padding: 0;
+    top: 0;
+    display: block;
+    color: rgba(49,52,57,.85);
+    #overflow: none;
+    white-space: pre-wrap;
+    }

@@ -1,0 +1,89 @@
+[GETTING_STARTED]
+other = "快速入门"
+
+[LEARN_MORE]
+other = "了解更多"
+
+[SimplePolicyLanguage]
+other = "简单的授权策略语言"
+
+[FEATURE_SimplePolicyLanguage]
+other = "用最直观自然的方式，使用声明式语言SPDL来定义策略。"
+
+[CloudNative]
+other = "云原生"
+
+[FEATURE_CloudNative]
+other = "云计算优先！借助于大量的集成示例和可插拔的接口，你可以在任何云平台上使用Speedle保护您的应用。"
+
+[RealtimePolicyDiscovery]
+other = "实时策略发现"
+
+[FEATURE_RealtimePolicyDiscovery]
+other = "基于服务之间的实时运行时交互动态发现策略，而无需猜测攻击者可以访问系统的所有可能方式。"
+
+[FEATURE_RBAC]
+other = "使用基于角色和属性的细粒度访问控制来保护您的应用程序。"
+
+[CentralizedPolicyManagement]
+other = "集中的策略管理"
+
+[FEATURE_CentralizedPolicyManagement]
+other = "从一个集中位置，借助于各种集成点对多语言、异构系统中的策略进行管理。"
+
+[PluggableIdentity]
+other = "可插拔的身份认证系统"
+
+[FEATURE_PluggableIdentity]
+other = "非常易扩展！您可以跟自己的身份认证提供者，比如Github, Okta或者你自己公司的身份认证系统，进行集成。"
+
+[PluggablePersistenceStore]
+other = "持久层存储替换"
+
+[FEATURE_BYOPersistenceStore]
+other = "不喜欢etcd？您可以自己的持久层存储：RBDMS，NoSQL，甚至block storage，只需实现我们的持久层接口。"
+
+[AboutSpeedleTitle]
+other = "关于Speedle"
+
+[AboutSpeedleContent]
+other = "Speedle是一个通用的访问控制引擎。该引擎支持策略驱动的细粒度访问控制，可帮助客户将其访问控制逻辑外部化至访问控制引擎，能够为给定的登录用户或代表用户的进程进行对RBAC/ABAC策略进行评估。"
+
+[SpeedleConsistsTitle]
+other = "Speedle构成"
+
+[SpeedleConsistsContent1]
+other = "SPDL策略定义语言"
+
+[SpeedleConsistsContent2]
+other = "PMS策略管理服务"
+
+[SpeedleConsistsContent3]
+other = "策略发现和策略诊断"
+
+[SpeedleConsistsContent4]
+other = "授权决策服务"
+
+[SpeedleConsistsContent5]
+other = "命令行工具（spctl）"
+
+[SpeedleConsistsContent6]
+other = "Speedle基于Universal Permissive License v1.0 - 用户可以自由地使用Speedle跟自己的系统进行集成"
+
+[Features]
+other = "特性"
+
+[Integrations]
+other = "集成"
+
+[ContributeToSpeedle]
+other = "帮助Speedle"
+
+[ContributeToSpeedleContent1]
+other = "Speedle是一个开源项目，我们热切期望那些认为他们可以并且愿意为此做出贡献的人，让它变得更好。"
+
+[ContributeToSpeedleContent2]
+other = "让Speedle变得更好。"
+
+[Contribute]
+other = "帮助"

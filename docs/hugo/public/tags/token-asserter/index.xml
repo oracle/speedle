@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Token Asserter on Speedle</title>
+    <link>/tags/token-asserter/</link>
+    <description>Recent content in Token Asserter on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Jan 2019 09:28:30 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/token-asserter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Token asserter</title>
+      <link>/docs/assertor/</link>
+      <pubDate>Mon, 21 Jan 2019 09:28:30 +0800</pubDate>
+      
+      <guid>/docs/assertor/</guid>
+      <description>Benefits of the token asserter An evaluation request can contain an identity token issued by any identity provider as an incoming user identity, instead of specifying the user identities (user identifier and those groups user belongs to) explicitly. When you integrate Speedle into your service, your service does not need to validate and parse identity tokens. Speedle can do it for you.
+The Speedle evaluation engine checks whether the incoming request contains an identity token.</description>
+    </item>
+    
+  </channel>
+</rss>

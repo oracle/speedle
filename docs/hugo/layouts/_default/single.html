@@ -1,0 +1,27 @@
+{{ define "title"}} {{ .Title}} {{ end }} {{ define "header"}}
+{{ partial "header" .}} {{ end }}
+{{ define "main" }}
+<div id="main">
+  <div class="features">
+    {{if .Params.icon }}
+    <image class="top-right-icon" src="/img/speedle/{{.Params.icon}}" />
+    {{ end }}
+    <h1>{{.Title }}</h1>
+
+    {{if .Params.description }}
+    <p class="subtitle">{{.Params.description}}</p>
+    {{ end }}
+    {{if .Params.bref }}
+    <p style="margin: 2px">{{.Params.bref}}</p>
+    {{ end }}
+    {{ partial "toc" .}}
+    <br />
+    <div id="kube-component" class="content">
+      {{.Content | safeHTML}}
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}

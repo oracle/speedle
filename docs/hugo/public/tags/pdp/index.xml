@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pdp on Speedle</title>
+    <link>/tags/pdp/</link>
+    <description>Recent content in Pdp on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/pdp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Authorization Decisions</title>
+      <link>/docs/decisions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/decisions/</guid>
+      <description>What is an authorization decision?  An authorization decision determines whether a subject performing an action on a resource is allowed.
+ An authorization decision is the result of real-time evaluation based on policies and attributes.
+  Ways to get authorization decisions Authorization decisions can be performed by the Authorization Decision Service or an by an embedded evaluator:
+ Authorization Decision Service (ADS)  REST API Grpc API  Embedded Evaluator  Golang API   APIs and Samples The ADS decision APIs make authorization decisions based on policies that describe the actions, permissions, and roles granted to a subject.</description>
+    </item>
+    
+  </channel>
+</rss>

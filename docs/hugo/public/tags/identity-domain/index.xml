@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Identity Domain on Speedle</title>
+    <link>/tags/identity-domain/</link>
+    <description>Recent content in Identity Domain on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Jan 2019 13:20:07 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/identity-domain/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Identity Domain</title>
+      <link>/docs/idd/</link>
+      <pubDate>Thu, 17 Jan 2019 13:20:07 +0800</pubDate>
+      
+      <guid>/docs/idd/</guid>
+      <description>What is an identity domain? An identity domain is a logical namespace for users and groups, typically representing a discrete set of users and groups in the physical data store. Each identity domain manages users and groups independently. User and group names must be unique in an identity domain.
+How Speedle handles multiple identity domains In an integrated environment, identities may come from multiple identity domains. Consider, for example, the following policy where a user with the identifier user1 is authorized to perform a rent action on the resource book.</description>
+    </item>
+    
+  </channel>
+</rss>

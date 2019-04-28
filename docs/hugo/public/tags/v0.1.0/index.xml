@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>V0.1.0 on Speedle</title>
+    <link>/tags/v0.1.0/</link>
+    <description>Recent content in V0.1.0 on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Jan 2019 21:19:44 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/v0.1.0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>API</title>
+      <link>/docs/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/</guid>
+      <description>REST APIs Policy Management Service API  Authorization Decision Service API  Token Assertion API     GRPC APIs Policy Management Service API  Authorization Decision Service API     Golang APIs Policy Management Service API  Authorization Decision Service API     Policy Management Authorization Decision Token Assertion</description>
+    </item>
+    
+    <item>
+      <title>Authorization Runtime/Decision API</title>
+      <link>/docs/api/decision_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/decision_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/policy-check.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+    <item>
+      <title>Logging Framework</title>
+      <link>/docs/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/logging/</guid>
+      <description>Overview The following two open source projects are used to process log messages,
+1. https://github.com/sirupsen/logrus 2. https://github.com/natefinch/lumberjack Logrus is a structured logger for Go (golang), and completely API compatible with the golang standard library logger. Note that logrus doesn&amp;rsquo;t support log rotation, and it is exactly the reason why we introduce the second project lumberjack, which provides a rolling logger. Logrus communicates with lumberjack using the io.Writer interface, please refer to the following diagram,</description>
+    </item>
+    
+    <item>
+      <title>Policy Management API</title>
+      <link>/docs/api/management_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/management_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/policy-manage.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+    <item>
+      <title>SPDL - Security Policy Definition Language</title>
+      <link>/docs/spdl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/spdl/</guid>
+      <description>Syntax Keywords The reserved keywords in SPDL are as follows. You cannot use any of these keywords as user name, group name, action, resource, attribute name, and so on.
+ role user group entity grant deny if in on from  The keywords are all case-insensitive, which means that you cannot use one of &amp;ldquo;role&amp;rdquo;, &amp;ldquo;ROLE&amp;rdquo;, &amp;ldquo;Role&amp;rdquo;, &amp;ldquo;rOLe&amp;rdquo;, etc as user name, group name, action, resource, attribute name, and so on.</description>
+    </item>
+    
+    <item>
+      <title>Speedle Policy</title>
+      <link>/docs/pms/</link>
+      <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
+      
+      <guid>/docs/pms/</guid>
+      <description> Policy Management Global Policy Policy Discovery Policy Diagnosis  </description>
+    </item>
+    
+    <item>
+      <title>Token Assertion Plugin API</title>
+      <link>/docs/api/asserter_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/asserter_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/asserter.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+  </channel>
+</rss>

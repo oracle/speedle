@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div id="main">
+  {{if .Params.icon }}
+  <image class="top-right-icon" src="/img/speedle/{{.Params.icon}}"></image>
+  {{ end }}
+  <h1>{{.Title }}</h1>
+  <p>{{.Params.bref}}</p>
+
+  {{ partial "toc" .}}
+  <br />
+  <div id="kube-component" class="content">
+    {{.Content | safeHTML}}
+  </div>
+</div>
+{{ end }}

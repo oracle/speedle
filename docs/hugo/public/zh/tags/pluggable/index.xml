@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pluggable on Speedle</title>
+    <link>/zh/tags/pluggable/</link>
+    <description>Recent content in Pluggable on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	<atom:link href="/zh/tags/pluggable/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Token Assertion Plugin API</title>
+      <link>/zh/docs/api/asserter_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/api/asserter_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/asserter.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+    <item>
+      <title>存储扩展</title>
+      <link>/zh/docs/store/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/store/</guid>
+      <description>概述 Speedle 现在支持两种数据存储，OOTB:文件存储和 etcd 存储。 但是，您可以实现自己的数据存储(例如使用 mongodb 等)
+ 请注意数据存储需要支持“watch”功能  本文档将说明如何逐步实现一个数据存储。
+实现 PolicyStoreManager 接口 在 store 目录下创建一个“mystore”目录并导航到它目录下面。 创建一个类似 mystore 之类的存储代码文件，并在此文件中实现“PolicyStoreManager”接口。
+Example in store/etcd/etcdStore.go:
+type Store struct { ... } func (s *Store) ReadPolicyStore() (*pms.PolicyStore, error) { ... } func (s *Store) CreateService(service *pms.Service) error { ... } ... 请注意这个 watch 的功能。该功能将监视数据存储的更改。这个函数需要返回一个“StorageChangeChannel”对象，每个 store change event(请查看“api/pms/types/StoreChangeEvent”以获取详细信息)都会被发送到这个 Channel。ADS 将接收这些更改事件并立即更新其缓存。
+编写 storeBuilder 代码 理解 Speedle 存储配置 Speedle 从三个不同的源读取存储配置信息:flags、环境变量和配置文件。
+flags 具有最高优先级，然后是环境变量，然后是配置文件。这意味着高优先级源中的配置项将覆盖低优先级源中的相同配置项。
+存储所有者需要在 init 函数中提供 flags 定义，我们使用pflag来定义 flags。</description>
+    </item>
+    
+  </channel>
+</rss>

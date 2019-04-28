@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Why on Speedle</title>
+    <link>/tags/why/</link>
+    <description>Recent content in Why on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 21:56:55 +0100</lastBuildDate>
+    
+	<atom:link href="/tags/why/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why Speedle?</title>
+      <link>/blog/what-is-speedle/</link>
+      <pubDate>Thu, 02 Mar 2017 21:56:55 +0100</pubDate>
+      
+      <guid>/blog/what-is-speedle/</guid>
+      <description>What and Why? Thoughts: Authz is not a new concept. Been using it in software since the dawn of time. Various systems have sprung up with their own little authz solutions. k8s, istio, various IAMs. One may have been using something else for their on premise applications. As folks move to hybrid models / workloads / cloud vendors - how does one keep track of the policies and manage identity as it flows across - these various systems.</description>
+    </item>
+    
+  </channel>
+</rss>

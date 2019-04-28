@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webhook on Speedle</title>
+    <link>/zh/tags/webhook/</link>
+    <description>Recent content in Webhook on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	<atom:link href="/zh/tags/webhook/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>/zh/integrations/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/integrations/kubernetes/</guid>
+      <description>Kubernetes Authorization Webhook Sample Build git clone git@github.com:oracle/speedle.git # make sure the speedle golang adsclient code is in your $GOPATH/src package. cp -r samples/adsclient/go/src/speedle/ $GOPATH/src # get additional required packages: $go get k8s.io/api/authorization/v1beta1 $go get k8s.io/client-go/kubernetes $go get k8s.io/client-go/tools/clientcmd # build cd samples/integration/kubernetes-integration go build webhook.go #Executable webhook could be found in same folder Create Certificates Generate self-signed certificates used by webhook by refering to this document BTW, let&amp;rsquo;s assume we store the generated certificates and other needed files to path /path/to/webhook/, we will use this path in below sections.</description>
+    </item>
+    
+  </channel>
+</rss>

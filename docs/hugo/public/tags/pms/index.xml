@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pms on Speedle</title>
+    <link>/tags/pms/</link>
+    <description>Recent content in Pms on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/pms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Policy Management</title>
+      <link>/docs/pms/policy-mgmt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/pms/policy-mgmt/</guid>
+      <description>What is a Speedle policy? A Speedle policy is a set of criteria that specify whether a user is granted access to a particular protected resource or assignment to a particular role. You manage Speedle policies using the Speedle Policy Management Service(PMS).
+Understanding the Speedle Policy Module Note: The Speedle syntax used in this document is defined in SPDL - Security Policy Definition Language.
+Policy store The policy store maintains all policy artifacts and can be persisted to an etcd store or a JSON file.</description>
+    </item>
+    
+    <item>
+      <title>Policy Management API</title>
+      <link>/docs/api/management_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/management_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/policy-manage.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+  </channel>
+</rss>

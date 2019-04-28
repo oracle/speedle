@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Storage on Speedle</title>
+    <link>/tags/storage/</link>
+    <description>Recent content in Storage on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/storage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pluggable Storage</title>
+      <link>/docs/store/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/store/</guid>
+      <description>Overview Speedle now supports two kinds of data store, OOTB: file store and etcd store. However, you can implement your own data store (e.g. with mongodb, etc)
+ Please note the data store needs to support the watch function.  This document walks through step-by-step instructions to implement a data store.
+Write store code to implement the PolicyStoreManager interface Create a &amp;ldquo;mystore&amp;rdquo; directory under store directory and navigate to it.</description>
+    </item>
+    
+  </channel>
+</rss>

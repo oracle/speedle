@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Identity on Speedle</title>
+    <link>/tags/identity/</link>
+    <description>Recent content in Identity on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Jan 2019 13:20:07 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/identity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Identity Domain</title>
+      <link>/docs/idd/</link>
+      <pubDate>Thu, 17 Jan 2019 13:20:07 +0800</pubDate>
+      
+      <guid>/docs/idd/</guid>
+      <description>What is an identity domain? An identity domain is a logical namespace for users and groups, typically representing a discrete set of users and groups in the physical data store. Each identity domain manages users and groups independently. User and group names must be unique in an identity domain.
+How Speedle handles multiple identity domains In an integrated environment, identities may come from multiple identity domains. Consider, for example, the following policy where a user with the identifier user1 is authorized to perform a rent action on the resource book.</description>
+    </item>
+    
+    <item>
+      <title>Token asserter</title>
+      <link>/docs/assertor/</link>
+      <pubDate>Mon, 21 Jan 2019 09:28:30 +0800</pubDate>
+      
+      <guid>/docs/assertor/</guid>
+      <description>Benefits of the token asserter An evaluation request can contain an identity token issued by any identity provider as an incoming user identity, instead of specifying the user identities (user identifier and those groups user belongs to) explicitly. When you integrate Speedle into your service, your service does not need to validate and parse identity tokens. Speedle can do it for you.
+The Speedle evaluation engine checks whether the incoming request contains an identity token.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Core on Speedle</title>
+    <link>/tags/core/</link>
+    <description>Recent content in Core on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Jan 2019 21:19:44 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/core/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>API</title>
+      <link>/docs/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/</guid>
+      <description>REST APIs Policy Management Service API  Authorization Decision Service API  Token Assertion API     GRPC APIs Policy Management Service API  Authorization Decision Service API     Golang APIs Policy Management Service API  Authorization Decision Service API     Policy Management Authorization Decision Token Assertion</description>
+    </item>
+    
+    <item>
+      <title>Authorization Decisions</title>
+      <link>/docs/decisions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/decisions/</guid>
+      <description>What is an authorization decision?  An authorization decision determines whether a subject performing an action on a resource is allowed.
+ An authorization decision is the result of real-time evaluation based on policies and attributes.
+  Ways to get authorization decisions Authorization decisions can be performed by the Authorization Decision Service or an by an embedded evaluator:
+ Authorization Decision Service (ADS)  REST API Grpc API  Embedded Evaluator  Golang API   APIs and Samples The ADS decision APIs make authorization decisions based on policies that describe the actions, permissions, and roles granted to a subject.</description>
+    </item>
+    
+    <item>
+      <title>Authorization Runtime/Decision API</title>
+      <link>/docs/api/decision_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/decision_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/policy-check.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+    <item>
+      <title>Policy Discovery</title>
+      <link>/docs/pms/discover/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/pms/discover/</guid>
+      <description>What can discover mode do? * Help you discover existing authorization requests The is-allowed API endpoint and the discover API endpoint use the same request and response format. When you replace is-allowed with discover in the URL of the API, each authorization request that is returned shows WHO carries out WHAT action on WHICH resource. Discover mode does not evaluate the authorization decision; it simply records the authorization decision requests, along with the actions and the resources protected, and returns &amp;ldquo;is-allowed=true&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Policy Management</title>
+      <link>/docs/pms/policy-mgmt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/pms/policy-mgmt/</guid>
+      <description>What is a Speedle policy? A Speedle policy is a set of criteria that specify whether a user is granted access to a particular protected resource or assignment to a particular role. You manage Speedle policies using the Speedle Policy Management Service(PMS).
+Understanding the Speedle Policy Module Note: The Speedle syntax used in this document is defined in SPDL - Security Policy Definition Language.
+Policy store The policy store maintains all policy artifacts and can be persisted to an etcd store or a JSON file.</description>
+    </item>
+    
+    <item>
+      <title>Policy Management API</title>
+      <link>/docs/api/management_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/management_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/policy-manage.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+    <item>
+      <title>SPDL - Security Policy Definition Language</title>
+      <link>/docs/spdl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/spdl/</guid>
+      <description>Syntax Keywords The reserved keywords in SPDL are as follows. You cannot use any of these keywords as user name, group name, action, resource, attribute name, and so on.
+ role user group entity grant deny if in on from  The keywords are all case-insensitive, which means that you cannot use one of &amp;ldquo;role&amp;rdquo;, &amp;ldquo;ROLE&amp;rdquo;, &amp;ldquo;Role&amp;rdquo;, &amp;ldquo;rOLe&amp;rdquo;, etc as user name, group name, action, resource, attribute name, and so on.</description>
+    </item>
+    
+    <item>
+      <title>Speedle Policy</title>
+      <link>/docs/pms/</link>
+      <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
+      
+      <guid>/docs/pms/</guid>
+      <description> Policy Management Global Policy Policy Discovery Policy Diagnosis  </description>
+    </item>
+    
+    <item>
+      <title>Token Assertion Plugin API</title>
+      <link>/docs/api/asserter_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/asserter_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/asserter.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+  </channel>
+</rss>

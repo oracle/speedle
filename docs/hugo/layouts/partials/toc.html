@@ -1,0 +1,53 @@
+{{ if and (isset .Params "toc") .Params.toc }}
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded",
+function(){
+tocbot.init({
+tocSelector: '.js-toc',
+contentSelector: '.content',
+headingSelector: '{{ .Params.tocheading }}'
+})
+}
+);
+</script>
+
+{{ if and (isset .Params "tocsidebar") .Params.tocsidebar }}
+<div align=center>
+<a class="button round" href=# data-component=offcanvas data-target=#offcanvas-left ><i class=kube-menu></i>Open Left</a>
+<div id=offcanvas-left class=hide>
+<a href=# class=close></a>
+<b>{{ .Title }}</b>
+<nav id="contents1">
+    <ol class="js-toc">
+    </ol>
+</nav>
+</div>
+</div>
+{{ else }}
+<nav id="contents">
+    <ol class="js-toc">
+    </ol>
+</nav>
+{{ end }}
+{{ end }}
+
+<!-- displays all h tags -->
+{{ if and (isset .Params "tocdef") ( and (gt .WordCount 400 ) (ne .Params.tocdef "false")) }}
+
+{{ if and (isset .Params "tocsidebar") .Params.tocsidebar }}
+<div align=center>
+<a class="button round" href=# data-component=offcanvas data-target=#offcanvas-left ><i class=kube-menu></i>Open Left</a>
+<div id=offcanvas-left class=hide>
+<a href=# class=close></a>
+<b>{{ .Title }}</b>
+     <!-- nav id="contents1" -->
+    {{.TableOfContents}}
+     <!-- /nav -->
+</div>
+</div>
+{{ else }}
+     <nav id="contents">
+      {{.TableOfContents}}
+     </nav>
+{{ end }}
+{{ end }}

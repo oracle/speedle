@@ -1,0 +1,33 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+<div id="main">
+  <div class="features">
+    <image class="top-right-icon" src="/img/speedle/10.Integrations.svg" />
+    <h1>{{ .Title }}</h1>
+    {{if .Params.description }}
+    <p class="subtitle">{{.Params.description}}</p>
+    {{ end }}
+    {{if .Params.bref }}
+    <p>{{.Params.bref}}</p>
+    {{ end }}
+    <br />
+    <div id="components">
+      <div class="row gutters">
+        {{ range.Data.Pages.ByWeight }}
+        {{ if gt .Params.weight 0 }}
+        <div class="col col-4 center">
+          <img class="svg" src="/img/speedle/{{.Params.iconurl}}" />
+          <h4>
+            <a href=" {{ .Permalink }}">{{ .Title }}</a>
+          </h4>
+          <p>{{ .Params.description }}</p>
+        </div>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{ end }}

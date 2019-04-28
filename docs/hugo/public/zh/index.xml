@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Speedle 强大易用的权限控制引擎 on Speedle</title>
+    <link>/zh/</link>
+    <description>Recent content in Speedle 强大易用的权限控制引擎 on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 18 Jan 2019 21:19:44 +0800</lastBuildDate>
+    
+	<atom:link href="/zh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用场景</title>
+      <link>/zh/docs/usecases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/usecases/</guid>
+      <description>嵌入到 GO 语言编写的应用程序 张先生是一个程序员，他用 GO 语言开发了一套应用系统，现在他希望在这套系统中增加权限控制功能。他可以在程序中直接调用 Speedle 的 GO API 轻松完成任务。
+利用 Speedle 管理应用系统的权限 H 公司正在开发一套远程医疗系统。健康数据属于个人隐私，根据合规的需要，H 公司必须提供严格的权限控制，确保每位用户只能接触到自己的数据。该系统还需定期接受第三方机构的审计。H 公司使用 Speedle 来达成一下目标：
+ 构建 RBAC/ABAC 兼容的授权模型 自然语言定义的授权策略，方便审计部门分析审计 详尽的审计数据，可以跟踪用户每一次访问  利用 Speedle 集中管理组织内所有信息系统 陈先生是某大型跨国公司的信息安全负责人。在过去的十年里该公司飞速发展，并购了数十家中小型公司。这给陈先生和他的团队出了个难题，被并购的公司都有自己的信息系统，实现这些信息系统的技术各不相同。有基于 JavaEE 的，有基于 NodeJS 的，有 Ruby on Rails，还有基于 CORBA 的遗留系统。这些系统的权限管理机制也不一致，有的是硬编码的权限管理模块，有的基于 JaaS，有的基于 OASIS XACML，有些策略模型是 RBAC，有些是 ABAC，有些是普通的 ACL，甚至有些是原始的黑名单白名单。陈先生和他的团队为了管理这些系统不得不学习数十种权限模型和语言，每次修改授权策略需要在数十个系统上做不同的操作。非常繁琐也容易出现错误。
+如何解决这个问题？Speedle 能帮上忙。
+ Speedle 的授权策略语言足够灵活，可以完美支持 ABAC，RBAC，ACL 等各种流行的模型。 Speedle 提供 REST，gRPC 和 GO API，很容易和各种系统集成。 Speedle 可以支持百万量级的授权策略，足够支持一个企业的所有业务需求。 Speedle 运行速度很快，可以在数毫秒内处理一个授权请求。不会拖慢现有系统。 一个 Speedle 实例每秒钟可以处理 30,000 - 40,000 次并发授权请求。如果这还不够，再启动一个实例，Speedle 有几乎无限的可扩展性。  基于以上特性，陈先生可以启动一组 Speedle 服务，把各个系统的权限控制模块指向 Speedle 服务。这样就可以用统一个授权模型和语言来管理这些系统了。</description>
+    </item>
+    
+    <item>
+      <title>策略管理</title>
+      <link>/zh/docs/pms/policy-mgmt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/pms/policy-mgmt/</guid>
+      <description>What is a Speedle policy? A Speedle policy is a set of criteria that specify whether a user is granted access to a particular protected resource or assignment to a particular role. You manage Speedle policies using the Speedle Policy Management Service(PMS).
+Understanding the Speedle Policy Module Note: The Speedle syntax used in this document is defined in SPDL - Security Policy Definition Language.
+Policy store The policy store maintains all policy artifacts and can be persisted to an etcd store or a JSON file.</description>
+    </item>
+    
+    <item>
+      <title>全局角色策略</title>
+      <link>/zh/docs/pms/global-policy/</link>
+      <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
+      
+      <guid>/zh/docs/pms/global-policy/</guid>
+      <description>什么时候需要全局角色 对于简单的应用，使用 RBAC（Role-based access control），我们通常把角色和授权都放在 SPEEDLE 的一个 service 里。
+然而在某些情况下，也许是一个由许多相对独立的子系统组成的复杂系统，也许你有很多个独立的应用但共享同一套身份系统，每个子系统或者应用都有自己的 SPEEDLE service。这样你就会有很多个 service，每个 service 里的角色都是独立的。同一个用户在一个 service 里的角色不会在另一个 service 里生效。如果有一些角色策略对所有 service 都是一样的，而你不想重复的去在每个 service 里定义它们，这时候你就可以把它们定义为全局角色。
+定义全局角色策略  首先需要创建一个名字为&amp;rsquo;global&amp;rsquo;的 service：  spctl create service global  然后就可以在&amp;rsquo;global&amp;rsquo; service 里创建角色了：  spctl create rolepolicy -c &amp;#34;grant user Emma AdminRole&amp;#34; --service-name=global 使用全局角色策略  在其它的 service 里定义角色或者授权时，可以引用全局角色：  spctl create policy -c &amp;#34;grant role AdminRole borrow books&amp;#34; --service-name=library  运行时全局角色会生效：  curl -X POST http://localhost:6734/authz-check/v1/is-allowed \ -d @- &amp;lt;&amp;lt; EOF { &amp;#34;subject&amp;#34;: {&amp;#34;principals&amp;#34;:[{&amp;#34;type&amp;#34;:&amp;#34;user&amp;#34;, &amp;#34;name&amp;#34;:&amp;#34;Emma&amp;#34;}]}, &amp;#34;serviceName&amp;#34;: &amp;#34;library&amp;#34;, &amp;#34;resource&amp;#34;:&amp;#34;books&amp;#34;, &amp;#34;action&amp;#34;: &amp;#34;borrow&amp;#34; } EOF 将会返回 allowed = true。因为 Emma 有全局角色 AdminRole，而在 service ‘library’里，我们给予了 AdminRole 这个权限。</description>
+    </item>
+    
+    <item>
+      <title>授权诊断</title>
+      <link>/zh/docs/pms/diagnosis/</link>
+      <pubDate>Fri, 18 Jan 2019 15:46:59 +0800</pubDate>
+      
+      <guid>/zh/docs/pms/diagnosis/</guid>
+      <description>授权诊断是 Speedle 的一个高级特性，用于诊断授权评估的过程。当一个用户被拒绝操作一个资源时，这个特性就可以用来找出拒绝的原因，例如，是哪条策略（policy）导致用户对资源的操作被拒绝的。
+授权诊断响应包的格式 授权诊断响应包的格式如下：
+type EvaluationDebugResponse struct { Allowed bool `json:&amp;#34;allowed&amp;#34;` Reason string `json:&amp;#34;reason&amp;#34;` RequestCtx *RequestContext `json:&amp;#34;requestContext,omitempty&amp;#34;` Attributes map[string]interface{} `json:&amp;#34;attributes,omitempty&amp;#34;` GrantedRoles []string `json:&amp;#34;grantedRoles,omitempty&amp;#34;` RolePolicies []*EvaluatedRolePolicy `json:&amp;#34;rolePolicies,omitempty&amp;#34;` Policies []*EvaluatedPolicy `json:&amp;#34;policies,omitempty&amp;#34;` } type EvaluatedPolicy struct { Status string `json:&amp;#34;status,omitempty&amp;#34;` ID string `json:&amp;#34;id,omitempty&amp;#34;` Name string `json:&amp;#34;name,omitempty&amp;#34;` Effect string `json:&amp;#34;effect,omitempty&amp;#34;` Permissions []Permission `json:&amp;#34;permissions,omitempty&amp;#34;` Principals []string `json:&amp;#34;principals,omitempty&amp;#34;` Condition *EvaluatedCondition `json:&amp;#34;condition,omitempty&amp;#34;` } type EvaluatedRolePolicy struct { Status string `json:&amp;#34;status,omitempty&amp;#34;` ID string `json:&amp;#34;id,omitempty&amp;#34;` Name string `json:&amp;#34;name,omitempty&amp;#34;` Effect string `json:&amp;#34;effect,omitempty&amp;#34;` Roles []string `json:&amp;#34;roles,omitempty&amp;#34;` Principals []string `json:&amp;#34;principals,omitempty&amp;#34;` Resources []string `json:&amp;#34;resources,omitempty&amp;#34;` ResourceExpressions []string `json:&amp;#34;resourceExpression,omitempty&amp;#34;` Condition *EvaluatedCondition `json:&amp;#34;condition,omitempty&amp;#34;` } type EvaluatedCondition struct { ConditionExpression string `json:&amp;#34;conditionExpression,omitempty&amp;#34;` EvaluationResult string `json:&amp;#34;evaluationResult,omitempty&amp;#34;` } 示例 注意：原请求中的属性以及 Speedle 内置的属性都会包含在诊断响应包的属性列表中。</description>
+    </item>
+    
+    <item>
+      <title>策略发现</title>
+      <link>/zh/docs/pms/discover/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/pms/discover/</guid>
+      <description>什么是 discovery mode? 当一个系统使用 Speedle 作为权限控制引擎时，在所有保护资源被访问之前， 都会向 Speedle 的 ARS(Authorization Runtime Service)发 authorization 请求。所有的 authorization 请求都被被发送到 Speedle ARS 的 is-allowed RESTful endpoint。ARS 根据系统中的所有 policy 计算出当前请求的资源访问是否允许。
+当系统中需要保护的资源越来越多，为这些资源创建 policy 就是一件比较痛苦的事情。因为 policy 的制定者需要知道如何在 policy 中正确表述资源。discover mode 就是为了解决这一痛点而设计的。简单来说， 我们提供了一个和 is-allowed 有着相同输入和输出的接口 discover, 这个接口永远返回 allowed, 同时记录下 authorization 请求。并提供命令行工具查询被 discover 接口记录下的 authorization 请求,甚至为这些请求生成 Policy.
+当我们把系统中的 is-allowed 接口统统换成 discover 接口,我们称系统工作在 discovery mode.
+discovery mode 能帮我们做什么?  记录 authorization 请求的内容
+ 根据记录的 authorization 请求生成 Policy
+ 关闭权限检查</description>
+    </item>
+    
+    <item>
+      <title>SPDL - 策略定义语言</title>
+      <link>/zh/docs/spdl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/spdl/</guid>
+      <description>基本的策略定义语言 保留关键字 SPDL 的保留关键字如下. 这些关键字不能用作 user name, group name, action, resource, attribute name 等等。
+ role user group entity grant deny if in on from  这些关键字均大小写不敏感。这意味着，&amp;rdquo;role&amp;rdquo;, &amp;ldquo;ROLE&amp;rdquo;, &amp;ldquo;Role&amp;rdquo;, &amp;ldquo;rOLe&amp;rdquo; 都不能用作 user name, group name, action, resource, attribute name 等等。
+命名规范  User Name: a user name consists of letters, decimal digits, punctuation marks except for comma i.e. [\p{L}\p{Nd}[\p{Punct}&amp;&amp;[^,]]]+ Group Name: a group name consists of letters, decimal digits, punctuation marks except for comma i.</description>
+    </item>
+    
+    <item>
+      <title>Contribution and Community</title>
+      <link>/zh/contribute/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/contribute/</guid>
+      <description>欢迎加入Speedle社区！您可以通过很多方式参与Speedle项目。
+使用 使用Speedle是您对这个项目的最大支持。我们希望Speedle可以作为信息系统权限控制的首选，我们也在朝这个目标努力。
+推广 您可以通过如下方式帮忙推广Speedle开源项目：
+ 在the project at Github上加一颗星星 将Speedle推荐给您的朋友，同学，同事 如果不介意的话，您可以告诉我们您是怎么使用Speedle的，我们将把您的公司或组织加入到我们用户列表里 您可以撰写一些文章来分享使用心得，如果需要技术上的支持，请和我们联系  讨论和用户社区 您可以在通过如下途径参加Speedle相关讨论：
+ 我们推荐大家使用Slack，Slack是一个非常优秀的沟通工具，Speedle的Slack社区很活跃，里面的每一个问题都会在24小时内得到回复。#speedle-chinese 如果大家访问Slack有困难，可以加入QQ群。群号：643201591  Issues 如果您发现Speedle的bug，或者希望Speedle实现一些新功能，请在GitHub issue 创建一个Issue。
+Issue的内容请包括：
+ Speedle的版本 问题的详细描述 最好有可重现的环境和步骤 写清楚期望的行为  代码贡献 如果您想为Speedle贡献代码，请完成如下流程：
+ 签署OCA Fork Speedle代码库 改动代码，保证您的代码通过所有测试 创建一个Pull Request 查看您的pipeline结果，如果有问题请修正 我们会审阅您的改动，如果大家没有异议，就merge这个PR  行为准则 请参阅 Golden Rule 和 Contributor Covenant Code of Conduct。</description>
+    </item>
+    
+    <item>
+      <title>Speedle 五分钟入门</title>
+      <link>/zh/quick-start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/quick-start/</guid>
+      <description>第一步 编译  先安装 GO 编译器，安装文件在https://golang.org/dl/ 设置 GOPATH 环境变量 运行如下命令  $ go get github.com/oracle/speedle/cmd/… 该命令会从 github 下载代码并自动编译。命令执行完毕后，我们可以检查\$GOPATH/bin 目录，应该有三个文件在该目录下：
+$ ls $GOPATH/bin spctl speedle-ads speedle-pms speedle-pms 是授权策略（Policy）管理服务
+speedle-ads 是授权决定服务（运行时）
+spctl 是命令行工具
+第二步 运行 启动 PMS 和 ADS
+$ cd $GOPATH/bin $ ./speedle-pms --store-type file &amp;amp; $ ./speedle-ads --store-type file &amp;amp; 第三步 使用 作为权限控制软件，最基本的功能有两个：
+ 管理授权策略（Policy) 处理授权请求，根据定义的 Policy 得出授权决定  例如，对于图书馆管理系统，我们要定义一个 Policy 说“张三可以借书”。我们可以进行如下操作：
+$ ./spctl create service library $ ./spctl create policy -c &amp;#34;grant user ZhangSan borrow book&amp;#34; --service-name=library 这样 Policy 就存储在 Speedle 中，接下来我们测试一下 Speedle 可不可以正确处理授权请求。</description>
+    </item>
+    
+    <item>
+      <title>系统架构</title>
+      <link>/zh/docs/architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/architecture/</guid>
+      <description>Modules Speedle is an authorization engine comprised of these components:
+ Policy Management Service (PMS) API - Manages the authorization and role policies, and the objects from which they are created.
+ Policy repository - Stores all the policy artifacts. The policy repository can be a json file, or a persistent store such as a database or etcd.
+ Authorization Decision Service (ADS) API - Evaluates the authorization requests against the applicable policies and returns GRANT/DENY decisions.</description>
+    </item>
+    
+    <item>
+      <title>Speedle嵌入模式</title>
+      <link>/zh/docs/deployment-embeded/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/deployment-embeded/</guid>
+      <description>什么是 Speedle 嵌入模式 区别于 Speedle 服务模式，Speedle 嵌入模式把 Speedle 的策略决策引擎嵌入到调用者进程内部，作为进程的一部分运行。调用者可以直接调用 Speedle 的 API 获得策略决策的结果。
+嵌入模式的局限  只支持 Golang，推荐使用 Golang 1.10。 只接受文件存储策略。  如何使用嵌入模式 把 Speedle 代码添加到你的工程中 在嵌入模式中，需要先将 Speedle 源代码从代码仓库中下载下来。主要有一下几种方式：
+ 使用 go get  go get github.com/oracle/speedle  使用 dep 工具  在你的 Gopkg.toml 文件中添加以下几行
+[[constraint]] name = &amp;#34;github.com/oracle/speedle&amp;#34; branch = &amp;#34;master&amp;#34; 使用 dep 工具将 Speedle 源代码添加到vendor目录下：
+dep ensure -update github.com/oracle/speedle 在代码中初始化一个 Evalautor 实例 方法func eval.NewFromFile(loc string, isWatch bool) (ads.PolicyEvaluator, error)使用一个策略定义文件初始化一个 Evaluator 实例。该方法接受两个参数：</description>
+    </item>
+    
+    <item>
+      <title>Speedle服务的部署方式</title>
+      <link>/zh/docs/deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/deployment/</guid>
+      <description>Speedle 支持两种部署方式
+ 开发模式  在开发模式下，Speedle 使用一个文件作为策略仓库，用户使用 RESTful API 和 CLI 工具访问 Speedle 的各项服务。
+ 生产模式  在生产模式下，Speedle 使用etcd作为策略仓库，用户使用 RESTful API 和 CLI 工具访问 Speedle 的各项服务。
+准备工作  Golang 1.10.0 开发环境已经安装好。 Docker 1.12 或更高的版本已经安装好。 一个 Docker registry。该 Docker registry 被用作推送和拉取 Speedle 的 Docker 映像。 在目录\$GOPATH/src/github.com/oracle/speedle/下同步最新的 Speedle 代码。 一个 Kubernetes 集群。 为你的 Docker registry 设置一个 Kubernetes Secret  # 为Docker registry设置Kubernetes Secret $ kubectl create secret docker-registry reg-speedle --docker-server=$DOCKER_LOGIN_SERVER --docker-username=$DOCKER_LOGIN_USER --docker-password=$DOCKER_LOGIN_PASSWORD 开发环境下部署 Speedle 服务 开发环境下可以使用helm部署 Speedle 服务。</description>
+    </item>
+    
+    <item>
+      <title>授权查询</title>
+      <link>/zh/docs/decisions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/decisions/</guid>
+      <description>1. 什么是授权查询?  授权查询是 Speedle ADS(Authorization Decision Service)提供的服务接口， 一般用于查询某个主体(subject)对某个资源(resource)实施某项操作(action)是否被允许。
+ 授权查询的结果是基于角色策略(role-policies)和策略(policies)的实时运算。
+  2. 授权查询的方式 Speedle 支持以下 3 种方式进行授权查询：
+ REST API provided by Authorization Decision Service(ADS) Grpc API provided by Authorization Decision Service(ADS) Golang API  3. 授权查询 API 及其示例 The ADS decision APIs make authorization decisions based on policies that describe the actions, permissions, and roles granted to a subject.
+3.1 查询授权决定 查询某个主体(subject)对某个资源(resource)实施某项操作(action)是否被允许
+ API overview  IN Given the request: subject, action, resource Given the runtime attributes **optional** Given the service scope OUT Returns true if allowed, false if NOT allowed Returns reason for the decision Returns errors if an error occurs  Sample  查询 user Alan 从 onlineBookStore 应用 下载 HarryPotter 这本书是否被允许。 授权结果基于定义在 &amp;ldquo;onlineBookStore&amp;rdquo; 这个 service 中的所有角色策略(role-policies)和策略(policies)的。   REST API example:</description>
+    </item>
+    
+    <item>
+      <title>用户身份域</title>
+      <link>/zh/docs/idd/</link>
+      <pubDate>Thu, 17 Jan 2019 13:20:07 +0800</pubDate>
+      
+      <guid>/zh/docs/idd/</guid>
+      <description>什么是用户身份域? 身份域是用户和组的逻辑名称空间，通常表示物理数据存储中的一组离散用户和组。 每个身份域独立管理用户和组， 用户名和组名在标识域中必须是唯一的。
+问题 在集成环境中，身份可能来自多个身份域。 例如，考虑以下场景，具有身份为user1的用户被授权对资源book执行rent操作。 此授权策略表示来自任何身份域的身份为user1的用户都具有权限以租用图书资源。
+./spctl create policy -c &amp;#34;grant user user1 rent book&amp;#34; --service-name=booksvc 但是，该服务只希望来自身份域github的user1具有rent权限。 因此，Speedle 必须能够区分来自不同身份域的用户。
+解决方案 要确保仅授予来自预期身份域的用户权限，您需要根据用户/组标识符和用户/组身份域构造新的用户/组标识符。 然后，您可以在 Speedle 策略中使用新的用户/组标识符。 新标识符结构定义如下，其中 IDD 表示身份域属性。
+type Principal struct { Type string `json:&amp;#34;type,omitempty&amp;#34;` Name string `json:&amp;#34;name,omitempty&amp;#34;` IDD string `json:&amp;#34;idd,omitempty&amp;#34;` } 备注: 身份提供商（如[google account]（https://account.google.com/））不支持多个身份域，而[IDCS]（https://www.oracle.com/cloud/paas/identity-cloud -service.html）确实支持多个身份域。 身份域属性的值取决于实现。
+使用身份域定义授权策略 要指定从指定的标识域为用户定义策略，请使用[SPDL]（../ spdl）关键字: from &amp;lt;identity domain&amp;gt;
+POLICY = EFFECT SUBJECT from &amp;lt;identity domain&amp;lt; ACTION RESOURCE if CONDITION
+示例 这个策略表明只有来自github身份提供者的user1才能对book资源执行read动作：
+# 授权来自 github 的名为 user1 的用户可以对资源： book具有 read的权限 .</description>
+    </item>
+    
+    <item>
+      <title>令牌用户身份断言</title>
+      <link>/zh/docs/assertor/</link>
+      <pubDate>Mon, 21 Jan 2019 09:28:30 +0800</pubDate>
+      
+      <guid>/zh/docs/assertor/</guid>
+      <description>令牌用户身份断言的好处 评估请求可以包含由任何身份提供者作为传入用户身份发布的身份令牌，而不是明确指定用户身份（用户标识符和用户所属的那些组）。 将 Speedle 集成到服务中时，您的服务无需验证和解析身份令牌。 Speedle 可以为您做到。
+Speedle 评估引擎检查传入请求是否包含身份令牌。 如果是，则评估引擎调用令牌断言服务的 webhook 以获得显式用户身份（用户标识符和组）。 然后，评估引擎可以基于用户身份域和组来执行策略评估。
+如何评估包含身份令牌的授权请求 要评估包含身份令牌的授权请求，请按照下列步骤操作。
+1. 实现断言服务的 webhook 接口 实现[Token Assertion Plugin API]（../ api / asserter_api）的断言服务将身份令牌，身份提供者和允许的身份域作为输入，并执行令牌验证和解析。 然后，该服务返回由身份令牌表示的显式身份（用户标识符和组）。
+请注意，如果设置了用户的身份域，则经过断言服务的用户标识可能包含用户/组的身份域。
+示例断言服务 备注: 此示例断言器服务仅用于测试目的。
+示例断言器服务源代码：
+package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; ) const ( // user type of Principal  PRINCIPAL_TYPE_USER = &amp;#34;user&amp;#34; // group type of Principal  PRINCIPAL_TYPE_GROUP = &amp;#34;group&amp;#34; // entity type of Principal  PRINCIPAL_TYPE_ENTITY = &amp;#34;entity&amp;#34; ) // Principal of Speedle type Principal struct { Type string `json:&amp;#34;type,omitempty&amp;#34;` Name string `json:&amp;#34;name,omitempty&amp;#34;` IDD string `json:&amp;#34;idd,omitempty&amp;#34;` } // AssertResponse assertion response type AssertResponse struct { Principals []*Principal `json:&amp;#34;principals,omitempty&amp;#34;` Attributes map[string]interface{} `json:&amp;#34;attributes,omitempty&amp;#34;` // non zero indicates errors happen  ErrCode int `json:&amp;#34;errCode&amp;#34;` ErrMessage string `json:&amp;#34;errMessage,omitempty&amp;#34;` } // SampleAsserter for testing only type SampleAsserter struct { } func (a SampleAsserter) ServeHTTP(w http.</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/zh/integrations/docker/</link>
+      <pubDate>Mon, 10 Apr 2017 16:41:54 +0100</pubDate>
+      
+      <guid>/zh/integrations/docker/</guid>
+      <description>Docker authorization plugin Docker users can implement a docker authorization plugin for authorization check, the docker official document &amp;ldquo;Access authorization plugin&amp;rdquo; shows the details.
+Build git clone git@github.com:oracle/speedle.git # make sure the speedle golang adsclient code is in your $GOPATH/src package. cp -r samples/adsclient/go/src/speedle/ $GOPATH/src # Get docker authorization plugin go get github.com/docker/go-plugins-helpers/authorization cd samples/integration/docker-integration make Executable speedle-docker-plugin could be found in \$HOME/go/bin
+Run speedle refer to speedle quickstart</description>
+    </item>
+    
+    <item>
+      <title>存储扩展</title>
+      <link>/zh/docs/store/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/store/</guid>
+      <description>概述 Speedle 现在支持两种数据存储，OOTB:文件存储和 etcd 存储。 但是，您可以实现自己的数据存储(例如使用 mongodb 等)
+ 请注意数据存储需要支持“watch”功能  本文档将说明如何逐步实现一个数据存储。
+实现 PolicyStoreManager 接口 在 store 目录下创建一个“mystore”目录并导航到它目录下面。 创建一个类似 mystore 之类的存储代码文件，并在此文件中实现“PolicyStoreManager”接口。
+Example in store/etcd/etcdStore.go:
+type Store struct { ... } func (s *Store) ReadPolicyStore() (*pms.PolicyStore, error) { ... } func (s *Store) CreateService(service *pms.Service) error { ... } ... 请注意这个 watch 的功能。该功能将监视数据存储的更改。这个函数需要返回一个“StorageChangeChannel”对象，每个 store change event(请查看“api/pms/types/StoreChangeEvent”以获取详细信息)都会被发送到这个 Channel。ADS 将接收这些更改事件并立即更新其缓存。
+编写 storeBuilder 代码 理解 Speedle 存储配置 Speedle 从三个不同的源读取存储配置信息:flags、环境变量和配置文件。
+flags 具有最高优先级，然后是环境变量，然后是配置文件。这意味着高优先级源中的配置项将覆盖低优先级源中的相同配置项。
+存储所有者需要在 init 函数中提供 flags 定义，我们使用pflag来定义 flags。</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>/zh/integrations/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/integrations/kubernetes/</guid>
+      <description>Kubernetes Authorization Webhook Sample Build git clone git@github.com:oracle/speedle.git # make sure the speedle golang adsclient code is in your $GOPATH/src package. cp -r samples/adsclient/go/src/speedle/ $GOPATH/src # get additional required packages: $go get k8s.io/api/authorization/v1beta1 $go get k8s.io/client-go/kubernetes $go get k8s.io/client-go/tools/clientcmd # build cd samples/integration/kubernetes-integration go build webhook.go #Executable webhook could be found in same folder Create Certificates Generate self-signed certificates used by webhook by refering to this document BTW, let&amp;rsquo;s assume we store the generated certificates and other needed files to path /path/to/webhook/, we will use this path in below sections.</description>
+    </item>
+    
+    <item>
+      <title>Istio</title>
+      <link>/zh/integrations/istio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/integrations/istio/</guid>
+      <description>Speedle Istio Mixer Adapter for authorization Prerequisite  To setup speedle istio adapter, a running Kubernetes cluster with istio is required. Speedle services need to be deployed. Please see Deploy Speedle Istio bookinfo sample installed. The kubectl configuration is set so that kubectl can be used to manage the cluster. A docker repository is required to push build result. Istio Adapter Before you start  Build git clone git@github.com:oracle/speedle.git cd samples/integration/istio-integration copy set-env.</description>
+    </item>
+    
+    <item>
+      <title>安全</title>
+      <link>/zh/docs/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/security/</guid>
+      <description>概要 API Endpoint 安全/认证和授权 Speedle API Endpoint 自身仅支持 TLS mutual auth（TLS 相互身份验证）这种认证和授权.
+您可以使用像 Ambassador API Gateway 等既存的方案对 Speedle API endpoint 进行保护。
+消息安全 / TLS TLS 是一种提供通信安全性的加密协议，它提供了许多不同的交换密钥进行身份验证，加密数据和保证消息完整性的方法。
+Speedle 支持使用 TLS 来保护在非信任环境中的消息传输，也支持使用 TLS mutual auth 来验证客户端身份。
+在下文中，我们将介绍如何在 Speedle（作为一个独立应用程序）中启用 TLS，以及如何使用 Speedle CLI / curl 访问启用 TLS 的 Speedle 服务。
+如果您希望通过 TLS 保护在 Kubernetes 中的 Speedle 部署，请单击 此处
+先决条件 为了启用 TLS，Speedle 必须为其外部接口（IP 地址或 DNS 名称）配置相关的“证书”，以接受安全连接。
+此证书由受信任的第三方（证书颁发机构）加密签名。要获取签名证书，您需要选择 CA 并按照所选 CA 提供的说明获取证书。
+在测试环境中，可以创建一个“自签名”证书。自签名证书是未经知名 CA 签名的用户自己生成的证书，无法保证证书的真实性，因此它们不适合在生产环境中使用。</description>
+    </item>
+    
+    <item>
+      <title>日志</title>
+      <link>/zh/docs/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/logging/</guid>
+      <description>概述 Speedle 使用了下面两个开源项目来处理日志,
+1. https://github.com/sirupsen/logrus 2. https://github.com/natefinch/lumberjack Logrus 是一个针对 go 语言的结构化的日志处理器，它与 go 语言标准的 logger 库完全 API 兼容。因为 logrus 不支持对日志循环滚动处理（rotation），所以我们引入了另外一个开源项目 lumberjack。Logrus 与 lumberjack 之间通过 io.Writer 接口交互，如下图所示,
+日志配置 可以通过两种方式对 Speedle 的日志模块进行配置，即命令行参数或者配置文件。
+通过命令行参数配置日志 所有的命令行参数如下所示。前两个参数供 logrus 使用，其它的参数则是为 lumberjack 准备的。
+--log-level string --log-formatter string --log-reportcaller bool --log-filename string --log-maxsize int --log-maxbackups int --log-maxage int --log-localtime bool --log-compress bool 上面每一个参数的详细信息包含在下面的表格中。所有的参数都收可选的。 如果所有参数都没有配置，那么日志消息默认会输出到标准错误输出（stderr），而且默认的日志级别是 info。
+   配置项 描述 默认值     &amp;ndash;log-level 日志级别, 有效的日志级别包括：panic、fatal、error、warn、info、debug info   &amp;ndash;log-formatter 日志格式, 有效的日志格式包括：text、json text   &amp;ndash;log-reportcaller 用于控制是否将调用信息 (文件名, 行数和函数名)包含在日志消息中 false   &amp;ndash;log-filename 日志文件名 没有默认值。 如果没有配置，那么日志消息默认会输出到标准错误输出（stderr）   &amp;ndash;log-maxsize 每个日志文件的最大尺寸。 注意该参数只有在&amp;rdquo;&amp;ndash;log-filename&amp;rdquo;已经配置的情况下才有效 100M   &amp;ndash;log-maxbackups 历史日志文件保留的最大数量。 注意该参数只有在&amp;rdquo;&amp;ndash;log-filename&amp;rdquo;已经配置的情况下才有效 0, 保留所有历史日志文件（注意历史日志文件可能由于达到了 maxAge 设定的时间限制而被删除）   &amp;ndash;log-maxage 历史日志文件保留的最多天数。注意该参数只有在&amp;rdquo;&amp;ndash;log-filename&amp;rdquo;已经配置的情况下才有效 0, 不删除任何历史日志文件（注意历史日志文件可能由于达到了 maxbackups 的限制而被删除）   &amp;ndash;log-localtime 用于控制在生成滚动日志文件时是否使用本地时间。注意该参数只有在&amp;rdquo;&amp;ndash;log-filename&amp;rdquo;已经配置的情况下才有效 false, 使用 UTC 时间   &amp;ndash;log-compress 用于控制在生成滚动日志文件时是否需要压缩。注意该参数只有在&amp;rdquo;&amp;ndash;log-filename&amp;rdquo;已经配置的情况下才有效 false, 不压缩    下面是两个日志消息的示例，第一个使用 text 格式输出，第二个则是使用 json 格式输出，</description>
+    </item>
+    
+    <item>
+      <title>版本</title>
+      <link>/zh/docs/versions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/versions/</guid>
+      <description> Version 0.2.0 (planning) &amp;hellip;
+Version 0.1.0 release notes: This is the first open source version. All basic functions are available in this version, including
+ Policy Management Service Authorization Runtime Service Command line tool Integration samples  </description>
+    </item>
+    
+    <item>
+      <title>Custom Function</title>
+      <link>/zh/docs/custom-function/</link>
+      <pubDate>Mon, 21 Jan 2019 10:43:02 +0800</pubDate>
+      
+      <guid>/zh/docs/custom-function/</guid>
+      <description>为什么需要 Custom Function? 在 Speedle 中, Policy 和 RolePolicy 都支持 Condition。参见 SPDL(Speedle Policy Definition Language)中的 if 语句。Condition 是由 attribute, function, constant, operator, comparator 等构成。Speedle 提供少量的内置 function。实际应用中存在一些复杂的 Condition，用现有的机制难以表达，比如需要访问其他数据源。这种情况下，custom function 就能发挥作用了。custom function 是对 Condition 中内置 function 的扩展，使得 condition 的定义更为灵活。
+如何使用 Custom Function? 下面介绍使用 Custom Function 的步骤：
+1. 实现 Custom Function， 并按照 Speedle 预定义的 Custom Function RESTFul 接口暴露服务 Speedle 按预定义的接口调用 custom function，Custom fundtion 的 RESTful endpoint 必须遵循如下接口约定：
+HTTP Verb: POST
+HTTP Request Body:</description>
+    </item>
+    
+    <item>
+      <title>About Speedle</title>
+      <link>/zh/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/about/</guid>
+      <description>Speedle is an open source, fine-grained access control engine built to address authorization requirements in cloud-native applications. Speedle offers policy-driven access control that provides the ability to externalize authorization decisions to a policy engine that that can evaluate RBAC/ABAC policies for a given logged-in user, or on a process acting on behalf of a user. Speedle includes the SPDL policy definition language.
+The open source version of Speedle consists of:</description>
+    </item>
+    
+    <item>
+      <title>Authorization Runtime/Decision API</title>
+      <link>/zh/docs/api/decision_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/api/decision_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/policy-check.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+    <item>
+      <title>Policy Management API</title>
+      <link>/zh/docs/api/management_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/api/management_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/policy-manage.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+    <item>
+      <title>Token Assertion Plugin API</title>
+      <link>/zh/docs/api/asserter_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/api/asserter_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/asserter.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+    <item>
+      <title>支持</title>
+      <link>/zh/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/support/</guid>
+      <description>FAQs Speedle looks awesome! Who is it for? Speedle is an open source project for access management. You can embed it in your system as long as access control is required, such that you don&amp;rsquo;t have to hard code authorization policies in your code.
+Does the world need one more policy engine? Well, please spend 15 minutes on Quick Start steps. Then you will have the answer. Why not give a try?</description>
+    </item>
+    
+  </channel>
+</rss>

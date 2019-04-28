@@ -1,0 +1,119 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Speedle"
+theme = "kube"
+canonifyURLs = "true"
+description = "Access Control across stacks should be simple and efficient and we get it!"
+Paginate = 4
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "xcode"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[languages.en]
+  languageCode = "en-us"
+
+[languages.zh]
+  languageCode = "zh-cn"
+
+[taxonomies]
+  category = "categories"
+  version = "versions"
+  tag = "tags"
+
+[Params]
+  RSSLink = "/index.xml"
+  author = "Speedle" # add your company name
+  github = "speedle" # add your github profile name
+  twitter = "oracle" # add your twitter profile
+  email = "rohit.koul@oracle.com"
+  [[Params.languages]]
+    name = "English"
+    url = "/en"
+  [[Params.languages]]
+    name = "中文"
+    url = "/zh"
+
+[[menu.main]]
+    name = "Getting Started"
+    weight = -500
+    url = "/quick-start/"
+[[menu.main]]
+    name = "Integrations"
+    weight = -400
+    url = "/integrations/"
+[[menu.main]]
+    name = "Contribute"
+    weight = -200
+    url = "/contribute/"
+[[menu.main]]
+    name = "Support"
+    weight = -100
+    url = "/support/"
+[[menu.main]]
+    name = "Playground"
+    weight = -50
+    url = "/playground/"
+[[menu.extra]]
+    name = "Blog"
+    weight = -600
+    url = "/blog/"
+[[menu.extra]]
+    name = "Docs"
+    weight = -500
+    url = "/docs/usecases"
+[[menu.extra]]
+    name = "Github"
+    weight = -400
+    url = "https://github.com/oracle/speedle"
+[[menu.extra]]
+    name = "About"
+    weight = -300
+    url = "/about"
+[[menu.lang]]
+    name = "English"
+    url = "/zh"
+    weight = 1
+
+[[languages.zh.menu.main]]
+    name = "入门"
+    weight = -500
+    url = "/quick-start/"
+[[languages.zh.menu.main]]
+    name = "集成"
+    weight = -400
+    url = "/integrations/"
+[[languages.zh.menu.main]]
+    name = "贡献"
+    weight = -200
+    url = "/contribute/"
+[[languages.zh.menu.main]]
+    name = "支持"
+    weight = -100
+    url = "/support/"
+[[languages.zh.menu.main]]
+    name = "游乐场"
+    weight = -500
+    url = "/playground/"
+[[languages.zh.menu.extra]]
+    name = "博客"
+    weight = -600
+    url = "/blog/"
+[[languages.zh.menu.extra]]
+    name = "文档"
+    weight = -500
+    url = "/docs/usecases"
+[[languages.zh.menu.extra]]
+    name = "Github"
+    weight = -400
+    url = "https://github.com/oracle/speedle"
+[[languages.zh.menu.extra]]
+    name = "关于"
+    weight = -300
+    url = "/about"
+[[languages.zh.menu.lang]]
+    name = "中文"
+    url = "/en"
+    weight = 1

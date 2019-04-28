@@ -1,0 +1,84 @@
+swagger: "2.0"
+info:
+  description: "This is webhook interface for assertion service"
+  version: "1.0.0"
+  title: "Assertion service"
+basePath: "/assert"
+schemes:
+- "http"
+paths:
+  /v1:
+    get:
+      tags:
+      - "assert"
+      summary: "Assert given token"
+      description: "Assert given token"
+      operationId: "assert"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "x-token"
+        in: "header"
+        description: "valid token issued by identity provider"
+        required: true
+        type: "string"
+      - name: "x-idp"
+        in: "header"
+        description: "identity provider's identifier, such as GITHUB|OIDC|WERCKER|IDCS"
+        required: false
+        type: "string"
+      - name: "x-allowedIDD"
+        in: "header"
+        description: "Allowed identity domains of the user represented by token, if user does not belong to this allowed identity domain, assertion will fail, multiple identity domains are splited by comma"
+        required: false
+        type: "string"
+      - name: "x-ecid"
+        in: "header"
+        description: "extra header will be passed along to backend identity provider"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Subject"
+        400:
+          description: "Invalid assertion request"
+        500:
+          description: "Assertion service internal error"
+
+definitions:
+  Subject:
+    type: object
+    properties:
+      principals:
+        type: array
+        items:
+          $ref: '#/definitions/Principal'
+      attributes:
+        type: array
+        items:
+          $ref: '#/definitions/Attribute'
+      errCode:
+        type: string
+      errMessage:
+        type: string
+  Principal:
+    type: object
+    properties:
+      type:
+        type: string
+        enum: [user, group, entity]
+      name:
+        type: string
+      idd:
+        type:  string
+  Attribute:
+    type: object
+    properties:
+      name:
+        type:  string
+      type:
+        type:  string
+        enum: [string, bool, numeric, datetime]
+      value: {}

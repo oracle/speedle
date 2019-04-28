@@ -1,0 +1,165 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+<div id="main">
+  <div class="features">
+    <h1 class="title1">{{.Description}}</h1>
+    <div class="row">
+      <div class="col col-6">
+        <span>
+          <a class="button primary started" style="font-size:16px; letter-spacing: 0.5px; font-weight: 300;" href="./quick-start">
+            <span> {{ i18n "GETTING_STARTED" }}</span>
+            <span class="started1"> > </span>
+          </a>
+        </span>
+      </div>
+      <div class="col col-6">
+        <figure>
+          <img class="hero" style="height: 200px;" src="/img/speedle/Speedle_logo_about.svg">
+        </figure>
+      </div>
+    </div>
+    <div class="row">
+      <h2 class="title">{{ i18n "AboutSpeedleTitle" }}</h2>
+    </div>
+    <div class="row">
+      <div class="col col-6" style="padding: 10px 30px 10px 0">
+        <span>{{ i18n "AboutSpeedleContent" }}</span>
+      </div>
+
+      <div class="col col-6 aboutBlurb" style="margin-top: 10px">
+        <div class="myDiv"></div>
+        <div class="myDiv2"></div>
+        <div class="myDiv3">
+          <ul>
+            <li style="font-size: 19px; letter-spacing: 0.5px; font-weight: 300; margin-bottom: 10px;">{{ i18n "SpeedleConsistsTitle" }}</li>
+            <li><img src="/img/speedle/Tick.svg">{{ i18n "SpeedleConsistsContent1" }}</li>
+            <li><img src="/img/speedle/Tick.svg">{{ i18n "SpeedleConsistsContent2" }}</li>
+            <li><img src="/img/speedle/Tick.svg">{{ i18n "SpeedleConsistsContent3" }}</li>
+            <li><img src="/img/speedle/Tick.svg">{{ i18n "SpeedleConsistsContent4" }}</li>
+            <li>{{ i18n "SpeedleConsistsContent6" }}</li>
+          </ul>
+        </div>
+        <div class="myDiv4">
+        </div>
+        <div class="myDiv5"></div>
+
+      </div>
+    </div>
+  </div>
+  <div class="features">
+    <div class="row">
+      <h2 class="title">{{ i18n "Features" }}</h2>
+    </div>
+    <div class="row gutters">
+      <div class="col col-4 center">
+        <figure>
+          <img class="svg" src="/img/speedle/1. Simple Policy Definition Language.svg">
+        </figure>
+        <h3>{{ i18n "SimplePolicyLanguage" }}</h3>
+        <p>{{ i18n "FEATURE_SimplePolicyLanguage" }}
+          <div>
+            <div><a class="leanmore" href="./docs/spdl">{{ i18n "LEARN_MORE" }} →</a></div>
+          </div>
+        </p>
+      </div>
+      <div class="col col-4 center">
+        <figure>
+          <img class="svg" src="/img/speedle/2. Cloud Native.svg">
+        </figure>
+        <h3>{{ i18n "CloudNative" }}</h3>
+        <p>{{ i18n "FEATURE_CloudNative" }}
+          <div><a class="leanmore" href="./categories/cloudnative">{{ i18n "LEARN_MORE" }} →</a></div>
+        </p>
+      </div>
+      <div class="col col-4 center">
+        <figure stlye="height: 108px">
+          <img class="svg" src="/img/speedle/3. Policy Discovery.svg">
+        </figure>
+        <h3>{{ i18n "RealtimePolicyDiscovery" }}</h3>
+        <p>{{ i18n "FEATURE_RealtimePolicyDiscovery" }}
+          <div><a class="leanmore" href="./docs/pms/discover">{{ i18n "LEARN_MORE" }} →</a></div>
+        </p>
+      </div>
+      <div class="col col-3 center">
+        <figure>
+          <img class="svg" src="/img/speedle/4. RBAC-ABAC.svg">
+        </figure>
+        <h3>RBAC / ABAC </h4>
+          <p>{{ i18n "FEATURE_RBAC" }}
+            <div><a class="leanmore" href="./tags/policy">{{ i18n "LEARN_MORE" }} →</a></div>
+          </p>
+      </div>
+      <div class="col col-3 center">
+        <figure>
+          <img class="svg" src="/img/speedle/5. Centralized Policy Management.svg">
+        </figure>
+        <h3>{{ i18n "CentralizedPolicyManagement" }}</h3>
+        <p>{{ i18n "FEATURE_CentralizedPolicyManagement" }}
+          <div><a class="leanmore" href="./docs/pms/policy-mgmt">{{ i18n "LEARN_MORE" }} →</a></div>
+        </p>
+      </div>
+      <div class="col col-3 center">
+        <figure>
+          <img class="svg" src="/img/speedle/6. Pluggable Identity.svg">
+        </figure>
+        <h3>{{ i18n "PluggableIdentity" }}</h3>
+        <p>{{ i18n "FEATURE_PluggableIdentity" }}
+          <div><a class="leanmore" href="./docs/assertor/">{{ i18n "LEARN_MORE" }} →</a></div>
+        </p>
+      </div>
+      <div class="col col-3 center">
+        <figure>
+          <img class="svg" src="/img/speedle/7. Persistence.svg">
+        </figure>
+        <h3>{{ i18n "PluggablePersistenceStore" }}</h3>
+        <p>{{ i18n "FEATURE_BYOPersistenceStore" }}
+          <div><a class="leanmore" href="./docs/store/">{{ i18n "LEARN_MORE" }} →</a></div>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="features">
+    <div class="row">
+      <h2 class="title">{{ i18n "Integrations" }}</h2>
+    </div>
+    <div id="components">
+      <div class="row gutters">
+        <div class="col col-4 center">
+          <a href="./integrations/kubernetes/"><img class="svg" src="/img/speedle/22. Kubernetes.svg"></a>
+        </div>
+        <div class="col col-4 center">
+          <a href="./integrations/istio/"><img class="svg" src="/img/speedle/23. Istio.svg"></a>
+        </div>
+        <div class="col col-4 center">
+          <a href="./integrations/docker/"><img class="svg" src="/img/speedle/24. Docker.svg"></a>
+        </div>
+      </div>
+      <div style="text-align: right; margin-top: 20px;">
+        <a class="leanmore" href="./integrations">{{ i18n "LEARN_MORE" }} →</a>
+      </div>
+    </div>
+  </div>
+  <div class="features">
+    <div class="row">
+      <h2 class="title">{{ i18n "ContributeToSpeedle" }}</h2>
+    </div>
+    <div class="row">
+      <div class="col col-6 center">
+        <br />
+        <a href="./integrations/kubernetes/"><img class="svg" src="/img/speedle/11. Contribute.svg"></a>
+      </div>
+      <div class="col col-6">
+        <p>{{ i18n "ContributeToSpeedleContent1" }}</p>
+        <p>{{ i18n "ContributeToSpeedleContent2" }}</p>
+        <span>
+          <a class="button primary started" style="font-size:16px; letter-spacing: 0.5px; font-weight: 300;" href="./contribute">
+            <span>{{ i18n "Contribute" }} →</span>
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}

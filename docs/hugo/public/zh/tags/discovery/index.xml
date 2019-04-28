@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discovery on Speedle</title>
+    <link>/zh/tags/discovery/</link>
+    <description>Recent content in Discovery on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	<atom:link href="/zh/tags/discovery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>策略发现</title>
+      <link>/zh/docs/pms/discover/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/pms/discover/</guid>
+      <description>什么是 discovery mode? 当一个系统使用 Speedle 作为权限控制引擎时，在所有保护资源被访问之前， 都会向 Speedle 的 ARS(Authorization Runtime Service)发 authorization 请求。所有的 authorization 请求都被被发送到 Speedle ARS 的 is-allowed RESTful endpoint。ARS 根据系统中的所有 policy 计算出当前请求的资源访问是否允许。
+当系统中需要保护的资源越来越多，为这些资源创建 policy 就是一件比较痛苦的事情。因为 policy 的制定者需要知道如何在 policy 中正确表述资源。discover mode 就是为了解决这一痛点而设计的。简单来说， 我们提供了一个和 is-allowed 有着相同输入和输出的接口 discover, 这个接口永远返回 allowed, 同时记录下 authorization 请求。并提供命令行工具查询被 discover 接口记录下的 authorization 请求,甚至为这些请求生成 Policy.
+当我们把系统中的 is-allowed 接口统统换成 discover 接口,我们称系统工作在 discovery mode.
+discovery mode 能帮我们做什么?  记录 authorization 请求的内容
+ 根据记录的 authorization 请求生成 Policy
+ 关闭权限检查</description>
+    </item>
+    
+  </channel>
+</rss>

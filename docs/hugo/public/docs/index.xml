@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Speedle Documents on Speedle</title>
+    <link>/docs/</link>
+    <description>Recent content in Speedle Documents on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Jan 2019 13:20:07 +0800</lastBuildDate>
+    
+	<atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Usecases</title>
+      <link>/docs/usecases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/usecases/</guid>
+      <description>Application specific policies Alex Chan is a developer who is implementing a simple application with golang. His application requires Authorization and he doesn’t want to re-invent the wheel. Alex can use an open source choice like Speedle for Authorization.
+Centalized policy enforcement and management Jin Chen is a security manager of multinational company. His team monitor dozens of internal systems. Different systems use different authorization mechanisms, different policy languages. They are eager to find a solution to manage all these systems efficiently.</description>
+    </item>
+    
+    <item>
+      <title>SPDL - Security Policy Definition Language</title>
+      <link>/docs/spdl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/spdl/</guid>
+      <description>Syntax Keywords The reserved keywords in SPDL are as follows. You cannot use any of these keywords as user name, group name, action, resource, attribute name, and so on.
+ role user group entity grant deny if in on from  The keywords are all case-insensitive, which means that you cannot use one of &amp;ldquo;role&amp;rdquo;, &amp;ldquo;ROLE&amp;rdquo;, &amp;ldquo;Role&amp;rdquo;, &amp;ldquo;rOLe&amp;rdquo;, etc as user name, group name, action, resource, attribute name, and so on.</description>
+    </item>
+    
+    <item>
+      <title>Architecture</title>
+      <link>/docs/architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/architecture/</guid>
+      <description>Modules Speedle is an authorization engine comprised of these components:
+ Policy Management Service (PMS) API - Manages the authorization and role policies, and the objects from which they are created.
+ Policy repository - Stores all the policy artifacts. The policy repository can be a json file, or a persistent store such as a database or etcd.
+ Authorization Decision Service (ADS) API - Evaluates the authorization requests against the applicable policies and returns GRANT/DENY decisions.</description>
+    </item>
+    
+    <item>
+      <title>Authorization Decisions</title>
+      <link>/docs/decisions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/decisions/</guid>
+      <description>What is an authorization decision?  An authorization decision determines whether a subject performing an action on a resource is allowed.
+ An authorization decision is the result of real-time evaluation based on policies and attributes.
+  Ways to get authorization decisions Authorization decisions can be performed by the Authorization Decision Service or an by an embedded evaluator:
+ Authorization Decision Service (ADS)  REST API Grpc API  Embedded Evaluator  Golang API   APIs and Samples The ADS decision APIs make authorization decisions based on policies that describe the actions, permissions, and roles granted to a subject.</description>
+    </item>
+    
+    <item>
+      <title>Identity Domain</title>
+      <link>/docs/idd/</link>
+      <pubDate>Thu, 17 Jan 2019 13:20:07 +0800</pubDate>
+      
+      <guid>/docs/idd/</guid>
+      <description>What is an identity domain? An identity domain is a logical namespace for users and groups, typically representing a discrete set of users and groups in the physical data store. Each identity domain manages users and groups independently. User and group names must be unique in an identity domain.
+How Speedle handles multiple identity domains In an integrated environment, identities may come from multiple identity domains. Consider, for example, the following policy where a user with the identifier user1 is authorized to perform a rent action on the resource book.</description>
+    </item>
+    
+    <item>
+      <title>Token asserter</title>
+      <link>/docs/assertor/</link>
+      <pubDate>Mon, 21 Jan 2019 09:28:30 +0800</pubDate>
+      
+      <guid>/docs/assertor/</guid>
+      <description>Benefits of the token asserter An evaluation request can contain an identity token issued by any identity provider as an incoming user identity, instead of specifying the user identities (user identifier and those groups user belongs to) explicitly. When you integrate Speedle into your service, your service does not need to validate and parse identity tokens. Speedle can do it for you.
+The Speedle evaluation engine checks whether the incoming request contains an identity token.</description>
+    </item>
+    
+    <item>
+      <title>Deployment</title>
+      <link>/docs/deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/deployment/</guid>
+      <description>Deploy Speedle in embedded mode Speedle works as a Go library. To deploy Speedle in embedded mode, simply pull Speedle from the repository and import it in golang code. The Policy Management Service (PMS) golang API is called to do policy management, and the Authorization Decision Service (ADS) golang API is called to do runtime authorization checks.
+Deploy Speedle as a service You can deploy Speedle as a service on Kubernetes in these modes:</description>
+    </item>
+    
+    <item>
+      <title>Pluggable Storage</title>
+      <link>/docs/store/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/store/</guid>
+      <description>Overview Speedle now supports two kinds of data store, OOTB: file store and etcd store. However, you can implement your own data store (e.g. with mongodb, etc)
+ Please note the data store needs to support the watch function.  This document walks through step-by-step instructions to implement a data store.
+Write store code to implement the PolicyStoreManager interface Create a &amp;ldquo;mystore&amp;rdquo; directory under store directory and navigate to it.</description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>/docs/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/security/</guid>
+      <description>Overview API Endpoint Security / Authentication and Authorization Authentication and authorization for client requests (other than TLS mutual auth) are not supported by Speedle.
+If you want to protect Speedle API endpoints, you can use any existing/stock solutions to secure these APIs (e.g. an API Gateway like Ambassador with tokens etc).
+Message security / TLS TLS is a cryptographic protocol that provides communications security, it offers many different ways of exchanging keys for authentication, encrypting data, and guaranteeing message integrity.</description>
+    </item>
+    
+    <item>
+      <title>Logging Framework</title>
+      <link>/docs/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/logging/</guid>
+      <description>Overview The following two open source projects are used to process log messages,
+1. https://github.com/sirupsen/logrus 2. https://github.com/natefinch/lumberjack Logrus is a structured logger for Go (golang), and completely API compatible with the golang standard library logger. Note that logrus doesn&amp;rsquo;t support log rotation, and it is exactly the reason why we introduce the second project lumberjack, which provides a rolling logger. Logrus communicates with lumberjack using the io.Writer interface, please refer to the following diagram,</description>
+    </item>
+    
+    <item>
+      <title>Versions</title>
+      <link>/docs/versions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/versions/</guid>
+      <description> Version 0.2.0 (planning) &amp;hellip;
+Version 0.1.0 release notes: This is the first open source version. All basic functions are available in this version, including
+ Policy Management Service Authorization Runtime Service Command line tool Integration samples  </description>
+    </item>
+    
+    <item>
+      <title>Custom Function</title>
+      <link>/docs/custom-function/</link>
+      <pubDate>Mon, 21 Jan 2019 10:43:02 +0800</pubDate>
+      
+      <guid>/docs/custom-function/</guid>
+      <description>Why use custom functions? In Speedle, policies and role policies may include conditions. You can create conditions using expressions. or use the built-in functions that are provided with Speedle. If the condition is very complicated, it may be too difficult to create using expressions and built-in functions. In that case, you can use a custom function that you define, which extends the ability of the authorization engine. Custom functions supplement the built-in functions that Speedle provides, increasing the flexibility for defining conditions.</description>
+    </item>
+    
+  </channel>
+</rss>

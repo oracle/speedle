@@ -1,0 +1,12 @@
+<li>
+  <h2 class="title2">
+    <a href="{{ .Permalink }}" itemprop="headline">{{ .Title }}</a>
+  </h2>
+  {{ if .Description }}
+  <p itemprop="about">{{ .Description }}</p>
+  {{ end }}
+  {{ if .Params.bref }}
+  <p itemprop="about">{{ .Params.bref }}</p>
+  {{ end }}
+  <hr />
+</li>

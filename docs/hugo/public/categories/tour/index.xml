@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tour on Speedle</title>
+    <link>/categories/tour/</link>
+    <description>Recent content in Tour on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/categories/tour/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Developer Track</title>
+      <link>/developer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/developer/</guid>
+      <description> TBD Policy Administrator Understand the basics of SPDL to model policies Deploy your Application Leverage Policy Discovery Mode Use the Policy Management Service API    Application Developer Understand the basics of SPDL Policy Management Service API Authorization Decision Service API Token Assertion API    </description>
+    </item>
+    
+    <item>
+      <title>Operator Track</title>
+      <link>/devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/devops/</guid>
+      <description> TBD Policy Debug?
+Policy Administrator Understand the basics of SPDL to model policies Deploy your Application Leverage Policy Discovery Mode Use the Policy Management Service API    Application Developer Understand the basics of SPDL Policy Management Service API Authorization Decision Service API Token Assertion API    </description>
+    </item>
+    
+  </channel>
+</rss>

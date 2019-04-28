@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ .Page.Language | default "en" }}">
+
+<head>
+    {{ .Hugo.Generator }}
+    {{ partial "favicon" . }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{- partial "head.html" . -}}
+    <link href="{{ "/css/font.css" | relURL }}" rel="stylesheet" type="text/css">
+    <link href="{{ "/css/kube.min.css" | relURL }}" rel="stylesheet" type="text/css">
+    <link href="{{ "/css/kube.legenda.css" | relURL }}" rel="stylesheet" type="text/css">
+    <link href="{{ "/css/highlight.css" | relURL }}" rel="stylesheet" type="text/css">
+    <link href="{{ "/css/master.css" | relURL }}" rel="stylesheet" type="text/css">
+    <link href="{{ "/css/kube.demo.css" | relURL }}" rel="stylesheet" type="text/css">
+    <link href="{{ "/css/swagger-ui.css" | relURL }}" rel="stylesheet" type="text/css">
+    {{ if and (isset .Params "customcss") .Params.customcss }}
+    {{ if (isset .Params "customcssfile") }}
+    <link href="{{ printf "/css/%s" $.Params.customcssfile    | relURL }}" rel="stylesheet" type="text/css">
+    {{ else }}
+    <link href="{{ "/css/speedle-custom.css" | relURL }}" rel="stylesheet" type="text/css">
+    {{ end }}
+    {{end}}
+    <!-- Your own theme here -->
+    <link href="{{ "/css/custom.css" | relURL }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+</head>
+
+<body class="page-kube" style="background: none">
+    <header>
+        {{- partial "header.html" . -}}
+    </header>
+    <div class="container">
+        <div class="content-container">
+            <main>{{ block "main" . }}{{ end }}</main>
+            {{- partial "sidebar.html" . -}}
+        </div>
+    </div>
+    <footer class="row"> {{ partial "footer" .}}</footer>
+    <script src="{{ "/js/kube.js" | relURL }}" type="text/javascript">
+    </script>
+    <script src="{{ "/js/kube.legenda.js" | relURL }}" type="text/javascript">
+    </script>
+    <script src="{{ "/js/master.js" | relURL }}" type="text/javascript">
+    </script>
+</body>
+
+</html>

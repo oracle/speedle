@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simplifying Complexity on Speedle</title>
+    <link>/</link>
+    <description>Recent content in Simplifying Complexity on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Jan 2019 21:19:44 +0800</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Policy Management</title>
+      <link>/docs/pms/policy-mgmt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/pms/policy-mgmt/</guid>
+      <description>What is a Speedle policy? A Speedle policy is a set of criteria that specify whether a user is granted access to a particular protected resource or assignment to a particular role. You manage Speedle policies using the Speedle Policy Management Service(PMS).
+Understanding the Speedle Policy Module Note: The Speedle syntax used in this document is defined in SPDL - Security Policy Definition Language.
+Policy store The policy store maintains all policy artifacts and can be persisted to an etcd store or a JSON file.</description>
+    </item>
+    
+    <item>
+      <title>Usecases</title>
+      <link>/docs/usecases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/usecases/</guid>
+      <description>Application specific policies Alex Chan is a developer who is implementing a simple application with golang. His application requires Authorization and he doesn’t want to re-invent the wheel. Alex can use an open source choice like Speedle for Authorization.
+Centalized policy enforcement and management Jin Chen is a security manager of multinational company. His team monitor dozens of internal systems. Different systems use different authorization mechanisms, different policy languages. They are eager to find a solution to manage all these systems efficiently.</description>
+    </item>
+    
+    <item>
+      <title>Global Policy</title>
+      <link>/docs/pms/global-policy/</link>
+      <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
+      
+      <guid>/docs/pms/global-policy/</guid>
+      <description>How global policies simplify policy management In Speedle, role policies and policies are defined and evaluated within a scope, which is called a &amp;lsquo;service&amp;rsquo;. For example, when creating a policy, you need to specify the service in which to create the policy. When calling the Authorization Decision Service API, you need to specify a service name so that the policies and role policies are evaluated within the scope of that service.</description>
+    </item>
+    
+    <item>
+      <title>Policy Diagnosis</title>
+      <link>/docs/pms/diagnosis/</link>
+      <pubDate>Fri, 18 Jan 2019 15:46:59 +0800</pubDate>
+      
+      <guid>/docs/pms/diagnosis/</guid>
+      <description>What&amp;rsquo;s policy diagnosis Policy diagnosis is one of the Speedle&amp;rsquo;s advanced features, which is used to diagnose the evaluation process of authorization. When the evaluation result isn&amp;rsquo;t expected or a user isn&amp;rsquo;t allowed to operate on a resource, then this feature is useful to find out the reason, i.e., what&amp;rsquo;s the policy which denies the operation on the resource.
+How to use policy diagnosis The usage of policy diagnosis request is almost identical to the usage of authorization decision request.</description>
+    </item>
+    
+    <item>
+      <title>Policy Discovery</title>
+      <link>/docs/pms/discover/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/pms/discover/</guid>
+      <description>What can discover mode do? * Help you discover existing authorization requests The is-allowed API endpoint and the discover API endpoint use the same request and response format. When you replace is-allowed with discover in the URL of the API, each authorization request that is returned shows WHO carries out WHAT action on WHICH resource. Discover mode does not evaluate the authorization decision; it simply records the authorization decision requests, along with the actions and the resources protected, and returns &amp;ldquo;is-allowed=true&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>SPDL - Security Policy Definition Language</title>
+      <link>/docs/spdl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/spdl/</guid>
+      <description>Syntax Keywords The reserved keywords in SPDL are as follows. You cannot use any of these keywords as user name, group name, action, resource, attribute name, and so on.
+ role user group entity grant deny if in on from  The keywords are all case-insensitive, which means that you cannot use one of &amp;ldquo;role&amp;rdquo;, &amp;ldquo;ROLE&amp;rdquo;, &amp;ldquo;Role&amp;rdquo;, &amp;ldquo;rOLe&amp;rdquo;, etc as user name, group name, action, resource, attribute name, and so on.</description>
+    </item>
+    
+    <item>
+      <title>Why Speedle?</title>
+      <link>/blog/what-is-speedle/</link>
+      <pubDate>Thu, 02 Mar 2017 21:56:55 +0100</pubDate>
+      
+      <guid>/blog/what-is-speedle/</guid>
+      <description>What and Why? Thoughts: Authz is not a new concept. Been using it in software since the dawn of time. Various systems have sprung up with their own little authz solutions. k8s, istio, various IAMs. One may have been using something else for their on premise applications. As folks move to hybrid models / workloads / cloud vendors - how does one keep track of the policies and manage identity as it flows across - these various systems.</description>
+    </item>
+    
+    <item>
+      <title>Architecture</title>
+      <link>/docs/architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/architecture/</guid>
+      <description>Modules Speedle is an authorization engine comprised of these components:
+ Policy Management Service (PMS) API - Manages the authorization and role policies, and the objects from which they are created.
+ Policy repository - Stores all the policy artifacts. The policy repository can be a json file, or a persistent store such as a database or etcd.
+ Authorization Decision Service (ADS) API - Evaluates the authorization requests against the applicable policies and returns GRANT/DENY decisions.</description>
+    </item>
+    
+    <item>
+      <title>Contribution and Community</title>
+      <link>/contribute/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contribute/</guid>
+      <description>Welcome to Speedle community! We are very excited about your participation and there are multiple ways to contribute.
+Promotion Star the project at Github, recommend to your colleagues or friends if you like. You also can share your success stories with us.
+All the above will be highly appreciated.
+Discussion &amp;amp; Community Join us at #speedleproject slack workspace.
+Join us at speedle-users and/or speedle-developers groups.
+Issues File a GitHub issue for any bug or enhancement.</description>
+    </item>
+    
+    <item>
+      <title>Quick Start</title>
+      <link>/quick-start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/quick-start/</guid>
+      <description>Prerequisites 1. Install the Go programming language The minimum version required is 1.10.1.
+See https://golang.org/doc/install
+If you use Oracle Linux, simply run one of below commmands.
+$ sudo yum install -y oracle-golang-release-el7 $ sudo yum install -y golang 2. Set the Go environment variables GOROOT is the folder where you installed Go.
+GOPATH is the folder where your Go projects are stored.
+$ export GOROOT=/scratch/tools/go $ export GOPATH=/scratch/xuwwang/go Download Source Code and Build Speedle $ go get github.</description>
+    </item>
+    
+    <item>
+      <title>Policy Discovery on the fly!</title>
+      <link>/blog/discovery/</link>
+      <pubDate>Thu, 02 Mar 2017 21:56:55 +0100</pubDate>
+      
+      <guid>/blog/discovery/</guid>
+      <description> What and Why? Thoughts:
+FooBar a link Chocolate tiramisu pastry a link
+Lorem Epsum Apple pie chocolate cake jelly-o icing bonbon. Gingerbread pastry fruitcake muffin chocolate bar cheesecake. Sugar plum bonbon bonbon lemon drops gummies.
+   RGB WMYN     Red Cyan   Green Magenta   Yellow Black    </description>
+    </item>
+    
+    <item>
+      <title>Authorization Decisions</title>
+      <link>/docs/decisions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/decisions/</guid>
+      <description>What is an authorization decision?  An authorization decision determines whether a subject performing an action on a resource is allowed.
+ An authorization decision is the result of real-time evaluation based on policies and attributes.
+  Ways to get authorization decisions Authorization decisions can be performed by the Authorization Decision Service or an by an embedded evaluator:
+ Authorization Decision Service (ADS)  REST API Grpc API  Embedded Evaluator  Golang API   APIs and Samples The ADS decision APIs make authorization decisions based on policies that describe the actions, permissions, and roles granted to a subject.</description>
+    </item>
+    
+    <item>
+      <title>Identity Domain</title>
+      <link>/docs/idd/</link>
+      <pubDate>Thu, 17 Jan 2019 13:20:07 +0800</pubDate>
+      
+      <guid>/docs/idd/</guid>
+      <description>What is an identity domain? An identity domain is a logical namespace for users and groups, typically representing a discrete set of users and groups in the physical data store. Each identity domain manages users and groups independently. User and group names must be unique in an identity domain.
+How Speedle handles multiple identity domains In an integrated environment, identities may come from multiple identity domains. Consider, for example, the following policy where a user with the identifier user1 is authorized to perform a rent action on the resource book.</description>
+    </item>
+    
+    <item>
+      <title>Token asserter</title>
+      <link>/docs/assertor/</link>
+      <pubDate>Mon, 21 Jan 2019 09:28:30 +0800</pubDate>
+      
+      <guid>/docs/assertor/</guid>
+      <description>Benefits of the token asserter An evaluation request can contain an identity token issued by any identity provider as an incoming user identity, instead of specifying the user identities (user identifier and those groups user belongs to) explicitly. When you integrate Speedle into your service, your service does not need to validate and parse identity tokens. Speedle can do it for you.
+The Speedle evaluation engine checks whether the incoming request contains an identity token.</description>
+    </item>
+    
+    <item>
+      <title>Deployment</title>
+      <link>/docs/deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/deployment/</guid>
+      <description>Deploy Speedle in embedded mode Speedle works as a Go library. To deploy Speedle in embedded mode, simply pull Speedle from the repository and import it in golang code. The Policy Management Service (PMS) golang API is called to do policy management, and the Authorization Decision Service (ADS) golang API is called to do runtime authorization checks.
+Deploy Speedle as a service You can deploy Speedle as a service on Kubernetes in these modes:</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/integrations/docker/</link>
+      <pubDate>Mon, 10 Apr 2017 16:41:54 +0100</pubDate>
+      
+      <guid>/integrations/docker/</guid>
+      <description>Docker authorization plugin Docker users can implement a docker authorization plugin for authorization check, the docker official document &amp;ldquo;Access authorization plugin&amp;rdquo; shows the details.
+Build git clone git@github.com:oracle/speedle.git # make sure the speedle golang adsclient code is in your $GOPATH/src package. cp -r samples/adsclient/go/src/speedle/ $GOPATH/src # Get docker authorization plugin go get github.com/docker/go-plugins-helpers/authorization cd samples/integration/docker-integration make Executable speedle-docker-plugin could be found in \$HOME/go/bin
+Run speedle refer to speedle quickstart</description>
+    </item>
+    
+    <item>
+      <title>Pluggable Storage</title>
+      <link>/docs/store/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/store/</guid>
+      <description>Overview Speedle now supports two kinds of data store, OOTB: file store and etcd store. However, you can implement your own data store (e.g. with mongodb, etc)
+ Please note the data store needs to support the watch function.  This document walks through step-by-step instructions to implement a data store.
+Write store code to implement the PolicyStoreManager interface Create a &amp;ldquo;mystore&amp;rdquo; directory under store directory and navigate to it.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>/integrations/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/integrations/kubernetes/</guid>
+      <description>Kubernetes Authorization Webhook Sample Build git clone git@github.com:oracle/speedle.git # make sure the speedle golang adsclient code is in your $GOPATH/src package. cp -r samples/adsclient/go/src/speedle/ $GOPATH/src # get additional required packages: $go get k8s.io/api/authorization/v1beta1 $go get k8s.io/client-go/kubernetes $go get k8s.io/client-go/tools/clientcmd # build cd samples/integration/kubernetes-integration go build webhook.go #Executable webhook could be found in same folder Create Certificates Generate self-signed certificates used by webhook by refering to this document BTW, let&amp;rsquo;s assume we store the generated certificates and other needed files to path /path/to/webhook/, we will use this path in below sections.</description>
+    </item>
+    
+    <item>
+      <title>Istio</title>
+      <link>/integrations/istio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/integrations/istio/</guid>
+      <description>Speedle Istio Mixer Adapter for authorization Prerequisite  To setup speedle istio adapter, a running Kubernetes cluster with istio is required. Speedle services need to be deployed. Please see Deploy Speedle Istio bookinfo sample installed. The kubectl configuration is set so that kubectl can be used to manage the cluster. A docker repository is required to push build result. Istio Adapter Before you start  Build git clone git@github.com:oracle/speedle.git cd samples/integration/istio-integration copy set-env.</description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>/docs/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/security/</guid>
+      <description>Overview API Endpoint Security / Authentication and Authorization Authentication and authorization for client requests (other than TLS mutual auth) are not supported by Speedle.
+If you want to protect Speedle API endpoints, you can use any existing/stock solutions to secure these APIs (e.g. an API Gateway like Ambassador with tokens etc).
+Message security / TLS TLS is a cryptographic protocol that provides communications security, it offers many different ways of exchanging keys for authentication, encrypting data, and guaranteeing message integrity.</description>
+    </item>
+    
+    <item>
+      <title>Logging Framework</title>
+      <link>/docs/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/logging/</guid>
+      <description>Overview The following two open source projects are used to process log messages,
+1. https://github.com/sirupsen/logrus 2. https://github.com/natefinch/lumberjack Logrus is a structured logger for Go (golang), and completely API compatible with the golang standard library logger. Note that logrus doesn&amp;rsquo;t support log rotation, and it is exactly the reason why we introduce the second project lumberjack, which provides a rolling logger. Logrus communicates with lumberjack using the io.Writer interface, please refer to the following diagram,</description>
+    </item>
+    
+    <item>
+      <title>Versions</title>
+      <link>/docs/versions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/versions/</guid>
+      <description> Version 0.2.0 (planning) &amp;hellip;
+Version 0.1.0 release notes: This is the first open source version. All basic functions are available in this version, including
+ Policy Management Service Authorization Runtime Service Command line tool Integration samples  </description>
+    </item>
+    
+    <item>
+      <title>Custom Function</title>
+      <link>/docs/custom-function/</link>
+      <pubDate>Mon, 21 Jan 2019 10:43:02 +0800</pubDate>
+      
+      <guid>/docs/custom-function/</guid>
+      <description>Why use custom functions? In Speedle, policies and role policies may include conditions. You can create conditions using expressions. or use the built-in functions that are provided with Speedle. If the condition is very complicated, it may be too difficult to create using expressions and built-in functions. In that case, you can use a custom function that you define, which extends the ability of the authorization engine. Custom functions supplement the built-in functions that Speedle provides, increasing the flexibility for defining conditions.</description>
+    </item>
+    
+    <item>
+      <title>About Speedle</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Speedle is an open source, fine-grained access control engine built to address authorization requirements in cloud-native applications. Speedle offers policy-driven access control that provides the ability to externalize authorization decisions to a policy engine that that can evaluate RBAC/ABAC policies for a given logged-in user, or on a process acting on behalf of a user. Speedle includes the SPDL policy definition language.
+The open source version of Speedle consists of:</description>
+    </item>
+    
+    <item>
+      <title>Authorization Runtime/Decision API</title>
+      <link>/docs/api/decision_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/decision_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/policy-check.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+    <item>
+      <title>Choose your track</title>
+      <link>/tour/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tour/</guid>
+      <description>Developer Path&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;DevOps Path  </description>
+    </item>
+    
+    <item>
+      <title>Developer Track</title>
+      <link>/developer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/developer/</guid>
+      <description> TBD Policy Administrator Understand the basics of SPDL to model policies Deploy your Application Leverage Policy Discovery Mode Use the Policy Management Service API    Application Developer Understand the basics of SPDL Policy Management Service API Authorization Decision Service API Token Assertion API    </description>
+    </item>
+    
+    <item>
+      <title>Operator Track</title>
+      <link>/devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/devops/</guid>
+      <description> TBD Policy Debug?
+Policy Administrator Understand the basics of SPDL to model policies Deploy your Application Leverage Policy Discovery Mode Use the Policy Management Service API    Application Developer Understand the basics of SPDL Policy Management Service API Authorization Decision Service API Token Assertion API    </description>
+    </item>
+    
+    <item>
+      <title>Policy Management API</title>
+      <link>/docs/api/management_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/management_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/policy-manage.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+    <item>
+      <title>Support</title>
+      <link>/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/support/</guid>
+      <description>FAQs Speedle looks awesome! Who is it for? Speedle is an open source project for access management. You can embed it in your system as long as access control is required, such that you don&amp;rsquo;t have to hard code authorization policies in your code.
+Does the world need one more policy engine? Well, please spend 15 minutes on Quick Start steps. Then you will have the answer. Why not give a try?</description>
+    </item>
+    
+    <item>
+      <title>Token Assertion Plugin API</title>
+      <link>/docs/api/asserter_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/api/asserter_api/</guid>
+      <description>               window.onload = function() { var url = &#34;\/swagger\/asserter.yaml&#34;; const ui = SwaggerUIBundle({ url: url, dom_id: &#39;#swagger-ui&#39;, deepLinking: true, presets: [ SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset ], plugins: [ SwaggerUIBundle.plugins.DownloadUrl ], layout: &#34;StandaloneLayout&#34; }) window.ui = ui }  </description>
+    </item>
+    
+  </channel>
+</rss>

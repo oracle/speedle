@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discovery on Speedle</title>
+    <link>/tags/discovery/</link>
+    <description>Recent content in Discovery on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 21:56:55 +0100</lastBuildDate>
+    
+	<atom:link href="/tags/discovery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Policy Discovery</title>
+      <link>/docs/pms/discover/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/pms/discover/</guid>
+      <description>What can discover mode do? * Help you discover existing authorization requests The is-allowed API endpoint and the discover API endpoint use the same request and response format. When you replace is-allowed with discover in the URL of the API, each authorization request that is returned shows WHO carries out WHAT action on WHICH resource. Discover mode does not evaluate the authorization decision; it simply records the authorization decision requests, along with the actions and the resources protected, and returns &amp;ldquo;is-allowed=true&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Policy Discovery on the fly!</title>
+      <link>/blog/discovery/</link>
+      <pubDate>Thu, 02 Mar 2017 21:56:55 +0100</pubDate>
+      
+      <guid>/blog/discovery/</guid>
+      <description> What and Why? Thoughts:
+FooBar a link Chocolate tiramisu pastry a link
+Lorem Epsum Apple pie chocolate cake jelly-o icing bonbon. Gingerbread pastry fruitcake muffin chocolate bar cheesecake. Sugar plum bonbon bonbon lemon drops gummies.
+   RGB WMYN     Red Cyan   Green Magenta   Yellow Black    </description>
+    </item>
+    
+  </channel>
+</rss>

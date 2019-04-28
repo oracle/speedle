@@ -1,0 +1,197 @@
+syntax = "proto3";
+
+package pb;
+
+service PolicyManager {
+    rpc CreateFunction(Function) returns(Function) {}
+    rpc QueryFunctions(FunctionQueryRequest) returns(FunctionQueryResponse) {}
+    rpc DeleteFunctions(FunctionQueryRequest) returns(Empty) {}
+    rpc CreateService(ServiceRequest) returns(Service) {}
+    rpc QueryServices(ServiceQueryRequest) returns(ServiceQueryResponse) {}
+    rpc DeleteServices(ServiceQueryRequest) returns(Empty) {}
+    rpc CreatePolicy(PolicyRequest) returns(Policy) {}
+    rpc QueryPolicies(PolicyQueryRequest) returns(PolicyQueryResponse) {}
+    rpc DeletePolicies(PolicyQueryRequest) returns(Empty) {}
+    rpc CreateRolePolicy(RolePolicyRequest) returns(RolePolicy) {}
+    rpc QueryRolePolicies(RolePolicyQueryRequest) returns(RolePolicyQueryResponse) {}
+    rpc DeleteRolePolicies(RolePolicyQueryRequest) returns(Empty) {}
+    rpc ListPolicyCounts(Empty) returns(PolicyCountsMap) {}
+
+    rpc GetDiscoverRequests(DiscoverRequestsRequest) returns(DiscoverRequestsResponse){}
+    rpc ResetDiscoverRequests(ResetRequestsRequest) returns(ResetRequestsResponse){}
+    rpc GetDiscoverPolicies(DiscoverPoliciesRequest) returns(DiscoverPoliciesResponse){}
+}
+
+enum Effect {
+    GRANT = 0;
+    DENY = 1;
+}
+
+enum ServiceType {
+    APPLICATION = 0;
+    K8S_CLUSTER = 1;
+}
+
+message DiscoverRequestsRequest {
+    string serviceName = 1;
+    bool last = 2;
+    int64 revision = 3;
+}
+
+message Principal {
+    string type = 1;
+    string name = 2;
+    string idd = 3;
+}
+
+message Subject {
+    repeated Principal principals = 1;
+    string tokenType = 2;
+    string token = 3;
+}
+
+message ContextRequest {
+    Subject subject = 1;
+    string serviceName = 2;
+    string resource = 3;
+    string action = 4;
+    map<string, string> attributes = 5;
+}
+
+message DiscoverRequestsResponse {
+    repeated ContextRequest requests = 1;
+    int64 revision = 2;
+}
+
+message ResetRequestsRequest {
+    string serviceName = 1;
+}
+
+message ResetRequestsResponse {
+}
+
+message DiscoverPoliciesRequest {
+    string serviceName = 1;
+    string principalType = 2;
+    string principalName = 3;
+    string principalIdd = 4;
+}
+
+message DiscoverPoliciesResponse {
+    repeated Service services = 1;
+    int64 revision = 2;
+}
+
+
+message Function {
+    string name = 1;
+    string description = 2;
+    string funcUrl = 3;
+    string localFuncUrl = 4;
+    string ca = 5;
+    bool resultCachable = 6;
+    int64 resultTTL = 7;
+}
+
+message FunctionQueryRequest {
+    string name = 1;
+    string filters = 2;
+}
+
+message FunctionQueryResponse {
+    repeated Function functions = 1;
+}
+
+
+message AndPrincipals {
+    repeated string principals = 1;
+}
+
+message Empty {
+
+}
+
+message ServiceRequest {
+    string name = 1;
+    ServiceType type = 2;
+}
+
+message PolicyRequest {
+    string serviceName = 1;
+    Policy policy = 2;
+}
+
+message ServiceQueryResponse {
+    repeated Service services = 1;
+}
+
+message ServiceQueryRequest {
+    string name = 1;
+}
+
+message PolicyQueryRequest {
+    string serviceName = 1;
+    string policyID = 2;
+    string filters = 3;
+}
+
+message PolicyQueryResponse {
+    repeated Policy policies = 1;
+}
+
+message Policy {
+    string id = 1;
+    string name = 2;
+    Effect effect = 3;
+    message Permission {
+        string resource = 1;
+        string resource_expression = 2;
+        repeated string actions = 3;
+    }
+    repeated Permission permissions = 4;
+    repeated AndPrincipals principals = 5;
+    string condition = 6;
+}
+
+message RolePolicyRequest {
+    string serviceName = 1;
+    RolePolicy rolePolicy = 2;
+}
+
+message RolePolicyQueryRequest {
+    string serviceName = 1;
+    string rolePolicyID = 2;
+    string filters = 3;
+}
+
+message RolePolicyQueryResponse {
+    repeated RolePolicy rolePolicies = 1;
+}
+
+message RolePolicy {
+    string id = 1;
+    string name = 2;
+    Effect effect = 3;
+    repeated string roles = 4;
+    repeated string principals = 5;
+    repeated string resources = 6;
+    repeated string resource_expressions = 7;
+    string condition = 8;
+}
+
+message Service {
+    string name = 1;
+    ServiceType type = 2;
+    repeated Policy policies = 3;
+    repeated RolePolicy role_policies = 4;
+}
+
+message PolicyAndRolePolicyCounts {
+    int64 policyCount = 1;
+    int64 rolePolicyCount = 2;
+}
+
+message PolicyCountsMap {
+    map<string, PolicyAndRolePolicyCounts> countMap = 1;
+}
+

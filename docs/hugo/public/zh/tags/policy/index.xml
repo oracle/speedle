@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Policy on Speedle</title>
+    <link>/zh/tags/policy/</link>
+    <description>Recent content in Policy on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    
+	<atom:link href="/zh/tags/policy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SPDL - 策略定义语言</title>
+      <link>/zh/docs/spdl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/spdl/</guid>
+      <description>基本的策略定义语言 保留关键字 SPDL 的保留关键字如下. 这些关键字不能用作 user name, group name, action, resource, attribute name 等等。
+ role user group entity grant deny if in on from  这些关键字均大小写不敏感。这意味着，&amp;rdquo;role&amp;rdquo;, &amp;ldquo;ROLE&amp;rdquo;, &amp;ldquo;Role&amp;rdquo;, &amp;ldquo;rOLe&amp;rdquo; 都不能用作 user name, group name, action, resource, attribute name 等等。
+命名规范  User Name: a user name consists of letters, decimal digits, punctuation marks except for comma i.e. [\p{L}\p{Nd}[\p{Punct}&amp;&amp;[^,]]]+ Group Name: a group name consists of letters, decimal digits, punctuation marks except for comma i.</description>
+    </item>
+    
+    <item>
+      <title>授权查询</title>
+      <link>/zh/docs/decisions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/decisions/</guid>
+      <description>1. 什么是授权查询?  授权查询是 Speedle ADS(Authorization Decision Service)提供的服务接口， 一般用于查询某个主体(subject)对某个资源(resource)实施某项操作(action)是否被允许。
+ 授权查询的结果是基于角色策略(role-policies)和策略(policies)的实时运算。
+  2. 授权查询的方式 Speedle 支持以下 3 种方式进行授权查询：
+ REST API provided by Authorization Decision Service(ADS) Grpc API provided by Authorization Decision Service(ADS) Golang API  3. 授权查询 API 及其示例 The ADS decision APIs make authorization decisions based on policies that describe the actions, permissions, and roles granted to a subject.
+3.1 查询授权决定 查询某个主体(subject)对某个资源(resource)实施某项操作(action)是否被允许
+ API overview  IN Given the request: subject, action, resource Given the runtime attributes **optional** Given the service scope OUT Returns true if allowed, false if NOT allowed Returns reason for the decision Returns errors if an error occurs  Sample  查询 user Alan 从 onlineBookStore 应用 下载 HarryPotter 这本书是否被允许。 授权结果基于定义在 &amp;ldquo;onlineBookStore&amp;rdquo; 这个 service 中的所有角色策略(role-policies)和策略(policies)的。   REST API example:</description>
+    </item>
+    
+    <item>
+      <title>策略发现</title>
+      <link>/zh/docs/pms/discover/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/pms/discover/</guid>
+      <description>什么是 discovery mode? 当一个系统使用 Speedle 作为权限控制引擎时，在所有保护资源被访问之前， 都会向 Speedle 的 ARS(Authorization Runtime Service)发 authorization 请求。所有的 authorization 请求都被被发送到 Speedle ARS 的 is-allowed RESTful endpoint。ARS 根据系统中的所有 policy 计算出当前请求的资源访问是否允许。
+当系统中需要保护的资源越来越多，为这些资源创建 policy 就是一件比较痛苦的事情。因为 policy 的制定者需要知道如何在 policy 中正确表述资源。discover mode 就是为了解决这一痛点而设计的。简单来说， 我们提供了一个和 is-allowed 有着相同输入和输出的接口 discover, 这个接口永远返回 allowed, 同时记录下 authorization 请求。并提供命令行工具查询被 discover 接口记录下的 authorization 请求,甚至为这些请求生成 Policy.
+当我们把系统中的 is-allowed 接口统统换成 discover 接口,我们称系统工作在 discovery mode.
+discovery mode 能帮我们做什么?  记录 authorization 请求的内容
+ 根据记录的 authorization 请求生成 Policy
+ 关闭权限检查</description>
+    </item>
+    
+    <item>
+      <title>策略管理</title>
+      <link>/zh/docs/pms/policy-mgmt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/zh/docs/pms/policy-mgmt/</guid>
+      <description>What is a Speedle policy? A Speedle policy is a set of criteria that specify whether a user is granted access to a particular protected resource or assignment to a particular role. You manage Speedle policies using the Speedle Policy Management Service(PMS).
+Understanding the Speedle Policy Module Note: The Speedle syntax used in this document is defined in SPDL - Security Policy Definition Language.
+Policy store The policy store maintains all policy artifacts and can be persisted to an etcd store or a JSON file.</description>
+    </item>
+    
+  </channel>
+</rss>

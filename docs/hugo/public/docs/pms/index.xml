@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Speedle Policy on Speedle</title>
+    <link>/docs/pms/</link>
+    <description>Recent content in Speedle Policy on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Jan 2019 21:19:44 +0800</lastBuildDate>
+    
+	<atom:link href="/docs/pms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Policy Management</title>
+      <link>/docs/pms/policy-mgmt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/pms/policy-mgmt/</guid>
+      <description>What is a Speedle policy? A Speedle policy is a set of criteria that specify whether a user is granted access to a particular protected resource or assignment to a particular role. You manage Speedle policies using the Speedle Policy Management Service(PMS).
+Understanding the Speedle Policy Module Note: The Speedle syntax used in this document is defined in SPDL - Security Policy Definition Language.
+Policy store The policy store maintains all policy artifacts and can be persisted to an etcd store or a JSON file.</description>
+    </item>
+    
+    <item>
+      <title>Global Policy</title>
+      <link>/docs/pms/global-policy/</link>
+      <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
+      
+      <guid>/docs/pms/global-policy/</guid>
+      <description>How global policies simplify policy management In Speedle, role policies and policies are defined and evaluated within a scope, which is called a &amp;lsquo;service&amp;rsquo;. For example, when creating a policy, you need to specify the service in which to create the policy. When calling the Authorization Decision Service API, you need to specify a service name so that the policies and role policies are evaluated within the scope of that service.</description>
+    </item>
+    
+    <item>
+      <title>Policy Diagnosis</title>
+      <link>/docs/pms/diagnosis/</link>
+      <pubDate>Fri, 18 Jan 2019 15:46:59 +0800</pubDate>
+      
+      <guid>/docs/pms/diagnosis/</guid>
+      <description>What&amp;rsquo;s policy diagnosis Policy diagnosis is one of the Speedle&amp;rsquo;s advanced features, which is used to diagnose the evaluation process of authorization. When the evaluation result isn&amp;rsquo;t expected or a user isn&amp;rsquo;t allowed to operate on a resource, then this feature is useful to find out the reason, i.e., what&amp;rsquo;s the policy which denies the operation on the resource.
+How to use policy diagnosis The usage of policy diagnosis request is almost identical to the usage of authorization decision request.</description>
+    </item>
+    
+    <item>
+      <title>Policy Discovery</title>
+      <link>/docs/pms/discover/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/pms/discover/</guid>
+      <description>What can discover mode do? * Help you discover existing authorization requests The is-allowed API endpoint and the discover API endpoint use the same request and response format. When you replace is-allowed with discover in the URL of the API, each authorization request that is returned shows WHO carries out WHAT action on WHICH resource. Discover mode does not evaluate the authorization decision; it simply records the authorization decision requests, along with the actions and the resources protected, and returns &amp;ldquo;is-allowed=true&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>

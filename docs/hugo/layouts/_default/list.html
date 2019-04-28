@@ -1,0 +1,21 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+
+{{ define "main" }}
+<div id="main">
+  <div class="features">
+    <h1>Voice of {{.Site.Params.author }} Developers</h1>
+    <p>Our vision, news and ideas, and whatever feels important.<br> <a href="https://join.slack.com/t/speedleproject/shared_invite/enQtNTUzODM3NDY0ODE2LTg0ODc0NzQ1MjVmM2NiODVmMThkMmVjNmMyODA0ZWJjZjQ3NDc2MjdlMzliN2U4MDRkZjhlYzYzMDEyZTgxMGQ">Follow
+        us on Slack</a></p>
+
+    <ul id="posts">
+      {{ range .Paginator.Pages.ByWeight }}
+      {{ partial "page-summary" . }}
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}

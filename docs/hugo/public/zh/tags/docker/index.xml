@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Speedle</title>
+    <link>/zh/tags/docker/</link>
+    <description>Recent content in Docker on Speedle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 10 Apr 2017 16:41:54 +0100</lastBuildDate>
+    
+	<atom:link href="/zh/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker</title>
+      <link>/zh/integrations/docker/</link>
+      <pubDate>Mon, 10 Apr 2017 16:41:54 +0100</pubDate>
+      
+      <guid>/zh/integrations/docker/</guid>
+      <description>Docker authorization plugin Docker users can implement a docker authorization plugin for authorization check, the docker official document &amp;ldquo;Access authorization plugin&amp;rdquo; shows the details.
+Build git clone git@github.com:oracle/speedle.git # make sure the speedle golang adsclient code is in your $GOPATH/src package. cp -r samples/adsclient/go/src/speedle/ $GOPATH/src # Get docker authorization plugin go get github.com/docker/go-plugins-helpers/authorization cd samples/integration/docker-integration make Executable speedle-docker-plugin could be found in \$HOME/go/bin
+Run speedle refer to speedle quickstart</description>
+    </item>
+    
+  </channel>
+</rss>
