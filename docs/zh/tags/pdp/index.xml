@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pdp on Speedle</title>
-    <link>/zh/tags/pdp/</link>
+    <link>https://oracle.github.io/speedle/zh/tags/pdp/</link>
     <description>Recent content in Pdp on Speedle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	<atom:link href="/zh/tags/pdp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oracle.github.io/speedle/zh/tags/pdp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>授权查询</title>
-      <link>/zh/docs/decisions/</link>
+      <link>https://oracle.github.io/speedle/zh/docs/decisions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/zh/docs/decisions/</guid>
+      <guid>https://oracle.github.io/speedle/zh/docs/decisions/</guid>
       <description>1. 什么是授权查询?  授权查询是 Speedle ADS(Authorization Decision Service)提供的服务接口， 一般用于查询某个主体(subject)对某个资源(resource)实施某项操作(action)是否被允许。
  授权查询的结果是基于角色策略(role-policies)和策略(policies)的实时运算。
   2. 授权查询的方式 Speedle 支持以下 3 种方式进行授权查询：

@@ -3,1002 +3,1002 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/zh/docs/usecases/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/usecases/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/usecases/"
+                href="https://oracle.github.io/speedle/docs/usecases/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/usecases/"
+                href="https://oracle.github.io/speedle/zh/docs/usecases/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/pms/policy-mgmt/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/pms/policy-mgmt/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/pms/policy-mgmt/"
+                href="https://oracle.github.io/speedle/docs/pms/policy-mgmt/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/pms/policy-mgmt/"
+                href="https://oracle.github.io/speedle/zh/docs/pms/policy-mgmt/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/pms/global-policy/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/pms/global-policy/</loc>
     <lastmod>2019-01-18T21:19:44+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/pms/global-policy/"
+                href="https://oracle.github.io/speedle/docs/pms/global-policy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/pms/global-policy/"
+                href="https://oracle.github.io/speedle/zh/docs/pms/global-policy/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/pms/diagnosis/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/pms/diagnosis/</loc>
     <lastmod>2019-01-18T15:46:59+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/pms/diagnosis/"
+                href="https://oracle.github.io/speedle/docs/pms/diagnosis/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/pms/diagnosis/"
+                href="https://oracle.github.io/speedle/zh/docs/pms/diagnosis/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/pms/discover/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/pms/discover/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/pms/discover/"
+                href="https://oracle.github.io/speedle/docs/pms/discover/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/pms/discover/"
+                href="https://oracle.github.io/speedle/zh/docs/pms/discover/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/spdl/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/spdl/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/spdl/"
+                href="https://oracle.github.io/speedle/docs/spdl/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/spdl/"
+                href="https://oracle.github.io/speedle/zh/docs/spdl/"
                 />
   </url>
   
   <url>
-    <loc>/zh/contribute/</loc>
+    <loc>https://oracle.github.io/speedle/zh/contribute/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/contribute/"
+                href="https://oracle.github.io/speedle/contribute/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/contribute/"
+                href="https://oracle.github.io/speedle/zh/contribute/"
                 />
   </url>
   
   <url>
-    <loc>/zh/quick-start/</loc>
+    <loc>https://oracle.github.io/speedle/zh/quick-start/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/quick-start/"
+                href="https://oracle.github.io/speedle/quick-start/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/quick-start/"
+                href="https://oracle.github.io/speedle/zh/quick-start/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/architecture/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/architecture/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/architecture/"
+                href="https://oracle.github.io/speedle/docs/architecture/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/architecture/"
+                href="https://oracle.github.io/speedle/zh/docs/architecture/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/deployment-embeded/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/deployment-embeded/</loc>
   </url>
   
   <url>
-    <loc>/zh/docs/deployment/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/deployment/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/deployment/"
+                href="https://oracle.github.io/speedle/docs/deployment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/deployment/"
+                href="https://oracle.github.io/speedle/zh/docs/deployment/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/pms/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/pms/</loc>
     <lastmod>2019-01-18T21:19:44+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/pms/"
+                href="https://oracle.github.io/speedle/docs/pms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/pms/"
+                href="https://oracle.github.io/speedle/zh/docs/pms/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/decisions/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/decisions/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/decisions/"
+                href="https://oracle.github.io/speedle/docs/decisions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/decisions/"
+                href="https://oracle.github.io/speedle/zh/docs/decisions/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/idd/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/idd/</loc>
     <lastmod>2019-01-17T13:20:07+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/idd/"
+                href="https://oracle.github.io/speedle/docs/idd/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/idd/"
+                href="https://oracle.github.io/speedle/zh/docs/idd/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/assertor/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/assertor/</loc>
     <lastmod>2019-01-21T09:28:30+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/assertor/"
+                href="https://oracle.github.io/speedle/docs/assertor/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/assertor/"
+                href="https://oracle.github.io/speedle/zh/docs/assertor/"
                 />
   </url>
   
   <url>
-    <loc>/zh/integrations/docker/</loc>
+    <loc>https://oracle.github.io/speedle/zh/integrations/docker/</loc>
     <lastmod>2017-04-10T16:41:54+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/integrations/docker/"
+                href="https://oracle.github.io/speedle/integrations/docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/integrations/docker/"
+                href="https://oracle.github.io/speedle/zh/integrations/docker/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/store/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/store/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/store/"
+                href="https://oracle.github.io/speedle/docs/store/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/store/"
+                href="https://oracle.github.io/speedle/zh/docs/store/"
                 />
   </url>
   
   <url>
-    <loc>/zh/integrations/kubernetes/</loc>
+    <loc>https://oracle.github.io/speedle/zh/integrations/kubernetes/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/integrations/kubernetes/"
+                href="https://oracle.github.io/speedle/integrations/kubernetes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/integrations/kubernetes/"
+                href="https://oracle.github.io/speedle/zh/integrations/kubernetes/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/api/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/api/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/api/"
+                href="https://oracle.github.io/speedle/docs/api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/api/"
+                href="https://oracle.github.io/speedle/zh/docs/api/"
                 />
   </url>
   
   <url>
-    <loc>/zh/integrations/istio/</loc>
+    <loc>https://oracle.github.io/speedle/zh/integrations/istio/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/integrations/istio/"
+                href="https://oracle.github.io/speedle/integrations/istio/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/integrations/istio/"
+                href="https://oracle.github.io/speedle/zh/integrations/istio/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/security/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/security/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/security/"
+                href="https://oracle.github.io/speedle/docs/security/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/security/"
+                href="https://oracle.github.io/speedle/zh/docs/security/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/logging/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/logging/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/logging/"
+                href="https://oracle.github.io/speedle/docs/logging/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/logging/"
+                href="https://oracle.github.io/speedle/zh/docs/logging/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/versions/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/versions/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/versions/"
+                href="https://oracle.github.io/speedle/docs/versions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/versions/"
+                href="https://oracle.github.io/speedle/zh/docs/versions/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/custom-function/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/custom-function/</loc>
     <lastmod>2019-01-21T10:43:02+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/custom-function/"
+                href="https://oracle.github.io/speedle/docs/custom-function/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/custom-function/"
+                href="https://oracle.github.io/speedle/zh/docs/custom-function/"
                 />
   </url>
   
   <url>
-    <loc>/zh/about/</loc>
+    <loc>https://oracle.github.io/speedle/zh/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/about/"
+                href="https://oracle.github.io/speedle/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/about/"
+                href="https://oracle.github.io/speedle/zh/about/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/ads/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/ads/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/ads/"
+                href="https://oracle.github.io/speedle/tags/ads/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/ads/"
+                href="https://oracle.github.io/speedle/zh/tags/ads/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/api/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/api/</loc>
     <lastmod>2019-01-18T21:19:44+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/api/"
+                href="https://oracle.github.io/speedle/tags/api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/api/"
+                href="https://oracle.github.io/speedle/zh/tags/api/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/asserter/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/asserter/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/asserter/"
+                href="https://oracle.github.io/speedle/tags/asserter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/asserter/"
+                href="https://oracle.github.io/speedle/zh/tags/asserter/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/api/decision_api/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/api/decision_api/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/api/decision_api/"
+                href="https://oracle.github.io/speedle/docs/api/decision_api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/api/decision_api/"
+                href="https://oracle.github.io/speedle/zh/docs/api/decision_api/"
                 />
   </url>
   
   <url>
-    <loc>/zh/categories/</loc>
+    <loc>https://oracle.github.io/speedle/zh/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="https://oracle.github.io/speedle/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/categories/"
+                href="https://oracle.github.io/speedle/zh/categories/"
                 />
   </url>
   
   <url>
-    <loc>/zh/categories/cloudnative/</loc>
+    <loc>https://oracle.github.io/speedle/zh/categories/cloudnative/</loc>
     <lastmod>2017-04-10T16:41:54+01:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/cloudnative/"
+                href="https://oracle.github.io/speedle/categories/cloudnative/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/categories/cloudnative/"
+                href="https://oracle.github.io/speedle/zh/categories/cloudnative/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/community/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/community/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/community/"
+                href="https://oracle.github.io/speedle/tags/community/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/community/"
+                href="https://oracle.github.io/speedle/zh/tags/community/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/contribution/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/contribution/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/contribution/"
+                href="https://oracle.github.io/speedle/tags/contribution/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/contribution/"
+                href="https://oracle.github.io/speedle/zh/tags/contribution/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/core/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/core/</loc>
     <lastmod>2019-01-18T21:19:44+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/core/"
+                href="https://oracle.github.io/speedle/tags/core/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/core/"
+                href="https://oracle.github.io/speedle/zh/tags/core/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/discovery/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/discovery/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/discovery/"
+                href="https://oracle.github.io/speedle/tags/discovery/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/discovery/"
+                href="https://oracle.github.io/speedle/zh/tags/discovery/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/docker/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/docker/</loc>
     <lastmod>2017-04-10T16:41:54+01:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/docker/"
+                href="https://oracle.github.io/speedle/tags/docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/docker/"
+                href="https://oracle.github.io/speedle/zh/tags/docker/"
                 />
   </url>
   
   <url>
-    <loc>/zh/categories/docs/</loc>
+    <loc>https://oracle.github.io/speedle/zh/categories/docs/</loc>
     <lastmod>2019-01-18T21:19:44+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/docs/"
+                href="https://oracle.github.io/speedle/categories/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/categories/docs/"
+                href="https://oracle.github.io/speedle/zh/categories/docs/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/guide/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/guide/</loc>
     <lastmod>2019-01-18T21:19:44+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/guide/"
+                href="https://oracle.github.io/speedle/tags/guide/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/guide/"
+                href="https://oracle.github.io/speedle/zh/tags/guide/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/https/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/https/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/https/"
+                href="https://oracle.github.io/speedle/tags/https/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/https/"
+                href="https://oracle.github.io/speedle/zh/tags/https/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/identity/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/identity/</loc>
     <lastmod>2019-01-17T13:20:07+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/identity/"
+                href="https://oracle.github.io/speedle/tags/identity/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/identity/"
+                href="https://oracle.github.io/speedle/zh/tags/identity/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/identity-domain/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/identity-domain/</loc>
     <lastmod>2019-01-17T13:20:07+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/identity-domain/"
+                href="https://oracle.github.io/speedle/tags/identity-domain/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/identity-domain/"
+                href="https://oracle.github.io/speedle/zh/tags/identity-domain/"
                 />
   </url>
   
   <url>
-    <loc>/zh/categories/integration/</loc>
+    <loc>https://oracle.github.io/speedle/zh/categories/integration/</loc>
     <lastmod>2017-04-10T16:41:54+01:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/integration/"
+                href="https://oracle.github.io/speedle/categories/integration/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/categories/integration/"
+                href="https://oracle.github.io/speedle/zh/categories/integration/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/istio/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/istio/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/istio/"
+                href="https://oracle.github.io/speedle/tags/istio/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/istio/"
+                href="https://oracle.github.io/speedle/zh/tags/istio/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/k8s/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/k8s/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/k8s/"
+                href="https://oracle.github.io/speedle/tags/k8s/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/k8s/"
+                href="https://oracle.github.io/speedle/zh/tags/k8s/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/kubernetes/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/kubernetes/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/kubernetes/"
+                href="https://oracle.github.io/speedle/tags/kubernetes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/kubernetes/"
+                href="https://oracle.github.io/speedle/zh/tags/kubernetes/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/logging/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/logging/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/logging/"
+                href="https://oracle.github.io/speedle/tags/logging/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/logging/"
+                href="https://oracle.github.io/speedle/zh/tags/logging/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/pdp/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/pdp/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/pdp/"
+                href="https://oracle.github.io/speedle/tags/pdp/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/pdp/"
+                href="https://oracle.github.io/speedle/zh/tags/pdp/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/pluggable/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/pluggable/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/pluggable/"
+                href="https://oracle.github.io/speedle/tags/pluggable/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/pluggable/"
+                href="https://oracle.github.io/speedle/zh/tags/pluggable/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/pms/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/pms/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/pms/"
+                href="https://oracle.github.io/speedle/tags/pms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/pms/"
+                href="https://oracle.github.io/speedle/zh/tags/pms/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/policy/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/policy/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/policy/"
+                href="https://oracle.github.io/speedle/tags/policy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/policy/"
+                href="https://oracle.github.io/speedle/zh/tags/policy/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/api/management_api/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/api/management_api/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/api/management_api/"
+                href="https://oracle.github.io/speedle/docs/api/management_api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/api/management_api/"
+                href="https://oracle.github.io/speedle/zh/docs/api/management_api/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/releases/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/releases/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/releases/"
+                href="https://oracle.github.io/speedle/tags/releases/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/releases/"
+                href="https://oracle.github.io/speedle/zh/tags/releases/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/security/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/security/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/security/"
+                href="https://oracle.github.io/speedle/tags/security/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/security/"
+                href="https://oracle.github.io/speedle/zh/tags/security/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/spdl/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/spdl/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/spdl/"
+                href="https://oracle.github.io/speedle/tags/spdl/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/spdl/"
+                href="https://oracle.github.io/speedle/zh/tags/spdl/"
                 />
   </url>
   
   <url>
-    <loc>/zh/</loc>
+    <loc>https://oracle.github.io/speedle/zh/</loc>
     <lastmod>2019-01-18T21:19:44+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="https://oracle.github.io/speedle/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/"
+                href="https://oracle.github.io/speedle/zh/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/</loc>
     <lastmod>2019-01-17T13:20:07+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/"
+                href="https://oracle.github.io/speedle/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/"
+                href="https://oracle.github.io/speedle/zh/docs/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/storage/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/storage/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/storage/"
+                href="https://oracle.github.io/speedle/tags/storage/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/storage/"
+                href="https://oracle.github.io/speedle/zh/tags/storage/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/</loc>
     <lastmod>2019-01-18T21:19:44+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="https://oracle.github.io/speedle/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/"
+                href="https://oracle.github.io/speedle/zh/tags/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/tls/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/tls/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/tls/"
+                href="https://oracle.github.io/speedle/tags/tls/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/tls/"
+                href="https://oracle.github.io/speedle/zh/tags/tls/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/token-asserter/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/token-asserter/</loc>
     <lastmod>2019-01-21T09:28:30+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/token-asserter/"
+                href="https://oracle.github.io/speedle/tags/token-asserter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/token-asserter/"
+                href="https://oracle.github.io/speedle/zh/tags/token-asserter/"
                 />
   </url>
   
   <url>
-    <loc>/zh/docs/api/asserter_api/</loc>
+    <loc>https://oracle.github.io/speedle/zh/docs/api/asserter_api/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/docs/api/asserter_api/"
+                href="https://oracle.github.io/speedle/docs/api/asserter_api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/docs/api/asserter_api/"
+                href="https://oracle.github.io/speedle/zh/docs/api/asserter_api/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/usecase/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/usecase/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/usecase/"
+                href="https://oracle.github.io/speedle/tags/usecase/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/usecase/"
+                href="https://oracle.github.io/speedle/zh/tags/usecase/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/v0.1.0/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/v0.1.0/</loc>
     <lastmod>2019-01-18T21:19:44+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/v0.1.0/"
+                href="https://oracle.github.io/speedle/tags/v0.1.0/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/v0.1.0/"
+                href="https://oracle.github.io/speedle/zh/tags/v0.1.0/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/versions/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/versions/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/versions/"
+                href="https://oracle.github.io/speedle/tags/versions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/versions/"
+                href="https://oracle.github.io/speedle/zh/tags/versions/"
                 />
   </url>
   
   <url>
-    <loc>/zh/versions/</loc>
+    <loc>https://oracle.github.io/speedle/zh/versions/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/versions/"
+                href="https://oracle.github.io/speedle/versions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/versions/"
+                href="https://oracle.github.io/speedle/zh/versions/"
                 />
   </url>
   
   <url>
-    <loc>/zh/tags/webhook/</loc>
+    <loc>https://oracle.github.io/speedle/zh/tags/webhook/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/webhook/"
+                href="https://oracle.github.io/speedle/tags/webhook/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/tags/webhook/"
+                href="https://oracle.github.io/speedle/zh/tags/webhook/"
                 />
   </url>
   
   <url>
-    <loc>/zh/support/</loc>
+    <loc>https://oracle.github.io/speedle/zh/support/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/support/"
+                href="https://oracle.github.io/speedle/support/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/support/"
+                href="https://oracle.github.io/speedle/zh/support/"
                 />
   </url>
   
   <url>
-    <loc>/zh/integrations/</loc>
+    <loc>https://oracle.github.io/speedle/zh/integrations/</loc>
     <lastmod>2017-04-10T16:41:54+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/integrations/"
+                href="https://oracle.github.io/speedle/integrations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="/zh/integrations/"
+                href="https://oracle.github.io/speedle/zh/integrations/"
                 />
   </url>
   

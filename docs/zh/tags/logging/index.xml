@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Logging on Speedle</title>
-    <link>/zh/tags/logging/</link>
+    <link>https://oracle.github.io/speedle/zh/tags/logging/</link>
     <description>Recent content in Logging on Speedle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	<atom:link href="/zh/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oracle.github.io/speedle/zh/tags/logging/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>日志</title>
-      <link>/zh/docs/logging/</link>
+      <link>https://oracle.github.io/speedle/zh/docs/logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/zh/docs/logging/</guid>
+      <guid>https://oracle.github.io/speedle/zh/docs/logging/</guid>
       <description>概述 Speedle 使用了下面两个开源项目来处理日志,
 1. https://github.com/sirupsen/logrus 2. https://github.com/natefinch/lumberjack Logrus 是一个针对 go 语言的结构化的日志处理器，它与 go 语言标准的 logger 库完全 API 兼容。因为 logrus 不支持对日志循环滚动处理（rotation），所以我们引入了另外一个开源项目 lumberjack。Logrus 与 lumberjack 之间通过 io.Writer 接口交互，如下图所示,
 日志配置 可以通过两种方式对 Speedle 的日志模块进行配置，即命令行参数或者配置文件。
