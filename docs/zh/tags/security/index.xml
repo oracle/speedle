@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security on Speedle</title>
-    <link>https://oracle.github.io/speedle/zh/tags/security/</link>
+    <link>/zh/tags/security/</link>
     <description>Recent content in Security on Speedle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	<atom:link href="https://oracle.github.io/speedle/zh/tags/security/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/zh/tags/security/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>安全</title>
-      <link>https://oracle.github.io/speedle/zh/docs/security/</link>
+      <link>/zh/docs/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/security/</guid>
+      <guid>/zh/docs/security/</guid>
       <description>概要 API Endpoint 安全/认证和授权 Speedle API Endpoint 自身仅支持 TLS mutual auth（TLS 相互身份验证）这种认证和授权.
 您可以使用像 Ambassador API Gateway 等既存的方案对 Speedle API endpoint 进行保护。
 消息安全 / TLS TLS 是一种提供通信安全性的加密协议，它提供了许多不同的交换密钥进行身份验证，加密数据和保证消息完整性的方法。

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Identity on Speedle</title>
-    <link>https://oracle.github.io/speedle/zh/tags/identity/</link>
+    <link>/zh/tags/identity/</link>
     <description>Recent content in Identity on Speedle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 17 Jan 2019 13:20:07 +0800</lastBuildDate>
     
-	<atom:link href="https://oracle.github.io/speedle/zh/tags/identity/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/zh/tags/identity/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>用户身份域</title>
-      <link>https://oracle.github.io/speedle/zh/docs/idd/</link>
+      <link>/zh/docs/idd/</link>
       <pubDate>Thu, 17 Jan 2019 13:20:07 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/idd/</guid>
+      <guid>/zh/docs/idd/</guid>
       <description>什么是用户身份域? 身份域是用户和组的逻辑名称空间，通常表示物理数据存储中的一组离散用户和组。 每个身份域独立管理用户和组， 用户名和组名在标识域中必须是唯一的。
 问题 在集成环境中，身份可能来自多个身份域。 例如，考虑以下场景，具有身份为user1的用户被授权对资源book执行rent操作。 此授权策略表示来自任何身份域的身份为user1的用户都具有权限以租用图书资源。
 ./spctl create policy -c &amp;#34;grant user user1 rent book&amp;#34; --service-name=booksvc 但是，该服务只希望来自身份域github的user1具有rent权限。 因此，Speedle 必须能够区分来自不同身份域的用户。
@@ -30,10 +30,10 @@ POLICY = EFFECT SUBJECT from &amp;lt;identity domain&amp;lt; ACTION RESOURCE if 
     
     <item>
       <title>令牌用户身份断言</title>
-      <link>https://oracle.github.io/speedle/zh/docs/assertor/</link>
+      <link>/zh/docs/assertor/</link>
       <pubDate>Mon, 21 Jan 2019 09:28:30 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/assertor/</guid>
+      <guid>/zh/docs/assertor/</guid>
       <description>令牌用户身份断言的好处 评估请求可以包含由任何身份提供者作为传入用户身份发布的身份令牌，而不是明确指定用户身份（用户标识符和用户所属的那些组）。 将 Speedle 集成到服务中时，您的服务无需验证和解析身份令牌。 Speedle 可以为您做到。
 Speedle 评估引擎检查传入请求是否包含身份令牌。 如果是，则评估引擎调用令牌断言服务的 webhook 以获得显式用户身份（用户标识符和组）。 然后，评估引擎可以基于用户身份域和组来执行策略评估。
 如何评估包含身份令牌的授权请求 要评估包含身份令牌的授权请求，请按照下列步骤操作。

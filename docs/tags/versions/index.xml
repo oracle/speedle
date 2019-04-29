@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Versions on Speedle</title>
-    <link>https://oracle.github.io/speedle/tags/versions/</link>
+    <link>/tags/versions/</link>
     <description>Recent content in Versions on Speedle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://oracle.github.io/speedle/tags/versions/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/versions/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Versions</title>
-      <link>https://oracle.github.io/speedle/docs/versions/</link>
+      <link>/docs/versions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/docs/versions/</guid>
+      <guid>/docs/versions/</guid>
       <description> Version 0.2.0 (planning) &amp;hellip;
 Version 0.1.0 release notes: This is the first open source version. All basic functions are available in this version, including
  Policy Management Service Authorization Runtime Service Command line tool Integration samples  </description>

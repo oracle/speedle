@@ -2,282 +2,282 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Speedle</title>
-    <link>https://oracle.github.io/speedle/zh/tags/</link>
+    <link>/zh/tags/</link>
     <description>Recent content in Tags on Speedle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 18 Jan 2019 21:19:44 +0800</lastBuildDate>
     
-	<atom:link href="https://oracle.github.io/speedle/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ads</title>
-      <link>https://oracle.github.io/speedle/zh/tags/ads/</link>
+      <link>/zh/tags/ads/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/ads/</guid>
+      <guid>/zh/tags/ads/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Api</title>
-      <link>https://oracle.github.io/speedle/zh/tags/api/</link>
+      <link>/zh/tags/api/</link>
       <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/api/</guid>
+      <guid>/zh/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Asserter</title>
-      <link>https://oracle.github.io/speedle/zh/tags/asserter/</link>
+      <link>/zh/tags/asserter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/asserter/</guid>
+      <guid>/zh/tags/asserter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Community</title>
-      <link>https://oracle.github.io/speedle/zh/tags/community/</link>
+      <link>/zh/tags/community/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/community/</guid>
+      <guid>/zh/tags/community/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contribution</title>
-      <link>https://oracle.github.io/speedle/zh/tags/contribution/</link>
+      <link>/zh/tags/contribution/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/contribution/</guid>
+      <guid>/zh/tags/contribution/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Core</title>
-      <link>https://oracle.github.io/speedle/zh/tags/core/</link>
+      <link>/zh/tags/core/</link>
       <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/core/</guid>
+      <guid>/zh/tags/core/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Discovery</title>
-      <link>https://oracle.github.io/speedle/zh/tags/discovery/</link>
+      <link>/zh/tags/discovery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/discovery/</guid>
+      <guid>/zh/tags/discovery/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://oracle.github.io/speedle/zh/tags/docker/</link>
+      <link>/zh/tags/docker/</link>
       <pubDate>Mon, 10 Apr 2017 16:41:54 +0100</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/docker/</guid>
+      <guid>/zh/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Guide</title>
-      <link>https://oracle.github.io/speedle/zh/tags/guide/</link>
+      <link>/zh/tags/guide/</link>
       <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/guide/</guid>
+      <guid>/zh/tags/guide/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Https</title>
-      <link>https://oracle.github.io/speedle/zh/tags/https/</link>
+      <link>/zh/tags/https/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/https/</guid>
+      <guid>/zh/tags/https/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Identity</title>
-      <link>https://oracle.github.io/speedle/zh/tags/identity/</link>
+      <link>/zh/tags/identity/</link>
       <pubDate>Thu, 17 Jan 2019 13:20:07 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/identity/</guid>
+      <guid>/zh/tags/identity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Identity Domain</title>
-      <link>https://oracle.github.io/speedle/zh/tags/identity-domain/</link>
+      <link>/zh/tags/identity-domain/</link>
       <pubDate>Thu, 17 Jan 2019 13:20:07 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/identity-domain/</guid>
+      <guid>/zh/tags/identity-domain/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Istio</title>
-      <link>https://oracle.github.io/speedle/zh/tags/istio/</link>
+      <link>/zh/tags/istio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/istio/</guid>
+      <guid>/zh/tags/istio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>K8s</title>
-      <link>https://oracle.github.io/speedle/zh/tags/k8s/</link>
+      <link>/zh/tags/k8s/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/k8s/</guid>
+      <guid>/zh/tags/k8s/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://oracle.github.io/speedle/zh/tags/kubernetes/</link>
+      <link>/zh/tags/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/kubernetes/</guid>
+      <guid>/zh/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Logging</title>
-      <link>https://oracle.github.io/speedle/zh/tags/logging/</link>
+      <link>/zh/tags/logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/logging/</guid>
+      <guid>/zh/tags/logging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pdp</title>
-      <link>https://oracle.github.io/speedle/zh/tags/pdp/</link>
+      <link>/zh/tags/pdp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/pdp/</guid>
+      <guid>/zh/tags/pdp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pluggable</title>
-      <link>https://oracle.github.io/speedle/zh/tags/pluggable/</link>
+      <link>/zh/tags/pluggable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/pluggable/</guid>
+      <guid>/zh/tags/pluggable/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pms</title>
-      <link>https://oracle.github.io/speedle/zh/tags/pms/</link>
+      <link>/zh/tags/pms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/pms/</guid>
+      <guid>/zh/tags/pms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Policy</title>
-      <link>https://oracle.github.io/speedle/zh/tags/policy/</link>
+      <link>/zh/tags/policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/policy/</guid>
+      <guid>/zh/tags/policy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Releases</title>
-      <link>https://oracle.github.io/speedle/zh/tags/releases/</link>
+      <link>/zh/tags/releases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/releases/</guid>
+      <guid>/zh/tags/releases/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Security</title>
-      <link>https://oracle.github.io/speedle/zh/tags/security/</link>
+      <link>/zh/tags/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/security/</guid>
+      <guid>/zh/tags/security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spdl</title>
-      <link>https://oracle.github.io/speedle/zh/tags/spdl/</link>
+      <link>/zh/tags/spdl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/spdl/</guid>
+      <guid>/zh/tags/spdl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Storage</title>
-      <link>https://oracle.github.io/speedle/zh/tags/storage/</link>
+      <link>/zh/tags/storage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/storage/</guid>
+      <guid>/zh/tags/storage/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tls</title>
-      <link>https://oracle.github.io/speedle/zh/tags/tls/</link>
+      <link>/zh/tags/tls/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/tls/</guid>
+      <guid>/zh/tags/tls/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Token Asserter</title>
-      <link>https://oracle.github.io/speedle/zh/tags/token-asserter/</link>
+      <link>/zh/tags/token-asserter/</link>
       <pubDate>Mon, 21 Jan 2019 09:28:30 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/token-asserter/</guid>
+      <guid>/zh/tags/token-asserter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Usecase</title>
-      <link>https://oracle.github.io/speedle/zh/tags/usecase/</link>
+      <link>/zh/tags/usecase/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/usecase/</guid>
+      <guid>/zh/tags/usecase/</guid>
       <description></description>
     </item>
     
     <item>
       <title>V0.1.0</title>
-      <link>https://oracle.github.io/speedle/zh/tags/v0.1.0/</link>
+      <link>/zh/tags/v0.1.0/</link>
       <pubDate>Fri, 18 Jan 2019 21:19:44 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/v0.1.0/</guid>
+      <guid>/zh/tags/v0.1.0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Versions</title>
-      <link>https://oracle.github.io/speedle/zh/tags/versions/</link>
+      <link>/zh/tags/versions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/versions/</guid>
+      <guid>/zh/tags/versions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Webhook</title>
-      <link>https://oracle.github.io/speedle/zh/tags/webhook/</link>
+      <link>/zh/tags/webhook/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/tags/webhook/</guid>
+      <guid>/zh/tags/webhook/</guid>
       <description></description>
     </item>
     

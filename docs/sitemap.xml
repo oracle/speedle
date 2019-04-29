@@ -2,14 +2,14 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<sitemap>
-	   	<loc>https://oracle.github.io/speedle/en/sitemap.xml</loc>
+	   	<loc>/en/sitemap.xml</loc>
 		
 	   	<lastmod>2019-01-21T10:43:02+08:00</lastmod>
 		
 	</sitemap>
 	
 	<sitemap>
-	   	<loc>https://oracle.github.io/speedle/zh/sitemap.xml</loc>
+	   	<loc>/zh/sitemap.xml</loc>
 		
 	   	<lastmod>2019-01-21T10:43:02+08:00</lastmod>
 		

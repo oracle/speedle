@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Speedle文档 on Speedle</title>
-    <link>https://oracle.github.io/speedle/zh/docs/</link>
+    <link>/zh/docs/</link>
     <description>Recent content in Speedle文档 on Speedle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 17 Jan 2019 13:20:07 +0800</lastBuildDate>
     
-	<atom:link href="https://oracle.github.io/speedle/zh/docs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/zh/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用场景</title>
-      <link>https://oracle.github.io/speedle/zh/docs/usecases/</link>
+      <link>/zh/docs/usecases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/usecases/</guid>
+      <guid>/zh/docs/usecases/</guid>
       <description>嵌入到 GO 语言编写的应用程序 张先生是一个程序员，他用 GO 语言开发了一套应用系统，现在他希望在这套系统中增加权限控制功能。他可以在程序中直接调用 Speedle 的 GO API 轻松完成任务。
 利用 Speedle 管理应用系统的权限 H 公司正在开发一套远程医疗系统。健康数据属于个人隐私，根据合规的需要，H 公司必须提供严格的权限控制，确保每位用户只能接触到自己的数据。该系统还需定期接受第三方机构的审计。H 公司使用 Speedle 来达成一下目标：
  构建 RBAC/ABAC 兼容的授权模型 自然语言定义的授权策略，方便审计部门分析审计 详尽的审计数据，可以跟踪用户每一次访问  利用 Speedle 集中管理组织内所有信息系统 陈先生是某大型跨国公司的信息安全负责人。在过去的十年里该公司飞速发展，并购了数十家中小型公司。这给陈先生和他的团队出了个难题，被并购的公司都有自己的信息系统，实现这些信息系统的技术各不相同。有基于 JavaEE 的，有基于 NodeJS 的，有 Ruby on Rails，还有基于 CORBA 的遗留系统。这些系统的权限管理机制也不一致，有的是硬编码的权限管理模块，有的基于 JaaS，有的基于 OASIS XACML，有些策略模型是 RBAC，有些是 ABAC，有些是普通的 ACL，甚至有些是原始的黑名单白名单。陈先生和他的团队为了管理这些系统不得不学习数十种权限模型和语言，每次修改授权策略需要在数十个系统上做不同的操作。非常繁琐也容易出现错误。
@@ -26,10 +26,10 @@
     
     <item>
       <title>SPDL - 策略定义语言</title>
-      <link>https://oracle.github.io/speedle/zh/docs/spdl/</link>
+      <link>/zh/docs/spdl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/spdl/</guid>
+      <guid>/zh/docs/spdl/</guid>
       <description>基本的策略定义语言 保留关键字 SPDL 的保留关键字如下. 这些关键字不能用作 user name, group name, action, resource, attribute name 等等。
  role user group entity grant deny if in on from  这些关键字均大小写不敏感。这意味着，&amp;rdquo;role&amp;rdquo;, &amp;ldquo;ROLE&amp;rdquo;, &amp;ldquo;Role&amp;rdquo;, &amp;ldquo;rOLe&amp;rdquo; 都不能用作 user name, group name, action, resource, attribute name 等等。
 命名规范  User Name: a user name consists of letters, decimal digits, punctuation marks except for comma i.e. [\p{L}\p{Nd}[\p{Punct}&amp;&amp;[^,]]]+ Group Name: a group name consists of letters, decimal digits, punctuation marks except for comma i.</description>
@@ -37,10 +37,10 @@
     
     <item>
       <title>系统架构</title>
-      <link>https://oracle.github.io/speedle/zh/docs/architecture/</link>
+      <link>/zh/docs/architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/architecture/</guid>
+      <guid>/zh/docs/architecture/</guid>
       <description>Modules Speedle is an authorization engine comprised of these components:
  Policy Management Service (PMS) API - Manages the authorization and role policies, and the objects from which they are created.
  Policy repository - Stores all the policy artifacts. The policy repository can be a json file, or a persistent store such as a database or etcd.
@@ -49,10 +49,10 @@
     
     <item>
       <title>Speedle嵌入模式</title>
-      <link>https://oracle.github.io/speedle/zh/docs/deployment-embeded/</link>
+      <link>/zh/docs/deployment-embeded/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/deployment-embeded/</guid>
+      <guid>/zh/docs/deployment-embeded/</guid>
       <description>什么是 Speedle 嵌入模式 区别于 Speedle 服务模式，Speedle 嵌入模式把 Speedle 的策略决策引擎嵌入到调用者进程内部，作为进程的一部分运行。调用者可以直接调用 Speedle 的 API 获得策略决策的结果。
 嵌入模式的局限  只支持 Golang，推荐使用 Golang 1.10。 只接受文件存储策略。  如何使用嵌入模式 把 Speedle 代码添加到你的工程中 在嵌入模式中，需要先将 Speedle 源代码从代码仓库中下载下来。主要有一下几种方式：
  使用 go get  go get github.com/oracle/speedle  使用 dep 工具  在你的 Gopkg.toml 文件中添加以下几行
@@ -62,10 +62,10 @@ dep ensure -update github.com/oracle/speedle 在代码中初始化一个 Evalaut
     
     <item>
       <title>Speedle服务的部署方式</title>
-      <link>https://oracle.github.io/speedle/zh/docs/deployment/</link>
+      <link>/zh/docs/deployment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/deployment/</guid>
+      <guid>/zh/docs/deployment/</guid>
       <description>Speedle 支持两种部署方式
  开发模式  在开发模式下，Speedle 使用一个文件作为策略仓库，用户使用 RESTful API 和 CLI 工具访问 Speedle 的各项服务。
  生产模式  在生产模式下，Speedle 使用etcd作为策略仓库，用户使用 RESTful API 和 CLI 工具访问 Speedle 的各项服务。
@@ -74,10 +74,10 @@ dep ensure -update github.com/oracle/speedle 在代码中初始化一个 Evalaut
     
     <item>
       <title>授权查询</title>
-      <link>https://oracle.github.io/speedle/zh/docs/decisions/</link>
+      <link>/zh/docs/decisions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/decisions/</guid>
+      <guid>/zh/docs/decisions/</guid>
       <description>1. 什么是授权查询?  授权查询是 Speedle ADS(Authorization Decision Service)提供的服务接口， 一般用于查询某个主体(subject)对某个资源(resource)实施某项操作(action)是否被允许。
  授权查询的结果是基于角色策略(role-policies)和策略(policies)的实时运算。
   2. 授权查询的方式 Speedle 支持以下 3 种方式进行授权查询：
@@ -88,10 +88,10 @@ dep ensure -update github.com/oracle/speedle 在代码中初始化一个 Evalaut
     
     <item>
       <title>用户身份域</title>
-      <link>https://oracle.github.io/speedle/zh/docs/idd/</link>
+      <link>/zh/docs/idd/</link>
       <pubDate>Thu, 17 Jan 2019 13:20:07 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/idd/</guid>
+      <guid>/zh/docs/idd/</guid>
       <description>什么是用户身份域? 身份域是用户和组的逻辑名称空间，通常表示物理数据存储中的一组离散用户和组。 每个身份域独立管理用户和组， 用户名和组名在标识域中必须是唯一的。
 问题 在集成环境中，身份可能来自多个身份域。 例如，考虑以下场景，具有身份为user1的用户被授权对资源book执行rent操作。 此授权策略表示来自任何身份域的身份为user1的用户都具有权限以租用图书资源。
 ./spctl create policy -c &amp;#34;grant user user1 rent book&amp;#34; --service-name=booksvc 但是，该服务只希望来自身份域github的user1具有rent权限。 因此，Speedle 必须能够区分来自不同身份域的用户。
@@ -105,10 +105,10 @@ POLICY = EFFECT SUBJECT from &amp;lt;identity domain&amp;lt; ACTION RESOURCE if 
     
     <item>
       <title>令牌用户身份断言</title>
-      <link>https://oracle.github.io/speedle/zh/docs/assertor/</link>
+      <link>/zh/docs/assertor/</link>
       <pubDate>Mon, 21 Jan 2019 09:28:30 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/assertor/</guid>
+      <guid>/zh/docs/assertor/</guid>
       <description>令牌用户身份断言的好处 评估请求可以包含由任何身份提供者作为传入用户身份发布的身份令牌，而不是明确指定用户身份（用户标识符和用户所属的那些组）。 将 Speedle 集成到服务中时，您的服务无需验证和解析身份令牌。 Speedle 可以为您做到。
 Speedle 评估引擎检查传入请求是否包含身份令牌。 如果是，则评估引擎调用令牌断言服务的 webhook 以获得显式用户身份（用户标识符和组）。 然后，评估引擎可以基于用户身份域和组来执行策略评估。
 如何评估包含身份令牌的授权请求 要评估包含身份令牌的授权请求，请按照下列步骤操作。
@@ -121,10 +121,10 @@ package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; &amp
     
     <item>
       <title>存储扩展</title>
-      <link>https://oracle.github.io/speedle/zh/docs/store/</link>
+      <link>/zh/docs/store/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/store/</guid>
+      <guid>/zh/docs/store/</guid>
       <description>概述 Speedle 现在支持两种数据存储，OOTB:文件存储和 etcd 存储。 但是，您可以实现自己的数据存储(例如使用 mongodb 等)
  请注意数据存储需要支持“watch”功能  本文档将说明如何逐步实现一个数据存储。
 实现 PolicyStoreManager 接口 在 store 目录下创建一个“mystore”目录并导航到它目录下面。 创建一个类似 mystore 之类的存储代码文件，并在此文件中实现“PolicyStoreManager”接口。
@@ -137,10 +137,10 @@ flags 具有最高优先级，然后是环境变量，然后是配置文件。�
     
     <item>
       <title>安全</title>
-      <link>https://oracle.github.io/speedle/zh/docs/security/</link>
+      <link>/zh/docs/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/security/</guid>
+      <guid>/zh/docs/security/</guid>
       <description>概要 API Endpoint 安全/认证和授权 Speedle API Endpoint 自身仅支持 TLS mutual auth（TLS 相互身份验证）这种认证和授权.
 您可以使用像 Ambassador API Gateway 等既存的方案对 Speedle API endpoint 进行保护。
 消息安全 / TLS TLS 是一种提供通信安全性的加密协议，它提供了许多不同的交换密钥进行身份验证，加密数据和保证消息完整性的方法。
@@ -154,10 +154,10 @@ Speedle 支持使用 TLS 来保护在非信任环境中的消息传输，也支�
     
     <item>
       <title>日志</title>
-      <link>https://oracle.github.io/speedle/zh/docs/logging/</link>
+      <link>/zh/docs/logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/logging/</guid>
+      <guid>/zh/docs/logging/</guid>
       <description>概述 Speedle 使用了下面两个开源项目来处理日志,
 1. https://github.com/sirupsen/logrus 2. https://github.com/natefinch/lumberjack Logrus 是一个针对 go 语言的结构化的日志处理器，它与 go 语言标准的 logger 库完全 API 兼容。因为 logrus 不支持对日志循环滚动处理（rotation），所以我们引入了另外一个开源项目 lumberjack。Logrus 与 lumberjack 之间通过 io.Writer 接口交互，如下图所示,
 日志配置 可以通过两种方式对 Speedle 的日志模块进行配置，即命令行参数或者配置文件。
@@ -168,10 +168,10 @@ Speedle 支持使用 TLS 来保护在非信任环境中的消息传输，也支�
     
     <item>
       <title>版本</title>
-      <link>https://oracle.github.io/speedle/zh/docs/versions/</link>
+      <link>/zh/docs/versions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/versions/</guid>
+      <guid>/zh/docs/versions/</guid>
       <description> Version 0.2.0 (planning) &amp;hellip;
 Version 0.1.0 release notes: This is the first open source version. All basic functions are available in this version, including
  Policy Management Service Authorization Runtime Service Command line tool Integration samples  </description>
@@ -179,10 +179,10 @@ Version 0.1.0 release notes: This is the first open source version. All basic fu
     
     <item>
       <title>Custom Function</title>
-      <link>https://oracle.github.io/speedle/zh/docs/custom-function/</link>
+      <link>/zh/docs/custom-function/</link>
       <pubDate>Mon, 21 Jan 2019 10:43:02 +0800</pubDate>
       
-      <guid>https://oracle.github.io/speedle/zh/docs/custom-function/</guid>
+      <guid>/zh/docs/custom-function/</guid>
       <description>为什么需要 Custom Function? 在 Speedle 中, Policy 和 RolePolicy 都支持 Condition。参见 SPDL(Speedle Policy Definition Language)中的 if 语句。Condition 是由 attribute, function, constant, operator, comparator 等构成。Speedle 提供少量的内置 function。实际应用中存在一些复杂的 Condition，用现有的机制难以表达，比如需要访问其他数据源。这种情况下，custom function 就能发挥作用了。custom function 是对 Condition 中内置 function 的扩展，使得 condition 的定义更为灵活。
 如何使用 Custom Function? 下面介绍使用 Custom Function 的步骤：
 1. 实现 Custom Function， 并按照 Speedle 预定义的 Custom Function RESTFul 接口暴露服务 Speedle 按预定义的接口调用 custom function，Custom fundtion 的 RESTful endpoint 必须遵循如下接口约定：
