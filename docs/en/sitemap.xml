@@ -1017,21 +1017,6 @@
   </url>
   
   <url>
-    <loc>/tags/versions/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="/zh/tags/versions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/versions/"
-                />
-  </url>
-  
-  <url>
     <loc>/versions/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -1043,6 +1028,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="/versions/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tags/versions/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="/zh/tags/versions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/versions/"
                 />
   </url>
   
