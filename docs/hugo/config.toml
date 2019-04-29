@@ -52,10 +52,7 @@ defaultContentLanguageInSubdir = false
     name = "Support"
     weight = -100
     url = "/support/"
-[[menu.main]]
-    name = "Playground"
-    weight = -50
-    url = "/playground/"
+
 [[menu.extra]]
     name = "Blog"
     weight = -600
@@ -93,10 +90,6 @@ defaultContentLanguageInSubdir = false
     name = "支持"
     weight = -100
     url = "/support/"
-[[languages.zh.menu.main]]
-    name = "游乐场"
-    weight = -500
-    url = "/playground/"
 [[languages.zh.menu.extra]]
     name = "博客"
     weight = -600
