@@ -310,8 +310,8 @@ And the init function needs to declare all the flags this store needed.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#a90d91">package</span> <span style="color:#000">main</span>
 
 <span style="color:#a90d91">import</span> (
-    <span style="color:#000">_</span> <span style="color:#c41a16">&#34;gitlab-odx.oracledx.com/wcai/speedle/store/etcd&#34;</span>
-    <span style="color:#000">_</span> <span style="color:#c41a16">&#34;gitlab-odx.oracledx.com/wcai/speedle/store/file&#34;</span>
+    <span style="color:#000">_</span> <span style="color:#c41a16">&#34;github.com/oracle/speedle/store/etcd&#34;</span>
+    <span style="color:#000">_</span> <span style="color:#c41a16">&#34;github.com/oracle/speedle/store/file&#34;</span>
 )</code></pre></div>
 <p>In this file, we link every store implmention with a side-effect import (using a blank import name). You can add your own store here too.
 If you want to use Speedle in <code>in-process</code> mode, you can copy this <code>stores.go</code> to your own package and modify the package name to your own package name.</p>

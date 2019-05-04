@@ -131,7 +131,7 @@ Secondly output any log messages anywhere you want. For example,
   log.Error("This is a error log entry")
 ```
 
-Please refer to [speedle/logging/demo/demo.go](https://gitlab-odx.oracledx.com/wcai/speedle/blob/master/logging/demo/demo.go) to get more detailed info.
+Please refer to [speedle/logging/demo/demo.go](https://github.com/oracle/speedle/blob/master/logging/demo/demo.go) to get more detailed info.
 
 ## Integration with 3rd-party log collectors
 

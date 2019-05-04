@@ -310,8 +310,8 @@ init 函数需要声明这个存储所需的所有 flags。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#a90d91">package</span> <span style="color:#000">main</span>
 
 <span style="color:#a90d91">import</span> (
-    <span style="color:#000">_</span> <span style="color:#c41a16">&#34;gitlab-odx.oracledx.com/wcai/speedle/store/etcd&#34;</span>
-    <span style="color:#000">_</span> <span style="color:#c41a16">&#34;gitlab-odx.oracledx.com/wcai/speedle/store/file&#34;</span>
+    <span style="color:#000">_</span> <span style="color:#c41a16">&#34;github.com/oracle/speedle/store/etcd&#34;</span>
+    <span style="color:#000">_</span> <span style="color:#c41a16">&#34;github.com/oracle/speedle/store/file&#34;</span>
 )</code></pre></div>
 <p>在这个文件中，我们用一个 side-effect 导入(使用一个空白导入名称)来链接每个存储的实现。您也可以在这里添加自己的存储。
 如果你想在“in-process”模式下使用 Speedle，你可以复制这个 store.go 文件。转到您自己的 package 中，将 package 名字修改为您自己的 package 名字。</p>

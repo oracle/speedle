@@ -39,9 +39,9 @@ More info about dep, please refer to Installation part in https://github.com/gol
 
 ```bash
    cd $GOPATH/src
-   git clone git@gitlab-odx.oracledx.com:wcai/speedle.git
-   mkdir -p gitlab-odx.oracledx.com/wcai
-   mv speedle gitlab-odx.oracledx.com/wcai/
+   git clone git@github.com:oracle/speedle.git
+   mkdir -p github.com/oracle
+   mv speedle github.com/oracle/
 ```
 
 Notes:
