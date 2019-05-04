@@ -189,7 +189,7 @@ The Policy Management Service (PMS) golang API is called to do policy management
 <li>Golang 1.10.0 environment installed on your development box</li>
 <li>Docker 1.12 or higher installed on your development box</li>
 <li>A Docker registry to publish Docker images</li>
-<li>The latest code from the Speedle repository synced to folder <code>$GOPATH/src/gitlab-odx.oracledx.com/wcai/speedle/</code> on your dev box</li>
+<li>The latest code from the Speedle repository synced to folder <code>$GOPATH/src/github.com/oracle/speedle/</code> on your dev box</li>
 <li>A Kubernetes cluster or an OKE cluster</li>
 <li>A Docker-registry secret. To create one:</li>
 </ul>
@@ -302,8 +302,8 @@ cp ca.pem client-ca.crt</code></pre></div>
 
 <h5 id="build-speedle">Build Speedle</h5>
 
-<p>You can build Speedle by executing the following command. This command assumes that you have already set the GOPATH environment variable, and that the Speedle code is located in the directory <code>$GOPATH/src/gitlab-odx.oracledx.com/wcai/speedle/</code></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#a90d91">cd</span> <span style="color:#000">$GOPATH</span>/src/gitlab-odx.oracledx.com/wcai/speedle
+<p>You can build Speedle by executing the following command. This command assumes that you have already set the GOPATH environment variable, and that the Speedle code is located in the directory <code>$GOPATH/src/github.com/oracle/speedle/</code></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#a90d91">cd</span> <span style="color:#000">$GOPATH</span>/src/github.com/oracle/speedle
 make</code></pre></div>
 <p>When the build completes, three files are located in the <code>$GOPATH/bin</code> directory:</p>
 
@@ -319,13 +319,13 @@ make</code></pre></div>
 <span style="color:#a90d91">export</span> <span style="color:#000">adsImageRepo</span><span style="color:#000">=</span>Docker repository of the Speedle authorization decision service
 <span style="color:#a90d91">export</span> <span style="color:#000">adsImageImageVersion</span><span style="color:#000">=</span>Docker image version of the Speedle ADS
 
-<span style="color:#a90d91">cd</span> <span style="color:#000">$GOPATH</span>/src/gitlab-odx.oracledx.com/wcai/speedle
+<span style="color:#a90d91">cd</span> <span style="color:#000">$GOPATH</span>/src/github.com/oracle/speedle
 make image</code></pre></div>
 <h5 id="deploy-speedle-in-dev-mode">Deploy Speedle in dev mode</h5>
 
 <h6 id="create-the-dev-mode-kubernetes-deployment">Create the dev mode Kubernetes deployment</h6>
 
-<p>Create a YAML file, named <code>speedle-dev.yaml</code>, using the values appropriate for your environment, that can deploy both speedle-pms and speedle-ads in one Kubernetes deployment. A sample <code>speedle-dev.yaml</code>file is available in the <a href="https://gitlab-odx.oracledx.com/wcai/speedle/blob/master/deployment/k8s/speedle-dev.yaml">Speedle GIT repository</a>.</p>
+<p>Create a YAML file, named <code>speedle-dev.yaml</code>, using the values appropriate for your environment, that can deploy both speedle-pms and speedle-ads in one Kubernetes deployment. A sample <code>speedle-dev.yaml</code>file is available in the <a href="https://github.com/oracle/speedle/blob/master/deployment/k8s/speedle-dev.yaml">Speedle GIT repository</a>.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">kind: Service
 apiVersion: v1
 metadata:
@@ -402,7 +402,7 @@ speedle-dev   ClusterIP   <span style="color:#1c01ce">10</span>.108.146.148   &l
 <h6 id="create-the-production-mode-kubernetes-deployment">Create the production mode Kubernetes deployment</h6>
 
 <p>Create a YAML file, named <code>speedle-prod.yaml</code>, using the values appropriate for your environment, that can deploy both speedle-pms and speedle-ads in one Kubernetes deployment. A sample <code>speedle-prod.yaml</code> file is available
-in the <a href="https://gitlab-odx.oracledx.com/wcai/speedle/blob/master/deployment/k8s/speedle-prod.yaml">Speedle GIT repository</a></p>
+in the <a href="https://github.com/oracle/speedle/blob/master/deployment/k8s/speedle-prod.yaml">Speedle GIT repository</a></p>
 
 <p>In this sample deployment file, etcd runs in one Kubernetes Pod.</p>
 
