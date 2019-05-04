@@ -34,7 +34,7 @@ Deploy Speedle on Kubernetes in both dev and production modes using Helm, or man
 - Golang 1.10.0 environment installed on your development box
 - Docker 1.12 or higher installed on your development box
 - A Docker registry to publish Docker images
-- The latest code from the Speedle repository synced to folder `$GOPATH/src/gitlab-odx.oracledx.com/wcai/speedle/` on your dev box
+- The latest code from the Speedle repository synced to folder `$GOPATH/src/github.com/oracle/speedle/` on your dev box
 - A Kubernetes cluster or an OKE cluster
 - A Docker-registry secret. To create one:
 
@@ -188,10 +188,10 @@ Before deploying Speedle manually, you need to build Speedle and build and push 
 
 ##### Build Speedle
 
-You can build Speedle by executing the following command. This command assumes that you have already set the GOPATH environment variable, and that the Speedle code is located in the directory `$GOPATH/src/gitlab-odx.oracledx.com/wcai/speedle/`
+You can build Speedle by executing the following command. This command assumes that you have already set the GOPATH environment variable, and that the Speedle code is located in the directory `$GOPATH/src/github.com/oracle/speedle/`
 
 ```bash
-cd $GOPATH/src/gitlab-odx.oracledx.com/wcai/speedle
+cd $GOPATH/src/github.com/oracle/speedle
 make
 ```
 
@@ -209,7 +209,7 @@ export pmsImageImageVersion=Docker image version of the Speedle PMS
 export adsImageRepo=Docker repository of the Speedle authorization decision service
 export adsImageImageVersion=Docker image version of the Speedle ADS
 
-cd $GOPATH/src/gitlab-odx.oracledx.com/wcai/speedle
+cd $GOPATH/src/github.com/oracle/speedle
 make image
 ```
 
@@ -217,7 +217,7 @@ make image
 
 ###### Create the dev mode Kubernetes deployment
 
-Create a YAML file, named `speedle-dev.yaml`, using the values appropriate for your environment, that can deploy both speedle-pms and speedle-ads in one Kubernetes deployment. A sample `speedle-dev.yaml`file is available in the [Speedle GIT repository](https://gitlab-odx.oracledx.com/wcai/speedle/blob/master/deployment/k8s/speedle-dev.yaml).
+Create a YAML file, named `speedle-dev.yaml`, using the values appropriate for your environment, that can deploy both speedle-pms and speedle-ads in one Kubernetes deployment. A sample `speedle-dev.yaml`file is available in the [Speedle GIT repository](https://github.com/oracle/speedle/blob/master/deployment/k8s/speedle-dev.yaml).
 
 ```yaml
 kind: Service
@@ -306,7 +306,7 @@ speedle-dev   ClusterIP   10.108.146.148   <none>        6733/TCP,6734/TCP   39m
 ###### Create the production mode Kubernetes deployment
 
 Create a YAML file, named `speedle-prod.yaml`, using the values appropriate for your environment, that can deploy both speedle-pms and speedle-ads in one Kubernetes deployment. A sample `speedle-prod.yaml` file is available
-in the [Speedle GIT repository](https://gitlab-odx.oracledx.com/wcai/speedle/blob/master/deployment/k8s/speedle-prod.yaml)
+in the [Speedle GIT repository](https://github.com/oracle/speedle/blob/master/deployment/k8s/speedle-prod.yaml)
 
 In this sample deployment file, etcd runs in one Kubernetes Pod.
 
