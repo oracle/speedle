@@ -211,7 +211,7 @@ func (k *Parameters) ParseFlags(defaultEndpoint string, printVersionInfoFun func
 	params = append(params, &k.AuditLogConf.LogLevel)
 	k.AuditLogConf.LogFormatter = StrParamDetail{Name: "auditlog-formatter", DefaultValue: DefaultAuditLogFormatter, Usage: "Audit Log config: log formatter, available values are text and json."}
 	params = append(params, &k.AuditLogConf.LogFormatter)
-	k.AuditLogConf.LogReportCaller = StrParamDetail{Name: "auditlog-reportcaller", DefaultValue: strconv.FormatBool(false), Usage: "Log config: if the caller(file, line and function) is included in the log entry."}
+	k.AuditLogConf.LogReportCaller = StrParamDetail{Name: "auditlog-reportcaller", DefaultValue: strconv.FormatBool(false), Usage: "Audit Log config: if the caller(file, line and function) is included in the log entry."}
 	params = append(params, &k.AuditLogConf.LogReportCaller)
 	k.AuditLogConf.LogFileName = StrParamDetail{Name: "auditlog-filename", DefaultValue: DefaultAuditLogFilename, Usage: "Audit Log config: log file name."}
 	params = append(params, &k.AuditLogConf.LogFileName)
