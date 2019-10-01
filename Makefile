@@ -27,14 +27,14 @@ buildSpctl:
 image: imagePms imageAds
 
 imagePms:
-	cp ${GOPATH}/bin/speedle-pms-${PLATFORM} deployment/docker/speedle-pms/.
-	docker build -t ${pmsImageRepo}:${pmsImageTag} --rm --no-cache deployment/docker/speedle-pms-${PLATFORM}
-	rm deployment/docker/speedle-pms/speedle-pms-${PLATFORM}
+	cp ${GOPATH}/bin/speedle-pms-${PLATFORM} deployment/docker/speedle-pms/speedle-pms
+	docker build -t ${pmsImageRepo}:${pmsImageTag} --rm --no-cache deployment/docker/speedle-pms
+	rm deployment/docker/speedle-pms/speedle-pms
 
 imageAds:
-	cp ${GOPATH}/bin/speedle-ads-${PLATFORM} deployment/docker/speedle-ads/.
-	docker build -t ${adsImageRepo}:${adsImageTag} --rm --no-cache deployment/docker/speedle-ads-${PLATFORM}
-	rm deployment/docker/speedle-ads/speedle-ads-${PLATFORM}
+	cp ${GOPATH}/bin/speedle-ads-${PLATFORM} deployment/docker/speedle-ads/speedle-ads
+	docker build -t ${adsImageRepo}:${adsImageTag} --rm --no-cache deployment/docker/speedle-ads
+	rm deployment/docker/speedle-ads/speedle-ads
 
 test: testAll
 

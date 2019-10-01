@@ -101,6 +101,7 @@ shopt -s expand_aliases
 
 alias pms=${GOPATH}/bin/speedle-pms-${PLATFORM}
 alias ads=${GOPATH}/bin/speedle-ads-${PLATFORM}
+alias spctl=${GOPATH}/bin/spctl-${PLATFORM}
 
 function ensureTestDir() {
     if [ "$1" == "file" ];then
