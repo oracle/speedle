@@ -5,6 +5,7 @@ export ADS_ENDPOINT=http://127.0.0.1:6734
 export PMS_ADMIN_TOKEN=
 export ADS_ADMIN_TOKEN=
 export SP_APP_NAME=spctl
+export PLATFORM=$(uname | tr '[:upper:]' '[:lower:]')
 
 echo "----------------------------------"
 echo "PMS_ENDPOINT=${PMS_ENDPOINT}"
@@ -97,13 +98,10 @@ function waitService  {
 }
 
 shopt -s expand_aliases
-if [ `uname -s` == "Darwin" ] ; then
-  alias pms=${GOPATH}/bin/speedle-pms-mac
-  alias ads=${GOPATH}/bin/speedle-ads-mac
-else
-  alias pms=${GOPATH}/bin/speedle-pms
-  alias ads=${GOPATH}/bin/speedle-ads
-fi
+
+alias pms=${GOPATH}/bin/speedle-pms-${PLATFORM}
+alias ads=${GOPATH}/bin/speedle-ads-${PLATFORM}
+alias spctl=${GOPATH}/bin/spctl-${PLATFORM}
 
 function ensureTestDir() {
     if [ "$1" == "file" ];then
