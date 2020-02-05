@@ -2,8 +2,10 @@
 set -ex
 #source pkg/svcs/pmsrest/start_etcd.sh
 rm -rf ./speedle.etcd
-source ${GOPATH}/src/github.com/oracle/speedle/setTestEnv.sh
-go clean -testcache
+source $(dirname $0)/../../../setTestEnv.sh
+go clean -testcache github.com/oracle/speedle/cmd/spctl/command
+
+exit 0
 
 #Reconfig spctl
 ${GOPATH}/bin/spctl config pms-endpoint http://localhost:6733/policy-mgmt/v1/

@@ -4,7 +4,7 @@ shell_dir=$(dirname $0)
 temp_policy_file=/tmp/speedle-test-file-store.json
 
 set -ex
-source ${GOPATH}/src/github.com/oracle/speedle/setTestEnv.sh
+source ${shell_dir}/../../../setTestEnv.sh
 
 startPMS file --config-file ${shell_dir}/../pmsrest/config_file.json
 

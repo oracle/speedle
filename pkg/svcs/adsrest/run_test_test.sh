@@ -1,6 +1,6 @@
 #/bin/sh
 set -ex
-source ${GOPATH}/src/github.com/oracle/speedle/setTestEnv.sh
+source $(dirname $0)/../../../setTestEnv.sh
 
 #Reconfig spctl
 ${GOPATH}/bin/spctl config ads-endpoint http://localhost:6734/authz-check/v1/

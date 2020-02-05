@@ -48,7 +48,7 @@ speedleUnitTests:
 	go test ${TEST_OPTS} github.com/oracle/speedle/cmd/spctl/pdl
 	go test ${TEST_OPTS} github.com/oracle/speedle/pkg/suid
 	go test ${TEST_OPTS} github.com/oracle/speedle/pkg/assertion
-	go clean -testcache
+	go clean -testcache github.com/oracle/speedle/pkg/eval
 	STORE_TYPE=etcd go test ${TEST_OPTS} github.com/oracle/speedle/pkg/eval
 
 testSpeedleRest:
