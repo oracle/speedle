@@ -61,7 +61,7 @@ $ make test
 
 ## Get Help
 
--   Join us on Slack: [#speedle-users](https://join.slack.com/t/speedleproject/shared_invite/enQtNTUzODM3NDY0ODE2LTg0ODc0NzQ1MjVmM2NiODVmMThkMmVjNmMyODA0ZWJjZjQ3NDc2MjdlMzliN2U4MDRkZjhlYzYzMDEyZTgxMGQ)
+-   Join us on Slack: [#speedle-users](https://join.slack.com/t/speedleproject/shared_invite/zt-72fgiyuo-QKJAhHAqVbn17KRFbd7aZw)
 -   Mailing List: speedle-users@googlegroups.com
 
 ## Get Involved
